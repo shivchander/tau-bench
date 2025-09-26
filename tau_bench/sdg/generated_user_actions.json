@@ -1,0 +1,82 @@
+[
+  {
+    "user_id": "raj_kovacs_8102",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "GetReservationDetails",
+        "kwargs": {
+          "reservation_id": "O8IHB3"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "yusuf_martin_3470",
+    "difficulty": "medium",
+    "target_action_count": 3,
+    "actions": [
+      {
+        "name": "UpdateReservationFlights",
+        "kwargs": {
+          "reservation_id": "BBVDO9",
+          "flights": [
+            {
+              "flight_number": "HAT060",
+              "date": "2024-05-22"
+            },
+            {
+              "flight_number": "HAT008",
+              "date": "2024-05-22"
+            }
+          ]
+        }
+      },
+      {
+        "name": "UpdateReservationBaggages",
+        "kwargs": {
+          "reservation_id": "BBVDO9",
+          "total_baggages": 3,
+          "nonfree_baggages": 2
+        }
+      },
+      {
+        "name": "BookReservation",
+        "kwargs": {
+          "user_id": "yusuf_martin_3470",
+          "origin": "PHL",
+          "destination": "LGA",
+          "flight_type": "one_way",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT001",
+              "date": "2024-05-18"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Yusuf",
+              "last_name": "Muller",
+              "dob": "1956-05-06"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_3071118",
+              "amount": 500
+            },
+            {
+              "payment_id": "credit_card_9067289",
+              "amount": 102
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        }
+      }
+    ]
+  }
+]

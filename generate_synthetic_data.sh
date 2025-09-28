@@ -41,7 +41,7 @@ mkdir -p tau_bench/sdg
 # Generate and validate medium tasks (30 samples)
 echo "📝 Generating 30 medium tasks (2-5 actions each)..."
 uv run python tau_bench/sdg/generate_user_actions.py \
-    --num-samples 100 \
+    --num-samples 1000 \
     --difficulty medium \
     --max-concurrency 10 \
     --output-file tau_bench/sdg/synthetic_tasks_medium

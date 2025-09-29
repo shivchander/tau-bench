@@ -1,126 +1,20 @@
 [
   {
-    "instruction": "Your user id is emma_jackson_2190. You need to check your reservation YKCIBO to confirm the updated departure time after receiving a recent flight schedule change notification.",
+    "user_id": "evelyn_smith_6580",
     "actions": [
       {
         "name": "get_reservation_details",
         "kwargs": {
-          "reservation_id": "YKCIBO"
+          "reservation_id": "63QBEX"
         }
       }
     ],
-    "user_id": "emma_jackson_2190",
+    "instruction": "Your user id is evelyn_smith_6580. You need the details of your existing reservation, but you do not recall the reservation ID. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If there are any issues retrieving the information, you are open to assisting with any additional verification needed.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 31,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is yara_silva_8071. You want to review your account details and confirm your membership status.",
-    "actions": [
-      {
-        "name": "get_user_details",
-        "kwargs": {
-          "user_id": "yara_silva_8071"
-        }
-      }
-    ],
-    "user_id": "yara_silva_8071",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 62,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is yara_silva_1929. You want to confirm your seat assignment for reservation N9V9VX to ensure a comfortable flight experience.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "N9V9VX"
-        }
-      }
-    ],
-    "user_id": "yara_silva_1929",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 3,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is daiki_patel_1917. You need to confirm your flight itinerary for reservation 7WKBKD to ensure all details are correct before your upcoming trip.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "7WKBKD"
-        }
-      }
-    ],
-    "user_id": "daiki_patel_1917",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 32,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is harper_kovacs_3082. You need to verify the status of your reservation AYVIYO to ensure your seat is confirmed for your upcoming trip.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "AYVIYO"
-        }
-      }
-    ],
-    "user_id": "harper_kovacs_3082",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 63,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is juan_rossi_7264. You need to check your reservation IWKGVL to confirm the flight time and ensure you have the correct terminal information.",
+    "user_id": "juan_rossi_7264",
     "actions": [
       {
         "name": "get_reservation_details",
@@ -129,166 +23,26 @@
         }
       }
     ],
-    "user_id": "juan_rossi_7264",
+    "instruction": "Your user id is juan_rossi_7264. You need to retrieve the details of your reservation, but you do not remember the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if it is necessary, you are willing to provide any other information needed to access the reservation details, within your privacy comfort level.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 2,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is harper_smith_3981. You want to confirm your seat selection and baggage allowance for reservation KT71XO before your upcoming trip.",
+    "user_id": "yara_silva_1929",
     "actions": [
       {
         "name": "get_reservation_details",
         "kwargs": {
-          "reservation_id": "KT71XO"
+          "reservation_id": "N9V9VX"
         }
       }
     ],
-    "user_id": "harper_smith_3981",
+    "instruction": "Your user id is yara_silva_1929. You want to inquire about your current reservation, but you cannot recall the specific details of it. If and only if the agent needs further details to locate the reservation, you are willing to provide additional information. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 61,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is anya_brown_2655. You want to ensure that all your flight details for reservation JEPRZB are accurate before your upcoming trip.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "JEPRZB"
-        }
-      }
-    ],
-    "user_id": "anya_brown_2655",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 33,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is noah_muller_9847. You need to confirm the seat allocation and meal preferences for your reservation SDZQKO.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "SDZQKO"
-        }
-      }
-    ],
-    "user_id": "noah_muller_9847",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 91,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is anya_anderson_8280. You want to confirm the seating arrangement for your reservation ZXIYE7 to ensure you have an aisle seat.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "ZXIYE7"
-        }
-      }
-    ],
-    "user_id": "anya_anderson_8280",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 92,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is ethan_nguyen_7360. You need to check your reservation G2LTC4 to confirm your seat assignment and meal preference for an upcoming flight.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "G2LTC4"
-        }
-      }
-    ],
-    "user_id": "ethan_nguyen_7360",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 93,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is amelia_li_2415. You want to confirm your seat assignment and meal preference for reservation NUCNX0.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "NUCNX0"
-        }
-      }
-    ],
-    "user_id": "amelia_li_2415",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 64,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is yusuf_patel_4029. You need to verify the seat assignment for your reservation 847MY1 to ensure you have a window seat.",
+    "user_id": "yusuf_patel_4029",
     "actions": [
       {
         "name": "get_reservation_details",
@@ -297,46 +51,12 @@
         }
       }
     ],
-    "user_id": "yusuf_patel_4029",
+    "instruction": "Your user id is yusuf_patel_4029. You want to inquire about the details of an existing reservation with the reservation id you cannot recall right now. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If the agent asks for additional information to find your reservation, you are willing to provide it if available.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 4,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is juan_lopez_1974. You want to check your reservation YFYFKQ to confirm your seating preferences and meal options before the flight.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "YFYFKQ"
-        }
-      }
-    ],
-    "user_id": "juan_lopez_1974",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 94,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is harper_ahmed_8302. You are looking for a flight from JFK to SEA on May 16, 2024; please prioritize direct options.",
+    "user_id": "harper_ahmed_8302",
     "actions": [
       {
         "name": "search_direct_flight",
@@ -347,46 +67,12 @@
         }
       }
     ],
-    "user_id": "harper_ahmed_8302",
+    "instruction": "Your user id is harper_ahmed_8302. You want to find a direct flight from New York (JFK) to Seattle on May 16. You prefer to leave in the afternoon to avoid the morning rush. If and only if a direct flight is unavailable, you are open to considering options with a single stopover, but prioritize the shortest travel time. You do not have a specific budget constraint but prefer competitive pricing. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 5,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is amelia_hernandez_8403. You want to verify the seating arrangements and meal preferences for your reservation 5JR4XX to ensure a comfortable flight experience.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "5JR4XX"
-        }
-      }
-    ],
-    "user_id": "amelia_hernandez_8403",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 34,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is james_ahmed_4322. You need to review your reservation JX6LB3 to ensure all flight details are correct before your upcoming trip.",
+    "user_id": "james_ahmed_4322",
     "actions": [
       {
         "name": "get_reservation_details",
@@ -395,166 +81,12 @@
         }
       }
     ],
-    "user_id": "james_ahmed_4322",
+    "instruction": "Your user id is james_ahmed_4322. You want to retrieve the details of your reservation, but you can't recall the reservation id on your own. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if the agent requires a reservation id to proceed, you can provide it once prompted.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 6,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is raj_garcia_4690. You want to verify the seating arrangements for your reservation 4NQCM5 to ensure your preferences are met.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "4NQCM5"
-        }
-      }
-    ],
-    "user_id": "raj_garcia_4690",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 95,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is liam_muller_3384. You need to confirm the seat selection for your reservation HDUF3Q to ensure you have your preferred seating arrangement.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "HDUF3Q"
-        }
-      }
-    ],
-    "user_id": "liam_muller_3384",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 65,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is chen_lopez_2451. You want to verify the seat assignment and meal preference for reservation 71Y56R as a gold member benefit.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "71Y56R"
-        }
-      }
-    ],
-    "user_id": "chen_lopez_2451",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 66,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is lucas_rossi_2421. You need to confirm the seat assignment for your reservation J43KQ8 to ensure you have the desired seating preference.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "J43KQ8"
-        }
-      }
-    ],
-    "user_id": "lucas_rossi_2421",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 36,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is liam_muller_3384. You want to check the details for reservation HDUF3Q to verify your seat assignment and meal preference.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "HDUF3Q"
-        }
-      }
-    ],
-    "user_id": "liam_muller_3384",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 35,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is noah_wilson_9692. You want to check your reservation XZE9VN to ensure all flight details are correct for your upcoming trip.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "XZE9VN"
-        }
-      }
-    ],
-    "user_id": "noah_wilson_9692",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 68,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is mia_santos_2092. You need to check your reservation 4NXSCL to confirm the seat assignment and ensure your dietary preferences are noted for the flight.",
+    "user_id": "mia_santos_2092",
     "actions": [
       {
         "name": "get_reservation_details",
@@ -563,142 +95,12 @@
         }
       }
     ],
-    "user_id": "mia_santos_2092",
+    "instruction": "Your user id is mia_santos_2092. You want to retrieve the details of your upcoming reservation. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if the agent needs more information, you will provide your reservation ID, which you have readily available.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 7,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is evelyn_smith_6580. You want to check your reservation 63QBEX to confirm your seat assignment and ensure there have been no changes to your flight itinerary.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "63QBEX"
-        }
-      }
-    ],
-    "user_id": "evelyn_smith_6580",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 97,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is lucas_wilson_8118. You need to check your reservation I6XC2H to confirm your seat assignment and ensure your frequent flyer benefits are applied.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "I6XC2H"
-        }
-      }
-    ],
-    "user_id": "lucas_wilson_8118",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 96,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is mohamed_silva_9265. You want to check your reservation K1NW8N to ensure all travel details are correct ahead of your upcoming trip.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "K1NW8N"
-        }
-      }
-    ],
-    "user_id": "mohamed_silva_9265",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 37,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is lucas_khan_1131. You need to verify your seating arrangement and meal preference for reservation AVX2IV to ensure a comfortable journey as a gold member.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "AVX2IV"
-        }
-      }
-    ],
-    "user_id": "lucas_khan_1131",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 67,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is mason_johansson_5154. You want to check reservation RB9S17 to confirm the seat assignment and meal preference for your upcoming flight.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "RB9S17"
-        }
-      }
-    ],
-    "user_id": "mason_johansson_5154",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 38,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is isabella_anderson_8228. You want to confirm your seating assignment and meal preference for reservation PIJF3U.",
+    "user_id": "isabella_anderson_8228",
     "actions": [
       {
         "name": "get_reservation_details",
@@ -707,46 +109,12 @@
         }
       }
     ],
-    "user_id": "isabella_anderson_8228",
+    "instruction": "Your user id is isabella_anderson_8228. You want to retrieve the details of your upcoming reservation, but you do not remember the reservation id. If and only if the agent asks for further identification, remind them that your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 8,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is chen_lee_6825. You want to ensure that your seat selection is confirmed for reservation JW6LEQ.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "JW6LEQ"
-        }
-      }
-    ],
-    "user_id": "chen_lee_6825",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 98,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is fatima_silva_7735. You want to check your reservation ASFFI5 to confirm the seating arrangement before your upcoming flight.",
+    "user_id": "fatima_silva_7735",
     "actions": [
       {
         "name": "get_reservation_details",
@@ -755,166 +123,12 @@
         }
       }
     ],
-    "user_id": "fatima_silva_7735",
+    "instruction": "Your user id is fatima_silva_7735. You want to retrieve the details of your current reservation, which you cannot recall the specific information about. If and only if the reservation details are unclear, you are okay with the agent providing additional options or clarification. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You prefer to ensure all information is accurate and complete.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 9,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is juan_brown_2465. You want to review your account details and ensure your membership level is correct.",
-    "actions": [
-      {
-        "name": "get_user_details",
-        "kwargs": {
-          "user_id": "juan_brown_2465"
-        }
-      }
-    ],
-    "user_id": "juan_brown_2465",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 69,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is mia_thomas_5479. You need to confirm the seat assignment for your reservation DYKWMO as you prefer a window seat.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "DYKWMO"
-        }
-      }
-    ],
-    "user_id": "mia_thomas_5479",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 39,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is harper_davis_5069. You want to verify the seating arrangements for reservation WLXS0L to ensure you have an aisle seat.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "WLXS0L"
-        }
-      }
-    ],
-    "user_id": "harper_davis_5069",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 70,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is emma_jackson_2190. You want to review your membership benefits and update your contact information.",
-    "actions": [
-      {
-        "name": "get_user_details",
-        "kwargs": {
-          "user_id": "emma_jackson_2190"
-        }
-      }
-    ],
-    "user_id": "emma_jackson_2190",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 99,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is amelia_nguyen_7778. You want to check your reservation U7QTYY to confirm your seat assignment and meal preference for an upcoming flight.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "U7QTYY"
-        }
-      }
-    ],
-    "user_id": "amelia_nguyen_7778",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 100,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is aarav_lee_9671. You want to verify the seating and meal preferences for your reservation CN5AEV before your upcoming trip.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "CN5AEV"
-        }
-      }
-    ],
-    "user_id": "aarav_lee_9671",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 11,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is mason_johansson_5154. You want to verify your seat assignment and meal preference for reservation RB9S17 before your upcoming flight.",
+    "user_id": "mason_johansson_5154",
     "actions": [
       {
         "name": "get_reservation_details",
@@ -923,70 +137,26 @@
         }
       }
     ],
-    "user_id": "mason_johansson_5154",
+    "instruction": "Your user id is mason_johansson_5154. You need to check the details of your existing reservation, for which you remember only the reservation id 'RB9S17'. If and only if further information is required, you can provide additional details. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 10,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is emma_martin_8571. You want to review the details of your reservation 1JR46H to ensure accuracy and confirm your travel itinerary as a gold member.",
+    "user_id": "aarav_lee_9671",
     "actions": [
       {
         "name": "get_reservation_details",
         "kwargs": {
-          "reservation_id": "1JR46H"
+          "reservation_id": "CN5AEV"
         }
       }
     ],
-    "user_id": "emma_martin_8571",
+    "instruction": "Your user id is aarav_lee_9671. You need to retrieve the details of your reservation, but you do not remember the reservation id. If the agent asks for any personal information, your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked. You are patient and prefer to wait for the agent to ask questions necessary to assist you.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 40,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is olivia_garcia_3026. You need to review your reservation AO5N50 details to ensure your seating preferences are correctly recorded for your upcoming flight.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "AO5N50"
-        }
-      }
-    ],
-    "user_id": "olivia_garcia_3026",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 71,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is isabella_ito_3653. You want to confirm the seat selection for your reservation MXCGN8 to ensure you have an aisle seat as requested.",
+    "user_id": "isabella_ito_3653",
     "actions": [
       {
         "name": "get_reservation_details",
@@ -995,22 +165,12 @@
         }
       }
     ],
-    "user_id": "isabella_ito_3653",
+    "instruction": "Your user id is isabella_ito_3653. You need the details for your current reservation but do not have the reservation id readily available. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked. If and only if further confirmation is needed, you are willing to answer specific questions about the reservation details.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 12,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is harper_patel_1045. You need to ensure that your reservation HAGO8B is confirmed and verify the departure time as you plan your travel itinerary.",
+    "user_id": "harper_patel_1045",
     "actions": [
       {
         "name": "get_reservation_details",
@@ -1019,94 +179,12 @@
         }
       }
     ],
-    "user_id": "harper_patel_1045",
+    "instruction": "Your user id is harper_patel_1045. You want to inquire about the details of your existing reservation, although you don't recall the reservation ID. If and only if the agent requires further information, you can provide additional context, but you prefer not to disclose your birthday as it is already available in your user profile. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 13,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is olivia_anderson_8651. To check your account details, please log in to your account dashboard and navigate to the \"Account Information\" section.",
-    "actions": [
-      {
-        "name": "get_user_details",
-        "kwargs": {
-          "user_id": "olivia_anderson_8651"
-        }
-      }
-    ],
-    "user_id": "olivia_anderson_8651",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 73,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is raj_davis_3310. You need to verify the seating arrangement for your reservation M6N5DM as you prefer a window seat for your upcoming flight.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "M6N5DM"
-        }
-      }
-    ],
-    "user_id": "raj_davis_3310",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 43,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is liam_wilson_9173. You need to review the seat assignment for your reservation 238F2V to ensure it meets your preferences.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "238F2V"
-        }
-      }
-    ],
-    "user_id": "liam_wilson_9173",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 72,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is juan_moore_4540. You need to review your reservation 2P5CYY to confirm your seat assignment and meal preferences before your upcoming flight.",
+    "user_id": "juan_moore_4540",
     "actions": [
       {
         "name": "get_reservation_details",
@@ -1115,22 +193,12 @@
         }
       }
     ],
-    "user_id": "juan_moore_4540",
+    "instruction": "Your user id is juan_moore_4540. You want to inquire about the details of your reservation, but you do not recall the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if asked, you may confirm that you are interested in ensuring all details are correct and up-to-date, but you will rely on the agent to guide the conversation.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 14,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is yusuf_martin_3470. You need to check the reservation BBVDO9 to confirm the seating arrangements for your upcoming flight.",
+    "user_id": "yusuf_martin_3470",
     "actions": [
       {
         "name": "get_reservation_details",
@@ -1139,140 +207,12 @@
         }
       }
     ],
-    "user_id": "yusuf_martin_3470",
+    "instruction": "Your user id is yusuf_martin_3470. You want to retrieve the details of your existing reservation. You do not have the reservation id memorized, so you depend on the agent to assist you in finding it. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If additional information is needed, you prefer the agent guides you through the process.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 15,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is liam_sanchez_8204. You need to review reservation Q17Y7B to confirm your seat assignment and baggage allowance before your upcoming trip.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "Q17Y7B"
-        }
-      }
-    ],
-    "user_id": "liam_sanchez_8204",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 41,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is aarav_sanchez_7773. Please display the list of all available airports for your review.",
-    "actions": [
-      {
-        "name": "list_all_airports",
-        "kwargs": {}
-      }
-    ],
-    "user_id": "aarav_sanchez_7773",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 42,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is yara_garcia_1905. You want to verify the seat assignment for your reservation HXDUBJ to ensure you have an aisle seat.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "HXDUBJ"
-        }
-      }
-    ],
-    "user_id": "yara_garcia_1905",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 44,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is amelia_davis_7067. You want to check your reservation ZAC5BK to ensure your seat preferences are confirmed for your upcoming flight.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "ZAC5BK"
-        }
-      }
-    ],
-    "user_id": "amelia_davis_7067",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 74,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is raj_khan_9352. You need to review your account details and update any necessary information.",
-    "actions": [
-      {
-        "name": "get_user_details",
-        "kwargs": {
-          "user_id": "raj_khan_9352"
-        }
-      }
-    ],
-    "user_id": "raj_khan_9352",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 76,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is harper_santos_6381. You need to verify your reservation IER616 to ensure your seat assignment is confirmed for your upcoming flight.",
+    "user_id": "harper_santos_6381",
     "actions": [
       {
         "name": "get_reservation_details",
@@ -1281,94 +221,12 @@
         }
       }
     ],
-    "user_id": "harper_santos_6381",
+    "instruction": "Your user id is harper_santos_6381. You want to retrieve the details of your reservation, which you have on file but do not remember the specifics. Your birthday is in your user profile, so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked. You would appreciate any assistance the agent can provide in quickly retrieving this information.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 16,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is omar_anderson_1185. You want to confirm the seating arrangements for your reservation 32J3PL to ensure you are sitting next to your family.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "32J3PL"
-        }
-      }
-    ],
-    "user_id": "omar_anderson_1185",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 45,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is evelyn_brown_8513. You need to check your reservation 0TN6YG to confirm the flight times for planning your travel itinerary.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "0TN6YG"
-        }
-      }
-    ],
-    "user_id": "evelyn_brown_8513",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 75,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is amelia_taylor_4937. You want to confirm the seating arrangement and meal preference for your reservation LT77K6.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "LT77K6"
-        }
-      }
-    ],
-    "user_id": "amelia_taylor_4937",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 46,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is liam_santos_5621. You need to check your reservation ZZSA4W to confirm the updated gate information for your upcoming flight.",
+    "user_id": "liam_santos_5621",
     "actions": [
       {
         "name": "get_reservation_details",
@@ -1377,22 +235,12 @@
         }
       }
     ],
-    "user_id": "liam_santos_5621",
+    "instruction": "Your user id is liam_santos_5621. You want to inquire about the details of your current reservation. If and only if the agent requires additional information, you are open to providing it, but your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 17,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is yara_silva_8071. Please search for direct flights from EWR to IAH on May 18th, 2024, and check for morning departures.",
+    "user_id": "yara_silva_8071",
     "actions": [
       {
         "name": "search_direct_flight",
@@ -1403,142 +251,12 @@
         }
       }
     ],
-    "user_id": "yara_silva_8071",
+    "instruction": "Your user id is yara_silva_8071. You want to find a direct flight from Newark to Houston on May 18. You prefer a straightforward journey without stopovers. If and only if there are no direct flights available, you are open to considering options with one stopover. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 18,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is liam_taylor_6683. You want to check your reservation OWCNP2 details to ensure your seating preferences are confirmed.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "OWCNP2"
-        }
-      }
-    ],
-    "user_id": "liam_taylor_6683",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 47,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is lei_anderson_2319. You want to confirm the seat assignment and baggage allowance for your reservation KFSKBR.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "KFSKBR"
-        }
-      }
-    ],
-    "user_id": "lei_anderson_2319",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 77,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is mia_ahmed_3713. You need to check your reservation M2RFTA to confirm the seating arrangement and baggage allowance for your upcoming trip.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "M2RFTA"
-        }
-      }
-    ],
-    "user_id": "mia_ahmed_3713",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 79,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is harper_lopez_2390. You want to review your account details and membership status.",
-    "actions": [
-      {
-        "name": "get_user_details",
-        "kwargs": {
-          "user_id": "harper_lopez_2390"
-        }
-      }
-    ],
-    "user_id": "harper_lopez_2390",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 48,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is lei_ito_5790. You want to confirm the flight details and seat assignment for your upcoming trip with reservation 6ZQNOS.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "6ZQNOS"
-        }
-      }
-    ],
-    "user_id": "lei_ito_5790",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 78,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is anya_sanchez_5753. You are searching for a flight from MIA to ORD on 2024-05-17.",
+    "user_id": "anya_sanchez_5753",
     "actions": [
       {
         "name": "search_direct_flight",
@@ -1549,46 +267,12 @@
         }
       }
     ],
-    "user_id": "anya_sanchez_5753",
+    "instruction": "Your user id is anya_sanchez_5753. You want to find a direct flight from Miami to Chicago on May 17. You prefer not to have any stopovers. If and only if no direct flights are available, you are open to considering flights with one stopover. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile, so you do not prefer to provide it. You have no immediate urgency but would appreciate a timely search.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 19,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is sophia_martin_4574. You want to confirm your seat selection and meal preference for reservation MFRB94.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "MFRB94"
-        }
-      }
-    ],
-    "user_id": "sophia_martin_4574",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 49,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is mason_johansson_3174. You need to check your reservation 91ZD2J to confirm your seat assignment and ensure all travel details are correct.",
+    "user_id": "mason_johansson_3174",
     "actions": [
       {
         "name": "get_reservation_details",
@@ -1597,92 +281,12 @@
         }
       }
     ],
-    "user_id": "mason_johansson_3174",
+    "instruction": "Your user id is mason_johansson_3174. You want to retrieve the details of your reservation with the id you remember as 91ZD2J. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked. If and only if the agent needs further identification, you will provide additional details as requested.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 20,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is ethan_davis_3996. You want to verify the seating arrangements for your reservation I2URCD as you plan to travel with a companion.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "I2URCD"
-        }
-      }
-    ],
-    "user_id": "ethan_davis_3996",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 81,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is sophia_garcia_4224. Please access the airport directory to view the complete list of available airports for your travel arrangements.",
-    "actions": [
-      {
-        "name": "list_all_airports",
-        "kwargs": {}
-      }
-    ],
-    "user_id": "sophia_garcia_4224",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 50,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is noah_martin_7498. You want to verify the seating arrangements for your reservation 6UJKDA to ensure comfort during your upcoming flight.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "6UJKDA"
-        }
-      }
-    ],
-    "user_id": "noah_martin_7498",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 80,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is aarav_rossi_9663. You want to confirm your seat assignment and meal preference for reservation IAANOV.",
+    "user_id": "aarav_rossi_9663",
     "actions": [
       {
         "name": "get_reservation_details",
@@ -1691,118 +295,12 @@
         }
       }
     ],
-    "user_id": "aarav_rossi_9663",
+    "instruction": "Your user id is aarav_rossi_9663. You want to retrieve the details of your upcoming reservation (reservation id not remembered) to ensure everything is in order. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You are calm and patient, and you rely on the agent to guide you through this process.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 21,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is mei_thomas_2630. You want to verify the seating arrangements and baggage allowance for your reservation U1YV6I.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "U1YV6I"
-        }
-      }
-    ],
-    "user_id": "mei_thomas_2630",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 82,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is daiki_patel_1917. You want to check your reservation 7WKBKD details to ensure seat selection and meal preferences are confirmed for your upcoming flight.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "7WKBKD"
-        }
-      }
-    ],
-    "user_id": "daiki_patel_1917",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 52,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is anya_lee_9572. You want to check your reservation ABB0M7 to confirm the seat selection and meal preferences for your upcoming flight.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "ABB0M7"
-        }
-      }
-    ],
-    "user_id": "anya_lee_9572",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 23,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is harper_lopez_2390. You want to review your account details, including your membership status and any linked services.",
-    "actions": [
-      {
-        "name": "get_user_details",
-        "kwargs": {
-          "user_id": "harper_lopez_2390"
-        }
-      }
-    ],
-    "user_id": "harper_lopez_2390",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 51,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is noah_sanchez_4225. You want to verify the seating arrangements for reservation AQSRNQ to ensure your preferences are met.",
+    "user_id": "noah_sanchez_4225",
     "actions": [
       {
         "name": "get_reservation_details",
@@ -1811,164 +309,38 @@
         }
       }
     ],
-    "user_id": "noah_sanchez_4225",
+    "instruction": "Your user id is noah_sanchez_4225. You want to get the details of your reservation. You have the reservation id saved but prefer not to share additional personal information unless specifically requested. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked. If and only if the reservation cannot be found, you are open to verifying any other information necessary to retrieve it.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 22,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is sofia_ahmed_9069. You want to view your account details to ensure everything is up-to-date.",
-    "actions": [
-      {
-        "name": "get_user_details",
-        "kwargs": {
-          "user_id": "sofia_ahmed_9069"
-        }
-      }
-    ],
-    "user_id": "sofia_ahmed_9069",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 83,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is amelia_li_2415. You need to confirm the details of your reservation NUCNX0 to ensure all travel plans are in order.",
+    "user_id": "anya_lee_9572",
     "actions": [
       {
         "name": "get_reservation_details",
         "kwargs": {
-          "reservation_id": "NUCNX0"
+          "reservation_id": "ABB0M7"
         }
       }
     ],
-    "user_id": "amelia_li_2415",
+    "instruction": "Your user id is anya_lee_9572. You need to retrieve the details of your existing reservation. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If there are any payment details required, you prefer not to provide them unless absolutely necessary.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 84,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is raj_garcia_3316. You want to verify your reservation Z7W1AC to ensure all details are correct before your upcoming trip.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "Z7W1AC"
-        }
-      }
-    ],
-    "user_id": "raj_garcia_3316",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 53,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is mei_johnson_4931. Please display a list of all available airports for your next travel plan.",
+    "user_id": "mei_johnson_4931",
     "actions": [
       {
         "name": "list_all_airports",
         "kwargs": {}
       }
     ],
-    "user_id": "mei_johnson_4931",
+    "instruction": "Your user id is mei_johnson_4931. You are planning a trip and need to know all available airports. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If you need to provide any payment information, you prefer using your certificate first. If and only if the certificate is not accepted, you will use your 7447 card.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 24,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is anya_khan_1074. You need to check your reservation 77VWO5 to confirm the seating arrangements for your upcoming flight as a silver member.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "77VWO5"
-        }
-      }
-    ],
-    "user_id": "anya_khan_1074",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 85,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is mohamed_martin_1679. You need to check your reservation V7NBLQ to confirm the flight details and seating arrangements before your trip.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "V7NBLQ"
-        }
-      }
-    ],
-    "user_id": "mohamed_martin_1679",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 26,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is anya_brown_2655. You want to verify your seating arrangements for reservation JEPRZB to ensure you are seated with your travel companions.",
+    "user_id": "anya_brown_2655",
     "actions": [
       {
         "name": "get_reservation_details",
@@ -1977,118 +349,26 @@
         }
       }
     ],
-    "user_id": "anya_brown_2655",
+    "instruction": "Your user id is anya_brown_2655. You need to retrieve the details of your current reservation, as there might be some confusion regarding your travel plans. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You are feeling a bit anxious about ensuring all details are correct, so prompt and accurate information is important to you.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 25,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is noah_khan_8166. You want to check your reservation Y1ZIDC to confirm your seating arrangement and baggage allowance before your upcoming trip.",
+    "user_id": "mohamed_martin_1679",
     "actions": [
       {
         "name": "get_reservation_details",
         "kwargs": {
-          "reservation_id": "Y1ZIDC"
+          "reservation_id": "V7NBLQ"
         }
       }
     ],
-    "user_id": "noah_khan_8166",
+    "instruction": "Your user id is mohamed_martin_1679. You need to inquire about the details of a reservation you made earlier, but you do not recall the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You are keen on understanding these details as soon as possible, so if and only if the agent needs more information to assist you, you are ready to provide any necessary context except for your birthday.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 86,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is emma_kim_9957. You want to check your reservation EHGLP3 to confirm the seating arrangements for your upcoming flight.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "EHGLP3"
-        }
-      }
-    ],
-    "user_id": "emma_kim_9957",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 55,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is mohamed_ahmed_3350. You need to check your reservation ZND99F to confirm the flight schedule and ensure your travel plans are set.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "ZND99F"
-        }
-      }
-    ],
-    "user_id": "mohamed_ahmed_3350",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 28,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is lei_kim_9517. You want to review your membership status and account preferences.",
-    "actions": [
-      {
-        "name": "get_user_details",
-        "kwargs": {
-          "user_id": "lei_kim_9517"
-        }
-      }
-    ],
-    "user_id": "lei_kim_9517",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 87,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is mohamed_silva_9265. You want to check the reservation K1NW8N details to confirm your travel itinerary and ensure there are no changes to your flight schedule.",
+    "user_id": "mohamed_silva_9265",
     "actions": [
       {
         "name": "get_reservation_details",
@@ -2097,190 +377,26 @@
         }
       }
     ],
-    "user_id": "mohamed_silva_9265",
+    "instruction": "Your user id is mohamed_silva_9265. You want to inquire about the details of your current reservation with the ID you cannot recall but you believe it begins with the letter 'K'. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 27,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is olivia_martin_3924. You need to review your reservation H0MVIE to verify the seat selection and baggage allowance as you're planning to pack for a long trip.",
+    "user_id": "mohamed_ahmed_3350",
     "actions": [
       {
         "name": "get_reservation_details",
         "kwargs": {
-          "reservation_id": "H0MVIE"
+          "reservation_id": "ZND99F"
         }
       }
     ],
-    "user_id": "olivia_martin_3924",
+    "instruction": "Your user id is mohamed_ahmed_3350. You want to inquire about the details of your reservation, but you do not remember the reservation id, so you need the agent to help retrieve it for you. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 56,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is fatima_anderson_7848. You want to verify the seating arrangements and meal preferences for your reservation TH87DD.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "TH87DD"
-        }
-      }
-    ],
-    "user_id": "fatima_anderson_7848",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 57,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is amelia_taylor_4937. You want to review your reservation PIMHHE to confirm your seat selection and meal preference for your upcoming flight.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "PIMHHE"
-        }
-      }
-    ],
-    "user_id": "amelia_taylor_4937",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 58,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is evelyn_smith_6580. You want to verify the seat assignment for your reservation 63QBEX to ensure you have an aisle seat for your upcoming flight.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "63QBEX"
-        }
-      }
-    ],
-    "user_id": "evelyn_smith_6580",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 1,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is sofia_santos_3403. You need to check your reservation JOHYVS to confirm the seating arrangements for your upcoming flight.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "JOHYVS"
-        }
-      }
-    ],
-    "user_id": "sofia_santos_3403",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 88,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is ethan_gonzalez_3910. You need to check your reservation 25DFCD to confirm the seating arrangements and baggage allowance for your upcoming flight.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "25DFCD"
-        }
-      }
-    ],
-    "user_id": "ethan_gonzalez_3910",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 30,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is liam_garcia_8705. You need to check your reservation 971W9L to confirm your seating preference and baggage allowance before your upcoming trip.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "971W9L"
-        }
-      }
-    ],
-    "user_id": "liam_garcia_8705",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 54,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is ivan_kim_3844. You want to ensure your seat preference is correctly updated for your reservation Q79V9W.",
+    "user_id": "ivan_kim_3844",
     "actions": [
       {
         "name": "get_reservation_details",
@@ -2289,46 +405,414 @@
         }
       }
     ],
-    "user_id": "ivan_kim_3844",
+    "instruction": "Your user id is ivan_kim_3844. You want to retrieve the details of your existing reservation. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked. If and only if the reservation details are not retrievable, you would be open to discussing alternative options with the agent.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 29,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is liam_jackson_9794. You want to review your account details and confirm your membership status.",
+    "user_id": "ethan_gonzalez_3910",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "25DFCD"
+        }
+      }
+    ],
+    "instruction": "Your user id is ethan_gonzalez_3910. You want to retrieve the details of your reservation, but you do not remember the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If the agent requires any additional information to locate your reservation, you prefer not to share sensitive details unless absolutely necessary.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "emma_jackson_2190",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "YKCIBO"
+        }
+      }
+    ],
+    "instruction": "Your user id is emma_jackson_2190. You want to retrieve the details of your reservation, though you cannot recall the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You prefer that the agent assists you in finding the reservation without requiring further information from you.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "daiki_patel_1917",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "7WKBKD"
+        }
+      }
+    ],
+    "instruction": "Your user id is daiki_patel_1917. You want to retrieve the details of your reservation but do not remember the reservation id exactly; however, the agent might find it under a similar reference. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if the agent cannot find the reservation, you are willing to provide more information if necessary.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "anya_brown_2655",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "JEPRZB"
+        }
+      }
+    ],
+    "instruction": "Your user id is anya_brown_2655. You want to retrieve the details for your existing reservation, but you do not remember the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if the agent asks for confirmation, you prefer to use your certificate for any additional charges.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "amelia_hernandez_8403",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "5JR4XX"
+        }
+      }
+    ],
+    "instruction": "Your user id is amelia_hernandez_8403. You want to retrieve the details of your reservation, but you do not recall your reservation id. If and only if the agent asks, you can provide additional information to help locate your booking. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If payment information is needed, you are open to discussing your options with the agent.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "liam_muller_3384",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "HDUF3Q"
+        }
+      }
+    ],
+    "instruction": "Your user id is liam_muller_3384. You want to inquire about the details of your current reservation, but you don't recall the reservation id. If and only if the details cannot be retrieved with the information available, you are open to providing additional information to assist the agent in locating your reservation. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "lucas_rossi_2421",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "J43KQ8"
+        }
+      }
+    ],
+    "instruction": "Your user id is lucas_rossi_2421. You need to review the details of an existing reservation, but you do not remember the reservation id. If the agent can find it, you want to confirm the flight details and ensure everything is in order. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. Please handle any sensitive information carefully, as you value your privacy.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "mohamed_silva_9265",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "K1NW8N"
+        }
+      }
+    ],
+    "instruction": "Your user id is mohamed_silva_9265. You need to retrieve the details of your reservation, but you do not recall the reservation ID. You are reactive to the agent and will not say anything that is not asked. If and only if the agent requires additional identification, your birthday is in your user profile so you do not prefer to provide it. You are comfortable waiting a bit for the information, but you want to ensure it's accurate and complete.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "mason_johansson_5154",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "RB9S17"
+        }
+      }
+    ],
+    "instruction": "Your user id is mason_johansson_5154. You need to retrieve the details of a current reservation associated with the reservation ID 'RB9S17'. You do not wish to provide your birthday as it is already in your user profile. You are reactive to the agent and will not say anything that is not asked. You have no specific payment or class preferences to declare at this moment, but if and only if the agent requires it, you are open to using your certificate or 7447 card for any necessary payments.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "mia_thomas_5479",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "DYKWMO"
+        }
+      }
+    ],
+    "instruction": "Your user id is mia_thomas_5479. You need details about your current reservation, but you do not remember the reservation id. If and only if asked, you can mention it involves travel plans in the upcoming month. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If payment methods or fares are discussed, you prefer to use available credits or certificates over direct card payments.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "emma_martin_8571",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "1JR46H"
+        }
+      }
+    ],
+    "instruction": "Your user id is emma_martin_8571. You want to retrieve the details of your reservation but do not remember the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You do not have any payment preferences to express at this moment, as you are only seeking information about your existing booking.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "liam_sanchez_8204",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "Q17Y7B"
+        }
+      }
+    ],
+    "instruction": "Your user id is liam_sanchez_8204. You want to retrieve the details for your reservation but do not remember the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You prefer not to discuss payment methods at this time unless absolutely necessary. If and only if the agent needs additional information to locate your reservation, you are open to providing any other necessary details.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "aarav_sanchez_7773",
+    "actions": [
+      {
+        "name": "list_all_airports",
+        "kwargs": {}
+      }
+    ],
+    "instruction": "Your user id is aarav_sanchez_7773. You are planning a trip and need to gather information about all available airports. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if there are any specific regional restrictions or preferences you need to be aware of, you want the agent to inform you about them.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "raj_davis_3310",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "M6N5DM"
+        }
+      }
+    ],
+    "instruction": "Your user id is raj_davis_3310. You want to check the details of your existing reservation. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if the agent needs additional information to proceed, you are willing to provide your reservation ID, which you have noted as M6N5DM.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "yara_garcia_1905",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "HXDUBJ"
+        }
+      }
+    ],
+    "instruction": "Your user id is yara_garcia_1905. You want to retrieve the details of your reservation, which you currently do not have at hand. If and only if the agent is unable to find your reservation using your name or other details, you are open to providing the reservation identifier from your records. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "omar_anderson_1185",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "32J3PL"
+        }
+      }
+    ],
+    "instruction": "Your user id is omar_anderson_1185. You want to obtain the details of your current reservation, but you do not recall the reservation ID. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You have no specific urgency, but you rely on the agent to guide you through accessing the reservation details. If and only if asked for further confirmation, you can provide additional information as needed.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "amelia_taylor_4937",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "LT77K6"
+        }
+      }
+    ],
+    "instruction": "Your user id is amelia_taylor_4937. You want to obtain the details of your reservation, but you do not remember the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if asked for verification, you prefer using your 7447 card for any necessary authentication.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "liam_taylor_6683",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "OWCNP2"
+        }
+      }
+    ],
+    "instruction": "Your user id is liam_taylor_6683. You want to inquire about the details of a reservation you currently have. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You are eager to get this information promptly as it is important for your travel planning. If and only if the agent needs additional information to locate your reservation, you are willing to provide your reservation id.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "harper_lopez_2390",
     "actions": [
       {
         "name": "get_user_details",
         "kwargs": {
-          "user_id": "liam_jackson_9794"
+          "user_id": "harper_lopez_2390"
         }
       }
     ],
-    "user_id": "liam_jackson_9794",
+    "instruction": "Your user id is harper_lopez_2390. You are contacting the agent to verify your current user details. You want the agent to confirm your information for accuracy, and you are reactive to the agent, meaning you will not say anything that is not asked. Your birthday is in your user profile, so you do not prefer to provide it during this interaction. You have no immediate urgency or emotional context attached to this request, and you are simply ensuring that your user profile is up-to-date for any future travel plans.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 89,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is ethan_nguyen_6045. You want to check your reservation L1QGWV to ensure your seat preferences are confirmed for your upcoming flight.",
+    "user_id": "sophia_martin_4574",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "MFRB94"
+        }
+      }
+    ],
+    "instruction": "Your user id is sophia_martin_4574. You want to inquire about the details of your reservation, but you do not recall the reservation id, as it is 'MFRB94' in the system. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You are feeling a bit anxious to confirm the details, so prompt assistance would be appreciated.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "sophia_garcia_4224",
+    "actions": [
+      {
+        "name": "list_all_airports",
+        "kwargs": {}
+      }
+    ],
+    "instruction": "Your user id is sophia_garcia_4224. You are curious about the available airports for a potential trip and want a list of all airports. You are not in a rush, and you are simply gathering information for future travel plans. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile, so you do not prefer to provide it.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "harper_lopez_2390",
+    "actions": [
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "harper_lopez_2390"
+        }
+      }
+    ],
+    "instruction": "Your user id is harper_lopez_2390. You want the agent to retrieve your user details for verification purposes. If and only if the agent cannot automatically access your information, you are open to confirming essential details as needed, except your birthday, which is already in your user profile, so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "daiki_patel_1917",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "7WKBKD"
+        }
+      }
+    ],
+    "instruction": "Your user id is daiki_patel_1917. You want to get the details for your existing reservation, but you do not remember the reservation id, so you need assistance in retrieving this information. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If there are any further actions required after obtaining the reservation details, you will consider them at that time.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "raj_garcia_3316",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "Z7W1AC"
+        }
+      }
+    ],
+    "instruction": "Your user id is raj_garcia_3316. You want to inquire about the details of your upcoming reservation, but you do not recall the reservation ID. If prompted, you are able to provide any additional information that might help the agent retrieve your reservation, except for your birthday, which is stored in your user profile, so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked. If multiple reservations are found, you prefer to receive details of all, focusing on the one with the soonest departure date.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "liam_garcia_8705",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "971W9L"
+        }
+      }
+    ],
+    "instruction": "Your user id is liam_garcia_8705. You need to retrieve the details of your current reservation, though you don't remember the reservation ID. If and only if the agent asks for verification, your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked. If there are issues accessing the reservation details, you prefer to resolve them using your certificate first, and if necessary, you can use your 7447 card as a backup. You need this information promptly, so express any urgency to the agent, but maintain a calm demeanor throughout the interaction.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "emma_kim_9957",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "EHGLP3"
+        }
+      }
+    ],
+    "instruction": "Your user id is emma_kim_9957. You want to retrieve the details of your current reservation, but you do not remember the reservation ID. You are looking for information on your upcoming travel plans and any associated arrangements. Your birthday is in your user profile, so you do not prefer to provide it when asked. You are reactive to the agent and will not say anything that is not asked. If and only if additional payment details are required, you prefer to use your certificate if applicable.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "olivia_martin_3924",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "H0MVIE"
+        }
+      }
+    ],
+    "instruction": "Your user id is olivia_martin_3924. You want to retrieve the details of your reservation, but you do not remember the reservation id. If and only if the agent requires additional information, you are willing to provide any necessary details except your birthday, which is in your user profile, so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked. If payment information is needed, you prefer not to provide it unless essential.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "fatima_anderson_7848",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "TH87DD"
+        }
+      }
+    ],
+    "instruction": "Your user id is fatima_anderson_7848. You want to inquire about the details of an existing reservation but do not remember the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "amelia_taylor_4937",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "PIMHHE"
+        }
+      }
+    ],
+    "instruction": "Your user id is amelia_taylor_4937. You want to retrieve the details of your existing reservation. If and only if the reservation details are not easily available, you are open to providing the reservation ID if needed, but you prefer the agent to look it up using your profile. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You have a calm demeanor and are not in a rush, preferring a thorough and accurate response over speed.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "ethan_nguyen_6045",
     "actions": [
       {
         "name": "get_reservation_details",
@@ -2337,46 +821,12 @@
         }
       }
     ],
-    "user_id": "ethan_nguyen_6045",
+    "instruction": "Your user id is ethan_nguyen_6045. You want to inquire about the details of your upcoming reservation. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if additional information is needed beyond what's in your profile, you're open to providing it as requested by the agent.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 59,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
   },
   {
-    "instruction": "Your user id is lucas_martin_2833. You want to check your reservation FFMQB1 to ensure your seat selection for the upcoming flight is confirmed.",
-    "actions": [
-      {
-        "name": "get_reservation_details",
-        "kwargs": {
-          "reservation_id": "FFMQB1"
-        }
-      }
-    ],
-    "user_id": "lucas_martin_2833",
-    "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 90,
-      "payment_corrections_applied": false
-    }
-  },
-  {
-    "instruction": "Your user id is yusuf_gonzalez_6436. You need to check your reservation Z9B996 to confirm the updated seating arrangement and meal preferences.",
+    "user_id": "yusuf_gonzalez_6436",
     "actions": [
       {
         "name": "get_reservation_details",
@@ -2385,18 +835,568 @@
         }
       }
     ],
-    "user_id": "yusuf_gonzalez_6436",
+    "instruction": "Your user id is yusuf_gonzalez_6436. You want to inquire about the details of your existing reservation, but you do not recall the reservation ID. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if prompted for additional information, you would prefer to verify using known details like your travel dates or destinations. You are patient and do not express urgency unless the agent indicates a need for quick action.",
     "difficulty": "easy",
-    "synthetic_generation": {
-      "method": "backtranslation",
-      "source": "validated_action_sequence",
-      "generated_timestamp": "2025-09-27T22:22:20.445337"
-    },
-    "trajectory_metadata": {
-      "is_valid": true,
-      "error_message": null,
-      "validation_sequence_number": 60,
-      "payment_corrections_applied": false
-    }
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "harper_smith_3981",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "KT71XO"
+        }
+      }
+    ],
+    "instruction": "Your user id is harper_smith_3981. You need to check the details of your existing reservation, but you do not remember the reservation ID. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You are patient and not in a rush, so there's no urgency in retrieving this information.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "yara_silva_8071",
+    "actions": [
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "yara_silva_8071"
+        }
+      }
+    ],
+    "instruction": "Your user id is yara_silva_8071. You want to ensure that your profile details are up-to-date before proceeding with any travel arrangements. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If any information is missing or needs verification, you expect the agent to assist you accordingly.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "harper_kovacs_3082",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "AYVIYO"
+        }
+      }
+    ],
+    "instruction": "Your user id is harper_kovacs_3082. You want to retrieve the details of your reservation, but you do not recall the reservation id. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked. If the agent needs to confirm your identity, you prefer not to provide additional personal information unless absolutely necessary.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "amelia_li_2415",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "NUCNX0"
+        }
+      }
+    ],
+    "instruction": "Your user id is amelia_li_2415. You want to inquire about the details of your existing flight reservation, but you do not remember the reservation ID. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if the agent requires additional information to retrieve the reservation, you are willing to provide alternative details that might help.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "liam_muller_3384",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "HDUF3Q"
+        }
+      }
+    ],
+    "instruction": "Your user id is liam_muller_3384. You want to retrieve the details of your current reservation, but you do not remember the reservation id. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "chen_lopez_2451",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "71Y56R"
+        }
+      }
+    ],
+    "instruction": "Your user id is chen_lopez_2451. You want to retrieve the details of your reservation (reservation id not remembered). You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If there are any payment methods associated with viewing details, you prefer to use your certificate first. If and only if the certificate cannot be used, you are comfortable using your 7447 card for any charges that may apply.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "lucas_khan_1131",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "AVX2IV"
+        }
+      }
+    ],
+    "instruction": "Your user id is lucas_khan_1131. You need to retrieve the details of your reservation, but you don't recall the reservation ID. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if the reservation details cannot be retrieved, do you prefer the agent to check using your last payment method, which is your certificate.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "noah_wilson_9692",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "XZE9VN"
+        }
+      }
+    ],
+    "instruction": "Your user id is noah_wilson_9692. You want to retrieve details for a reservation you have, but you do not remember the reservation id. If and only if the reservation id cannot be located, you are open to providing alternative information that might help. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You are feeling a bit anxious because you need this information promptly.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "juan_brown_2465",
+    "actions": [
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "juan_brown_2465"
+        }
+      }
+    ],
+    "instruction": "Your user id is juan_brown_2465. You want the agent to confirm your user details for your upcoming travel plans. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked. If there are any questions regarding payment or additional personal information, you prefer the agent to refer to the existing information stored in your profile.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "harper_davis_5069",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "WLXS0L"
+        }
+      }
+    ],
+    "instruction": "Your user id is harper_davis_5069. You want to retrieve the details for a specific reservation but cannot remember the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if asked to verify your identity, you prefer to provide information available in your user profile.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "olivia_garcia_3026",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "AO5N50"
+        }
+      }
+    ],
+    "instruction": "Your user id is olivia_garcia_3026. You want to check the details of your upcoming reservation, but you do not remember the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You are eager to get confirmation about your flight details as soon as possible.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "liam_wilson_9173",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "238F2V"
+        }
+      }
+    ],
+    "instruction": "Your user id is liam_wilson_9173. You want to retrieve the details of your reservation but do not remember the reservation id. If and only if the agent asks, you are willing to provide any necessary verification, except your birthday, as it is in your user profile and you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "olivia_anderson_8651",
+    "actions": [
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "olivia_anderson_8651"
+        }
+      }
+    ],
+    "instruction": "Your user id is olivia_anderson_8651. You are calling to confirm or update personal details associated with your account. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If the agent needs to verify your identity, you are prepared to answer security questions, but only if asked. You are not in a hurry, so you will patiently follow the agent's guidance during the process.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "amelia_davis_7067",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "ZAC5BK"
+        }
+      }
+    ],
+    "instruction": "Your user id is amelia_davis_7067. You want to inquire about the details of your existing reservation, but you do not recall the reservation ID. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if the agent cannot retrieve your reservation details, you will consider providing additional information as requested.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "evelyn_brown_8513",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "0TN6YG"
+        }
+      }
+    ],
+    "instruction": "Your user id is evelyn_brown_8513. You want to retrieve the details of your reservation for an upcoming trip, but you do not remember the reservation ID. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If there are multiple reservations, you prefer to get information on the one with the earliest departure date.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "raj_khan_9352",
+    "actions": [
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "raj_khan_9352"
+        }
+      }
+    ],
+    "instruction": "Your user id is raj_khan_9352. You are seeking assistance from the agent to retrieve your user details. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You are patient and await further questions or instructions from the agent to proceed with any additional requests.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "lei_anderson_2319",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "KFSKBR"
+        }
+      }
+    ],
+    "instruction": "Your user id is lei_anderson_2319. You want to know the details of your current reservation but can't recall the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You are feeling a bit anxious about ensuring your travel details are correct, so you would appreciate a prompt response from the agent.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "lei_ito_5790",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "6ZQNOS"
+        }
+      }
+    ],
+    "instruction": "Your user id is lei_ito_5790. You need to retrieve the details for a specific reservation, but you do not remember the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If there are any further steps required, you will rely on the agent to guide you through them.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "mia_ahmed_3713",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "M2RFTA"
+        }
+      }
+    ],
+    "instruction": "Your user id is mia_ahmed_3713. You want to retrieve the reservation details for your upcoming trip. You do not remember the reservation id, so you are relying on the agent to find it for you. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked. If and only if the reservation cannot be located, you are open to providing additional information upon request to assist in the search.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "noah_martin_7498",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "6UJKDA"
+        }
+      }
+    ],
+    "instruction": "Your user id is noah_martin_7498. You want to check the details of your upcoming reservation, but you do not recall the reservation ID. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You prefer the agent to retrieve the reservation details for you.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "ethan_davis_3996",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "I2URCD"
+        }
+      }
+    ],
+    "instruction": "Your user id is ethan_davis_3996. You want to retrieve the details for your current reservation, but you don't remember the reservation id. If and only if you are prompted for any information that is already in your user profile, such as your birthday, you prefer not to provide it. You are reactive to the agent and will not say anything that is not asked.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "mei_thomas_2630",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "U1YV6I"
+        }
+      }
+    ],
+    "instruction": "Your user id is mei_thomas_2630. You want to retrieve the details of a specific reservation, though you do not recall the reservation id. You prefer the agent to ask for necessary information, as you are reactive and will not provide details unless prompted. Your birthday is in your user profile, so you do not prefer to provide it. If and only if additional identification is required, you are open to verifying your identity with your stored personal details.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "sofia_ahmed_9069",
+    "actions": [
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "sofia_ahmed_9069"
+        }
+      }
+    ],
+    "instruction": "Your user id is sofia_ahmed_9069. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "amelia_li_2415",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "NUCNX0"
+        }
+      }
+    ],
+    "instruction": "Your user id is amelia_li_2415. You want to inquire about the details of your reservation, which you cannot recall fully, but the reservation id is NUCNX0. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "anya_khan_1074",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "77VWO5"
+        }
+      }
+    ],
+    "instruction": "Your user id is anya_khan_1074. You want to retrieve the details of your existing reservation for further review. If and only if there are any discrepancies or changes needed in your itinerary, you will decide on the next steps. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "noah_khan_8166",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "Y1ZIDC"
+        }
+      }
+    ],
+    "instruction": "Your user id is noah_khan_8166. You want to inquire about the details of your existing reservation, but you do not remember the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You are not in a hurry, but you would appreciate the information as soon as it's convenient.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "lei_kim_9517",
+    "actions": [
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "lei_kim_9517"
+        }
+      }
+    ],
+    "instruction": "Your user id is lei_kim_9517. You are planning a trip and require the agent to first confirm your user details. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You want to ensure all personal details are correctly captured in your profile before proceeding with any bookings or inquiries.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "sofia_santos_3403",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "JOHYVS"
+        }
+      }
+    ],
+    "instruction": "Your user id is sofia_santos_3403. You want to retrieve the details of your reservation, but you do not remember the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "liam_jackson_9794",
+    "actions": [
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "liam_jackson_9794"
+        }
+      }
+    ],
+    "instruction": "Your user id is liam_jackson_9794. You want the agent to verify your user details to ensure everything is up-to-date, given your recent travels. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You are generally calm but expect efficiency in handling your request. If and only if there's an issue with your account details, you prefer to be contacted via email rather than a phone call.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "lucas_martin_2833",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "FFMQB1"
+        }
+      }
+    ],
+    "instruction": "Your user id is lucas_martin_2833. You want to retrieve the details of your upcoming reservation. You are reactive to the agent and will not say anything that is not asked. If you need to provide information, your birthday is in your user profile so you do not prefer to provide it. Remember to maintain privacy and use discretion when sharing details.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "noah_muller_9847",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "SDZQKO"
+        }
+      }
+    ],
+    "instruction": "Your user id is noah_muller_9847. You want to retrieve the details of your current reservation. If and only if the agent needs additional information, you will provide the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "anya_anderson_8280",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "ZXIYE7"
+        }
+      }
+    ],
+    "instruction": "Your user id is anya_anderson_8280. You want to retrieve the details for a reservation, but you do not remember the specific reservation id. You will not provide additional information such as your birthday, as it is already in your user profile. You are reactive to the agent and will not say anything that is not asked. If and only if further details are required to identify the reservation, you are willing to assist with any non-sensitive information.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "ethan_nguyen_7360",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "G2LTC4"
+        }
+      }
+    ],
+    "instruction": "Your user id is ethan_nguyen_7360. You need to retrieve the details of your reservation, but you cannot recall the reservation id. If and only if the reservation details are incomplete or missing, you are willing to provide additional necessary information as prompted by the agent. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "juan_lopez_1974",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "YFYFKQ"
+        }
+      }
+    ],
+    "instruction": "Your user id is juan_lopez_1974. You want to retrieve the details of a reservation but do not recall the reservation id explicitly. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if the agent cannot locate the reservation with this information, you would be willing to provide any other identifying details as requested.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "raj_garcia_4690",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "4NQCM5"
+        }
+      }
+    ],
+    "instruction": "Your user id is raj_garcia_4690. You want to retrieve the details of your existing reservation but cannot recall the reservation id. If and only if the agent needs further information, you are willing to confirm the trip dates or destinations. However, you prefer not to provide your birthday because it is already in your user profile. You are reactive to the agent and will not say anything that is not asked. You tend to be concise and direct in your communication, ensuring efficiency and clarity in your interactions.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "lucas_wilson_8118",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "I6XC2H"
+        }
+      }
+    ],
+    "instruction": "Your user id is lucas_wilson_8118. You need to retrieve the details for a reservation, but you don't remember the specifics except for the reservation id, which is 'I6XC2H'. You do not prefer to provide your birthday as it is already in your user profile. If and only if the agent asks for additional information, you will provide it. You are reactive to the agent and will not say anything that is not asked.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "evelyn_smith_6580",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "63QBEX"
+        }
+      }
+    ],
+    "instruction": "Your user id is evelyn_smith_6580. You want to retrieve the details of your reservation but you do not remember the reservation ID. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If the reservation details include sensitive information, you prefer to verify it through secure methods.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "chen_lee_6825",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "JW6LEQ"
+        }
+      }
+    ],
+    "instruction": "Your user id is chen_lee_6825. You want to retrieve the details of your reservation, for which the reservation ID is not remembered but stored in your profile. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile, so you do not prefer to provide it. You have no specific payment or class preferences for this inquiry, but if any changes are needed, you prefer to be informed of all options.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "emma_jackson_2190",
+    "actions": [
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "emma_jackson_2190"
+        }
+      }
+    ],
+    "instruction": "Your user id is emma_jackson_2190. You are contacting the agent to verify your user details. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If any payment information is required, you prefer to use your certificate first. If and only if the certificate cannot cover the amount, you will use your 7447 card for the remaining balance.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
+  },
+  {
+    "user_id": "amelia_nguyen_7778",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "U7QTYY"
+        }
+      }
+    ],
+    "instruction": "Your user id is amelia_nguyen_7778. You want to inquire about the details of your current reservation. You expect the agent to retrieve the information for you without needing any additional details from your side, as you are reactive to the agent and will not say anything that is not asked. Since your birthday is in your user profile, you do not prefer to provide it again. If and only if the agent cannot retrieve your reservation details directly, you are open to providing minimal necessary information to assist them.",
+    "difficulty": "easy",
+    "method": "few_shot_learning"
   }
 ]

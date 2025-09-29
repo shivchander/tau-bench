@@ -1,0 +1,7373 @@
+[
+  {
+    "user_id": "chen_hernandez_2608",
+    "difficulty": "medium",
+    "target_action_count": 5,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "OC39IW",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT197",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT289",
+              "date": "2024-05-29"
+            }
+          ],
+          "payment_id": "credit_card_8453507"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "V25KYO"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "chen_hernandez_2608",
+          "origin": "EWR",
+          "destination": "LGA",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT270",
+              "date": "2024-05-21"
+            },
+            {
+              "flight_number": "HAT087",
+              "date": "2024-05-21"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Chen",
+              "last_name": "Hernandez",
+              "dob": "1990-08-26"
+            },
+            {
+              "first_name": "Liam",
+              "last_name": "Nguyen",
+              "dob": "1960-08-07"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_8453507",
+              "amount": 554
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "MM67S8",
+          "total_baggages": 2,
+          "nonfree_baggages": 1,
+          "payment_id": "credit_card_6123046"
+        }
+      },
+      {
+        "name": "send_certificate",
+        "kwargs": {
+          "user_id": "chen_hernandez_2608",
+          "amount": 50
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "harper_wilson_8866",
+    "difficulty": "medium",
+    "target_action_count": 5,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "EDW7JL"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "EDW7JL",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT112",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT047",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT011",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT082",
+              "date": "2024-05-19"
+            }
+          ],
+          "payment_id": "credit_card_2968427"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "EDW7JL",
+          "total_baggages": 2,
+          "nonfree_baggages": 1,
+          "payment_id": "gift_card_9884102"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "GQ8WB2"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "harper_wilson_8866",
+          "origin": "LGA",
+          "destination": "SFO",
+          "flight_type": "round_trip",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT002",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT278",
+              "date": "2024-05-20"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Harper",
+              "last_name": "Wilson",
+              "dob": "1990-05-15"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_1079706",
+              "amount": 100
+            },
+            {
+              "payment_id": "gift_card_2397458",
+              "amount": 146
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "insurance": "yes"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "chen_taylor_3219",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "PAJY3L",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT213",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT099",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT055",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT142",
+              "date": "2024-05-20"
+            }
+          ],
+          "payment_id": "gift_card_8608365"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "PAJY3L",
+          "total_baggages": 2,
+          "nonfree_baggages": 1,
+          "payment_id": "gift_card_8608365"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "RBAT3I"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "chen_taylor_3219",
+          "origin": "ORD",
+          "destination": "DFW",
+          "flight_type": "round_trip",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT238",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT170",
+              "date": "2024-05-20"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Olivia",
+              "last_name": "Kovacs",
+              "dob": "1958-10-19"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_4765255",
+              "amount": 250
+            },
+            {
+              "payment_id": "gift_card_8608365",
+              "amount": 91
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "raj_sanchez_7340",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "MZDDS4"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "MZDDS4",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT050",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT228",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT202",
+              "date": "2024-05-23"
+            }
+          ],
+          "payment_id": "credit_card_7891819"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "MZDDS4",
+          "total_baggages": 4,
+          "nonfree_baggages": 1,
+          "payment_id": "gift_card_4964153"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "raj_sanchez_7340",
+          "origin": "MCO",
+          "destination": "JFK",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT014",
+              "date": "2024-05-19"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Olivia",
+              "last_name": "Taylor",
+              "dob": "1976-06-27"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_4594761",
+              "amount": 150
+            },
+            {
+              "payment_id": "gift_card_1591784",
+              "amount": 57
+            },
+            {
+              "payment_id": "credit_card_7891819",
+              "amount": 67
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "anya_lee_9572",
+    "difficulty": "medium",
+    "target_action_count": 5,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "ABB0M7"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "ABB0M7",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT011",
+              "date": "2024-05-28"
+            },
+            {
+              "flight_number": "HAT163",
+              "date": "2024-05-28"
+            },
+            {
+              "flight_number": "HAT186",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT099",
+              "date": "2024-05-30"
+            }
+          ],
+          "payment_id": "credit_card_4589036"
+        }
+      },
+      {
+        "name": "calculate",
+        "kwargs": {
+          "expression": "(197 * 2 * 1) + (99 * 2 * 1) + (71 * 2 * 1) + (154 * 2 * 1)"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "ABB0M7",
+          "total_baggages": 2,
+          "nonfree_baggages": 2,
+          "payment_id": "credit_card_9909970"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "ACE9Z1"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "anya_lee_3112",
+    "difficulty": "medium",
+    "target_action_count": 3,
+    "actions": [
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "NMFZ8Z"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "anya_lee_3112",
+          "origin": "PHL",
+          "destination": "DEN",
+          "flight_type": "round_trip",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT122",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT262",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT105",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT271",
+              "date": "2024-05-20"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Anya",
+              "last_name": "Lee"
+            },
+            {
+              "first_name": "Mei",
+              "last_name": "Martin",
+              "dob": "1986-09-15"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "gift_card_1406984",
+              "amount": 73
+            },
+            {
+              "payment_id": "certificate_4567890",
+              "amount": 1676
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "PPFOZN",
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "payment_id": "gift_card_1406984"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "omar_patel_2218",
+    "difficulty": "medium",
+    "target_action_count": 3,
+    "actions": [
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "B8WY4K",
+          "total_baggages": 2,
+          "nonfree_baggages": 2,
+          "payment_id": "gift_card_4194895"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "32ZS5N",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT123",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT181",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT214",
+              "date": "2024-05-29"
+            },
+            {
+              "flight_number": "HAT159",
+              "date": "2024-05-30"
+            }
+          ],
+          "payment_id": "credit_card_5087987"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "omar_patel_2218",
+          "origin": "ATL",
+          "destination": "ORD",
+          "flight_type": "round_trip",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT227",
+              "date": "2024-05-16"
+            },
+            {
+              "flight_number": "HAT227",
+              "date": "2024-05-19"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Omar",
+              "last_name": "Patel",
+              "dob": "1990-01-01"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_9633193",
+              "amount": 250
+            },
+            {
+              "payment_id": "credit_card_7019609",
+              "amount": 0
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "insurance": "yes"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "mia_jackson_2156",
+    "difficulty": "medium",
+    "target_action_count": 3,
+    "actions": [
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "JBYKQ0"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "mia_jackson_2156",
+          "origin": "LAX",
+          "destination": "CLT",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT228",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT270",
+              "date": "2024-05-19"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Mia",
+              "last_name": "Jackson"
+            },
+            {
+              "first_name": "James",
+              "last_name": "Moore",
+              "dob": "1970-10-27"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "gift_card_4636647",
+              "amount": 178
+            },
+            {
+              "payment_id": "certificate_7504069",
+              "amount": 220
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "EJJRUB",
+          "total_baggages": 2,
+          "nonfree_baggages": 2,
+          "payment_id": "gift_card_4636647"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "anya_brown_2655",
+    "difficulty": "medium",
+    "target_action_count": 3,
+    "actions": [
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "JEPRZB"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "anya_brown_2655",
+          "origin": "EWR",
+          "destination": "MSP",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT208",
+              "date": "2024-05-20"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Sophia",
+              "last_name": "Li",
+              "dob": "1986-08-27"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "gift_card_9782382",
+              "amount": 198
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "9O1NCR",
+          "total_baggages": 2,
+          "nonfree_baggages": 0,
+          "payment_id": "gift_card_9402900"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "daiki_lopez_8334",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "N5XKBC",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT283",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT257",
+              "date": "2024-05-18"
+            }
+          ],
+          "payment_id": "gift_card_1140237"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "2GFKHR",
+          "total_baggages": 3,
+          "nonfree_baggages": 2,
+          "payment_id": "gift_card_6700138"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "SAJ8PY"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "daiki_lopez_8334",
+          "origin": "DEN",
+          "destination": "PHL",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT080",
+              "date": "2024-05-16"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Emma",
+              "last_name": "Santos",
+              "dob": "1955-03-23"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_4566418",
+              "amount": 195
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "mei_brown_7075",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "DB1Y70"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "mei_brown_7075",
+          "origin": "PHX",
+          "destination": "CLT",
+          "flight_type": "one_way",
+          "cabin": "basic_economy",
+          "flights": [
+            {
+              "flight_number": "HAT265",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT053",
+              "date": "2024-05-19"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Mei",
+              "last_name": "Brown"
+            },
+            {
+              "first_name": "Yusuf",
+              "last_name": "Silva"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_6761175",
+              "amount": 250
+            },
+            {
+              "payment_id": "gift_card_8987598",
+              "amount": 130
+            },
+            {
+              "payment_id": "credit_card_4920843",
+              "amount": 79
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        }
+      },
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "3JA7XV"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "3JA7XV",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT045",
+              "date": "2024-05-16"
+            },
+            {
+              "flight_number": "HAT194",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT182",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT153",
+              "date": "2024-05-20"
+            }
+          ],
+          "payment_id": "credit_card_4920843"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "ivan_brown_5554",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "DLCYQ9",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT046",
+              "date": "2024-05-08"
+            },
+            {
+              "flight_number": "HAT142",
+              "date": "2024-05-08"
+            },
+            {
+              "flight_number": "HAT202",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT193",
+              "date": "2024-05-18"
+            }
+          ],
+          "payment_id": "credit_card_8269856"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "DLCYQ9",
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "payment_id": "credit_card_8269856"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "8ZJN85"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "ivan_brown_5554",
+          "origin": "DEN",
+          "destination": "DFW",
+          "flight_type": "one_way",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT140",
+              "date": "2024-05-18"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Noah",
+              "last_name": "Wilson",
+              "dob": "1954-05-06"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_8269856",
+              "amount": 443
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "noah_li_4002",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "BLWUE2"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "BLWUE2",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT201",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT032",
+              "date": "2024-05-18"
+            }
+          ],
+          "payment_id": "gift_card_3839485"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "BLWUE2",
+          "total_baggages": 2,
+          "nonfree_baggages": 2,
+          "payment_id": "gift_card_5231103"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "noah_li_4002",
+          "origin": "MIA",
+          "destination": "LAX",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT019",
+              "date": "2024-05-19"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Mohamed",
+              "last_name": "Ahmed",
+              "dob": "1958-09-07"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_3052659",
+              "amount": 248
+            },
+            {
+              "payment_id": "certificate_7088174",
+              "amount": 60
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "insurance": "yes"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "mia_thomas_5479",
+    "difficulty": "medium",
+    "target_action_count": 5,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "DYKWMO"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "DYKWMO"
+        }
+      },
+      {
+        "name": "search_onestop_flight",
+        "kwargs": {
+          "origin": "EWR",
+          "destination": "LAS",
+          "date": "2024-05-16"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "mia_thomas_5479",
+          "origin": "EWR",
+          "destination": "LAS",
+          "flight_type": "round_trip",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT166",
+              "date": "2024-05-16"
+            },
+            {
+              "flight_number": "HAT131",
+              "date": "2024-05-16"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Harper",
+              "last_name": "Silva",
+              "dob": "1953-02-28"
+            },
+            {
+              "first_name": "Mia",
+              "last_name": "Thomas",
+              "dob": "1985-04-15"
+            },
+            {
+              "first_name": "Alex",
+              "last_name": "Doe",
+              "dob": "1990-06-20"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_8127453",
+              "amount": 1146
+            }
+          ],
+          "total_baggages": 3,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "DWXBW7",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT191",
+              "date": "2024-05-10"
+            },
+            {
+              "flight_number": "HAT262",
+              "date": "2024-05-10"
+            },
+            {
+              "flight_number": "HAT105",
+              "date": "2024-05-13"
+            },
+            {
+              "flight_number": "HAT020",
+              "date": "2024-05-13"
+            }
+          ],
+          "payment_id": "credit_card_8127453"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "amelia_ahmed_6605",
+    "difficulty": "medium",
+    "target_action_count": 2,
+    "actions": [
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "amelia_ahmed_6605",
+          "origin": "MIA",
+          "destination": "DEN",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT148",
+              "date": "2024-05-18"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Harper",
+              "last_name": "Santos",
+              "dob": "1958-02-18"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_7517120",
+              "amount": 250
+            },
+            {
+              "payment_id": "certificate_5224265",
+              "amount": 1
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 1,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "amelia_ahmed_6605",
+          "origin": "MIA",
+          "destination": "DEN",
+          "flight_type": "one_way",
+          "cabin": "basic_economy",
+          "flights": [
+            {
+              "flight_number": "HAT148",
+              "date": "2024-05-19"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Harper",
+              "last_name": "Santos",
+              "dob": "1958-02-18"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_7517120",
+              "amount": 364
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "mohamed_taylor_9830",
+    "difficulty": "medium",
+    "target_action_count": 5,
+    "actions": [
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "KY93IV",
+          "total_baggages": 3,
+          "nonfree_baggages": 1,
+          "payment_id": "gift_card_6470207"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "RSD7NA"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "mohamed_taylor_9830",
+          "origin": "PHX",
+          "destination": "JFK",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT267",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT100",
+              "date": "2024-05-20"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Lucas",
+              "last_name": "Ito",
+              "dob": "1977-10-07"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_4104573",
+              "amount": 433
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "WPK8DQ",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT292",
+              "date": "2024-05-19"
+            }
+          ],
+          "payment_id": "credit_card_4104573"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "mohamed_taylor_9830",
+          "origin": "JFK",
+          "destination": "MIA",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT060",
+              "date": "2024-05-19"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Lucas",
+              "last_name": "Ito",
+              "dob": "1977-10-07"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "gift_card_6470207",
+              "amount": 145
+            },
+            {
+              "payment_id": "gift_card_3822922",
+              "amount": 67
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "chen_patel_9446",
+    "difficulty": "medium",
+    "target_action_count": 5,
+    "actions": [
+      {
+        "name": "search_onestop_flight",
+        "kwargs": {
+          "origin": "LGA",
+          "destination": "CLT",
+          "date": "2024-05-19"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "chen_patel_9446",
+          "origin": "LGA",
+          "destination": "CLT",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT272",
+              "date": "2024-05-19"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Isabella",
+              "last_name": "Muller",
+              "dob": "1970-03-21"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "gift_card_2747099",
+              "amount": 5
+            },
+            {
+              "payment_id": "credit_card_7885560",
+              "amount": 179
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "chen_patel_9446"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "RES1",
+          "total_baggages": 2,
+          "nonfree_baggages": 2,
+          "payment_id": "credit_card_7885560"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "RES1"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "amelia_wilson_8288",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "NQUIQN"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "NQUIQN",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT006",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT037",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT067",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT194",
+              "date": "2024-05-20"
+            }
+          ],
+          "payment_id": "gift_card_8353376"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "FUKVSI"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "amelia_wilson_8288",
+          "origin": "PHX",
+          "destination": "PHL",
+          "flight_type": "round_trip",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT081",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT206",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT135",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT150",
+              "date": "2024-05-19"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Ava",
+              "last_name": "Wilson",
+              "dob": "1970-04-06"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_1020064",
+              "amount": 250
+            },
+            {
+              "payment_id": "gift_card_8353376",
+              "amount": 153
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "chen_anderson_9197",
+    "difficulty": "medium",
+    "target_action_count": 2,
+    "actions": [
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "PKPZRQ"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "chen_anderson_9197",
+          "origin": "DTW",
+          "destination": "EWR",
+          "flight_type": "round_trip",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT168",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT157",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT043",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT167",
+              "date": "2024-05-20"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Yara",
+              "last_name": "Jackson",
+              "dob": "1963-11-13"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_8096516",
+              "amount": 426
+            },
+            {
+              "payment_id": "gift_card_4985217",
+              "amount": 178
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "juan_johansson_1492",
+    "difficulty": "medium",
+    "target_action_count": 5,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "816Y7T"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "JXXVFF"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "juan_johansson_1492",
+          "origin": "CLT",
+          "destination": "DEN",
+          "flight_type": "round_trip",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT262",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT143",
+              "date": "2024-05-22"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Ivan",
+              "last_name": "Ahmed",
+              "dob": "1950-04-12"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_9197564",
+              "amount": 250
+            },
+            {
+              "payment_id": "credit_card_1500537",
+              "amount": 191
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "search_direct_flight",
+        "kwargs": {
+          "origin": "IAH",
+          "destination": "JFK",
+          "date": "2024-05-18"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "QTWQK7",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT082",
+              "date": "2024-05-12"
+            },
+            {
+              "flight_number": "HAT085",
+              "date": "2024-05-18"
+            }
+          ],
+          "payment_id": "credit_card_5856065"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "raj_moore_8640",
+    "difficulty": "medium",
+    "target_action_count": 2,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "JT8DB7",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT275",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT283",
+              "date": "2024-05-24"
+            },
+            {
+              "flight_number": "HAT144",
+              "date": "2024-05-29"
+            },
+            {
+              "flight_number": "HAT265",
+              "date": "2024-05-18"
+            }
+          ],
+          "payment_id": "credit_card_8507667"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "JT8DB7",
+          "total_baggages": 2,
+          "nonfree_baggages": 1,
+          "payment_id": "gift_card_5282321"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "chen_anderson_9197",
+    "difficulty": "medium",
+    "target_action_count": 3,
+    "actions": [
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "PKPZRQ"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "chen_anderson_9197",
+          "origin": "DTW",
+          "destination": "EWR",
+          "flight_type": "round_trip",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT168",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT157",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT043",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT167",
+              "date": "2024-05-20"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Chen",
+              "last_name": "Anderson",
+              "dob": "1980-02-15"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_8096516",
+              "amount": 500
+            },
+            {
+              "payment_id": "certificate_5342998",
+              "amount": 104
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "KE6SNX",
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "payment_id": "gift_card_4985217"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "noah_lopez_2532",
+    "difficulty": "medium",
+    "target_action_count": 5,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "FPJKQM",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT159",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT257",
+              "date": "2024-05-20"
+            }
+          ],
+          "payment_id": "credit_card_3623927"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "FPJKQM",
+          "total_baggages": 5,
+          "nonfree_baggages": 1,
+          "payment_id": "credit_card_3623927"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "noah_lopez_2532",
+          "origin": "PHX",
+          "destination": "LGA",
+          "flight_type": "one_way",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT066",
+              "date": "2024-05-20"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Evelyn",
+              "last_name": "Lee",
+              "dob": "1950-04-04"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_5542518",
+              "amount": 397
+            },
+            {
+              "payment_id": "credit_card_3623927",
+              "amount": 116
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "noah_lopez_2532"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "5XOFTB"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "aarav_garcia_1177",
+    "difficulty": "medium",
+    "target_action_count": 3,
+    "actions": [
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "UHDAHF"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "M05KNL",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT227",
+              "date": "2024-05-23"
+            },
+            {
+              "flight_number": "HAT139",
+              "date": "2024-05-23"
+            },
+            {
+              "flight_number": "HAT228",
+              "date": "2024-05-19"
+            }
+          ],
+          "payment_id": "gift_card_8887175"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "M05KNL",
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "payment_id": "gift_card_8887175"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "sophia_nguyen_1995",
+    "difficulty": "medium",
+    "target_action_count": 3,
+    "actions": [
+      {
+        "name": "update_reservation_passengers",
+        "kwargs": {
+          "reservation_id": "VDRMS2",
+          "passengers": [
+            {
+              "first_name": "Sophia",
+              "last_name": "Nguyen",
+              "dob": "1995-11-11"
+            },
+            {
+              "first_name": "Fatima",
+              "last_name": "Kim",
+              "dob": "1989-09-18"
+            },
+            {
+              "first_name": "Mohamed",
+              "last_name": "Garcia",
+              "dob": "1956-12-13"
+            }
+          ]
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "VDRMS2",
+          "total_baggages": 4,
+          "nonfree_baggages": 1,
+          "payment_id": "gift_card_3369847"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "VDRMS2",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT184",
+              "date": "2024-05-22"
+            },
+            {
+              "flight_number": "HAT247",
+              "date": "2024-05-26"
+            }
+          ],
+          "payment_id": "gift_card_3369847"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "noah_li_4002",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "BLWUE2"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "BLWUE2",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT201",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT032",
+              "date": "2024-05-19"
+            }
+          ],
+          "payment_id": "gift_card_3839485"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "BLWUE2",
+          "total_baggages": 4,
+          "nonfree_baggages": 4,
+          "payment_id": "gift_card_5231103"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "3XYW9B"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "mohamed_taylor_5128",
+    "difficulty": "medium",
+    "target_action_count": 2,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "4YCHG7",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT292",
+              "date": "2024-05-18"
+            }
+          ],
+          "payment_id": "credit_card_8590142"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "4YCHG7",
+          "total_baggages": 2,
+          "nonfree_baggages": 1,
+          "payment_id": "credit_card_8590142"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "chen_nguyen_2677",
+    "difficulty": "medium",
+    "target_action_count": 5,
+    "actions": [
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "5HVW7S"
+        }
+      },
+      {
+        "name": "search_onestop_flight",
+        "kwargs": {
+          "origin": "BOS",
+          "destination": "EWR",
+          "date": "2024-05-18"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "chen_nguyen_2677",
+          "origin": "BOS",
+          "destination": "EWR",
+          "flight_type": "round_trip",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT277",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT157",
+              "date": "2024-05-20"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Yusuf",
+              "last_name": "Nguyen",
+              "dob": "1975-12-05"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_2810906",
+              "amount": 627
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "VHV4BG",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT043",
+              "date": "2024-05-18"
+            }
+          ],
+          "payment_id": "credit_card_1677722"
+        }
+      },
+      {
+        "name": "search_direct_flight",
+        "kwargs": {
+          "origin": "EWR",
+          "destination": "CLT",
+          "date": "2024-05-19"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "james_patel_9828",
+    "difficulty": "medium",
+    "target_action_count": 5,
+    "actions": [
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "GV1N64",
+          "total_baggages": 6,
+          "nonfree_baggages": 3,
+          "payment_id": "gift_card_1642017"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "AAVMM8"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "james_patel_9828",
+          "origin": "MCO",
+          "destination": "DTW",
+          "flight_type": "one_way",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT214",
+              "date": "2024-05-21"
+            },
+            {
+              "flight_number": "HAT106",
+              "date": "2024-05-22"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "James",
+              "last_name": "Sanchez",
+              "dob": "1956-08-18"
+            },
+            {
+              "first_name": "Ava",
+              "last_name": "Rossi",
+              "dob": "1973-11-14"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "gift_card_1642017",
+              "amount": 128
+            },
+            {
+              "payment_id": "credit_card_1234567",
+              "amount": 4624
+            }
+          ],
+          "total_baggages": 3,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "james_patel_9828",
+          "origin": "SEA",
+          "destination": "ATL",
+          "flight_type": "round_trip",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT220",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT220",
+              "date": "2024-05-20"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "James",
+              "last_name": "Sanchez",
+              "dob": "1956-08-18"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_1234567",
+              "amount": 1950
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "update_reservation_passengers",
+        "kwargs": {
+          "reservation_id": "MQHHT6",
+          "passengers": [
+            {
+              "first_name": "Ava",
+              "last_name": "Rossi",
+              "dob": "1973-11-14"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "chen_nguyen_6691",
+    "difficulty": "medium",
+    "target_action_count": 2,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "AX3OXQ",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT139",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT197",
+              "date": "2024-05-18"
+            }
+          ],
+          "payment_id": "credit_card_9491838"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "chen_nguyen_6691",
+          "origin": "DEN",
+          "destination": "PHL",
+          "flight_type": "one_way",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT080",
+              "date": "2024-05-19"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Aarav",
+              "last_name": "Taylor",
+              "dob": "1980-05-19"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "gift_card_7144561",
+              "amount": 209
+            },
+            {
+              "payment_id": "credit_card_9800418",
+              "amount": 86
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "raj_johnson_6495",
+    "difficulty": "medium",
+    "target_action_count": 5,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "NA6PZ3"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "NA6PZ3",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT275",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT106",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT053",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT167",
+              "date": "2024-05-20"
+            }
+          ],
+          "payment_id": "credit_card_5296290"
+        }
+      },
+      {
+        "name": "calculate",
+        "kwargs": {
+          "expression": "(142 * 2 * 2) + (161 * 2 * 2) + (141 * 2 * 2) + (187 * 2 * 2) + (30 * 2)"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "NA6PZ3",
+          "total_baggages": 2,
+          "nonfree_baggages": 2,
+          "payment_id": "gift_card_3613186"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "raj_johnson_6495",
+          "origin": "LAX",
+          "destination": "ORD",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT090",
+              "date": "2024-05-18"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Sofia",
+              "last_name": "Jackson",
+              "dob": "1986-10-03"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_7153839",
+              "amount": 191
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "anya_johansson_1855",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "YL0RHR",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT254",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT127",
+              "date": "2024-05-20"
+            }
+          ],
+          "payment_id": "credit_card_2114702"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "YL0RHR",
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "payment_id": "gift_card_7865517"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "L0A0CE"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "anya_johansson_1855",
+          "origin": "EWR",
+          "destination": "MSP",
+          "flight_type": "one_way",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT208",
+              "date": "2024-05-16"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Emma",
+              "last_name": "Gonzalez",
+              "dob": "1984-10-10"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_9039426",
+              "amount": 150
+            },
+            {
+              "payment_id": "credit_card_2114702",
+              "amount": 129
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "aarav_sanchez_7773",
+    "difficulty": "medium",
+    "target_action_count": 5,
+    "actions": [
+      {
+        "name": "search_onestop_flight",
+        "kwargs": {
+          "origin": "MSP",
+          "destination": "JFK",
+          "date": "2024-05-17"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "aarav_sanchez_7773",
+          "origin": "MSP",
+          "destination": "JFK",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT248",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT240",
+              "date": "2024-05-18"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Emma",
+              "last_name": "Kovacs",
+              "dob": "1979-07-06"
+            },
+            {
+              "first_name": "Anya",
+              "last_name": "Ahmed",
+              "dob": "1975-04-09"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_8708059",
+              "amount": 500
+            },
+            {
+              "payment_id": "certificate_8159557",
+              "amount": 104
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 1,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "XYZ123",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT240",
+              "date": "2024-05-18"
+            }
+          ],
+          "payment_id": "certificate_3037686"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "XYZ123",
+          "total_baggages": 3,
+          "nonfree_baggages": 2,
+          "payment_id": "certificate_1675464"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "XYZ123"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "liam_sanchez_8204",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "XGS9D8",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT100",
+              "date": "2024-05-24"
+            },
+            {
+              "flight_number": "HAT069",
+              "date": "2024-05-25"
+            }
+          ],
+          "payment_id": "credit_card_7979469"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "Q17Y7B",
+          "total_baggages": 2,
+          "nonfree_baggages": 1,
+          "payment_id": "gift_card_3371116"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "ULO159"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "liam_sanchez_8204",
+          "origin": "LAS",
+          "destination": "ATL",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT007",
+              "date": "2024-05-19"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Olivia",
+              "last_name": "Lee",
+              "dob": "1959-08-23"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "gift_card_3641634",
+              "amount": 58
+            },
+            {
+              "payment_id": "credit_card_7979469",
+              "amount": 174
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "sofia_johnson_3271",
+    "difficulty": "medium",
+    "target_action_count": 5,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "DN1AG3",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT035",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT181",
+              "date": "2024-05-19"
+            }
+          ],
+          "payment_id": "gift_card_4828169"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "DN1AG3",
+          "total_baggages": 2,
+          "nonfree_baggages": 2,
+          "payment_id": "gift_card_1699712"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "sofia_johnson_3271",
+          "origin": "SEA",
+          "destination": "JFK",
+          "flight_type": "one_way",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT276",
+              "date": "2024-05-18"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Daiki",
+              "last_name": "Anderson",
+              "dob": "1975-07-10"
+            },
+            {
+              "first_name": "Yara",
+              "last_name": "Khan",
+              "dob": "1993-03-24"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_1344691",
+              "amount": 100
+            },
+            {
+              "payment_id": "gift_card_4828169",
+              "amount": 564
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "calculate",
+        "kwargs": {
+          "expression": "332 - (60*2 + 30*2)"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "5M7L8T",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT214",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT073",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT210",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT071",
+              "date": "2024-05-18"
+            }
+          ],
+          "payment_id": "gift_card_1699712"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "harper_lopez_2390",
+    "difficulty": "medium",
+    "target_action_count": 2,
+    "actions": [
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "harper_lopez_2390",
+          "origin": "SEA",
+          "destination": "SFO",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT274",
+              "date": "2024-05-17"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Juan",
+              "last_name": "Khan",
+              "dob": "1975-11-06"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_4721194",
+              "amount": 100
+            },
+            {
+              "payment_id": "certificate_1909532",
+              "amount": 34
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "harper_lopez_2390",
+          "origin": "PHX",
+          "destination": "SFO",
+          "flight_type": "one_way",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT032",
+              "date": "2024-05-18"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Juan",
+              "last_name": "Khan",
+              "dob": "1975-11-06"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_1909532",
+              "amount": 80
+            },
+            {
+              "payment_id": "credit_card_123456",
+              "amount": 419
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "liam_hernandez_9084",
+    "difficulty": "medium",
+    "target_action_count": 3,
+    "actions": [
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "liam_hernandez_9084",
+          "origin": "SEA",
+          "destination": "JFK",
+          "flight_type": "one_way",
+          "cabin": "basic_economy",
+          "flights": [
+            {
+              "flight_number": "HAT089",
+              "date": "2024-05-16"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Aarav",
+              "last_name": "Hernandez",
+              "dob": "1989-12-23"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_5521221",
+              "amount": 116
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "liam_hernandez_9084",
+          "origin": "SEA",
+          "destination": "JFK",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT089",
+              "date": "2024-05-17"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Aarav",
+              "last_name": "Hernandez",
+              "dob": "1989-12-23"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_4818483",
+              "amount": 146
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "liam_hernandez_9084",
+          "origin": "SEA",
+          "destination": "JFK",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT089",
+              "date": "2024-05-18"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Aarav",
+              "last_name": "Hernandez",
+              "dob": "1989-12-23"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_5521221",
+              "amount": 196
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "insurance": "yes"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "mia_taylor_2876",
+    "difficulty": "medium",
+    "target_action_count": 2,
+    "actions": [
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "mia_taylor_2876",
+          "origin": "MIA",
+          "destination": "LAX",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT232",
+              "date": "2024-05-19"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Olivia",
+              "last_name": "Thomas",
+              "dob": "1973-06-02"
+            },
+            {
+              "first_name": "Aarav",
+              "last_name": "Rossi",
+              "dob": "1964-12-03"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_5929972",
+              "amount": 150
+            },
+            {
+              "payment_id": "certificate_9682706",
+              "amount": 100
+            },
+            {
+              "payment_id": "gift_card_3112961",
+              "amount": 206
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 1,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "ABC123",
+          "total_baggages": 3,
+          "nonfree_baggages": 2,
+          "payment_id": "gift_card_3112961"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "amelia_li_7880",
+    "difficulty": "medium",
+    "target_action_count": 2,
+    "actions": [
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "amelia_li_7880",
+          "origin": "LGA",
+          "destination": "CLT",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT211",
+              "date": "2024-05-19"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Evelyn",
+              "last_name": "Martin",
+              "dob": "1994-05-23"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_3063140",
+              "amount": 270
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "amelia_li_7880",
+          "origin": "BOS",
+          "destination": "MCO",
+          "flight_type": "one_way",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT145",
+              "date": "2024-05-17"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Evelyn",
+              "last_name": "Martin",
+              "dob": "1994-05-23"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_3063140",
+              "amount": 334
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "anya_sanchez_5753",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "anya_sanchez_5753",
+          "origin": "SEA",
+          "destination": "LGA",
+          "flight_type": "one_way",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT121",
+              "date": "2024-05-16"
+            },
+            {
+              "flight_number": "HAT066",
+              "date": "2024-05-19"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Mia",
+              "last_name": "Wilson",
+              "dob": "1993-12-20"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_5186497",
+              "amount": 500
+            },
+            {
+              "payment_id": "credit_card_1000001",
+              "amount": 401
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 2,
+          "insurance": "no"
+        }
+      },
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "ABC123"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "ABC123",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT140",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT038",
+              "date": "2024-05-18"
+            }
+          ],
+          "payment_id": "credit_card_1000001"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "ABC123"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "liam_thomas_8955",
+    "difficulty": "medium",
+    "target_action_count": 3,
+    "actions": [
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "liam_thomas_8955",
+          "origin": "IAH",
+          "destination": "PHL",
+          "flight_type": "round_trip",
+          "cabin": "basic_economy",
+          "flights": [
+            {
+              "flight_number": "HAT138",
+              "date": "2024-05-16"
+            },
+            {
+              "flight_number": "HAT271",
+              "date": "2024-05-16"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Yara",
+              "last_name": "Jackson",
+              "dob": "1990-11-10"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_9844816",
+              "amount": 150
+            },
+            {
+              "payment_id": "credit_card_2502370",
+              "amount": 126
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "liam_thomas_8955",
+          "origin": "MCO",
+          "destination": "LAS",
+          "flight_type": "one_way",
+          "cabin": "basic_economy",
+          "flights": [
+            {
+              "flight_number": "HAT299",
+              "date": "2024-05-16"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Yara",
+              "last_name": "Jackson",
+              "dob": "1990-11-10"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_2502370",
+              "amount": 64
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "PREVIOUSLY_BOOKED_ID"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "isabella_garcia_4633",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "MHH4XU",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT052",
+              "date": "2024-05-05"
+            },
+            {
+              "flight_number": "HAT266",
+              "date": "2024-05-05"
+            },
+            {
+              "flight_number": "HAT085",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT136",
+              "date": "2024-05-17"
+            }
+          ],
+          "payment_id": "credit_card_3658511"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "C913YC"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "isabella_garcia_4633",
+          "origin": "MCO",
+          "destination": "MSP",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT298",
+              "date": "2024-05-17"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Isabella",
+              "last_name": "Garcia",
+              "dob": "1990-04-15"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "gift_card_7460058",
+              "amount": 162
+            },
+            {
+              "payment_id": "credit_card_3658511",
+              "amount": 63
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "XTL8SU"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "anya_sanchez_3274",
+    "difficulty": "medium",
+    "target_action_count": 2,
+    "actions": [
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "anya_sanchez_3274",
+          "origin": "ORD",
+          "destination": "ATL",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT223",
+              "date": "2024-05-18"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Isabella",
+              "last_name": "Santos",
+              "dob": "1990-04-14"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_4050952",
+              "amount": 150
+            },
+            {
+              "payment_id": "credit_card_default",
+              "amount": 41
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "Perform this step after the reservation ID is generated from the initial booking"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "noah_garcia_4365",
+    "difficulty": "medium",
+    "target_action_count": 2,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "RJQWGO",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT119",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT271",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT243",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT167",
+              "date": "2024-05-19"
+            }
+          ],
+          "payment_id": "credit_card_5429291"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "RJQWGO",
+          "total_baggages": 2,
+          "nonfree_baggages": 2,
+          "payment_id": "gift_card_3952479"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "olivia_jackson_7257",
+    "difficulty": "medium",
+    "target_action_count": 2,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "1Y59NZ",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT229",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT175",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT112",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT162",
+              "date": "2024-05-19"
+            }
+          ],
+          "payment_id": "credit_card_2480682"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "1Y59NZ",
+          "total_baggages": 5,
+          "nonfree_baggages": 2,
+          "payment_id": "credit_card_2480682"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "harper_ito_2309",
+    "difficulty": "medium",
+    "target_action_count": 3,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "MCO2H9",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT263",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT126",
+              "date": "2024-05-17"
+            }
+          ],
+          "payment_id": "credit_card_3005515"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "0LJQ9Y",
+          "total_baggages": 3,
+          "nonfree_baggages": 1,
+          "payment_id": "credit_card_1330512"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "1H7N3H"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "yara_sanchez_8382",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "33BKWP"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "yara_sanchez_8382",
+          "origin": "SEA",
+          "destination": "LAS",
+          "flight_type": "one_way",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT018",
+              "date": "2024-05-19"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "James",
+              "last_name": "Sanchez",
+              "dob": "1965-09-09"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "gift_card_8371729",
+              "amount": 247
+            },
+            {
+              "payment_id": "gift_card_8541816",
+              "amount": 1580
+            },
+            {
+              "payment_id": "certificate_6409849",
+              "amount": 8
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "H43D2Y",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT276",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT060",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT198",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT069",
+              "date": "2024-05-19"
+            }
+          ],
+          "payment_id": "gift_card_8541816"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "H6TTA1",
+          "total_baggages": 2,
+          "nonfree_baggages": 1,
+          "payment_id": "gift_card_8371729"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "ethan_garcia_7028",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "JNY9IX"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "ethan_garcia_7028",
+          "origin": "IAH",
+          "destination": "PHX",
+          "flight_type": "round_trip",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT180",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT123",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT152",
+              "date": "2024-05-20"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Ethan",
+              "last_name": "Garcia"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "gift_card_1955364",
+              "amount": 273
+            },
+            {
+              "payment_id": "gift_card_1693799",
+              "amount": 178
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "X38JYX",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT289",
+              "date": "2024-05-24"
+            },
+            {
+              "flight_number": "HAT197",
+              "date": "2024-05-24"
+            },
+            {
+              "flight_number": "HAT165",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT138",
+              "date": "2024-05-18"
+            }
+          ],
+          "payment_id": "gift_card_1693799"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "683OBU",
+          "total_baggages": 4,
+          "nonfree_baggages": 2,
+          "payment_id": "gift_card_1693799"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "noah_jackson_7027",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "LS1NEQ",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT084",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT242",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT027",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT162",
+              "date": "2024-05-20"
+            }
+          ],
+          "payment_id": "credit_card_2522320"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "LS1NEQ",
+          "total_baggages": 3,
+          "nonfree_baggages": 2,
+          "payment_id": "gift_card_1093667"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "noah_jackson_7027",
+          "origin": "PHX",
+          "destination": "JFK",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT242",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT025",
+              "date": "2024-05-20"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Noah",
+              "last_name": "Jackson",
+              "dob": "1990-05-12"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_1655492",
+              "amount": 243
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "OLXVJQ"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "sofia_kim_7287",
+    "difficulty": "medium",
+    "target_action_count": 3,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "KA7I60"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "KA7I60",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT160",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT167",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT191",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT262",
+              "date": "2024-05-20"
+            }
+          ],
+          "payment_id": "credit_card_9879898"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "KA7I60",
+          "total_baggages": 2,
+          "nonfree_baggages": 1,
+          "payment_id": "gift_card_6276644"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "harper_smith_3981",
+    "difficulty": "medium",
+    "target_action_count": 3,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "KT71XO",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT299",
+              "date": "2024-05-17"
+            }
+          ],
+          "payment_id": "credit_card_9955122"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "4WGAEF",
+          "total_baggages": 2,
+          "nonfree_baggages": 1,
+          "payment_id": "gift_card_7747327"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "harper_smith_3981",
+          "origin": "SEA",
+          "destination": "DFW",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT037",
+              "date": "2024-05-19"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Isabella",
+              "last_name": "Li",
+              "dob": "1968-10-09"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_9955122",
+              "amount": 117
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "yara_silva_8071",
+    "difficulty": "medium",
+    "target_action_count": 5,
+    "actions": [
+      {
+        "name": "search_onestop_flight",
+        "kwargs": {
+          "origin": "ATL",
+          "destination": "MCO",
+          "date": "2024-05-17"
+        }
+      },
+      {
+        "name": "search_onestop_flight",
+        "kwargs": {
+          "origin": "DTW",
+          "destination": "CLT",
+          "date": "2024-05-18"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "yara_silva_8071",
+          "origin": "ATL",
+          "destination": "MCO",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT010",
+              "date": "2024-05-17"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Yara",
+              "last_name": "Muller",
+              "dob": "1984-04-21"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_5006824",
+              "amount": 180
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "yara_silva_8071",
+          "origin": "DTW",
+          "destination": "CLT",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT191",
+              "date": "2024-05-18"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Yara",
+              "last_name": "Muller",
+              "dob": "1984-04-21"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_5006824",
+              "amount": 161
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "HAT191"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "ethan_nguyen_6045",
+    "difficulty": "medium",
+    "target_action_count": 2,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "UDIGI7",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT272",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT157",
+              "date": "2024-05-18"
+            }
+          ],
+          "payment_id": "credit_card_8005628"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "UDIGI7",
+          "total_baggages": 2,
+          "nonfree_baggages": 1,
+          "payment_id": "credit_card_8005628"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "juan_patel_6197",
+    "difficulty": "medium",
+    "target_action_count": 3,
+    "actions": [
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "4LHWQX"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "juan_patel_6197",
+          "origin": "CLT",
+          "destination": "MCO",
+          "flight_type": "one_way",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT216",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT235",
+              "date": "2024-05-20"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Ivan",
+              "last_name": "Johnson",
+              "dob": "1965-11-16"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "gift_card_9855408",
+              "amount": 261
+            },
+            {
+              "payment_id": "certificate_1925278",
+              "amount": 250
+            },
+            {
+              "payment_id": "certificate_7400868",
+              "amount": 250
+            },
+            {
+              "payment_id": "credit_card_7373445",
+              "amount": 1543
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "8LGW0E",
+          "total_baggages": 4,
+          "nonfree_baggages": 2,
+          "payment_id": "gift_card_5973120"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "daiki_lee_6144",
+    "difficulty": "medium",
+    "target_action_count": 5,
+    "actions": [
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "IIHXDG"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "daiki_lee_6144",
+          "origin": "PHL",
+          "destination": "SFO",
+          "flight_type": "one_way",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT199",
+              "date": "2024-05-19"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Daiki",
+              "last_name": "Lee",
+              "dob": "1992-07-14"
+            },
+            {
+              "first_name": "Raj",
+              "last_name": "Muller",
+              "dob": "1967-10-16"
+            },
+            {
+              "first_name": "Akira",
+              "last_name": "Nomura",
+              "dob": "1985-03-23"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "gift_card_5128346",
+              "amount": 262
+            },
+            {
+              "payment_id": "credit_card_6198952",
+              "amount": 1269
+            }
+          ],
+          "total_baggages": 3,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "DF89BM",
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "payment_id": "gift_card_3112961"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "DF89BM",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT079",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT020",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT263",
+              "date": "2024-05-24"
+            }
+          ],
+          "payment_id": "credit_card_6198952"
+        }
+      },
+      {
+        "name": "send_certificate",
+        "kwargs": {
+          "user_id": "daiki_lee_6144",
+          "amount": 50
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "mei_hernandez_9827",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "672VDE",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT103",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT271",
+              "date": "2024-05-17"
+            }
+          ],
+          "payment_id": "credit_card_9355028"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "672VDE",
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "payment_id": "credit_card_9355028"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "Z65U3F"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "mei_hernandez_9827",
+          "origin": "SFO",
+          "destination": "LAX",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT257",
+              "date": "2024-05-19"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Isabella",
+              "last_name": "Johansson",
+              "dob": "1971-09-14"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_3080156",
+              "amount": 100
+            },
+            {
+              "payment_id": "credit_card_9355028",
+              "amount": 28
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "evelyn_martin_3582",
+    "difficulty": "medium",
+    "target_action_count": 2,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "9V43HC",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT093",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT285",
+              "date": "2024-05-19"
+            }
+          ],
+          "payment_id": "credit_card_1351239"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "evelyn_martin_3582",
+          "origin": "LAX",
+          "destination": "DFW",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT187",
+              "date": "2024-05-18"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Aarav",
+              "last_name": "Rossi",
+              "dob": "1952-08-28"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "gift_card_2860331",
+              "amount": 140
+            },
+            {
+              "payment_id": "credit_card_1351239",
+              "amount": 40
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "mei_thomas_2630",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "U1YV6I",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT101",
+              "date": "2024-05-17"
+            }
+          ],
+          "payment_id": "credit_card_1347098"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "YPMTQZ",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT180",
+              "date": "2024-05-20"
+            }
+          ],
+          "payment_id": "credit_card_1347098"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "YPMTQZ",
+          "total_baggages": 2,
+          "nonfree_baggages": 1,
+          "payment_id": "gift_card_1173609"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "mei_thomas_2630",
+          "origin": "SFO",
+          "destination": "BOS",
+          "flight_type": "one_way",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT026",
+              "date": "2024-05-18"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Aarav",
+              "last_name": "Garcia",
+              "dob": "1990-06-10"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "gift_card_1173609",
+              "amount": 171
+            },
+            {
+              "payment_id": "credit_card_1347098",
+              "amount": 251
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "ava_li_8840",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "VHG5XU"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "VHG5XU",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT235",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT298",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT151",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT217",
+              "date": "2024-05-19"
+            }
+          ],
+          "payment_id": "gift_card_3397648"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "VHG5XU",
+          "total_baggages": 3,
+          "nonfree_baggages": 3,
+          "payment_id": "gift_card_9286808"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "ava_li_8840",
+          "origin": "SFO",
+          "destination": "BOS",
+          "flight_type": "one_way",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT026",
+              "date": "2024-05-18"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Ava",
+              "last_name": "Li",
+              "dob": "1990-01-01"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_2185445",
+              "amount": 386
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 2,
+          "insurance": "yes"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "yara_wilson_1123",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "43TOIE",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT087",
+              "date": "2024-05-19"
+            }
+          ],
+          "payment_id": "credit_card_9901939"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "43TOIE",
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "payment_id": "gift_card_8845666"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "43TOIE"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "yara_wilson_1123",
+          "origin": "CLT",
+          "destination": "LGA",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT087",
+              "date": "2024-05-20"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Yara",
+              "last_name": "Wilson",
+              "dob": "1990-06-23"
+            },
+            {
+              "first_name": "Ivan",
+              "last_name": "Lee",
+              "dob": "1975-07-05"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_4266791",
+              "amount": 424
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 1,
+          "insurance": "yes"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "mohamed_patel_8127",
+    "difficulty": "medium",
+    "target_action_count": 5,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "IKQC5J",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT118",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT143",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT176",
+              "date": "2024-05-29"
+            },
+            {
+              "flight_number": "HAT119",
+              "date": "2024-05-29"
+            }
+          ],
+          "payment_id": "gift_card_3592770"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "3DOGKJ",
+          "total_baggages": 2,
+          "nonfree_baggages": 2,
+          "payment_id": "gift_card_3592770"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "mohamed_patel_8127",
+          "origin": "PHL",
+          "destination": "ORD",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT289",
+              "date": "2024-05-20"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Raj",
+              "last_name": "Johansson",
+              "dob": "1954-11-23"
+            },
+            {
+              "first_name": "Yusuf",
+              "last_name": "Garcia",
+              "dob": "1972-07-21"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "gift_card_3592770",
+              "amount": 208
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "9FYEJ6"
+        }
+      },
+      {
+        "name": "search_direct_flight",
+        "kwargs": {
+          "origin": "LAX",
+          "destination": "JFK",
+          "date": "2024-05-20"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "mohamed_silva_4301",
+    "difficulty": "medium",
+    "target_action_count": 2,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "72T71H",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT065",
+              "date": "2024-05-16"
+            },
+            {
+              "flight_number": "HAT157",
+              "date": "2024-05-16"
+            },
+            {
+              "flight_number": "HAT043",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT087",
+              "date": "2024-05-17"
+            }
+          ],
+          "payment_id": "credit_card_5297893"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "72T71H",
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "payment_id": "credit_card_5297893"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "chen_hernandez_2608",
+    "difficulty": "medium",
+    "target_action_count": 3,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "OC39IW",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT197",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT289",
+              "date": "2024-05-29"
+            }
+          ],
+          "payment_id": "credit_card_8453507"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "OC39IW",
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "payment_id": "credit_card_6123046"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "chen_hernandez_2608",
+          "origin": "PHL",
+          "destination": "SEA",
+          "flight_type": "one_way",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT291",
+              "date": "2024-05-20"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Liam",
+              "last_name": "Nguyen",
+              "dob": "1960-08-07"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_8453507",
+              "amount": 432
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "mei_ito_6207",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "5QGJJ1"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "mei_ito_6207",
+          "origin": "JFK",
+          "destination": "MSP",
+          "flight_type": "round_trip",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT033",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT248",
+              "date": "2024-05-22"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "James",
+              "last_name": "Li",
+              "dob": "1972-07-09"
+            },
+            {
+              "first_name": "Mei",
+              "last_name": "Ito",
+              "dob": "1982-06-27"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_4134857",
+              "amount": 851
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 2,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "Q8YZY1",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT133",
+              "date": "2024-05-16"
+            },
+            {
+              "flight_number": "HAT220",
+              "date": "2024-05-17"
+            }
+          ],
+          "payment_id": "credit_card_8547862"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "I9GT07",
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "payment_id": "credit_card_8547862"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "fatima_johnson_6882",
+    "difficulty": "medium",
+    "target_action_count": 2,
+    "actions": [
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "fatima_johnson_6882",
+          "origin": "LAS",
+          "destination": "ATL",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT007",
+              "date": "2024-05-17"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Raj",
+              "last_name": "Sanchez",
+              "dob": "1977-03-14"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_2584190",
+              "amount": 134
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "TEMP_RESERVATION_ID",
+          "total_baggages": 2,
+          "nonfree_baggages": 2,
+          "payment_id": "certificate_1983124"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "lucas_kovacs_4017",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "NSQ8SJ"
+        }
+      },
+      {
+        "name": "search_onestop_flight",
+        "kwargs": {
+          "origin": "PHX",
+          "destination": "MCO",
+          "date": "2024-05-17"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "lucas_kovacs_4017",
+          "origin": "PHX",
+          "destination": "MCO",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT181",
+              "date": "2024-05-17"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Lucas",
+              "last_name": "Kovacs",
+              "dob": "1980-12-10"
+            },
+            {
+              "first_name": "Liam",
+              "last_name": "Ito",
+              "dob": "1962-11-16"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_8260242",
+              "amount": 342
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "LV1F99",
+          "total_baggages": 2,
+          "nonfree_baggages": 2,
+          "payment_id": "credit_card_7486134"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "amelia_taylor_4937",
+    "difficulty": "medium",
+    "target_action_count": 5,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "PIMHHE",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT279",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT085",
+              "date": "2024-05-26"
+            }
+          ],
+          "payment_id": "gift_card_4788785"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "R8XD2X",
+          "total_baggages": 2,
+          "nonfree_baggages": 1,
+          "payment_id": "gift_card_1822448"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "XRC5CB"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "amelia_taylor_4937",
+          "origin": "SFO",
+          "destination": "DFW",
+          "flight_type": "one_way",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT204",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT055",
+              "date": "2024-05-19"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Amelia",
+              "last_name": "Taylor",
+              "dob": "1985-07-16"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_1430006",
+              "amount": 632
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "amelia_taylor_4937",
+          "origin": "JFK",
+          "destination": "MIA",
+          "flight_type": "one_way",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT014",
+              "date": "2024-05-19"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Amelia",
+              "last_name": "Taylor",
+              "dob": "1985-07-16"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "gift_card_4788785",
+              "amount": 270
+            },
+            {
+              "payment_id": "credit_card_1430006",
+              "amount": 30
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "sofia_kim_7287",
+    "difficulty": "medium",
+    "target_action_count": 5,
+    "actions": [
+      {
+        "name": {
+          "name": "cancel_reservation",
+          "kwargs": {
+            "reservation_id": "OI5L9G"
+          }
+        },
+        "kwargs": {
+          "reservation_id": "KA7I60",
+          "passengers": [
+            {
+              "first_name": "Sofia",
+              "last_name": "Kim",
+              "dob": "1992-08-14"
+            },
+            {
+              "first_name": "Mia",
+              "last_name": "Jackson",
+              "dob": "1986-05-05"
+            }
+          ]
+        },
+        "credit_card_9879898": "update_reservation_baggages",
+        "KA7I60": "update_reservation_passengers"
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "sofia_kim_7287",
+          "origin": "MCO",
+          "destination": "CLT",
+          "flight_type": "round_trip",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT017",
+              "date": "2024-05-25"
+            },
+            {
+              "flight_number": "HAT287",
+              "date": "2024-05-19"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Sofia",
+              "last_name": "Kim",
+              "dob": "1992-08-14"
+            },
+            {
+              "first_name": "Mia",
+              "last_name": "Jackson",
+              "dob": "1986-05-05"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_8544743",
+              "amount": 250
+            },
+            {
+              "payment_id": "credit_card_9879898",
+              "amount": 206
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "evelyn_rossi_4078",
+    "difficulty": "medium",
+    "target_action_count": 5,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "QMLLG3",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT209",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT224",
+              "date": "2024-05-20"
+            }
+          ],
+          "payment_id": "credit_card_2355067"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "QMLLG3",
+          "total_baggages": 2,
+          "nonfree_baggages": 1,
+          "payment_id": "credit_card_7800202"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "EZGELT"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "evelyn_rossi_4078",
+          "origin": "MIA",
+          "destination": "LAS",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT062",
+              "date": "2024-05-19"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Evelyn",
+              "last_name": "Rossi",
+              "dob": "1984-11-05"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_2355067",
+              "amount": 154
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "QMLLG3"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "fatima_johnson_3148",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "MAT62E"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "fatima_johnson_3148",
+          "origin": "ORD",
+          "destination": "PHL",
+          "flight_type": "round_trip",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT118",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT080",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT197",
+              "date": "2024-05-20"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Fatima",
+              "last_name": "Kovacs",
+              "dob": "1998-08-10"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_1153817",
+              "amount": 100
+            },
+            {
+              "payment_id": "credit_card_6216489",
+              "amount": 870
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "insurance": "no"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "V08NLS",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT028",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT145",
+              "date": "2024-05-20"
+            }
+          ],
+          "payment_id": "credit_card_6216489"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "I8DDGT",
+          "total_baggages": 3,
+          "nonfree_baggages": 1,
+          "payment_id": "credit_card_6216489"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "fatima_johansson_1766",
+    "difficulty": "medium",
+    "target_action_count": 5,
+    "actions": [
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "31UV5U"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "fatima_johansson_1766",
+          "origin": "EWR",
+          "destination": "SFO",
+          "flight_type": "round_trip",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT188",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT180",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT082",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT207",
+              "date": "2024-05-19"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Fatima",
+              "last_name": "Johansson",
+              "dob": "1996-08-15"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_7147085",
+              "amount": 500
+            },
+            {
+              "payment_id": "gift_card_3566354",
+              "amount": 84
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "9FVEXC",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT166",
+              "date": "2024-05-16"
+            },
+            {
+              "flight_number": "HAT195",
+              "date": "2024-05-16"
+            },
+            {
+              "flight_number": "HAT166",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT195",
+              "date": "2024-05-18"
+            }
+          ],
+          "payment_id": "gift_card_3566354"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "HYRRPC",
+          "total_baggages": 4,
+          "nonfree_baggages": 2,
+          "payment_id": "gift_card_3566354"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "fatima_johansson_1766",
+          "origin": "LAS",
+          "destination": "PHX",
+          "flight_type": "round_trip",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT095",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT259",
+              "date": "2024-05-20"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Sophia",
+              "last_name": "Smith",
+              "dob": "1974-04-09"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "gift_card_3566354",
+              "amount": 289
+            },
+            {
+              "payment_id": "credit_card_1234",
+              "amount": 225
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "insurance": "no"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "amelia_ahmed_6605",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "amelia_ahmed_6605",
+          "origin": "ORD",
+          "destination": "DTW",
+          "flight_type": "one_way",
+          "cabin": "basic_economy",
+          "flights": [
+            {
+              "flight_number": "HAT020",
+              "date": "2024-05-18"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Harper",
+              "last_name": "Santos",
+              "dob": "1958-02-18"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_5224265",
+              "amount": 179
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "amelia_ahmed_6605",
+          "origin": "IAH",
+          "destination": "ORD",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT044",
+              "date": "2024-05-18"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Harper",
+              "last_name": "Santos",
+              "dob": "1958-02-18"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_7517120",
+              "amount": 127
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        }
+      },
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "RES001"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "RES001",
+          "total_baggages": 2,
+          "nonfree_baggages": 2,
+          "payment_id": "certificate_7517120"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "juan_brown_7405",
+    "difficulty": "medium",
+    "target_action_count": 5,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "5Q7ZUK"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "5Q7ZUK",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT065",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT064",
+              "date": "2024-05-20"
+            }
+          ],
+          "payment_id": "credit_card_6125882"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "juan_brown_7405",
+          "origin": "LGA",
+          "destination": "PHX",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT114",
+              "date": "2024-05-20"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Juan",
+              "last_name": "Brown",
+              "dob": "1980-07-25"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "gift_card_8693196",
+              "amount": 64
+            },
+            {
+              "payment_id": "gift_card_7372169",
+              "amount": 74
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "5Q7ZUK",
+          "total_baggages": 2,
+          "nonfree_baggages": 1,
+          "payment_id": "gift_card_7372169"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "4ALCKY"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "fatima_silva_7735",
+    "difficulty": "medium",
+    "target_action_count": 3,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "ASFFI5",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT172",
+              "date": "2024-05-15"
+            },
+            {
+              "flight_number": "HAT197",
+              "date": "2024-05-16"
+            },
+            {
+              "flight_number": "HAT093",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT110",
+              "date": "2024-05-19"
+            }
+          ],
+          "payment_id": "credit_card_9590541"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "ASFFI5",
+          "total_baggages": 2,
+          "nonfree_baggages": 1,
+          "payment_id": "credit_card_5147732"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "fatima_silva_7735",
+          "origin": "ATL",
+          "destination": "SEA",
+          "flight_type": "round_trip",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT039",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT107",
+              "date": "2024-05-20"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Amelia",
+              "last_name": "Anderson",
+              "dob": "1991-03-09"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_9590541",
+              "amount": 928
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "ivan_johnson_5613",
+    "difficulty": "medium",
+    "target_action_count": 2,
+    "actions": [
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "U021C8"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "ivan_johnson_5613",
+          "origin": "ORD",
+          "destination": "IAH",
+          "flight_type": "round_trip",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT147",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT044",
+              "date": "2024-05-20"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Ivan",
+              "last_name": "Johnson",
+              "dob": "1984-03-15"
+            },
+            {
+              "first_name": "Omar",
+              "last_name": "Muller",
+              "dob": "1957-10-14"
+            },
+            {
+              "first_name": "Jane",
+              "last_name": "Doe",
+              "dob": "1990-07-19"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "gift_card_8286569",
+              "amount": 43
+            },
+            {
+              "payment_id": "certificate_6505545",
+              "amount": 539
+            }
+          ],
+          "total_baggages": 3,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "noah_gonzalez_5087",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "DP6J8S",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT297",
+              "date": "2024-05-07"
+            },
+            {
+              "flight_number": "HAT128",
+              "date": "2024-05-15"
+            }
+          ],
+          "payment_id": "credit_card_4178310"
+        }
+      },
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "DP6J8S"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "DP6J8S"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "noah_gonzalez_5087",
+          "origin": "ATL",
+          "destination": "DFW",
+          "flight_type": "round_trip",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT297",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT128",
+              "date": "2024-05-19"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Noah",
+              "last_name": "Gonzalez",
+              "dob": "1985-07-28"
+            },
+            {
+              "first_name": "Ava",
+              "last_name": "Kovacs",
+              "dob": "1959-10-03"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_8459651",
+              "amount": 170
+            },
+            {
+              "payment_id": "gift_card_4106771",
+              "amount": 170
+            },
+            {
+              "payment_id": "credit_card_4178310",
+              "amount": 388
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "omar_rossi_1241",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "5RJ7UH",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT034",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT163",
+              "date": "2024-05-19"
+            }
+          ],
+          "payment_id": "credit_card_6754990"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "FQ8APE",
+          "total_baggages": 2,
+          "nonfree_baggages": 1,
+          "payment_id": "gift_card_6490722"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "QKRY03"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "omar_rossi_1241",
+          "origin": "MCO",
+          "destination": "ORD",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT214",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT119",
+              "date": "2024-05-20"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Omar",
+              "last_name": "Rossi",
+              "dob": "1995-06-10"
+            },
+            {
+              "first_name": "Liam",
+              "last_name": "Lee",
+              "dob": "1989-08-12"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_1778167",
+              "amount": 250
+            },
+            {
+              "payment_id": "credit_card_7407366",
+              "amount": 139
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "ethan_gonzalez_3910",
+    "difficulty": "medium",
+    "target_action_count": 2,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "AYZIIX",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT139",
+              "date": "2024-05-20"
+            }
+          ],
+          "payment_id": "gift_card_4427585"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "AYZIIX",
+          "total_baggages": 2,
+          "nonfree_baggages": 1,
+          "payment_id": "gift_card_4427585"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "lucas_rossi_9280",
+    "difficulty": "medium",
+    "target_action_count": 5,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "L1S2JC"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "L1S2JC",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT220",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT293",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT161",
+              "date": "2024-05-21"
+            },
+            {
+              "flight_number": "HAT045",
+              "date": "2024-05-21"
+            }
+          ],
+          "payment_id": "credit_card_7507634"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "L1S2JC",
+          "total_baggages": 4,
+          "nonfree_baggages": 2,
+          "payment_id": "gift_card_1600929"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "lucas_rossi_9280",
+          "origin": "SEA",
+          "destination": "JFK",
+          "flight_type": "one_way",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT011",
+              "date": "2024-05-17"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Evelyn",
+              "last_name": "Santos",
+              "dob": "1988-06-21"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_1106772",
+              "amount": 333
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "VC3MQ9"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "lucas_rossi_2421",
+    "difficulty": "medium",
+    "target_action_count": 2,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "J43KQ8",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT071",
+              "date": "2024-05-16"
+            },
+            {
+              "flight_number": "HAT217",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT235",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT298",
+              "date": "2024-05-17"
+            }
+          ],
+          "payment_id": "gift_card_4812084"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "13AO6D",
+          "total_baggages": 4,
+          "nonfree_baggages": 1,
+          "payment_id": "gift_card_4812084"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "amelia_moore_2925",
+    "difficulty": "medium",
+    "target_action_count": 3,
+    "actions": [
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "9TLOJT"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "amelia_moore_2925",
+          "origin": "BOS",
+          "destination": "DEN",
+          "flight_type": "one_way",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT086",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT148",
+              "date": "2024-05-18"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Harper",
+              "last_name": "Muller",
+              "dob": "1951-11-21"
+            },
+            {
+              "first_name": "Mason",
+              "last_name": "Jackson",
+              "dob": "1960-06-23"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "gift_card_8964104",
+              "amount": 282
+            },
+            {
+              "payment_id": "certificate_9478863",
+              "amount": 150
+            },
+            {
+              "payment_id": "credit_card_9414946",
+              "amount": 776
+            }
+          ],
+          "total_baggages": 4,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "YMSAGZ",
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "payment_id": "credit_card_3664152"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "anya_anderson_8280",
+    "difficulty": "medium",
+    "target_action_count": 2,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "ZXIYE7",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT224",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT209",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT148",
+              "date": "2024-05-25"
+            },
+            {
+              "flight_number": "HAT255",
+              "date": "2024-05-25"
+            }
+          ],
+          "payment_id": "credit_card_1757702"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "ZXIYE7",
+          "total_baggages": 5,
+          "nonfree_baggages": 2,
+          "payment_id": "gift_card_9438198"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "sofia_ahmed_9069",
+    "difficulty": "medium",
+    "target_action_count": 2,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "3JC1V1",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT083",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT236",
+              "date": "2024-05-19"
+            }
+          ],
+          "payment_id": "credit_card_1236431"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "3JC1V1",
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "payment_id": "gift_card_9115943"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "amelia_wilson_8288",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "NQUIQN"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "NQUIQN",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT006",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT037",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT067",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT194",
+              "date": "2024-05-20"
+            }
+          ],
+          "payment_id": "gift_card_8353376"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "NQUIQN",
+          "total_baggages": 2,
+          "nonfree_baggages": 1,
+          "payment_id": "gift_card_8353376"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "1LSWIT"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "sophia_johansson_8142",
+    "difficulty": "medium",
+    "target_action_count": 5,
+    "actions": [
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "VEBH3D"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "sophia_johansson_8142",
+          "origin": "MSP",
+          "destination": "CLT",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT127",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT168",
+              "date": "2024-05-20"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Anya",
+              "last_name": "Martin",
+              "dob": "1974-03-25"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_9727368",
+              "amount": 250
+            },
+            {
+              "payment_id": "gift_card_4044343",
+              "amount": 118
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "84BUUS",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT191",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT157",
+              "date": "2024-05-20"
+            }
+          ],
+          "payment_id": "gift_card_4044343"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "EIPS3W",
+          "total_baggages": 5,
+          "nonfree_baggages": 1,
+          "payment_id": "gift_card_4044343"
+        }
+      },
+      {
+        "name": "list_all_airports",
+        "kwargs": {}
+      }
+    ]
+  },
+  {
+    "user_id": "ava_silva_7424",
+    "difficulty": "medium",
+    "target_action_count": 5,
+    "actions": [
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "0AIEP0"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "ava_silva_7424",
+          "origin": "SFO",
+          "destination": "LAS",
+          "flight_type": "round_trip",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT134",
+              "date": "2024-05-16"
+            },
+            {
+              "flight_number": "HAT173",
+              "date": "2024-05-16"
+            },
+            {
+              "flight_number": "HAT244",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT009",
+              "date": "2024-05-20"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Ava",
+              "last_name": "Silva",
+              "dob": "1985-08-15"
+            },
+            {
+              "first_name": "Omar",
+              "last_name": "Santos",
+              "dob": "1995-05-21"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_1829572",
+              "amount": 250
+            },
+            {
+              "payment_id": "credit_card_4769809",
+              "amount": 562
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "0AIEP0"
+        }
+      },
+      {
+        "name": "list_all_airports",
+        "kwargs": {}
+      },
+      {
+        "name": "update_reservation_passengers",
+        "kwargs": {
+          "reservation_id": "0AIEP0",
+          "passengers": [
+            {
+              "first_name": "Ava",
+              "last_name": "Silva",
+              "dob": "1985-08-15"
+            },
+            {
+              "first_name": "Omar",
+              "last_name": "Santos",
+              "dob": "1995-05-21"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "mia_taylor_2876",
+    "difficulty": "medium",
+    "target_action_count": 2,
+    "actions": [
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "mia_taylor_2876",
+          "origin": "MCO",
+          "destination": "LGA",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT214",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT226",
+              "date": "2024-05-18"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Olivia",
+              "last_name": "Thomas",
+              "dob": "1973-06-02"
+            },
+            {
+              "first_name": "Aarav",
+              "last_name": "Rossi",
+              "dob": "1964-12-03"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_5929972",
+              "amount": 150
+            },
+            {
+              "payment_id": "certificate_9682706",
+              "amount": 100
+            },
+            {
+              "payment_id": "credit_card_4421486",
+              "amount": 236
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 1,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "mia_taylor_2876",
+          "origin": "DTW",
+          "destination": "PHX",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT035",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT226",
+              "date": "2024-05-18"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Olivia",
+              "last_name": "Thomas",
+              "dob": "1973-06-02"
+            },
+            {
+              "first_name": "Aarav",
+              "last_name": "Rossi",
+              "dob": "1964-12-03"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_4421486",
+              "amount": 420
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "evelyn_brown_8513",
+    "difficulty": "medium",
+    "target_action_count": 5,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "0TN6YG",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT260",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT157",
+              "date": "2024-05-19"
+            }
+          ],
+          "payment_id": "gift_card_7184607"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "evelyn_brown_8513",
+          "origin": "ORD",
+          "destination": "DTW",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT020",
+              "date": "2024-05-16"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Lei",
+              "last_name": "Hernandez",
+              "dob": "1977-09-19"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_8209051",
+              "amount": 127
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "calculate",
+        "kwargs": {
+          "expression": "142*3*2 + 30*3 + 50*2"
+        }
+      },
+      {
+        "name": "calculate",
+        "kwargs": {
+          "expression": "117*1*1 + 30*1"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "0TN6YG",
+          "total_baggages": 4,
+          "nonfree_baggages": 2,
+          "payment_id": "gift_card_7184607"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "ethan_li_4016",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "I6MKN8"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "ethan_li_4016",
+          "origin": "BOS",
+          "destination": "MIA",
+          "flight_type": "one_way",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT086",
+              "date": "2024-05-18"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Ethan",
+              "last_name": "Li",
+              "dob": "1996-09-18"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_3129816",
+              "amount": 2044
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "33AIQ2",
+          "total_baggages": 2,
+          "nonfree_baggages": 2,
+          "payment_id": "credit_card_5430276"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "QE1WXY",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT023",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT204",
+              "date": "2024-05-20"
+            },
+            {
+              "flight_number": "HAT089",
+              "date": "2024-05-20"
+            }
+          ],
+          "payment_id": "credit_card_3129816"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "liam_wilson_9173",
+    "difficulty": "medium",
+    "target_action_count": 5,
+    "actions": [
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "9RWK8C"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "liam_wilson_9173",
+          "origin": "LGA",
+          "destination": "CLT",
+          "flight_type": "round_trip",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT272",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT024",
+              "date": "2024-05-24"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Liam",
+              "last_name": "Wilson",
+              "dob": "1995-07-22"
+            },
+            {
+              "first_name": "Omar",
+              "last_name": "Taylor",
+              "dob": "1976-04-12"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_5401485",
+              "amount": 150
+            },
+            {
+              "payment_id": "credit_card_2767730",
+              "amount": 2708
+            }
+          ],
+          "total_baggages": 3,
+          "nonfree_baggages": 3,
+          "insurance": "no"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "8PSKPZ",
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "payment_id": "gift_card_3863533"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "238F2V",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT079",
+              "date": "2024-05-18"
+            }
+          ],
+          "payment_id": "credit_card_2767730"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "liam_wilson_9173",
+          "origin": "JFK",
+          "destination": "IAH",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT279",
+              "date": "2024-05-19"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Liam",
+              "last_name": "Wilson",
+              "dob": "1995-07-22"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "gift_card_6723569",
+              "amount": 51
+            },
+            {
+              "payment_id": "credit_card_2767730",
+              "amount": 53
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "amelia_taylor_4937",
+    "difficulty": "medium",
+    "target_action_count": 5,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "PIMHHE"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "PIMHHE",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT279",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT085",
+              "date": "2024-05-26"
+            }
+          ],
+          "payment_id": "credit_card_1430006"
+        }
+      },
+      {
+        "name": "calculate",
+        "kwargs": {
+          "expression": "290 * 2 + 221 * 2 + 30 * 2"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "PIMHHE",
+          "total_baggages": 2,
+          "nonfree_baggages": 2,
+          "payment_id": "gift_card_4788785"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "XRC5CB"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "noah_lopez_2532",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "E9E7HC",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT077",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT233",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT060",
+              "date": "2024-05-18"
+            },
+            {
+              "flight_number": "HAT288",
+              "date": "2024-05-18"
+            }
+          ],
+          "payment_id": "credit_card_3623927"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "E9E7HC",
+          "total_baggages": 2,
+          "nonfree_baggages": 2,
+          "payment_id": "credit_card_3623927"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "5XOFTB"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "noah_lopez_2532",
+          "origin": "PHX",
+          "destination": "LGA",
+          "flight_type": "one_way",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT066",
+              "date": "2024-05-20"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Noah",
+              "last_name": "Lopez",
+              "dob": "1990-01-02"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_5542518",
+              "amount": 397
+            },
+            {
+              "payment_id": "credit_card_3623927",
+              "amount": 153
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 1,
+          "insurance": "yes"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "liam_jackson_9794",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "AIARDZ"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "liam_jackson_9794",
+          "origin": "JFK",
+          "destination": "DTW",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT261",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT020",
+              "date": "2024-05-17"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Mohamed",
+              "last_name": "Gonzalez",
+              "dob": "1990-09-03"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "gift_card_7219695",
+              "amount": 214
+            },
+            {
+              "payment_id": "credit_card_2922116",
+              "amount": 212
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "99NI0N",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT051",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT264",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT135",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT114",
+              "date": "2024-05-19"
+            }
+          ],
+          "payment_id": "credit_card_6996246"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "M9WKQM",
+          "total_baggages": 2,
+          "nonfree_baggages": 2,
+          "payment_id": "gift_card_5499048"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "olivia_moore_2080",
+    "difficulty": "medium",
+    "target_action_count": 5,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "SF5VA1"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "SF5VA1",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT076",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT080",
+              "date": "2024-05-30"
+            }
+          ],
+          "payment_id": "gift_card_7002574"
+        }
+      },
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "BMXAXU"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "olivia_moore_2080",
+          "origin": "LGA",
+          "destination": "PHX",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT114",
+              "date": "2024-05-17"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Olivia",
+              "last_name": "Moore",
+              "dob": "N/A"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_4961816",
+              "amount": 150
+            },
+            {
+              "payment_id": "gift_card_7002574",
+              "amount": 64
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "05KW3F",
+          "total_baggages": 5,
+          "nonfree_baggages": 1,
+          "payment_id": "gift_card_7002574"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "sophia_garcia_4224",
+    "difficulty": "medium",
+    "target_action_count": 2,
+    "actions": [
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "sophia_garcia_4224",
+          "origin": "PHX",
+          "destination": "SEA",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT045",
+              "date": "2024-05-17"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Omar",
+              "last_name": "Khan",
+              "dob": "1983-04-01"
+            },
+            {
+              "first_name": "Isabella",
+              "last_name": "Taylor",
+              "dob": "1954-08-21"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_1156710",
+              "amount": 100
+            },
+            {
+              "payment_id": "credit_card_1234567",
+              "amount": 130
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "sophia_garcia_4224",
+          "origin": "EWR",
+          "destination": "IAH",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT056",
+              "date": "2024-05-16"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Omar",
+              "last_name": "Khan",
+              "dob": "1983-04-01"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_1234567",
+              "amount": 222
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "olivia_garcia_3026",
+    "difficulty": "medium",
+    "target_action_count": 2,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "AO5N50",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT129",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT139",
+              "date": "2024-05-19"
+            }
+          ],
+          "payment_id": "credit_card_7156345"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "AO5N50",
+          "total_baggages": 4,
+          "nonfree_baggages": 1,
+          "payment_id": "credit_card_7156345"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "mason_johansson_5154",
+    "difficulty": "medium",
+    "target_action_count": 3,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "RB9S17",
+          "cabin": "business",
+          "flights": [
+            {
+              "flight_number": "HAT262",
+              "date": "2024-05-16"
+            }
+          ],
+          "payment_id": "credit_card_5590177"
+        }
+      },
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "2OQQI6",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT139",
+              "date": "2024-05-16"
+            }
+          ],
+          "payment_id": "credit_card_3358561"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "RB9S17",
+          "total_baggages": 2,
+          "nonfree_baggages": 1,
+          "payment_id": "credit_card_5590177"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "ava_smith_9007",
+    "difficulty": "medium",
+    "target_action_count": 2,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "68C06V",
+          "cabin": "basic_economy",
+          "flights": [
+            {
+              "flight_number": "HAT147",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT020",
+              "date": "2024-05-19"
+            }
+          ],
+          "payment_id": "gift_card_7397399"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "ava_smith_9007",
+          "origin": "CLT",
+          "destination": "BOS",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT216",
+              "date": "2024-05-19"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Yara",
+              "last_name": "Patel",
+              "dob": "1961-06-01"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "gift_card_7397399",
+              "amount": 215
+            },
+            {
+              "payment_id": "credit_card_4516131",
+              "amount": 51
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "fatima_moore_8184",
+    "difficulty": "medium",
+    "target_action_count": 4,
+    "actions": [
+      {
+        "name": "cancel_reservation",
+        "kwargs": {
+          "reservation_id": "1CZ3MI"
+        }
+      },
+      {
+        "name": "search_direct_flight",
+        "kwargs": {
+          "origin": "SEA",
+          "destination": "SFO",
+          "date": "2024-05-17"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "fatima_moore_8184",
+          "origin": "SEA",
+          "destination": "SFO",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT121",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT032",
+              "date": "2024-05-17"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Fatima",
+              "last_name": "Moore",
+              "dob": "1988-10-11"
+            },
+            {
+              "first_name": "Aarav",
+              "last_name": "Khan",
+              "dob": "1996-12-07"
+            },
+            {
+              "first_name": "John",
+              "last_name": "Doe",
+              "dob": "1985-03-15"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "gift_card_1034889",
+              "amount": 167
+            },
+            {
+              "payment_id": "credit_card_4151073",
+              "amount": 757
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 2,
+          "insurance": "yes"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "RDBK8Y",
+          "total_baggages": 2,
+          "nonfree_baggages": 0,
+          "payment_id": "credit_card_4151073"
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "noah_li_4002",
+    "difficulty": "medium",
+    "target_action_count": 3,
+    "actions": [
+      {
+        "name": "update_reservation_flights",
+        "kwargs": {
+          "reservation_id": "BLWUE2",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT201",
+              "date": "2024-05-19"
+            },
+            {
+              "flight_number": "HAT032",
+              "date": "2024-05-19"
+            }
+          ],
+          "payment_id": "gift_card_3839485"
+        }
+      },
+      {
+        "name": "update_reservation_baggages",
+        "kwargs": {
+          "reservation_id": "NCO2MJ",
+          "total_baggages": 3,
+          "nonfree_baggages": 1,
+          "payment_id": "gift_card_5231103"
+        }
+      },
+      {
+        "name": "book_reservation",
+        "kwargs": {
+          "user_id": "noah_li_4002",
+          "origin": "LAX",
+          "destination": "ORD",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT090",
+              "date": "2024-05-17"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Mohamed",
+              "last_name": "Ahmed",
+              "dob": "1958-09-07"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_3052659",
+              "amount": 169
+            }
+          ],
+          "total_baggages": 1,
+          "nonfree_baggages": 0,
+          "insurance": "yes"
+        }
+      }
+    ]
+  }
+]

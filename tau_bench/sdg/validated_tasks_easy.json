@@ -1,0 +1,1902 @@
+[
+  {
+    "user_id": "evelyn_smith_6580",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "63QBEX"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 1,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "juan_rossi_7264",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "IWKGVL"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 2,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "yara_silva_1929",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "N9V9VX"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 3,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "yusuf_patel_4029",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "847MY1"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 4,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "harper_ahmed_8302",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "search_direct_flight",
+        "kwargs": {
+          "origin": "JFK",
+          "destination": "SEA",
+          "date": "2024-05-16"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 5,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "james_ahmed_4322",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "JX6LB3"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 6,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "mia_santos_2092",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "4NXSCL"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 7,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "isabella_anderson_8228",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "PIJF3U"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 8,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "fatima_silva_7735",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "ASFFI5"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 9,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "mason_johansson_5154",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "RB9S17"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 10,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "aarav_lee_9671",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "CN5AEV"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 11,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "isabella_ito_3653",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "MXCGN8"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 12,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "harper_patel_1045",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "HAGO8B"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 13,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "juan_moore_4540",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "2P5CYY"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 14,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "yusuf_martin_3470",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "BBVDO9"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 15,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "harper_santos_6381",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "IER616"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 16,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "liam_santos_5621",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "ZZSA4W"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 17,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "yara_silva_8071",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "search_direct_flight",
+        "kwargs": {
+          "origin": "EWR",
+          "destination": "IAH",
+          "date": "2024-05-18"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 18,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "anya_sanchez_5753",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "search_direct_flight",
+        "kwargs": {
+          "origin": "MIA",
+          "destination": "ORD",
+          "date": "2024-05-17"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 19,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "mason_johansson_3174",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "91ZD2J"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 20,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "aarav_rossi_9663",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "IAANOV"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 21,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "noah_sanchez_4225",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "AQSRNQ"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 22,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "anya_lee_9572",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "ABB0M7"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 23,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "mei_johnson_4931",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "list_all_airports",
+        "kwargs": {}
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 24,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "anya_brown_2655",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "JEPRZB"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 25,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "mohamed_martin_1679",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "V7NBLQ"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 26,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "mohamed_silva_9265",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "K1NW8N"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 27,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "mohamed_ahmed_3350",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "ZND99F"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 28,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "ivan_kim_3844",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "Q79V9W"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 29,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "ethan_gonzalez_3910",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "25DFCD"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 30,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "emma_jackson_2190",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "YKCIBO"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 31,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "daiki_patel_1917",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "7WKBKD"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 32,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "anya_brown_2655",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "JEPRZB"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 33,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "amelia_hernandez_8403",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "5JR4XX"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 34,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "liam_muller_3384",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "HDUF3Q"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 35,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "lucas_rossi_2421",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "J43KQ8"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 36,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "mohamed_silva_9265",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "K1NW8N"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 37,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "mason_johansson_5154",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "RB9S17"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 38,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "mia_thomas_5479",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "DYKWMO"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 39,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "emma_martin_8571",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "1JR46H"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 40,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "liam_sanchez_8204",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "Q17Y7B"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 41,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "aarav_sanchez_7773",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "list_all_airports",
+        "kwargs": {}
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 42,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "raj_davis_3310",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "M6N5DM"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 43,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "yara_garcia_1905",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "HXDUBJ"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 44,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "omar_anderson_1185",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "32J3PL"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 45,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "amelia_taylor_4937",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "LT77K6"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 46,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "liam_taylor_6683",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "OWCNP2"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 47,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "harper_lopez_2390",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "harper_lopez_2390"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 48,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "sophia_martin_4574",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "MFRB94"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 49,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "sophia_garcia_4224",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "list_all_airports",
+        "kwargs": {}
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 50,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "harper_lopez_2390",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "harper_lopez_2390"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 51,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "daiki_patel_1917",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "7WKBKD"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 52,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "raj_garcia_3316",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "Z7W1AC"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 53,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "liam_garcia_8705",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "971W9L"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 54,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "emma_kim_9957",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "EHGLP3"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 55,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "olivia_martin_3924",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "H0MVIE"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 56,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "fatima_anderson_7848",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "TH87DD"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 57,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "amelia_taylor_4937",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "PIMHHE"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 58,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "ethan_nguyen_6045",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "L1QGWV"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 59,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "yusuf_gonzalez_6436",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "Z9B996"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 60,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "harper_smith_3981",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "KT71XO"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 61,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "yara_silva_8071",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "yara_silva_8071"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 62,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "harper_kovacs_3082",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "AYVIYO"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 63,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "amelia_li_2415",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "NUCNX0"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 64,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "liam_muller_3384",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "HDUF3Q"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 65,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "chen_lopez_2451",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "71Y56R"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 66,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "lucas_khan_1131",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "AVX2IV"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 67,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "noah_wilson_9692",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "XZE9VN"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 68,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "juan_brown_2465",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "juan_brown_2465"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 69,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "harper_davis_5069",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "WLXS0L"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 70,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "olivia_garcia_3026",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "AO5N50"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 71,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "liam_wilson_9173",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "238F2V"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 72,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "olivia_anderson_8651",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "olivia_anderson_8651"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 73,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "amelia_davis_7067",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "ZAC5BK"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 74,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "evelyn_brown_8513",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "0TN6YG"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 75,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "raj_khan_9352",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "raj_khan_9352"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 76,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "lei_anderson_2319",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "KFSKBR"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 77,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "lei_ito_5790",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "6ZQNOS"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 78,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "mia_ahmed_3713",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "M2RFTA"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 79,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "noah_martin_7498",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "6UJKDA"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 80,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "ethan_davis_3996",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "I2URCD"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 81,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "mei_thomas_2630",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "U1YV6I"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 82,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "sofia_ahmed_9069",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "sofia_ahmed_9069"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 83,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "amelia_li_2415",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "NUCNX0"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 84,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "anya_khan_1074",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "77VWO5"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 85,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "noah_khan_8166",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "Y1ZIDC"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 86,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "lei_kim_9517",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "lei_kim_9517"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 87,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "sofia_santos_3403",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "JOHYVS"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 88,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "liam_jackson_9794",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "liam_jackson_9794"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 89,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "lucas_martin_2833",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "FFMQB1"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 90,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "noah_muller_9847",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "SDZQKO"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 91,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "anya_anderson_8280",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "ZXIYE7"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 92,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "ethan_nguyen_7360",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "G2LTC4"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 93,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "juan_lopez_1974",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "YFYFKQ"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 94,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "raj_garcia_4690",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "4NQCM5"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 95,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "lucas_wilson_8118",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "I6XC2H"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 96,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "evelyn_smith_6580",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "63QBEX"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 97,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "chen_lee_6825",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "JW6LEQ"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 98,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "emma_jackson_2190",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "emma_jackson_2190"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 99,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "user_id": "amelia_nguyen_7778",
+    "difficulty": "easy",
+    "target_action_count": 1,
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "U7QTYY"
+        }
+      }
+    ],
+    "validation": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 100,
+      "payment_corrections_applied": false
+    }
+  }
+]

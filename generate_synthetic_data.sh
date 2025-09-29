@@ -19,10 +19,10 @@ fi
 # Create output directory if it doesn't exist
 mkdir -p tau_bench/sdg
 
-# # Generate and validate easy tasks (30 samples)
-# echo "📝 Generating 30 easy tasks (1 action each)..."
+# Generate and validate easy tasks (100 samples)
+# echo "📝 Generating 100 easy tasks (1 action each)..."
 # uv run python tau_bench/sdg/generate_user_actions.py \
-#     --num-samples 30 \
+#     --num-samples 100 \
 #     --difficulty easy \
 #     --max-concurrency 8 \
 #     --output-file tau_bench/sdg/synthetic_tasks_easy
@@ -38,23 +38,41 @@ mkdir -p tau_bench/sdg
 # echo "✅ Easy task validation completed!"
 # echo ""
 
-# Generate and validate medium tasks (30 samples)
-echo "📝 Generating 30 medium tasks (2-5 actions each)..."
-uv run python tau_bench/sdg/generate_user_actions.py \
-    --num-samples 1000 \
-    --difficulty medium \
-    --max-concurrency 10 \
-    --output-file tau_bench/sdg/synthetic_tasks_medium
+# echo "🎯 Generating task instructions for easy tasks..."
+# uv run python tau_bench/sdg/generate_task_instructions.py \
+#     --input-file tau_bench/sdg/validated_tasks_easy.json \
+#     --output-file tau_bench/sdg/validated_tasks_easy_with_instructions.json \
+#     --max-concurrency 10
 
-echo "✅ Medium tasks generated!"
-echo ""
+# echo "✅ Easy task instructions generated!"
+# echo ""
 
-echo "🔍 Validating medium task sequences..."
-uv run python tau_bench/sdg/validate_actions_simple.py \
-    --input-file tau_bench/sdg/synthetic_tasks_medium.json \
-    --output-file tau_bench/sdg/validated_tasks_medium.json
+# Generate and validate medium tasks (100 samples)
+# echo "📝 Generating 100 medium tasks (2-5 actions each)..."
+# uv run python tau_bench/sdg/generate_user_actions.py \
+#     --num-samples 100 \
+#     --difficulty medium \
+#     --max-concurrency 10 \
+#     --output-file tau_bench/sdg/synthetic_tasks_medium
 
-echo "✅ Medium task validation completed!"
+# echo "✅ Medium tasks generated!"
+# echo ""
+
+# echo "🔍 Validating medium task sequences..."
+# uv run python tau_bench/sdg/validate_actions_simple.py \
+#     --input-file tau_bench/sdg/synthetic_tasks_medium.json \
+#     --output-file tau_bench/sdg/validated_tasks_medium.json
+
+# echo "✅ Medium task validation completed!"
+# echo ""
+
+echo "🎯 Generating task instructions for medium tasks..."
+uv run python tau_bench/sdg/generate_task_instructions.py \
+    --input-file tau_bench/sdg/validated_tasks_medium.json \
+    --output-file tau_bench/sdg/validated_tasks_medium_with_instructions.json \
+    --max-concurrency 10
+
+echo "✅ Medium task instructions generated!"
 echo ""
 
 # # Generate and validate hard tasks (30 samples)

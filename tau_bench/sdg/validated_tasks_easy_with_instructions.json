@@ -1,0 +1,2402 @@
+[
+  {
+    "instruction": "Your user id is emma_jackson_2190. You need to check your reservation YKCIBO to confirm the updated departure time after receiving a recent flight schedule change notification.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "YKCIBO"
+        }
+      }
+    ],
+    "user_id": "emma_jackson_2190",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 31,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is yara_silva_8071. You want to review your account details and confirm your membership status.",
+    "actions": [
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "yara_silva_8071"
+        }
+      }
+    ],
+    "user_id": "yara_silva_8071",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 62,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is yara_silva_1929. You want to confirm your seat assignment for reservation N9V9VX to ensure a comfortable flight experience.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "N9V9VX"
+        }
+      }
+    ],
+    "user_id": "yara_silva_1929",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 3,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is daiki_patel_1917. You need to confirm your flight itinerary for reservation 7WKBKD to ensure all details are correct before your upcoming trip.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "7WKBKD"
+        }
+      }
+    ],
+    "user_id": "daiki_patel_1917",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 32,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is harper_kovacs_3082. You need to verify the status of your reservation AYVIYO to ensure your seat is confirmed for your upcoming trip.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "AYVIYO"
+        }
+      }
+    ],
+    "user_id": "harper_kovacs_3082",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 63,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is juan_rossi_7264. You need to check your reservation IWKGVL to confirm the flight time and ensure you have the correct terminal information.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "IWKGVL"
+        }
+      }
+    ],
+    "user_id": "juan_rossi_7264",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 2,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is harper_smith_3981. You want to confirm your seat selection and baggage allowance for reservation KT71XO before your upcoming trip.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "KT71XO"
+        }
+      }
+    ],
+    "user_id": "harper_smith_3981",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 61,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is anya_brown_2655. You want to ensure that all your flight details for reservation JEPRZB are accurate before your upcoming trip.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "JEPRZB"
+        }
+      }
+    ],
+    "user_id": "anya_brown_2655",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 33,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is noah_muller_9847. You need to confirm the seat allocation and meal preferences for your reservation SDZQKO.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "SDZQKO"
+        }
+      }
+    ],
+    "user_id": "noah_muller_9847",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 91,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is anya_anderson_8280. You want to confirm the seating arrangement for your reservation ZXIYE7 to ensure you have an aisle seat.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "ZXIYE7"
+        }
+      }
+    ],
+    "user_id": "anya_anderson_8280",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 92,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is ethan_nguyen_7360. You need to check your reservation G2LTC4 to confirm your seat assignment and meal preference for an upcoming flight.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "G2LTC4"
+        }
+      }
+    ],
+    "user_id": "ethan_nguyen_7360",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 93,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is amelia_li_2415. You want to confirm your seat assignment and meal preference for reservation NUCNX0.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "NUCNX0"
+        }
+      }
+    ],
+    "user_id": "amelia_li_2415",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 64,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is yusuf_patel_4029. You need to verify the seat assignment for your reservation 847MY1 to ensure you have a window seat.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "847MY1"
+        }
+      }
+    ],
+    "user_id": "yusuf_patel_4029",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 4,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is juan_lopez_1974. You want to check your reservation YFYFKQ to confirm your seating preferences and meal options before the flight.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "YFYFKQ"
+        }
+      }
+    ],
+    "user_id": "juan_lopez_1974",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 94,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is harper_ahmed_8302. You are looking for a flight from JFK to SEA on May 16, 2024; please prioritize direct options.",
+    "actions": [
+      {
+        "name": "search_direct_flight",
+        "kwargs": {
+          "origin": "JFK",
+          "destination": "SEA",
+          "date": "2024-05-16"
+        }
+      }
+    ],
+    "user_id": "harper_ahmed_8302",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 5,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is amelia_hernandez_8403. You want to verify the seating arrangements and meal preferences for your reservation 5JR4XX to ensure a comfortable flight experience.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "5JR4XX"
+        }
+      }
+    ],
+    "user_id": "amelia_hernandez_8403",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 34,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is james_ahmed_4322. You need to review your reservation JX6LB3 to ensure all flight details are correct before your upcoming trip.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "JX6LB3"
+        }
+      }
+    ],
+    "user_id": "james_ahmed_4322",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 6,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is raj_garcia_4690. You want to verify the seating arrangements for your reservation 4NQCM5 to ensure your preferences are met.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "4NQCM5"
+        }
+      }
+    ],
+    "user_id": "raj_garcia_4690",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 95,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is liam_muller_3384. You need to confirm the seat selection for your reservation HDUF3Q to ensure you have your preferred seating arrangement.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "HDUF3Q"
+        }
+      }
+    ],
+    "user_id": "liam_muller_3384",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 65,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is chen_lopez_2451. You want to verify the seat assignment and meal preference for reservation 71Y56R as a gold member benefit.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "71Y56R"
+        }
+      }
+    ],
+    "user_id": "chen_lopez_2451",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 66,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is lucas_rossi_2421. You need to confirm the seat assignment for your reservation J43KQ8 to ensure you have the desired seating preference.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "J43KQ8"
+        }
+      }
+    ],
+    "user_id": "lucas_rossi_2421",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 36,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is liam_muller_3384. You want to check the details for reservation HDUF3Q to verify your seat assignment and meal preference.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "HDUF3Q"
+        }
+      }
+    ],
+    "user_id": "liam_muller_3384",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 35,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is noah_wilson_9692. You want to check your reservation XZE9VN to ensure all flight details are correct for your upcoming trip.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "XZE9VN"
+        }
+      }
+    ],
+    "user_id": "noah_wilson_9692",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 68,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is mia_santos_2092. You need to check your reservation 4NXSCL to confirm the seat assignment and ensure your dietary preferences are noted for the flight.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "4NXSCL"
+        }
+      }
+    ],
+    "user_id": "mia_santos_2092",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 7,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is evelyn_smith_6580. You want to check your reservation 63QBEX to confirm your seat assignment and ensure there have been no changes to your flight itinerary.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "63QBEX"
+        }
+      }
+    ],
+    "user_id": "evelyn_smith_6580",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 97,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is lucas_wilson_8118. You need to check your reservation I6XC2H to confirm your seat assignment and ensure your frequent flyer benefits are applied.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "I6XC2H"
+        }
+      }
+    ],
+    "user_id": "lucas_wilson_8118",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 96,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is mohamed_silva_9265. You want to check your reservation K1NW8N to ensure all travel details are correct ahead of your upcoming trip.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "K1NW8N"
+        }
+      }
+    ],
+    "user_id": "mohamed_silva_9265",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 37,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is lucas_khan_1131. You need to verify your seating arrangement and meal preference for reservation AVX2IV to ensure a comfortable journey as a gold member.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "AVX2IV"
+        }
+      }
+    ],
+    "user_id": "lucas_khan_1131",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 67,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is mason_johansson_5154. You want to check reservation RB9S17 to confirm the seat assignment and meal preference for your upcoming flight.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "RB9S17"
+        }
+      }
+    ],
+    "user_id": "mason_johansson_5154",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 38,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is isabella_anderson_8228. You want to confirm your seating assignment and meal preference for reservation PIJF3U.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "PIJF3U"
+        }
+      }
+    ],
+    "user_id": "isabella_anderson_8228",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 8,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is chen_lee_6825. You want to ensure that your seat selection is confirmed for reservation JW6LEQ.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "JW6LEQ"
+        }
+      }
+    ],
+    "user_id": "chen_lee_6825",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 98,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is fatima_silva_7735. You want to check your reservation ASFFI5 to confirm the seating arrangement before your upcoming flight.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "ASFFI5"
+        }
+      }
+    ],
+    "user_id": "fatima_silva_7735",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 9,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is juan_brown_2465. You want to review your account details and ensure your membership level is correct.",
+    "actions": [
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "juan_brown_2465"
+        }
+      }
+    ],
+    "user_id": "juan_brown_2465",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 69,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is mia_thomas_5479. You need to confirm the seat assignment for your reservation DYKWMO as you prefer a window seat.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "DYKWMO"
+        }
+      }
+    ],
+    "user_id": "mia_thomas_5479",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 39,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is harper_davis_5069. You want to verify the seating arrangements for reservation WLXS0L to ensure you have an aisle seat.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "WLXS0L"
+        }
+      }
+    ],
+    "user_id": "harper_davis_5069",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 70,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is emma_jackson_2190. You want to review your membership benefits and update your contact information.",
+    "actions": [
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "emma_jackson_2190"
+        }
+      }
+    ],
+    "user_id": "emma_jackson_2190",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 99,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is amelia_nguyen_7778. You want to check your reservation U7QTYY to confirm your seat assignment and meal preference for an upcoming flight.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "U7QTYY"
+        }
+      }
+    ],
+    "user_id": "amelia_nguyen_7778",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 100,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is aarav_lee_9671. You want to verify the seating and meal preferences for your reservation CN5AEV before your upcoming trip.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "CN5AEV"
+        }
+      }
+    ],
+    "user_id": "aarav_lee_9671",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 11,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is mason_johansson_5154. You want to verify your seat assignment and meal preference for reservation RB9S17 before your upcoming flight.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "RB9S17"
+        }
+      }
+    ],
+    "user_id": "mason_johansson_5154",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 10,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is emma_martin_8571. You want to review the details of your reservation 1JR46H to ensure accuracy and confirm your travel itinerary as a gold member.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "1JR46H"
+        }
+      }
+    ],
+    "user_id": "emma_martin_8571",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 40,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is olivia_garcia_3026. You need to review your reservation AO5N50 details to ensure your seating preferences are correctly recorded for your upcoming flight.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "AO5N50"
+        }
+      }
+    ],
+    "user_id": "olivia_garcia_3026",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 71,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is isabella_ito_3653. You want to confirm the seat selection for your reservation MXCGN8 to ensure you have an aisle seat as requested.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "MXCGN8"
+        }
+      }
+    ],
+    "user_id": "isabella_ito_3653",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 12,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is harper_patel_1045. You need to ensure that your reservation HAGO8B is confirmed and verify the departure time as you plan your travel itinerary.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "HAGO8B"
+        }
+      }
+    ],
+    "user_id": "harper_patel_1045",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 13,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is olivia_anderson_8651. To check your account details, please log in to your account dashboard and navigate to the \"Account Information\" section.",
+    "actions": [
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "olivia_anderson_8651"
+        }
+      }
+    ],
+    "user_id": "olivia_anderson_8651",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 73,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is raj_davis_3310. You need to verify the seating arrangement for your reservation M6N5DM as you prefer a window seat for your upcoming flight.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "M6N5DM"
+        }
+      }
+    ],
+    "user_id": "raj_davis_3310",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 43,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is liam_wilson_9173. You need to review the seat assignment for your reservation 238F2V to ensure it meets your preferences.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "238F2V"
+        }
+      }
+    ],
+    "user_id": "liam_wilson_9173",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 72,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is juan_moore_4540. You need to review your reservation 2P5CYY to confirm your seat assignment and meal preferences before your upcoming flight.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "2P5CYY"
+        }
+      }
+    ],
+    "user_id": "juan_moore_4540",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 14,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is yusuf_martin_3470. You need to check the reservation BBVDO9 to confirm the seating arrangements for your upcoming flight.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "BBVDO9"
+        }
+      }
+    ],
+    "user_id": "yusuf_martin_3470",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 15,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is liam_sanchez_8204. You need to review reservation Q17Y7B to confirm your seat assignment and baggage allowance before your upcoming trip.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "Q17Y7B"
+        }
+      }
+    ],
+    "user_id": "liam_sanchez_8204",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 41,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is aarav_sanchez_7773. Please display the list of all available airports for your review.",
+    "actions": [
+      {
+        "name": "list_all_airports",
+        "kwargs": {}
+      }
+    ],
+    "user_id": "aarav_sanchez_7773",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 42,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is yara_garcia_1905. You want to verify the seat assignment for your reservation HXDUBJ to ensure you have an aisle seat.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "HXDUBJ"
+        }
+      }
+    ],
+    "user_id": "yara_garcia_1905",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 44,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is amelia_davis_7067. You want to check your reservation ZAC5BK to ensure your seat preferences are confirmed for your upcoming flight.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "ZAC5BK"
+        }
+      }
+    ],
+    "user_id": "amelia_davis_7067",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 74,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is raj_khan_9352. You need to review your account details and update any necessary information.",
+    "actions": [
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "raj_khan_9352"
+        }
+      }
+    ],
+    "user_id": "raj_khan_9352",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 76,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is harper_santos_6381. You need to verify your reservation IER616 to ensure your seat assignment is confirmed for your upcoming flight.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "IER616"
+        }
+      }
+    ],
+    "user_id": "harper_santos_6381",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 16,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is omar_anderson_1185. You want to confirm the seating arrangements for your reservation 32J3PL to ensure you are sitting next to your family.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "32J3PL"
+        }
+      }
+    ],
+    "user_id": "omar_anderson_1185",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 45,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is evelyn_brown_8513. You need to check your reservation 0TN6YG to confirm the flight times for planning your travel itinerary.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "0TN6YG"
+        }
+      }
+    ],
+    "user_id": "evelyn_brown_8513",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 75,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is amelia_taylor_4937. You want to confirm the seating arrangement and meal preference for your reservation LT77K6.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "LT77K6"
+        }
+      }
+    ],
+    "user_id": "amelia_taylor_4937",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 46,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is liam_santos_5621. You need to check your reservation ZZSA4W to confirm the updated gate information for your upcoming flight.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "ZZSA4W"
+        }
+      }
+    ],
+    "user_id": "liam_santos_5621",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 17,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is yara_silva_8071. Please search for direct flights from EWR to IAH on May 18th, 2024, and check for morning departures.",
+    "actions": [
+      {
+        "name": "search_direct_flight",
+        "kwargs": {
+          "origin": "EWR",
+          "destination": "IAH",
+          "date": "2024-05-18"
+        }
+      }
+    ],
+    "user_id": "yara_silva_8071",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 18,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is liam_taylor_6683. You want to check your reservation OWCNP2 details to ensure your seating preferences are confirmed.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "OWCNP2"
+        }
+      }
+    ],
+    "user_id": "liam_taylor_6683",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 47,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is lei_anderson_2319. You want to confirm the seat assignment and baggage allowance for your reservation KFSKBR.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "KFSKBR"
+        }
+      }
+    ],
+    "user_id": "lei_anderson_2319",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 77,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is mia_ahmed_3713. You need to check your reservation M2RFTA to confirm the seating arrangement and baggage allowance for your upcoming trip.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "M2RFTA"
+        }
+      }
+    ],
+    "user_id": "mia_ahmed_3713",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 79,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is harper_lopez_2390. You want to review your account details and membership status.",
+    "actions": [
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "harper_lopez_2390"
+        }
+      }
+    ],
+    "user_id": "harper_lopez_2390",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 48,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is lei_ito_5790. You want to confirm the flight details and seat assignment for your upcoming trip with reservation 6ZQNOS.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "6ZQNOS"
+        }
+      }
+    ],
+    "user_id": "lei_ito_5790",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 78,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is anya_sanchez_5753. You are searching for a flight from MIA to ORD on 2024-05-17.",
+    "actions": [
+      {
+        "name": "search_direct_flight",
+        "kwargs": {
+          "origin": "MIA",
+          "destination": "ORD",
+          "date": "2024-05-17"
+        }
+      }
+    ],
+    "user_id": "anya_sanchez_5753",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 19,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is sophia_martin_4574. You want to confirm your seat selection and meal preference for reservation MFRB94.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "MFRB94"
+        }
+      }
+    ],
+    "user_id": "sophia_martin_4574",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 49,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is mason_johansson_3174. You need to check your reservation 91ZD2J to confirm your seat assignment and ensure all travel details are correct.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "91ZD2J"
+        }
+      }
+    ],
+    "user_id": "mason_johansson_3174",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 20,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is ethan_davis_3996. You want to verify the seating arrangements for your reservation I2URCD as you plan to travel with a companion.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "I2URCD"
+        }
+      }
+    ],
+    "user_id": "ethan_davis_3996",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 81,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is sophia_garcia_4224. Please access the airport directory to view the complete list of available airports for your travel arrangements.",
+    "actions": [
+      {
+        "name": "list_all_airports",
+        "kwargs": {}
+      }
+    ],
+    "user_id": "sophia_garcia_4224",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 50,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is noah_martin_7498. You want to verify the seating arrangements for your reservation 6UJKDA to ensure comfort during your upcoming flight.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "6UJKDA"
+        }
+      }
+    ],
+    "user_id": "noah_martin_7498",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 80,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is aarav_rossi_9663. You want to confirm your seat assignment and meal preference for reservation IAANOV.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "IAANOV"
+        }
+      }
+    ],
+    "user_id": "aarav_rossi_9663",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 21,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is mei_thomas_2630. You want to verify the seating arrangements and baggage allowance for your reservation U1YV6I.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "U1YV6I"
+        }
+      }
+    ],
+    "user_id": "mei_thomas_2630",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 82,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is daiki_patel_1917. You want to check your reservation 7WKBKD details to ensure seat selection and meal preferences are confirmed for your upcoming flight.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "7WKBKD"
+        }
+      }
+    ],
+    "user_id": "daiki_patel_1917",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 52,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is anya_lee_9572. You want to check your reservation ABB0M7 to confirm the seat selection and meal preferences for your upcoming flight.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "ABB0M7"
+        }
+      }
+    ],
+    "user_id": "anya_lee_9572",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 23,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is harper_lopez_2390. You want to review your account details, including your membership status and any linked services.",
+    "actions": [
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "harper_lopez_2390"
+        }
+      }
+    ],
+    "user_id": "harper_lopez_2390",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 51,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is noah_sanchez_4225. You want to verify the seating arrangements for reservation AQSRNQ to ensure your preferences are met.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "AQSRNQ"
+        }
+      }
+    ],
+    "user_id": "noah_sanchez_4225",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 22,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is sofia_ahmed_9069. You want to view your account details to ensure everything is up-to-date.",
+    "actions": [
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "sofia_ahmed_9069"
+        }
+      }
+    ],
+    "user_id": "sofia_ahmed_9069",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 83,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is amelia_li_2415. You need to confirm the details of your reservation NUCNX0 to ensure all travel plans are in order.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "NUCNX0"
+        }
+      }
+    ],
+    "user_id": "amelia_li_2415",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 84,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is raj_garcia_3316. You want to verify your reservation Z7W1AC to ensure all details are correct before your upcoming trip.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "Z7W1AC"
+        }
+      }
+    ],
+    "user_id": "raj_garcia_3316",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 53,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is mei_johnson_4931. Please display a list of all available airports for your next travel plan.",
+    "actions": [
+      {
+        "name": "list_all_airports",
+        "kwargs": {}
+      }
+    ],
+    "user_id": "mei_johnson_4931",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 24,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is anya_khan_1074. You need to check your reservation 77VWO5 to confirm the seating arrangements for your upcoming flight as a silver member.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "77VWO5"
+        }
+      }
+    ],
+    "user_id": "anya_khan_1074",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 85,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is mohamed_martin_1679. You need to check your reservation V7NBLQ to confirm the flight details and seating arrangements before your trip.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "V7NBLQ"
+        }
+      }
+    ],
+    "user_id": "mohamed_martin_1679",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 26,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is anya_brown_2655. You want to verify your seating arrangements for reservation JEPRZB to ensure you are seated with your travel companions.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "JEPRZB"
+        }
+      }
+    ],
+    "user_id": "anya_brown_2655",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 25,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is noah_khan_8166. You want to check your reservation Y1ZIDC to confirm your seating arrangement and baggage allowance before your upcoming trip.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "Y1ZIDC"
+        }
+      }
+    ],
+    "user_id": "noah_khan_8166",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 86,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is emma_kim_9957. You want to check your reservation EHGLP3 to confirm the seating arrangements for your upcoming flight.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "EHGLP3"
+        }
+      }
+    ],
+    "user_id": "emma_kim_9957",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 55,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is mohamed_ahmed_3350. You need to check your reservation ZND99F to confirm the flight schedule and ensure your travel plans are set.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "ZND99F"
+        }
+      }
+    ],
+    "user_id": "mohamed_ahmed_3350",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 28,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is lei_kim_9517. You want to review your membership status and account preferences.",
+    "actions": [
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "lei_kim_9517"
+        }
+      }
+    ],
+    "user_id": "lei_kim_9517",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 87,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is mohamed_silva_9265. You want to check the reservation K1NW8N details to confirm your travel itinerary and ensure there are no changes to your flight schedule.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "K1NW8N"
+        }
+      }
+    ],
+    "user_id": "mohamed_silva_9265",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 27,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is olivia_martin_3924. You need to review your reservation H0MVIE to verify the seat selection and baggage allowance as you're planning to pack for a long trip.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "H0MVIE"
+        }
+      }
+    ],
+    "user_id": "olivia_martin_3924",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 56,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is fatima_anderson_7848. You want to verify the seating arrangements and meal preferences for your reservation TH87DD.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "TH87DD"
+        }
+      }
+    ],
+    "user_id": "fatima_anderson_7848",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 57,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is amelia_taylor_4937. You want to review your reservation PIMHHE to confirm your seat selection and meal preference for your upcoming flight.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "PIMHHE"
+        }
+      }
+    ],
+    "user_id": "amelia_taylor_4937",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 58,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is evelyn_smith_6580. You want to verify the seat assignment for your reservation 63QBEX to ensure you have an aisle seat for your upcoming flight.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "63QBEX"
+        }
+      }
+    ],
+    "user_id": "evelyn_smith_6580",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 1,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is sofia_santos_3403. You need to check your reservation JOHYVS to confirm the seating arrangements for your upcoming flight.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "JOHYVS"
+        }
+      }
+    ],
+    "user_id": "sofia_santos_3403",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 88,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is ethan_gonzalez_3910. You need to check your reservation 25DFCD to confirm the seating arrangements and baggage allowance for your upcoming flight.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "25DFCD"
+        }
+      }
+    ],
+    "user_id": "ethan_gonzalez_3910",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 30,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is liam_garcia_8705. You need to check your reservation 971W9L to confirm your seating preference and baggage allowance before your upcoming trip.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "971W9L"
+        }
+      }
+    ],
+    "user_id": "liam_garcia_8705",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 54,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is ivan_kim_3844. You want to ensure your seat preference is correctly updated for your reservation Q79V9W.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "Q79V9W"
+        }
+      }
+    ],
+    "user_id": "ivan_kim_3844",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 29,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is liam_jackson_9794. You want to review your account details and confirm your membership status.",
+    "actions": [
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "liam_jackson_9794"
+        }
+      }
+    ],
+    "user_id": "liam_jackson_9794",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 89,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is ethan_nguyen_6045. You want to check your reservation L1QGWV to ensure your seat preferences are confirmed for your upcoming flight.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "L1QGWV"
+        }
+      }
+    ],
+    "user_id": "ethan_nguyen_6045",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 59,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is lucas_martin_2833. You want to check your reservation FFMQB1 to ensure your seat selection for the upcoming flight is confirmed.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "FFMQB1"
+        }
+      }
+    ],
+    "user_id": "lucas_martin_2833",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 90,
+      "payment_corrections_applied": false
+    }
+  },
+  {
+    "instruction": "Your user id is yusuf_gonzalez_6436. You need to check your reservation Z9B996 to confirm the updated seating arrangement and meal preferences.",
+    "actions": [
+      {
+        "name": "get_reservation_details",
+        "kwargs": {
+          "reservation_id": "Z9B996"
+        }
+      }
+    ],
+    "user_id": "yusuf_gonzalez_6436",
+    "difficulty": "easy",
+    "synthetic_generation": {
+      "method": "backtranslation",
+      "source": "validated_action_sequence",
+      "generated_timestamp": "2025-09-27T22:22:20.445337"
+    },
+    "trajectory_metadata": {
+      "is_valid": true,
+      "error_message": null,
+      "validation_sequence_number": 60,
+      "payment_corrections_applied": false
+    }
+  }
+]

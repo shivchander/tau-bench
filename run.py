@@ -52,8 +52,8 @@ def parse_args() -> RunConfig:
         "--task-split",
         type=str,
         default="test",
-        choices=["train", "test", "dev"],
-        help="The split of tasks to run (only applies to the retail domain for now",
+        choices=["train", "test", "dev", "synthetic"],
+        help="The split of tasks to run (only applies to the retail domain for now; synthetic applies to airline domain",
     )
     parser.add_argument("--start-index", type=int, default=0)
     parser.add_argument("--end-index", type=int, default=-1, help="Run all tasks if -1")

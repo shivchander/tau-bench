@@ -4,7 +4,7 @@ TASKS = [
     Task(
         annotator="1",
         user_id="mei_thomas_2630",
-        instruction="Your user id is mei_thomas_2630. You want to retrieve the details of a specific reservation, though you do not recall the reservation id. You prefer the agent to ask for necessary information, as you are reactive and will not provide details unless prompted. Your birthday is in your user profile, so you do not prefer to provide it. If and only if additional identification is required, you are open to verifying your identity with your stored personal details.",
+        instruction="Your user id is mei_thomas_2630. You want the agent to provide detailed information for your reservation with the reservation ID U1YV6I. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="get_reservation_details",
@@ -16,7 +16,7 @@ TASKS = [
     Task(
         annotator="0",
         user_id="yusuf_martin_3470",
-        instruction="Your user id is yusuf_martin_3470. You want to retrieve the details of your existing reservation. You do not have the reservation id memorized, so you depend on the agent to assist you in finding it. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If additional information is needed, you prefer the agent guides you through the process.",
+        instruction="Your user id is yusuf_martin_3470. You want to retrieve the details for your existing reservation with the ID BBVDO9. This reservation includes a one-way business class flight from JFK to LAX with a stopover in MIA on May 22, 2024. You are traveling with Yusuf Muller, and your payment history shows you used your Mastercard ending in 6182 for this booking. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="get_reservation_details",
@@ -28,7 +28,7 @@ TASKS = [
     Task(
         annotator="0",
         user_id="yusuf_patel_4029",
-        instruction="Your user id is yusuf_patel_4029. You want to inquire about the details of an existing reservation with the reservation id you cannot recall right now. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If the agent asks for additional information to find your reservation, you are willing to provide it if available.",
+        instruction="Your user id is yusuf_patel_4029. You want to check the details for your one-way flight reservation from Philadelphia to Chicago under reservation ID 847MY1. Please provide all the information related to this booking, including the flight date, flight number, any baggage allowance, and the payment method used. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="get_reservation_details",
@@ -40,7 +40,7 @@ TASKS = [
     Task(
         annotator="3",
         user_id="raj_garcia_4690",
-        instruction="Your user id is raj_garcia_4690. You want to retrieve the details of your existing reservation but cannot recall the reservation id. If and only if the agent needs further information, you are willing to confirm the trip dates or destinations. However, you prefer not to provide your birthday because it is already in your user profile. You are reactive to the agent and will not say anything that is not asked. You tend to be concise and direct in your communication, ensuring efficiency and clarity in your interactions.",
+        instruction="Your user id is raj_garcia_4690. You want to retrieve the details for your reservation with the ID 4NQCM5. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="get_reservation_details",
@@ -52,7 +52,7 @@ TASKS = [
     Task(
         annotator="1",
         user_id="lucas_rossi_2421",
-        instruction="Your user id is lucas_rossi_2421. You need to review the details of an existing reservation, but you do not remember the reservation id. If the agent can find it, you want to confirm the flight details and ensure everything is in order. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. Please handle any sensitive information carefully, as you value your privacy.",
+        instruction="Your user id is lucas_rossi_2421. You want to retrieve the details for your reservation with the id J43KQ8. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="get_reservation_details",
@@ -64,7 +64,7 @@ TASKS = [
     Task(
         annotator="1",
         user_id="daiki_patel_1917",
-        instruction="Your user id is daiki_patel_1917. You want to retrieve the details of your reservation but do not remember the reservation id exactly; however, the agent might find it under a similar reference. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if the agent cannot find the reservation, you are willing to provide more information if necessary.",
+        instruction="Your user id is daiki_patel_1917. You want to review the details of your reservation with the ID 7WKBKD. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="get_reservation_details",
@@ -76,7 +76,7 @@ TASKS = [
     Task(
         annotator="1",
         user_id="ivan_kim_3844",
-        instruction="Your user id is ivan_kim_3844. You want to retrieve the details of your existing reservation. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked. If and only if the reservation details are not retrievable, you would be open to discussing alternative options with the agent.",
+        instruction="Your user id is ivan_kim_3844. You want to review the details of your existing reservation with the ID Q79V9W. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="get_reservation_details",
@@ -88,7 +88,7 @@ TASKS = [
     Task(
         annotator="1",
         user_id="yara_silva_8071",
-        instruction="Your user id is yara_silva_8071. You want to find a direct flight from Newark to Houston on May 18. You prefer a straightforward journey without stopovers. If and only if there are no direct flights available, you are open to considering options with one stopover. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+        instruction="Your user id is yara_silva_8071. You want to search for a direct flight from Newark (EWR) to Houston (IAH) on May 18, 2024. Since you have a gold membership, you may inquire about any available benefits that could be applied to this booking. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="search_direct_flight",
@@ -100,7 +100,7 @@ TASKS = [
     Task(
         annotator="0",
         user_id="juan_moore_4540",
-        instruction="Your user id is juan_moore_4540. You want to inquire about the details of your reservation, but you do not recall the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if asked, you may confirm that you are interested in ensuring all details are correct and up-to-date, but you will rely on the agent to guide the conversation.",
+        instruction="Your user id is juan_moore_4540. You want to retrieve the details of your reservation with the ID 2P5CYY. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="get_reservation_details",
@@ -112,7 +112,7 @@ TASKS = [
     Task(
         annotator="1",
         user_id="lei_kim_9517",
-        instruction="Your user id is lei_kim_9517. You are planning a trip and require the agent to first confirm your user details. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You want to ensure all personal details are correctly captured in your profile before proceeding with any bookings or inquiries.",
+        instruction="Your user id is lei_kim_9517. You need to verify your account details, including your current address and saved payment methods. You prefer to use your $100 certificate for any future bookings. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="get_user_details",
@@ -124,7 +124,7 @@ TASKS = [
     Task(
         annotator="1",
         user_id="harper_davis_5069",
-        instruction="Your user id is harper_davis_5069. You want to retrieve the details for a specific reservation but cannot remember the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if asked to verify your identity, you prefer to provide information available in your user profile.",
+        instruction="Your user id is harper_davis_5069. You need to retrieve the details for your reservation with the ID WLXS0L. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="get_reservation_details",
@@ -136,7 +136,7 @@ TASKS = [
     Task(
         annotator="1",
         user_id="isabella_ito_3653",
-        instruction="Your user id is isabella_ito_3653. You need the details for your current reservation but do not have the reservation id readily available. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked. If and only if further confirmation is needed, you are willing to answer specific questions about the reservation details.",
+        instruction="Your user id is isabella_ito_3653. You need details for your flight reservation from Detroit to Minneapolis on May 17. The flight number is HAT210, and your reservation ID is MXCGN8. You are traveling in business class with yourself, Isabella Ito, and another passenger, Aarav Khan. You used your Mastercard ending in 2671 for payment. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="get_reservation_details",
@@ -148,7 +148,7 @@ TASKS = [
     Task(
         annotator="1",
         user_id="raj_khan_9352",
-        instruction="Your user id is raj_khan_9352. You are seeking assistance from the agent to retrieve your user details. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You are patient and await further questions or instructions from the agent to proceed with any additional requests.",
+        instruction="Your user id is raj_khan_9352. You want to verify your account details, including your saved payment methods, upcoming reservations, and any other personal information associated with your account. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="get_user_details",
@@ -160,7 +160,7 @@ TASKS = [
     Task(
         annotator="0",
         user_id="liam_lee_5870",
-        instruction="Your user id is liam_lee_5870. You are looking to cancel your current reservation for reasons not specified here. You need to find and book a direct flight from Los Angeles to Charlotte on May 17, traveling one way in economy class. You prefer to travel with Raj Hernandez and Sofia Jackson, with their birthdays already in the profile, so you do not prefer to provide them. You have 2 bags, and one of them is a non-free checked bag. You do not want to purchase insurance. You wish to pay using your gift card first, and if it doesn’t cover the full amount, use your 1015550 card for the remaining balance. Additionally, you need to update your existing reservation to include 1 non-free checked bag and change the flights to the ones on May 20. You are reactive to the agent and will not say anything that is not asked.",
+        instruction="Your user id is liam_lee_5870. You want to cancel your existing reservation from Los Angeles to Charlotte with reservation id 1CUG9J. Then, search for a new direct flight from Los Angeles to Charlotte on May 17. Once you find an appropriate flight, book a one-way trip in economy class for Raj Hernandez and Sofia Jackson on May 17, with flight numbers HAT228 and HAT270. You want to use your $49 gift card to pay first, and the remaining balance should be paid with your Mastercard ending in 8261. You also need to include 2 baggages, with 1 being a non-free baggage. Additionally, update your reservation EWO4IQ to change the travel date to May 20 with the same flight numbers HAT299 and HAT047, upgrade to economy class, and add 1 non-free baggage using your Mastercard ending in 8261. You do not want insurance for these bookings. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="cancel_reservation",
@@ -188,7 +188,7 @@ TASKS = [
     Task(
         annotator="2",
         user_id="harper_martin_8348",
-        instruction="Your user id is harper_martin_8348. You want to cancel your current reservation with the id MU96D4. Subsequently, you are looking to book a new business class one-way flight from New York to Miami on May 18 with the passenger Mason Rossi, born on July 25, 1973. You prefer to use your gift card first for payment, covering the amount of $186, and then use your 4852 card for the remaining $388. You have a total of 1 baggage, which is non-free, and you would like to include insurance in this booking. Additionally, you need to update an existing reservation, id ER7A5P, to include 2 baggages (1 non-free) and ensure all flights are in business class, paying with your 4852 card. Your birthday is in your user profile so you do not prefer to provide it. If and only if there are issues with seat availability, you would like to be informed to adjust your plans. You are reactive to the agent and will not say anything that is not asked.",
+        instruction="Your user id is harper_martin_8348. You want to make a few changes and bookings for your travel plans. First, please cancel your existing reservation from Detroit to Phoenix with reservation ID MU96D4. Next, you want to book a new one-way flight from New York (JFK) to Miami (MIA) in business class for Mason Rossi, traveling on May 18 on flight number HAT209. You would like to include one checked baggage and opt for insurance. To pay for this, use your gift card of $186 and cover the remaining amount with your Visa card ending in 2492.\n\nAdditionally, you wish to update your existing reservation with ID ER7A5P. Please change the cabin class to business for all flights on this reservation. Also, increase the total baggage allowance to two, including one non-free baggage. Use your Visa card ending in 2492 to cover any additional costs associated with these updates. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="think",
@@ -216,7 +216,7 @@ TASKS = [
     Task(
         annotator="3",
         user_id="yusuf_thomas_7802",
-        instruction="Your user id is yusuf_thomas_7802. You want to first get the details of your current reservation for clarity. You are looking to update this reservation to include flights on May 19 and May 28 in business class. You have one bag to check, and you are okay with using your 6263 card to pay for the flight updates and your 1321 card for the baggage fees. If there is any issue with these cards, you want the agent to ask for alternatives. You also need to cancel a different reservation, which you can identify by its reservation ID. Following that, you plan to book a new round-trip flight from Phoenix to Los Angeles, leaving on May 20 and returning on May 24, traveling in business class. You will be flying with one passenger, Lucas Santos, whose details are already in the system. You prefer to pay using your gift cards first, using your credit card for any remaining balance. If and only if the gift cards cannot cover the cost, you will use your 8008 card to complete the payment. You have just one non-free bag to check on this new trip and do not require any travel insurance. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+        instruction="Your user id is yusuf_thomas_7802. You want to update your existing reservation from Phoenix to San Francisco (reservation id 0SZHSV) by changing the departure flights to May 19 in business class and adding one checked bag. Use your Visa ending in 8264 for the flight changes and your Visa ending in 6833 for the baggage fee. Additionally, you want to cancel your upcoming trip from Phoenix to Los Angeles (reservation id ZI0T78). After canceling, you want to book a new round-trip flight from Phoenix to Los Angeles for Lucas Santos with the following itinerary: depart on May 20 (flight numbers HAT159 and HAT163) and return on May 24 (flight numbers HAT034 and HAT123) in business class. You do not want insurance and prefer to use your $252 gift card first, followed by your $122 gift card, and then your Mastercard ending in 5011 for any remaining balance. You want one bag included in this new booking. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="get_reservation_details",
@@ -244,7 +244,7 @@ TASKS = [
     Task(
         annotator="2",
         user_id="chen_lopez_2451",
-        instruction="Your user id is chen_lopez_2451. You need to retrieve the details of your existing reservation for an upcoming trip. You want to update this reservation to travel in business class, utilizing your 7912636 card for payment. If and only if this reservation cannot be updated, you would like to cancel reservation DNL44T. You also want to book a new one-way flight from Phoenix to Minneapolis on May 18 for two passengers, Yara Lopez and yourself, Chen Lopez. The trip should be in economy class, and you have a preference for using your 4073554 card for the payment. You will have two pieces of luggage, one of which requires additional payment. You prefer not to purchase insurance. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+        instruction="Your user id is chen_lopez_2451. First, you want to retrieve the details for your reservation with ID 71Y56R. After reviewing, you want to update this reservation to maintain the business class and ensure your flights are as follows: Flight HAT253 on May 18, HAT013 on May 20, HAT161 and HAT045 both on May 28. You prefer to use your Mastercard ending in 2121 for any additional charges. Next, you want to cancel your existing reservation DNL44T. Instead, you wish to book a new one-way trip from Phoenix to Minneapolis on May 18. The flights should be HAT106 followed by HAT254, and you plan to travel in economy class with two passengers, Yara Lopez and Chen Lopez. You will have a total of 2 baggages, of which 1 will incur a fee. Use your Visa ending in 9890 for the payment of this new booking. Finally, you want to update your reservation LP32EB to include a total of 2 baggages, with 1 being a non-free baggage, and pay any related fees with your Mastercard ending in 2121. You do not require insurance for any of these reservations. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="get_reservation_details",
@@ -272,7 +272,7 @@ TASKS = [
     Task(
         annotator="1",
         user_id="amelia_taylor_4937",
-        instruction="Your user id is amelia_taylor_4937. You want to update your existing reservation to include a round-trip flight from JFK to IAH with the outbound on May 19 and return on May 22, all in economy class. You also need to add 5 total baggages, with 2 being nonfree. You prefer to pay for the flights using your 7447 card and for the baggage with your gift card that covers it entirely. Additionally, you want to cancel another reservation you have without specifying the details. You also wish to book a new one-way flight from JFK to IAH on May 18 in business class for yourself, and you want to use your gift card for the full payment. You do not require any baggage for this new booking, nor do you want insurance. You wish to update another reservation to change the passenger to Emma Kim, born on October 13, 1954. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+        instruction="Your user id is amelia_taylor_4937. You want to make several updates to your reservations. First, for your reservation R8XD2X, you want to change your flights to depart from DFW to SEA on May 19 with flight HAT222, and from SEA to SFO on the same day with flight HAT274. Your return from SFO to SEA on May 22 will be with flight HAT204, and from SEA to DFW with flight HAT037 on the same day. You want to stay in economy class and use your Mastercard ending in 1756 for payment.\n\nNext, for reservation LT77K6, you wish to increase your total baggage count to 5, with 2 being non-free. You prefer to use your $299 gift card for this payment.\n\nAdditionally, you need to cancel your reservation PIMHHE entirely.\n\nYou also want to book a new one-way trip from New York (JFK) to Houston (IAH) on May 18 in business class. You will be the passenger on this reservation, and you want to use your $238 gift card for payment. You do not require any baggage or insurance for this trip.\n\nLastly, for reservation XRC5CB, you want to update the passenger to Emma Kim with the birthdate October 13, 1954. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="update_reservation_flights",
@@ -300,7 +300,7 @@ TASKS = [
     Task(
         annotator="0",
         user_id="lucas_taylor_8203",
-        instruction="Your user id is lucas_taylor_8203. You want to update your reservation for a round trip, ensuring that you're flying in business class. Your flights are scheduled to depart on May 19 and return on May 23. You are not concerned about stopovers and prefer the itinerary you already have. For the flights, you want to use your 8476 card for payment. Additionally, you need to update the baggage allowance on a separate reservation, requiring 3 checked bags, all of which are non-free, and you prefer to pay for this with a gift card. If and only if the gift card cannot cover the full amount, you would allow using your credit card for the remaining balance. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked.",
+        instruction="Your user id is lucas_taylor_8203. You want to modify your reservation for the trip from Philadelphia to Houston (reservation id 6BL7WH). You want to upgrade your cabin to business class for all flights on May 19 and May 23, specifically flights HAT291, HAT082, HAT116, and HAT271. Please use your Mastercard ending in 9678 for this upgrade. Additionally, for your one-way trip from Boston to Denver (reservation id U1DEHM), you want to include 3 checked bags, and you prefer to use your gift card with the amount of $292 to cover this. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="update_reservation_flights",
@@ -316,7 +316,7 @@ TASKS = [
     Task(
         annotator="2",
         user_id="raj_muller_5942",
-        instruction="Your user id is raj_muller_5942. You want to update your reservation to include business class flights for your trip on May 18. You are flexible with flight times but prefer to have minimal layovers. You plan to bring 3 pieces of luggage, with one of them requiring payment. You wish to use your 7447 card to pay for the flight update, and prefer using your gift card for the baggage charges. If and only if the gift card cannot cover the baggage fees, you will use your 7447 card instead. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked.",
+        instruction="Your user id is raj_muller_5942. You want to update your flight reservation with id 41X7CX from New York LaGuardia to Detroit on May 18, changing the cabin to business class on flights HAT245 and HAT265. You want to pay for this change with your Mastercard ending in 7990. Additionally, for your reservation with id 5Q85YP from Boston to Minneapolis, you want to increase your total baggage to 3 bags, including 1 non-free bag. You would like to use your gift card with the balance of $276 to cover any additional charges. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="update_reservation_flights",
@@ -332,7 +332,7 @@ TASKS = [
     Task(
         annotator="3",
         user_id="james_silva_1659",
-        instruction="Your user id is james_silva_1659. You want to update your existing reservation for a multi-leg trip starting on May 19. You prefer to fly in economy class and need the flights to be updated to include all legs on May 19 and May 20. You require one checked bag, and if it incurs an additional fee, you want to use your gift card to cover this cost. For the flight updates, you prefer to pay with your 1882 card. If and only if the gift card cannot cover the baggage fee, use the 1882 card for the remaining balance. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked.",
+        instruction="Your user id is james_silva_1659. You want to update your existing reservation (R4H4N6) for a round trip from Minneapolis to New York, ensuring that you fly in economy class. Please adjust the departure flight from Minneapolis to Detroit to May 19 with flight number HAT127, and ensure the Detroit to New York leg is updated to May 20 on flight HAT169. Additionally, modify the return flights: New York to Detroit should be on May 20 with flight number HAT033, and Detroit to Minneapolis on the same day with flight number HAT210. You would also like to add one checked bag to this reservation. For the flight changes, please use your Mastercard ending in 7420 for payment. For the baggage fee, use your gift card. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="update_reservation_flights",
@@ -348,7 +348,7 @@ TASKS = [
     Task(
         annotator="3",
         user_id="harper_ahmed_9365",
-        instruction="Your user id is harper_ahmed_9365. You want to update your existing reservation (reservation id not remembered) for a flight on May 16, upgrading to business class. You will be flying across multiple flights on that day and prefer to use your gift card to pay for these changes. Additionally, you want to book a new round-trip flight from New York LaGuardia to Phoenix, departing on May 16 and returning on May 18, flying in economy class. You will be booking this trip for Yusuf Johnson. You have one piece of non-free baggage for this new reservation and do not require insurance. You wish to use your two certificates to cover the payment for this booking. If only one certificate can be used, prioritize the one with the larger balance. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+        instruction="Your user id is harper_ahmed_9365. You want to update your reservation with ID 53WBRH to change the flights to an earlier date. You will be flying in business class, and you want the following flights on May 16: HAT180 from IAH to SFO, HAT163 from SFO to LAX, HAT228 from LAX to EWR, and HAT056 from EWR to IAH. To cover this update, you wish to use your gift card amount. Additionally, you want to book a new round-trip reservation from New York (LGA) to Phoenix (PHX), departing on May 16 with flight HAT002 and returning on May 18 with flight HAT051. The passenger for this trip will be Yusuf Johnson, whose details are in your user profile. You prefer to fly in economy class and will have one checked bag. For payment, you want to use your $150 certificate and your $250 certificate, with the remaining balance covered by the latter. You do not require travel insurance. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="update_reservation_flights",
@@ -364,7 +364,7 @@ TASKS = [
     Task(
         annotator="1",
         user_id="ethan_hernandez_6400",
-        instruction="Your user id is ethan_hernandez_6400. You want to update your reservations to include two baggages, with one being non-free, for your upcoming travel. You prefer to pay with your 9038 card. Additionally, you wish to ensure your flights are in economy class for the trip occurring on May 19. If and only if there are any issues with the flight changes, you are open to discussing alternatives on the same day. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+        instruction="Your user id is ethan_hernandez_6400. For your reservation from Las Vegas to San Francisco (reservation id 7HXRPX), you want to add an additional checked bag, making it a total of 2 bags, with one being a paid bag. You would like to use your Visa card ending in 1332 for this payment. Additionally, for your one-way trip from New York to Boston (reservation id 4069WE), you would like to change your cabin class to economy for both flights on May 19, with flight numbers HAT083 and HAT194. Again, you wish to use the same Visa card ending in 1332 for this transaction. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="update_reservation_baggages",
@@ -380,7 +380,7 @@ TASKS = [
     Task(
         annotator="2",
         user_id="mason_johansson_5154",
-        instruction="Your user id is mason_johansson_5154. You want to update your reservation for a flight on May 19, upgrading to business class. You want to ensure you have one checked bag for which you need to pay. Use your 5590 card for the flight upgrade and your 3358 card for the baggage fees. If and only if there is an issue with using your 5590 card, you prefer to use the 3358 card for the flight as well. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. It's essential that your travel arrangements are handled smoothly and efficiently.",
+        instruction="Your user id is mason_johansson_5154. You want to update your existing reservation for your flight from Charlotte to Denver on May 28 to a new date, May 19, while staying in business class. The flight number is HAT262. You want to pay for this flight change using your Visa card ending in 2961. Additionally, you would like to add one checked bag to this reservation, which will be one non-free baggage, and you prefer to pay for this with your Visa card ending in 1242. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="update_reservation_flights",
@@ -396,7 +396,7 @@ TASKS = [
     Task(
         annotator="1",
         user_id="noah_silva_2256",
-        instruction="Your user id is noah_silva_2256. You want to update your existing reservation for a trip, ensuring you travel in business class on May 19. You are looking for flights that possibly include the most comfortable options available. You have a preference for using your 7773 card for flight payments. Additionally, you need to check in one bag, which will incur an extra charge, and you prefer to pay for this baggage using your gift card. If and only if your preferred payment methods cannot cover the costs, you authorize the agent to suggest alternative options. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked.",
+        instruction="Your user id is noah_silva_2256. You need to update your existing reservation (ID: T8QHPY) for your flight from Phoenix to Seattle. Please adjust the flight dates to May 19 with flight numbers HAT173 and HAT047, maintaining business class. You want to add one checked baggage to this reservation, using your gift card with the $112 balance for the baggage fee. For the flight adjustments, use your Mastercard ending in 9170. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="update_reservation_flights",
@@ -412,7 +412,7 @@ TASKS = [
     Task(
         annotator="1",
         user_id="mei_lee_8701",
-        instruction="Your user id is mei_lee_8701. You want to update your existing reservation to include flights on May 16 and May 19, staying in economy class. You prefer to pay using your gift card with the balance that fits. You also need to book a one-way flight from New York to Houston on May 19 in economy class. You have no baggage and you require insurance. You prefer to use your certificate first for payment, followed by your gift card, and finally your 1904 card for any remaining balance. If and only if the certificate cannot be used fully, you would like to maximize its application before using the other methods. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+        instruction="Your user id is mei_lee_8701. You need to make two updates. First, for your existing reservation from Dallas (DFW) to Newark (EWR) with reservation id UWNK0D, you want to adjust your return flight. Keep the departure flight as scheduled on May 16 with flight number HAT142, but change the return flight to May 19 using flight number HAT213. Please use your $298 gift card for any additional charges.\n\nSecondly, you want to book a new one-way flight from New York (JFK) to Houston (IAH) on May 19 in economy class. The flight number for this journey is HAT279. The passenger will be Mei Lee, with the birth date of March 5, 1980. You want to include travel insurance for this trip. For payment, apply your $100 certificate first, then your $21 gift card, and finally, cover any remaining balance with your Mastercard ending in 2084. You do not need to add any baggage for this booking. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="update_reservation_flights",
@@ -428,7 +428,7 @@ TASKS = [
     Task(
         annotator="1",
         user_id="lucas_rossi_9280",
-        instruction="Your user id is lucas_rossi_9280. You want to update your reservation to fly in business class for your upcoming trip, ensuring the flights are on May 17 and May 20. You require 2 pieces of checked luggage and prefer to cover these fees with a gift card. If the cost of the flight updates cannot be fully covered by the gift card, use your 7507634 card to pay for the flights. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked.",
+        instruction="Your user id is lucas_rossi_9280. You need to update your reservation MH743C for your trip from Phoenix to Dallas. You want to change the departure and return dates to May 17 and May 20, respectively, while keeping all flights in business class. The specific flights you want are HAT156 and HAT037 on May 17, and HAT067 and HAT121 on May 20. You want to use your Visa card ending in 1842 for any additional charges related to the flight changes. Additionally, you want to add two checked bags for this reservation and use your gift card valued at $277 to cover the baggage fees. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="update_reservation_flights",
@@ -444,7 +444,7 @@ TASKS = [
     Task(
         annotator="0",
         user_id="olivia_jackson_7257",
-        instruction="Your user id is olivia_jackson_7257. You need to cancel your current reservation, though you do not remember the reservation ID. You want to book a round-trip flight from Chicago to Phoenix, departing on May 16 and returning on May 18. You prefer to travel in business class. You will be traveling with two passengers, Aarav Johansson and yourself, Olivia Jackson. You do not need to provide your birthday as it is already in your user profile. You prefer to pay using your 2480 card for the total amount of $2030. You do not want any checked bags for this trip, and you prefer not to purchase travel insurance. Additionally, you need to update a separate reservation to include 5 total bags, of which 2 are non-free, using your 2480 card for payment. If and only if the agent needs more information, you are reactive and will only provide answers to their questions.",
+        instruction="Your user id is olivia_jackson_7257. You want to cancel your existing round-trip reservation from Chicago (ORD) to Phoenix (PHX) with the reservation ID LDZCLM. After canceling, you wish to book a new round-trip flight from Chicago to Phoenix. The flights you prefer are on May 16, with flight numbers HAT230 and HAT035, and returning on May 18 with flight numbers HAT152 and HAT044. You wish to book these flights in business class for two passengers: Aarav Johansson and yourself, Olivia Jackson. You want to pay for this booking using your Visa card ending in 3838. You do not wish to add any baggage or purchase insurance for this reservation. Additionally, for your reservation with ID NQ4Y0O, you would like to update the baggage to a total of 5 bags, of which 2 are non-free, and you want to pay for this update using your Visa card ending in 3838. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="cancel_reservation",
@@ -464,7 +464,7 @@ TASKS = [
     Task(
         annotator="1",
         user_id="sofia_santos_3403",
-        instruction="Your user id is sofia_santos_3403. You want to update your reservation for a flight on May 17, ensuring you are flying in business class. You wish to use your gift card for payment. Additionally, you need to update another reservation to include 3 baggages, 2 of which are not free, paid with the same gift card. You also want to book a one-way flight from Detroit to Charlotte on May 16 for Anya Moore, traveling in business class with 1 checked baggage and insurance. You prefer to pay with your gift card. If the gift card cannot cover all expenses, you do not provide any other payment details unless asked. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked.",
+        instruction="Your user id is sofia_santos_3403. You need to make several updates and bookings: \n\nFirstly, for your existing reservation from Atlanta to Detroit (reservation ID JOHYVS), change the flight dates to May 17, keeping the same flight numbers HAT227 and HAT020, and maintain the business class cabin. Use your gift card to cover any costs.\n\nNext, for your reservation from Houston to Denver (reservation ID 8UW4LT), increase your total baggages to 3, with 2 of them being non-free. Pay for this additional baggage using your gift card.\n\nFinally, you want to book a new one-way flight for Anya Moore from Detroit to Charlotte on May 16, in business class. The flight number is HAT168. This booking should include 1 non-free baggage, and you would like to purchase insurance. Pay for this reservation using your gift card.\n\nYou are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="update_reservation_flights",
@@ -484,7 +484,7 @@ TASKS = [
     Task(
         annotator="2",
         user_id="yusuf_martin_3470",
-        instruction="Your user id is yusuf_martin_3470. You want to cancel your current reservation with the id UIN4IZ and book a new round-trip flight from Houston to Phoenix, departing on May 19 and returning on May 26. You prefer to travel in business class. You want to bring one checked bag, and you are open to having a non-direct flight option. You wish to purchase travel insurance. You prefer to use your certificate for payment; if and only if there is a remaining balance, you would like to use your 9067 card for the rest. You have updated your reservation with id FATBVC to reflect one checked bag and want to pay for this with your 9067 card. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+        instruction="Your user id is yusuf_martin_3470. You want to cancel your existing reservation from Houston to Phoenix with reservation id UIN4IZ. After that, you want to book a new round-trip flight from Houston (IAH) to Phoenix (PHX) in business class. The flights should be on May 19 with flight numbers HAT180 and HAT123, and return on May 26 with flight number HAT152. The passenger will be Yusuf Muller, with the birthdate of May 6, 1956. You want to include one checked bag and prefer to have travel insurance. For payment, use your $500 certificate first and cover the remaining amount with your Mastercard ending in 6182. Additionally, you want to update your existing reservation FATBVC to include one checked bag, paying for this with your Mastercard ending in 6182. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="cancel_reservation",
@@ -504,7 +504,7 @@ TASKS = [
     Task(
         annotator="0",
         user_id="ava_gonzalez_2934",
-        instruction="Your user id is ava_gonzalez_2934. You want to update your reservation for an upcoming trip on May 16 to include traveling in business class with flights that provide the best schedule, even if it involves multiple connections. You wish to travel with a total of 3 checked bags, of which 2 will incur additional fees, and you prefer to use your 7957 card for payment. If and only if it is necessary to make any changes, you prefer to cancel your reservation 7FVJG2 completely. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked.",
+        instruction="Your user id is ava_gonzalez_2934. You want to update your reservation from San Francisco to LaGuardia (reservation ID HZBXN1) to travel on May 16 instead. You want to fly in business class for all legs of the trip on flights HAT144, HAT226, HAT201, and HAT283. Additionally, you need to update your baggage to include a total of 3 bags, with 2 of them being non-free. For these changes, you prefer to use your Mastercard ending in 6758. Furthermore, you would like to cancel your one-way trip from Newark to Las Vegas (reservation ID 7FVJG2). You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="update_reservation_flights",
@@ -524,7 +524,7 @@ TASKS = [
     Task(
         annotator="1",
         user_id="juan_sanchez_3680",
-        instruction="Your user id is juan_sanchez_3680. You want to update your existing reservation to fly in business class on May 19 and ensure your flights are confirmed for the quickest journey on that date. You prefer to use your 6952 card for payment. Additionally, you need to update another reservation to include 2 total baggages, with 1 being non-free, and prefer using your gift card for this. Furthermore, you want to book a one-way flight from Seattle to San Francisco on May 20 for Mason Sanchez, traveling in economy. You do not require insurance for this booking and wish to use your 6952 card to pay the full amount. Your birthday is in your user profile so you do not prefer to provide it. If and only if payment with your 6952 card is unsuccessful, you will consider other payment options upon the agent's prompt. You are reactive to the agent and will not say anything that is not asked. You are also eager to finalize these arrangements promptly.",
+        instruction="Your user id is juan_sanchez_3680. You want to update your existing reservation from Charlotte to New York (reservation ID 42IIXI) to fly on May 19, in business class. You will be on flight HAT176 from Charlotte to Detroit and then flight HAT263 from Detroit to New York. You want to pay for this update using your Visa card ending in 8861. Additionally, for your reservation from Philadelphia to Newark (reservation ID PZUNWM), you want to add a total of two bags, with one being chargeable, and you want to pay for this baggage using your $76 gift card. Finally, you wish to book a new one-way flight for Mason Sanchez from Seattle to San Francisco on May 20, in economy class, on flight HAT107. You want to include one checked bag and decline insurance for this booking, using your Visa card ending in 8861 to pay. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="update_reservation_flights",
@@ -544,7 +544,7 @@ TASKS = [
     Task(
         annotator="0",
         user_id="mason_johnson_9566",
-        instruction="Your user id is mason_johnson_9566. You want to update your flights for an existing reservation to business class and ensure it includes the following legs: on May 17 and May 18, as well as return legs on May 27 and May 28. You prefer to use your 3562 card for payment. Additionally, you need to update your baggage for this reservation to include one checked bag. You also need to cancel another reservation that you no longer require. For a new booking, you want to fly one way from Phoenix to Dallas on May 17 in economy class, with no baggage or insurance. Payment for this new booking should also be made using your 3562 card. If and only if this card cannot be used, you will provide another method when asked. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked.",
+        instruction="Your user id is mason_johnson_9566. You want to upgrade your Boston to Phoenix round-trip flight (reservation id YWZEQN) to business class while keeping the same flights on May 17, 18, 27, and 28 (flight numbers HAT235, HAT214, HAT181, and HAT217, respectively). You want to add one checked bag to this reservation. Please use your Mastercard ending in 3523 for any additional charges. Additionally, you need to cancel your one-way flight from Seattle to Dallas (reservation id WM6OS0). Lastly, you want to book a new one-way flight from Phoenix to Dallas on May 17 in economy class for yourself, Mason Johnson, born on February 22, 1996, using your Mastercard ending in 3523 to pay the $127 fare. Ensure there is no baggage included in this booking, and you do not require any travel insurance. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="update_reservation_flights",
@@ -568,7 +568,7 @@ TASKS = [
     Task(
         annotator="3",
         user_id="anya_lee_9572",
-        instruction="Your user id is anya_lee_9572. You want to cancel your existing reservation and instead book a round-trip flight from New York to Las Vegas, departing on May 20 and returning on May 28, in economy class. You will be traveling with one baggage, and you prefer to have travel insurance. You wish to pay using your 4589 card. If there are multiple flights available on the same day, you prefer the one with the shortest total travel time. You also need to update a separate reservation for another trip on May 28 and May 30, ensuring it remains in economy class and using your 4390 card for payment. Additionally, you want to modify a different reservation to include a total of three baggages, one of which is nonfree, and prefer to pay with your 9909 card. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+        instruction="Your user id is anya_lee_9572. You want to cancel your existing reservation from JFK to LAS, which has the reservation ID 7KYHMW. After that, you wish to rebook a round-trip flight from New York (JFK) to Las Vegas (LAS) departing on May 20 and returning on May 28. You prefer to travel in economy class on the following flights: HAT136 and HAT281 on May 20, and HAT047 and HAT021 on May 28. You will be traveling with one piece of baggage and would like to include insurance. You want to use your Visa card ending in 3963 to pay for this booking. Additionally, you wish to update your existing reservation with ID ABB0M7 to confirm that all flights on May 28 and 30 remain in economy class, and charge any necessary fees to your Visa card ending in 9975. Lastly, please update your reservation ID I6KKNF to include a total of three pieces of baggage, with one being a non-free baggage, charged to your Mastercard ending in 1507. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="cancel_reservation",
@@ -592,7 +592,7 @@ TASKS = [
     Task(
         annotator="1",
         user_id="mia_silva_9133",
-        instruction="Your user id is mia_silva_9133. You want to modify your travel plans for an upcoming trip. First, update your flight reservations to business class and change to flights departing on May 19 and returning on May 20. You prefer to pay for this with your 9663703 card. Additionally, you need to adjust your baggage reservation to include one checked bag, for which you will use your gift card. You also want to cancel a separate reservation that you no longer need. Furthermore, you want to book a new round-trip ticket from Dallas to Los Angeles, departing on May 18 and returning on May 20, in business class. You will be traveling under the name Amelia Johansson. Your payment preference is to use your gift card of 203, and if there's any remaining balance, you will cover it with your 3163658 card. You need one checked bag, but do not require additional paid baggage. You want to include travel insurance for this new booking. If and only if the situation requires clarifications, you will react to the agent's questions, but you will not volunteer additional information unprompted. Your birthday is in your user profile so you do not prefer to provide it.",
+        instruction="Your user id is mia_silva_9133. You want to update your reservation with ID YZF0F6. Change the cabin class to business for the flight from Houston to Atlanta, with flight numbers HAT085 on May 19 and HAT218 on May 20. Use your Visa card ending in 2436 for this payment. Additionally, for the reservation ID TD3FPM, add one checked bag and use your $234 gift card for payment. You also want to cancel your reservation ID P1D9KS entirely. Finally, book a new round-trip flight from Dallas to Los Angeles in business class for Amelia Johansson. The flights should be on May 18 (HAT124) and May 20 (HAT022). Include one checked bag and insurance for this trip. Pay with your $203 gift card and the remaining balance with your Visa card ending in 7854. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="update_reservation_flights",
@@ -616,7 +616,7 @@ TASKS = [
     Task(
         annotator="1",
         user_id="harper_davis_5069",
-        instruction="Your user id is harper_davis_5069. You want to retrieve the details for a specific reservation but cannot remember the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if asked to verify your identity, you prefer to provide information available in your user profile.",
+        instruction="Your user id is harper_davis_5069. You need to retrieve the details for your reservation with the ID WLXS0L. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="get_reservation_details",
@@ -628,7 +628,7 @@ TASKS = [
     Task(
         annotator="1",
         user_id="liam_muller_3384",
-        instruction="Your user id is liam_muller_3384. You want to inquire about the details of your current reservation, but you don't recall the reservation id. If and only if the details cannot be retrieved with the information available, you are open to providing additional information to assist the agent in locating your reservation. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked.",
+        instruction="Your user id is liam_muller_3384. You want to retrieve the details of your reservation with the ID HDUF3Q. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="get_reservation_details",
@@ -640,7 +640,7 @@ TASKS = [
     Task(
         annotator="0",
         user_id="harper_santos_6381",
-        instruction="Your user id is harper_santos_6381. You want to retrieve the details of your reservation, which you have on file but do not remember the specifics. Your birthday is in your user profile, so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked. You would appreciate any assistance the agent can provide in quickly retrieving this information.",
+        instruction="Your user id is harper_santos_6381. You want to inquire about the details of your existing reservation with the reservation ID IER616. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="get_reservation_details",
@@ -652,7 +652,7 @@ TASKS = [
     Task(
         annotator="2",
         user_id="lucas_wilson_8118",
-        instruction="Your user id is lucas_wilson_8118. You need to retrieve the details for a reservation, but you don't remember the specifics except for the reservation id, which is 'I6XC2H'. You do not prefer to provide your birthday as it is already in your user profile. If and only if the agent asks for additional information, you will provide it. You are reactive to the agent and will not say anything that is not asked.",
+        instruction="Your user id is lucas_wilson_8118. You want to retrieve the details of your reservation with the reservation ID I6XC2H. You prefer not to provide any additional information unless specifically asked by the agent. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="get_reservation_details",
@@ -664,7 +664,7 @@ TASKS = [
     Task(
         annotator="0",
         user_id="amelia_hernandez_8403",
-        instruction="Your user id is amelia_hernandez_8403. You want to retrieve the details of your reservation, but you do not recall your reservation id. If and only if the agent asks, you can provide additional information to help locate your booking. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If payment information is needed, you are open to discussing your options with the agent.",
+        instruction="Your user id is amelia_hernandez_8403. You want to retrieve the details for your reservation with the ID 5JR4XX. Please ensure you check all aspects of the booking, including the flight itinerary, passenger information, and payment details. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="get_reservation_details",
@@ -676,7 +676,7 @@ TASKS = [
     Task(
         annotator="1",
         user_id="mason_johansson_5154",
-        instruction="Your user id is mason_johansson_5154. You need to check the details of your existing reservation, for which you remember only the reservation id 'RB9S17'. If and only if further information is required, you can provide additional details. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+        instruction="Your user id is mason_johansson_5154. You want to retrieve the details of your reservation with the ID RB9S17. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="get_reservation_details",
@@ -688,7 +688,7 @@ TASKS = [
     Task(
         annotator="1",
         user_id="mason_johansson_5154",
-        instruction="Your user id is mason_johansson_5154. You need to check the details of your existing reservation, for which you remember only the reservation id 'RB9S17'. If and only if further information is required, you can provide additional details. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+        instruction="Your user id is mason_johansson_5154. You want to retrieve the details of your reservation with the ID RB9S17. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="get_reservation_details",
@@ -700,7 +700,7 @@ TASKS = [
     Task(
         annotator="2",
         user_id="juan_li_9671",
-        instruction="Your user id is juan_li_9671. You need to cancel your current reservation and, instead, book a round-trip flight from Charlotte to Orlando, departing on May 17 and returning on May 19. You prefer economy class and want the flights to be direct. You wish to book for two passengers, Daiki Garcia and Lei Garcia, and add a total of two baggages. You require travel insurance for this trip. You prefer using your certificate for payment, and if necessary, the remaining balance should be charged to your 3086 card. Additionally, you want to update an existing reservation to business class for a trip on May 25, ensuring payment is completed with your 3086 card. You also wish to amend another reservation to include four baggages, out of which two are non-free, using your gift card. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+        instruction="Your user id is juan_li_9671. You want to cancel your current reservation from Charlotte to Orlando under reservation ID PPHW67. After that, you are searching for direct flights from Charlotte to Orlando on May 17, 2024. Once you find a suitable option, you wish to book a round-trip in economy class for Daiki Garcia and Lei Garcia, with flights HAT064 on May 17 and HAT017 on May 19. You want 2 checked bags and prefer to include insurance. For payment, use your $500 certificate first, and then the remaining balance with your Visa ending in 8442.\n\nAdditionally, you want to upgrade your existing reservation Y2DJ0A to business class while keeping the same flights on May 25, 2024, and pay for any differences using your Visa ending in 8442. Lastly, for reservation ITSLB7, you want to update the number of total baggages to 4, with 2 of them being non-free, and pay for this update using your gift card worth $120. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="cancel_reservation",
@@ -728,7 +728,7 @@ TASKS = [
     Task(
         annotator="0",
         user_id="ivan_garcia_1794",
-        instruction="Your user id is ivan_garcia_1794. You want to review the details of your existing reservation. You need to update your flights to business class for your reservation, and you want to pay using your credit card ending in 8638. You plan to travel with 2 pieces of checked baggage. Additionally, you are looking to book a new one-way flight from Atlanta to Dallas on May 19 in economy class, with yourself as the passenger. You have one baggage for this trip, and you want insurance. You intend to use your credit card ending in 7155 for this payment. If and only if the previous reservation update cannot be completed, you would cancel another reservation. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+        instruction="Your user id is ivan_garcia_1794. You want to update your existing reservation LV5MG2 from Las Vegas to Chicago, flying on May 20, to business class. You prefer to keep the same flights, HAT115 and HAT129, and you want to add two checked baggages. Please use your Visa card ending in 8790 for any additional charges. Additionally, you want to book a new one-way flight from Atlanta to Dallas on May 19 in economy class with flight number HAT059. This reservation will be for yourself, Ivan Garcia, and you want to use your Visa card ending in 8149 for payment. Include travel insurance and one carry-on bag for this new booking. Lastly, you wish to cancel your reservation PG7O11. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="get_reservation_details",
@@ -756,7 +756,7 @@ TASKS = [
     Task(
         annotator="0",
         user_id="mei_patel_4436",
-        instruction="Your user id is mei_patel_4436. You want to update your reservation for a trip spanning May 19 and 20, ensuring that you fly in economy class. You need to carry 3 bags, all of which are non-free. You prefer to use your credit card to pay for these updates. If and only if your preferred card cannot be used for the flight update, you would like to switch to another card for the baggage charges. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+        instruction="Your user id is mei_patel_4436. You want to update your reservation with ID E17VRA to change the cabin class from basic economy to economy for your flights from LaGuardia to Seattle, which include flight HAT114 on May 19 and flight HAT156 on May 20. You prefer to use your Mastercard ending in 1562 for this upgrade. Additionally, you want to add 3 checked bags to this reservation, and for this, you wish to use your Mastercard ending in 4094. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="update_reservation_flights",
@@ -772,7 +772,7 @@ TASKS = [
     Task(
         annotator="0",
         user_id="liam_lee_5870",
-        instruction="Your user id is liam_lee_5870. You are looking to cancel your current reservation for reasons not specified here. You need to find and book a direct flight from Los Angeles to Charlotte on May 17, traveling one way in economy class. You prefer to travel with Raj Hernandez and Sofia Jackson, with their birthdays already in the profile, so you do not prefer to provide them. You have 2 bags, and one of them is a non-free checked bag. You do not want to purchase insurance. You wish to pay using your gift card first, and if it doesn’t cover the full amount, use your 1015550 card for the remaining balance. Additionally, you need to update your existing reservation to include 1 non-free checked bag and change the flights to the ones on May 20. You are reactive to the agent and will not say anything that is not asked.",
+        instruction="Your user id is liam_lee_5870. You want to cancel your existing reservation from Los Angeles to Charlotte with reservation id 1CUG9J. Then, search for a new direct flight from Los Angeles to Charlotte on May 17. Once you find an appropriate flight, book a one-way trip in economy class for Raj Hernandez and Sofia Jackson on May 17, with flight numbers HAT228 and HAT270. You want to use your $49 gift card to pay first, and the remaining balance should be paid with your Mastercard ending in 8261. You also need to include 2 baggages, with 1 being a non-free baggage. Additionally, update your reservation EWO4IQ to change the travel date to May 20 with the same flight numbers HAT299 and HAT047, upgrade to economy class, and add 1 non-free baggage using your Mastercard ending in 8261. You do not want insurance for these bookings. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="cancel_reservation",
@@ -800,7 +800,7 @@ TASKS = [
     Task(
         annotator="2",
         user_id="daiki_martin_9991",
-        instruction="Your user id is daiki_martin_9991. You want to update your flights for the reservation you have, keeping it in economy class, for your trip on May 18. You prefer to use your 7447 card for any additional costs related to this update. You also want to adjust your baggage for this reservation, ensuring you have one checked bag, which you want to pay for using your gift card. Additionally, you need to book a separate one-way flight for Ethan Moore, from Phoenix to Seattle on May 20, in basic economy class. You prefer to use your gift card to cover the cost of this booking. You do not require travel insurance for Ethan's trip. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if any payment method cannot cover the amount, you are open to suggestions from the agent for alternatives, ensuring the process is smooth and hassle-free.",
+        instruction="Your user id is daiki_martin_9991. You want to update your existing reservation from Seattle to New York (reservation ID MH0T63) to change the departure date to May 18, while retaining the same flights: HAT121, HAT081, HAT245, and HAT156. You prefer to fly in economy class for this trip. You want to use your Mastercard ending in 5570 for any additional charges related to this update. Additionally, you would like to add one checked baggage to this reservation, and you prefer to use your $194 gift card for this baggage fee. \n\nSeparately, you want to book a one-way flight for Ethan Moore from Phoenix to Seattle on May 20, with flight number HAT156. You prefer the basic economy cabin for this flight. You plan to use your $194 gift card to cover the cost of this booking. You do not want to purchase travel insurance. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="update_reservation_flights",
@@ -820,7 +820,7 @@ TASKS = [
     Task(
         annotator="1",
         user_id="ivan_muller_7015",
-        instruction="Your user id is ivan_muller_7015. You want to update your reservation for your trip on May 17 to include flights in business class. You are traveling with a total of three bags, one of which incurs an extra fee. You prefer to use your 3563 card to pay for the flight upgrade and your gift card for any baggage fees. Your birthday is in your user profile so you do not prefer to provide it. If and only if your gift card cannot cover the baggage fees, then you would like to use your 3563 card for the remainder. You are reactive to the agent and will not say anything that is not asked.",
+        instruction="Your user id is ivan_muller_7015. You want to upgrade your existing reservation (G72NSF) for your journey from Detroit to Seattle on May 17. You prefer to change your cabin class from economy to business on both flights (HAT097 from Detroit to Phoenix and HAT251 from Phoenix to Seattle). You will use your Mastercard ending in 6710 for this upgrade. Additionally, you want to increase your total checked baggage from 2 to 3, with one non-free baggage. You want to use your gift card worth $128 to pay for the baggage fees. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="update_reservation_flights",
@@ -836,7 +836,7 @@ TASKS = [
     Task(
         annotator="2",
         user_id="mia_lopez_6592",
-        instruction="Your user id is mia_lopez_6592. You have a reservation that you want to update to fly from Denver to Atlanta on May 19, in business class. You want to check the reservation details first and then update it if needed. You prefer business class and have a total of 6 baggages, with 1 being non-free. You want to use your gift card for baggage payment. Additionally, you want to book a one-way business class flight for Noah Silva, departing from Denver to Atlanta on May 19. You prefer to use your certificate for part of the payment and pay the remaining balance with your 9314282 card. You also want to add travel insurance for this booking. If and only if the certificate cannot cover the full amount, use your 9314282 card to cover any remaining balance. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked.",
+        instruction="Your user id is mia_lopez_6592. You need details for your reservation with ID P9YQCF. You want to update the flights for this reservation to fly on May 19, changing to flight numbers HAT235 and HAT153, and on May 20, to flight numbers HAT032 and HAT026, all in business class. You want to pay for this update with your Visa ending in 3305. Additionally, you want to increase your total baggage allowance to 6 bags, with 1 being a non-free bag, using your $135 gift card for payment. Furthermore, you want to book a one-way business class flight from Denver to Atlanta on May 19 for Noah Silva, with flight number HAT261. You prefer to pay using your $250 certificate first and cover any remaining balance with your Visa ending in 3305. You want insurance for this booking. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="get_reservation_details",
@@ -860,7 +860,7 @@ TASKS = [
     Task(
         annotator="2",
         user_id="ivan_taylor_6615",
-        instruction="Your user id is ivan_taylor_6615. You want to cancel your current reservation (reservation id not remembered) and book a new one-way flight from Atlanta to Charlotte on May 19. You prefer to fly in economy class and have no baggage for this trip. You want Aarav Kim as the passenger, and since his birthday is in the profile, you do not prefer to provide it. For payment, you wish to use your certificate for the full amount. You also need to update another existing reservation (reservation id not remembered) to include 3 total bags, of which 1 is nonfree, and use your 7447 card for any additional charges. You are reactive to the agent and will not say anything that is not asked. The situation is urgent, so you value efficiency and prompt adjustments.",
+        instruction="Your user id is ivan_taylor_6615. You need to cancel your current one-way flight reservation from Boston to Charlotte on May 12 under reservation ID 7GJ1NY for Aarav Kim. After canceling, you want to book a new one-way flight from Atlanta to Charlotte on May 19 in economy class for Aarav Kim. Use your $500 certificate to cover the cost of this new reservation. Additionally, for your round-trip reservation from Los Angeles to Houston with reservation ID PK9XO8, you want to update the baggage allowance to include 3 total bags, with 1 being a non-free checked bag. Use your Visa card ending in 1656 for any additional charges related to the baggage update. You do not want to add any insurance. You are reactive to the agent and will not say anything that is not asked.",
         actions=[
             Action(
                 name="cancel_reservation",

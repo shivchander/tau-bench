@@ -66,14 +66,26 @@ mkdir -p tau_bench/sdg
 # echo "✅ Medium task validation completed!"
 # echo ""
 
-echo "🎯 Generating task instructions for medium tasks..."
-uv run python tau_bench/sdg/generate_task_instructions.py \
+# echo "🎯 Generating task instructions for medium tasks..."
+# uv run python tau_bench/sdg/simple_instruction_generator.py \
+#     --input-file tau_bench/sdg/validated_tasks_easy.json \
+#     --output-file tau_bench/sdg/validated_tasks_easy_with_instructions.json \
+#     --max-concurrency 10
+
+# echo "✅ Easy task instructions generated!"
+# echo ""
+
+uv run python tau_bench/sdg/simple_instruction_generator.py \
+  --input-file tau_bench/sdg/validated_tasks_easy.json \
+  --output-file tau_bench/sdg/validated_tasks_easy_with_instructions.json \
+  --max-concurrency 100
+
+if [ $? -eq 0 ]; then
+  uv run python tau_bench/sdg/simple_instruction_generator.py \
     --input-file tau_bench/sdg/validated_tasks_medium.json \
     --output-file tau_bench/sdg/validated_tasks_medium_with_instructions.json \
-    --max-concurrency 10
-
-echo "✅ Medium task instructions generated!"
-echo ""
+    --max-concurrency 100
+fi
 
 # # Generate and validate hard tasks (30 samples)
 # echo "📝 Generating 30 hard tasks (6-10 actions each)..."

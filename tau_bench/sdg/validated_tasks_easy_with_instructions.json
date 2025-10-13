@@ -9,7 +9,7 @@
         }
       }
     ],
-    "instruction": "Your user id is evelyn_smith_6580. You need the details of your existing reservation, but you do not recall the reservation ID. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If there are any issues retrieving the information, you are open to assisting with any additional verification needed.",
+    "instruction": "Your user id is evelyn_smith_6580. You want to retrieve the details for your reservation with the ID 63QBEX. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -23,7 +23,7 @@
         }
       }
     ],
-    "instruction": "Your user id is juan_rossi_7264. You need to retrieve the details of your reservation, but you do not remember the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if it is necessary, you are willing to provide any other information needed to access the reservation details, within your privacy comfort level.",
+    "instruction": "Your user id is juan_rossi_7264. You want to discuss the details of your existing reservation with reservation ID IWKGVL. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -37,7 +37,7 @@
         }
       }
     ],
-    "instruction": "Your user id is yara_silva_1929. You want to inquire about your current reservation, but you cannot recall the specific details of it. If and only if the agent needs further details to locate the reservation, you are willing to provide additional information. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked.",
+    "instruction": "Your user id is yara_silva_1929. You want to retrieve the details of your reservation with the ID N9V9VX. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -51,7 +51,7 @@
         }
       }
     ],
-    "instruction": "Your user id is yusuf_patel_4029. You want to inquire about the details of an existing reservation with the reservation id you cannot recall right now. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If the agent asks for additional information to find your reservation, you are willing to provide it if available.",
+    "instruction": "Your user id is yusuf_patel_4029. You want to check the details for your one-way flight reservation from Philadelphia to Chicago under reservation ID 847MY1. Please provide all the information related to this booking, including the flight date, flight number, any baggage allowance, and the payment method used. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -67,7 +67,7 @@
         }
       }
     ],
-    "instruction": "Your user id is harper_ahmed_8302. You want to find a direct flight from New York (JFK) to Seattle on May 16. You prefer to leave in the afternoon to avoid the morning rush. If and only if a direct flight is unavailable, you are open to considering options with a single stopover, but prioritize the shortest travel time. You do not have a specific budget constraint but prefer competitive pricing. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+    "instruction": "Your user id is harper_ahmed_8302. You want to search for a direct flight from New York (JFK) to Seattle (SEA) on May 16, 2024. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -81,7 +81,7 @@
         }
       }
     ],
-    "instruction": "Your user id is james_ahmed_4322. You want to retrieve the details of your reservation, but you can't recall the reservation id on your own. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if the agent requires a reservation id to proceed, you can provide it once prompted.",
+    "instruction": "Your user id is james_ahmed_4322. You want to retrieve all the details for your current reservation with the reservation ID JX6LB3. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -95,7 +95,7 @@
         }
       }
     ],
-    "instruction": "Your user id is mia_santos_2092. You want to retrieve the details of your upcoming reservation. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if the agent needs more information, you will provide your reservation ID, which you have readily available.",
+    "instruction": "Your user id is mia_santos_2092. You want to retrieve the details of your reservation with the ID 4NXSCL. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -109,7 +109,7 @@
         }
       }
     ],
-    "instruction": "Your user id is isabella_anderson_8228. You want to retrieve the details of your upcoming reservation, but you do not remember the reservation id. If and only if the agent asks for further identification, remind them that your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked.",
+    "instruction": "Your user id is isabella_anderson_8228. You want to review the details of your reservation with the ID PIJF3U. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -123,7 +123,7 @@
         }
       }
     ],
-    "instruction": "Your user id is fatima_silva_7735. You want to retrieve the details of your current reservation, which you cannot recall the specific information about. If and only if the reservation details are unclear, you are okay with the agent providing additional options or clarification. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You prefer to ensure all information is accurate and complete.",
+    "instruction": "Your user id is fatima_silva_7735. You want to review the details of your existing reservation with the ID ASFFI5. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -137,7 +137,7 @@
         }
       }
     ],
-    "instruction": "Your user id is mason_johansson_5154. You need to check the details of your existing reservation, for which you remember only the reservation id 'RB9S17'. If and only if further information is required, you can provide additional details. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+    "instruction": "Your user id is mason_johansson_5154. You want to retrieve the details of your reservation with the ID RB9S17. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -151,7 +151,7 @@
         }
       }
     ],
-    "instruction": "Your user id is aarav_lee_9671. You need to retrieve the details of your reservation, but you do not remember the reservation id. If the agent asks for any personal information, your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked. You are patient and prefer to wait for the agent to ask questions necessary to assist you.",
+    "instruction": "Your user id is aarav_lee_9671. You want to retrieve the details of your reservation with ID CN5AEV. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -165,7 +165,7 @@
         }
       }
     ],
-    "instruction": "Your user id is isabella_ito_3653. You need the details for your current reservation but do not have the reservation id readily available. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked. If and only if further confirmation is needed, you are willing to answer specific questions about the reservation details.",
+    "instruction": "Your user id is isabella_ito_3653. You need details for your flight reservation from Detroit to Minneapolis on May 17. The flight number is HAT210, and your reservation ID is MXCGN8. You are traveling in business class with yourself, Isabella Ito, and another passenger, Aarav Khan. You used your Mastercard ending in 2671 for payment. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -179,7 +179,7 @@
         }
       }
     ],
-    "instruction": "Your user id is harper_patel_1045. You want to inquire about the details of your existing reservation, although you don't recall the reservation ID. If and only if the agent requires further information, you can provide additional context, but you prefer not to disclose your birthday as it is already available in your user profile. You are reactive to the agent and will not say anything that is not asked.",
+    "instruction": "Your user id is harper_patel_1045. You want to retrieve the details for your reservation with ID HAGO8B. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -193,7 +193,7 @@
         }
       }
     ],
-    "instruction": "Your user id is juan_moore_4540. You want to inquire about the details of your reservation, but you do not recall the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if asked, you may confirm that you are interested in ensuring all details are correct and up-to-date, but you will rely on the agent to guide the conversation.",
+    "instruction": "Your user id is juan_moore_4540. You want to retrieve the details of your reservation with the ID 2P5CYY. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -207,7 +207,7 @@
         }
       }
     ],
-    "instruction": "Your user id is yusuf_martin_3470. You want to retrieve the details of your existing reservation. You do not have the reservation id memorized, so you depend on the agent to assist you in finding it. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If additional information is needed, you prefer the agent guides you through the process.",
+    "instruction": "Your user id is yusuf_martin_3470. You want to retrieve the details for your existing reservation with the ID BBVDO9. This reservation includes a one-way business class flight from JFK to LAX with a stopover in MIA on May 22, 2024. You are traveling with Yusuf Muller, and your payment history shows you used your Mastercard ending in 6182 for this booking. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -221,7 +221,7 @@
         }
       }
     ],
-    "instruction": "Your user id is harper_santos_6381. You want to retrieve the details of your reservation, which you have on file but do not remember the specifics. Your birthday is in your user profile, so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked. You would appreciate any assistance the agent can provide in quickly retrieving this information.",
+    "instruction": "Your user id is harper_santos_6381. You want to inquire about the details of your existing reservation with the reservation ID IER616. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -235,7 +235,7 @@
         }
       }
     ],
-    "instruction": "Your user id is liam_santos_5621. You want to inquire about the details of your current reservation. If and only if the agent requires additional information, you are open to providing it, but your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked.",
+    "instruction": "Your user id is liam_santos_5621. You want to retrieve the details of your reservation with the ID ZZSA4W. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -251,7 +251,7 @@
         }
       }
     ],
-    "instruction": "Your user id is yara_silva_8071. You want to find a direct flight from Newark to Houston on May 18. You prefer a straightforward journey without stopovers. If and only if there are no direct flights available, you are open to considering options with one stopover. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+    "instruction": "Your user id is yara_silva_8071. You want to search for a direct flight from Newark (EWR) to Houston (IAH) on May 18, 2024. Since you have a gold membership, you may inquire about any available benefits that could be applied to this booking. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -267,7 +267,7 @@
         }
       }
     ],
-    "instruction": "Your user id is anya_sanchez_5753. You want to find a direct flight from Miami to Chicago on May 17. You prefer not to have any stopovers. If and only if no direct flights are available, you are open to considering flights with one stopover. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile, so you do not prefer to provide it. You have no immediate urgency but would appreciate a timely search.",
+    "instruction": "Your user id is anya_sanchez_5753. You want to find a direct flight from Miami to Chicago on May 17, 2024. You prefer to use your existing $500 certificate if any payment is required. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -281,7 +281,7 @@
         }
       }
     ],
-    "instruction": "Your user id is mason_johansson_3174. You want to retrieve the details of your reservation with the id you remember as 91ZD2J. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked. If and only if the agent needs further identification, you will provide additional details as requested.",
+    "instruction": "Your user id is mason_johansson_3174. You want to review the details of your reservation with the ID 91ZD2J, which is a round-trip flight from Minneapolis to Charlotte. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -295,7 +295,7 @@
         }
       }
     ],
-    "instruction": "Your user id is aarav_rossi_9663. You want to retrieve the details of your upcoming reservation (reservation id not remembered) to ensure everything is in order. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You are calm and patient, and you rely on the agent to guide you through this process.",
+    "instruction": "Your user id is aarav_rossi_9663. You want to retrieve the details for your reservation with the ID IAANOV. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -309,7 +309,7 @@
         }
       }
     ],
-    "instruction": "Your user id is noah_sanchez_4225. You want to get the details of your reservation. You have the reservation id saved but prefer not to share additional personal information unless specifically requested. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked. If and only if the reservation cannot be found, you are open to verifying any other information necessary to retrieve it.",
+    "instruction": "Your user id is noah_sanchez_4225. You want to retrieve the details of your reservation with ID AQSRNQ. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -323,7 +323,7 @@
         }
       }
     ],
-    "instruction": "Your user id is anya_lee_9572. You need to retrieve the details of your existing reservation. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If there are any payment details required, you prefer not to provide them unless absolutely necessary.",
+    "instruction": "Your user id is anya_lee_9572. You want to retrieve the details of your reservation with ID ABB0M7. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -335,7 +335,7 @@
         "kwargs": {}
       }
     ],
-    "instruction": "Your user id is mei_johnson_4931. You are planning a trip and need to know all available airports. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If you need to provide any payment information, you prefer using your certificate first. If and only if the certificate is not accepted, you will use your 7447 card.",
+    "instruction": "Your user id is mei_johnson_4931. You would like to see a list of all available airports. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -349,7 +349,7 @@
         }
       }
     ],
-    "instruction": "Your user id is anya_brown_2655. You need to retrieve the details of your current reservation, as there might be some confusion regarding your travel plans. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You are feeling a bit anxious about ensuring all details are correct, so prompt and accurate information is important to you.",
+    "instruction": "Your user id is anya_brown_2655. You want to obtain the details of your reservation with the ID JEPRZB. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -363,7 +363,7 @@
         }
       }
     ],
-    "instruction": "Your user id is mohamed_martin_1679. You need to inquire about the details of a reservation you made earlier, but you do not recall the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You are keen on understanding these details as soon as possible, so if and only if the agent needs more information to assist you, you are ready to provide any necessary context except for your birthday.",
+    "instruction": "Your user id is mohamed_martin_1679. You want to check the details of your existing reservation with the ID V7NBLQ. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -377,7 +377,7 @@
         }
       }
     ],
-    "instruction": "Your user id is mohamed_silva_9265. You want to inquire about the details of your current reservation with the ID you cannot recall but you believe it begins with the letter 'K'. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+    "instruction": "Your user id is mohamed_silva_9265. You want to confirm the details of your existing reservation with the id K1NW8N. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -391,7 +391,7 @@
         }
       }
     ],
-    "instruction": "Your user id is mohamed_ahmed_3350. You want to inquire about the details of your reservation, but you do not remember the reservation id, so you need the agent to help retrieve it for you. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+    "instruction": "Your user id is mohamed_ahmed_3350. You want to retrieve the details for your reservation with the ID ZND99F. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -405,7 +405,7 @@
         }
       }
     ],
-    "instruction": "Your user id is ivan_kim_3844. You want to retrieve the details of your existing reservation. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked. If and only if the reservation details are not retrievable, you would be open to discussing alternative options with the agent.",
+    "instruction": "Your user id is ivan_kim_3844. You want to review the details of your existing reservation with the ID Q79V9W. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -419,7 +419,7 @@
         }
       }
     ],
-    "instruction": "Your user id is ethan_gonzalez_3910. You want to retrieve the details of your reservation, but you do not remember the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If the agent requires any additional information to locate your reservation, you prefer not to share sensitive details unless absolutely necessary.",
+    "instruction": "Your user id is ethan_gonzalez_3910. You want to get the details for your reservation with ID 25DFCD, which is a round-trip flight from Denver to Miami. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -433,7 +433,7 @@
         }
       }
     ],
-    "instruction": "Your user id is emma_jackson_2190. You want to retrieve the details of your reservation, though you cannot recall the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You prefer that the agent assists you in finding the reservation without requiring further information from you.",
+    "instruction": "Your user id is emma_jackson_2190. You want to check the details of your reservation for the flight from Boston to Boston with the reservation ID YKCIBO. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -447,7 +447,7 @@
         }
       }
     ],
-    "instruction": "Your user id is daiki_patel_1917. You want to retrieve the details of your reservation but do not remember the reservation id exactly; however, the agent might find it under a similar reference. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if the agent cannot find the reservation, you are willing to provide more information if necessary.",
+    "instruction": "Your user id is daiki_patel_1917. You want to review the details of your reservation with the ID 7WKBKD. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -461,7 +461,7 @@
         }
       }
     ],
-    "instruction": "Your user id is anya_brown_2655. You want to retrieve the details for your existing reservation, but you do not remember the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if the agent asks for confirmation, you prefer to use your certificate for any additional charges.",
+    "instruction": "Your user id is anya_brown_2655. You want to retrieve the details of your reservation with the reservation ID JEPRZB. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -475,7 +475,7 @@
         }
       }
     ],
-    "instruction": "Your user id is amelia_hernandez_8403. You want to retrieve the details of your reservation, but you do not recall your reservation id. If and only if the agent asks, you can provide additional information to help locate your booking. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If payment information is needed, you are open to discussing your options with the agent.",
+    "instruction": "Your user id is amelia_hernandez_8403. You want to retrieve the details for your reservation with the ID 5JR4XX. Please ensure you check all aspects of the booking, including the flight itinerary, passenger information, and payment details. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -489,7 +489,7 @@
         }
       }
     ],
-    "instruction": "Your user id is liam_muller_3384. You want to inquire about the details of your current reservation, but you don't recall the reservation id. If and only if the details cannot be retrieved with the information available, you are open to providing additional information to assist the agent in locating your reservation. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked.",
+    "instruction": "Your user id is liam_muller_3384. You want to retrieve the details of your reservation with the ID HDUF3Q. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -503,7 +503,7 @@
         }
       }
     ],
-    "instruction": "Your user id is lucas_rossi_2421. You need to review the details of an existing reservation, but you do not remember the reservation id. If the agent can find it, you want to confirm the flight details and ensure everything is in order. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. Please handle any sensitive information carefully, as you value your privacy.",
+    "instruction": "Your user id is lucas_rossi_2421. You want to retrieve the details for your reservation with the id J43KQ8. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -517,7 +517,7 @@
         }
       }
     ],
-    "instruction": "Your user id is mohamed_silva_9265. You need to retrieve the details of your reservation, but you do not recall the reservation ID. You are reactive to the agent and will not say anything that is not asked. If and only if the agent requires additional identification, your birthday is in your user profile so you do not prefer to provide it. You are comfortable waiting a bit for the information, but you want to ensure it's accurate and complete.",
+    "instruction": "Your user id is mohamed_silva_9265. You want to retrieve the details of your reservation with the ID K1NW8N. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -531,7 +531,7 @@
         }
       }
     ],
-    "instruction": "Your user id is mason_johansson_5154. You need to retrieve the details of a current reservation associated with the reservation ID 'RB9S17'. You do not wish to provide your birthday as it is already in your user profile. You are reactive to the agent and will not say anything that is not asked. You have no specific payment or class preferences to declare at this moment, but if and only if the agent requires it, you are open to using your certificate or 7447 card for any necessary payments.",
+    "instruction": "Your user id is mason_johansson_5154. You want to retrieve the details of your existing reservation with ID RB9S17. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -545,7 +545,7 @@
         }
       }
     ],
-    "instruction": "Your user id is mia_thomas_5479. You need details about your current reservation, but you do not remember the reservation id. If and only if asked, you can mention it involves travel plans in the upcoming month. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If payment methods or fares are discussed, you prefer to use available credits or certificates over direct card payments.",
+    "instruction": "Your user id is mia_thomas_5479. You want to retrieve the details of your reservation with the ID DYKWMO. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -559,7 +559,7 @@
         }
       }
     ],
-    "instruction": "Your user id is emma_martin_8571. You want to retrieve the details of your reservation but do not remember the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You do not have any payment preferences to express at this moment, as you are only seeking information about your existing booking.",
+    "instruction": "Your user id is emma_martin_8571. You want to retrieve the details for your upcoming one-way trip from Detroit to Boston, which is under reservation ID 1JR46H. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -573,7 +573,7 @@
         }
       }
     ],
-    "instruction": "Your user id is liam_sanchez_8204. You want to retrieve the details for your reservation but do not remember the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You prefer not to discuss payment methods at this time unless absolutely necessary. If and only if the agent needs additional information to locate your reservation, you are open to providing any other necessary details.",
+    "instruction": "Your user id is liam_sanchez_8204. You want to retrieve the details for your reservation with ID Q17Y7B. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -585,7 +585,7 @@
         "kwargs": {}
       }
     ],
-    "instruction": "Your user id is aarav_sanchez_7773. You are planning a trip and need to gather information about all available airports. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if there are any specific regional restrictions or preferences you need to be aware of, you want the agent to inform you about them.",
+    "instruction": "Your user id is aarav_sanchez_7773. You want to obtain a comprehensive list of all available airports. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -599,7 +599,7 @@
         }
       }
     ],
-    "instruction": "Your user id is raj_davis_3310. You want to check the details of your existing reservation. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if the agent needs additional information to proceed, you are willing to provide your reservation ID, which you have noted as M6N5DM.",
+    "instruction": "Your user id is raj_davis_3310. You want to retrieve the details of your reservation with the ID M6N5DM. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -613,7 +613,7 @@
         }
       }
     ],
-    "instruction": "Your user id is yara_garcia_1905. You want to retrieve the details of your reservation, which you currently do not have at hand. If and only if the agent is unable to find your reservation using your name or other details, you are open to providing the reservation identifier from your records. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+    "instruction": "Your user id is yara_garcia_1905. You want to retrieve the details for your trip with reservation ID HXDUBJ. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -627,7 +627,7 @@
         }
       }
     ],
-    "instruction": "Your user id is omar_anderson_1185. You want to obtain the details of your current reservation, but you do not recall the reservation ID. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You have no specific urgency, but you rely on the agent to guide you through accessing the reservation details. If and only if asked for further confirmation, you can provide additional information as needed.",
+    "instruction": "Your user id is omar_anderson_1185. You want to retrieve the details of your reservation with the ID 32J3PL. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -641,7 +641,7 @@
         }
       }
     ],
-    "instruction": "Your user id is amelia_taylor_4937. You want to obtain the details of your reservation, but you do not remember the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if asked for verification, you prefer using your 7447 card for any necessary authentication.",
+    "instruction": "Your user id is amelia_taylor_4937. You want to retrieve the details of your reservation with the ID LT77K6. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -655,7 +655,7 @@
         }
       }
     ],
-    "instruction": "Your user id is liam_taylor_6683. You want to inquire about the details of a reservation you currently have. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You are eager to get this information promptly as it is important for your travel planning. If and only if the agent needs additional information to locate your reservation, you are willing to provide your reservation id.",
+    "instruction": "Your user id is liam_taylor_6683. You want to retrieve the details of your round-trip reservation from Detroit to Miami, with the reservation ID OWCNP2. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -669,7 +669,7 @@
         }
       }
     ],
-    "instruction": "Your user id is harper_lopez_2390. You are contacting the agent to verify your current user details. You want the agent to confirm your information for accuracy, and you are reactive to the agent, meaning you will not say anything that is not asked. Your birthday is in your user profile, so you do not prefer to provide it during this interaction. You have no immediate urgency or emotional context attached to this request, and you are simply ensuring that your user profile is up-to-date for any future travel plans.",
+    "instruction": "Your user id is harper_lopez_2390. You want the agent to access your account details and confirm all the information related to your profile. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -683,7 +683,7 @@
         }
       }
     ],
-    "instruction": "Your user id is sophia_martin_4574. You want to inquire about the details of your reservation, but you do not recall the reservation id, as it is 'MFRB94' in the system. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You are feeling a bit anxious to confirm the details, so prompt assistance would be appreciated.",
+    "instruction": "Your user id is sophia_martin_4574. You want to obtain the details of your reservation with the ID MFRB94. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -695,7 +695,7 @@
         "kwargs": {}
       }
     ],
-    "instruction": "Your user id is sophia_garcia_4224. You are curious about the available airports for a potential trip and want a list of all airports. You are not in a rush, and you are simply gathering information for future travel plans. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile, so you do not prefer to provide it.",
+    "instruction": "Your user id is sophia_garcia_4224. You want to get a list of all available airports. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -709,7 +709,7 @@
         }
       }
     ],
-    "instruction": "Your user id is harper_lopez_2390. You want the agent to retrieve your user details for verification purposes. If and only if the agent cannot automatically access your information, you are open to confirming essential details as needed, except your birthday, which is already in your user profile, so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked.",
+    "instruction": "Your user id is harper_lopez_2390. You want the agent to verify your user details in their system. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -723,7 +723,7 @@
         }
       }
     ],
-    "instruction": "Your user id is daiki_patel_1917. You want to get the details for your existing reservation, but you do not remember the reservation id, so you need assistance in retrieving this information. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If there are any further actions required after obtaining the reservation details, you will consider them at that time.",
+    "instruction": "Your user id is daiki_patel_1917. You want to get the details for your reservation with the ID 7WKBKD. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -737,7 +737,7 @@
         }
       }
     ],
-    "instruction": "Your user id is raj_garcia_3316. You want to inquire about the details of your upcoming reservation, but you do not recall the reservation ID. If prompted, you are able to provide any additional information that might help the agent retrieve your reservation, except for your birthday, which is stored in your user profile, so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked. If multiple reservations are found, you prefer to receive details of all, focusing on the one with the soonest departure date.",
+    "instruction": "Your user id is raj_garcia_3316. You want to retrieve the details of your existing reservation with the ID Z7W1AC. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -751,7 +751,7 @@
         }
       }
     ],
-    "instruction": "Your user id is liam_garcia_8705. You need to retrieve the details of your current reservation, though you don't remember the reservation ID. If and only if the agent asks for verification, your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked. If there are issues accessing the reservation details, you prefer to resolve them using your certificate first, and if necessary, you can use your 7447 card as a backup. You need this information promptly, so express any urgency to the agent, but maintain a calm demeanor throughout the interaction.",
+    "instruction": "Your user id is liam_garcia_8705. You need the details for your reservation with id 971W9L. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -765,7 +765,7 @@
         }
       }
     ],
-    "instruction": "Your user id is emma_kim_9957. You want to retrieve the details of your current reservation, but you do not remember the reservation ID. You are looking for information on your upcoming travel plans and any associated arrangements. Your birthday is in your user profile, so you do not prefer to provide it when asked. You are reactive to the agent and will not say anything that is not asked. If and only if additional payment details are required, you prefer to use your certificate if applicable.",
+    "instruction": "Your user id is emma_kim_9957. You want to retrieve the details of your reservation with the reservation ID EHGLP3. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -779,7 +779,7 @@
         }
       }
     ],
-    "instruction": "Your user id is olivia_martin_3924. You want to retrieve the details of your reservation, but you do not remember the reservation id. If and only if the agent requires additional information, you are willing to provide any necessary details except your birthday, which is in your user profile, so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked. If payment information is needed, you prefer not to provide it unless essential.",
+    "instruction": "Your user id is olivia_martin_3924. You want to check the details of your existing reservation with the reservation ID H0MVIE. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -793,7 +793,7 @@
         }
       }
     ],
-    "instruction": "Your user id is fatima_anderson_7848. You want to inquire about the details of an existing reservation but do not remember the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+    "instruction": "Your user id is fatima_anderson_7848. You want to retrieve the details for your existing reservation with reservation ID TH87DD. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -807,7 +807,7 @@
         }
       }
     ],
-    "instruction": "Your user id is amelia_taylor_4937. You want to retrieve the details of your existing reservation. If and only if the reservation details are not easily available, you are open to providing the reservation ID if needed, but you prefer the agent to look it up using your profile. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You have a calm demeanor and are not in a rush, preferring a thorough and accurate response over speed.",
+    "instruction": "Your user id is amelia_taylor_4937. You want to review the details of your round-trip reservation from New York (JFK) to Houston (IAH) with reservation ID PIMHHE. Please check the flight information, passenger details, and any other relevant reservation information. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -821,7 +821,7 @@
         }
       }
     ],
-    "instruction": "Your user id is ethan_nguyen_6045. You want to inquire about the details of your upcoming reservation. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if additional information is needed beyond what's in your profile, you're open to providing it as requested by the agent.",
+    "instruction": "Your user id is ethan_nguyen_6045. You want to retrieve the details of your existing reservation L1QGWV, which is a round-trip flight from LaGuardia (LGA) to Philadelphia (PHL) and back. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -835,7 +835,7 @@
         }
       }
     ],
-    "instruction": "Your user id is yusuf_gonzalez_6436. You want to inquire about the details of your existing reservation, but you do not recall the reservation ID. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if prompted for additional information, you would prefer to verify using known details like your travel dates or destinations. You are patient and do not express urgency unless the agent indicates a need for quick action.",
+    "instruction": "Your user id is yusuf_gonzalez_6436. You would like to review the details of your round-trip reservation from Philadelphia to Boston under reservation ID Z9B996. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -849,7 +849,7 @@
         }
       }
     ],
-    "instruction": "Your user id is harper_smith_3981. You need to check the details of your existing reservation, but you do not remember the reservation ID. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You are patient and not in a rush, so there's no urgency in retrieving this information.",
+    "instruction": "Your user id is harper_smith_3981. You want to retrieve the details of your existing reservation with the reservation ID KT71XO. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -863,7 +863,7 @@
         }
       }
     ],
-    "instruction": "Your user id is yara_silva_8071. You want to ensure that your profile details are up-to-date before proceeding with any travel arrangements. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If any information is missing or needs verification, you expect the agent to assist you accordingly.",
+    "instruction": "Your user id is yara_silva_8071. You want to verify your user details with the airline. You prefer to use your certificate for payments when needed. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -877,7 +877,7 @@
         }
       }
     ],
-    "instruction": "Your user id is harper_kovacs_3082. You want to retrieve the details of your reservation, but you do not recall the reservation id. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked. If the agent needs to confirm your identity, you prefer not to provide additional personal information unless absolutely necessary.",
+    "instruction": "Your user id is harper_kovacs_3082. You want to retrieve the details for your flight reservation with the ID AYVIYO. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -891,7 +891,7 @@
         }
       }
     ],
-    "instruction": "Your user id is amelia_li_2415. You want to inquire about the details of your existing flight reservation, but you do not remember the reservation ID. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if the agent requires additional information to retrieve the reservation, you are willing to provide alternative details that might help.",
+    "instruction": "Your user id is amelia_li_2415. You need the details for your reservation with the ID NUCNX0. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -905,7 +905,7 @@
         }
       }
     ],
-    "instruction": "Your user id is liam_muller_3384. You want to retrieve the details of your current reservation, but you do not remember the reservation id. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked.",
+    "instruction": "Your user id is liam_muller_3384. You want to retrieve the details for your reservation with ID HDUF3Q. This reservation includes a one-way trip from LaGuardia Airport to Seattle, with a stopover in Phoenix. The flights are in business class, and the dates are May 17 and May 18. You have already used your Mastercard ending in 4133 for previous payments. You are traveling with passengers Aarav Khan and Ivan Sanchez. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -919,7 +919,7 @@
         }
       }
     ],
-    "instruction": "Your user id is chen_lopez_2451. You want to retrieve the details of your reservation (reservation id not remembered). You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If there are any payment methods associated with viewing details, you prefer to use your certificate first. If and only if the certificate cannot be used, you are comfortable using your 7447 card for any charges that may apply.",
+    "instruction": "Your user id is chen_lopez_2451. You want to get the details for your upcoming reservation with the ID 71Y56R. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -933,7 +933,7 @@
         }
       }
     ],
-    "instruction": "Your user id is lucas_khan_1131. You need to retrieve the details of your reservation, but you don't recall the reservation ID. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if the reservation details cannot be retrieved, do you prefer the agent to check using your last payment method, which is your certificate.",
+    "instruction": "Your user id is lucas_khan_1131. You want to get the details of your existing reservation with the ID AVX2IV. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -947,7 +947,7 @@
         }
       }
     ],
-    "instruction": "Your user id is noah_wilson_9692. You want to retrieve details for a reservation you have, but you do not remember the reservation id. If and only if the reservation id cannot be located, you are open to providing alternative information that might help. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You are feeling a bit anxious because you need this information promptly.",
+    "instruction": "Your user id is noah_wilson_9692. You want to obtain the details for your reservation with the ID XZE9VN. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -961,7 +961,7 @@
         }
       }
     ],
-    "instruction": "Your user id is juan_brown_2465. You want the agent to confirm your user details for your upcoming travel plans. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked. If there are any questions regarding payment or additional personal information, you prefer the agent to refer to the existing information stored in your profile.",
+    "instruction": "Your user id is juan_brown_2465. You want to retrieve your user details, which include your contact information, saved passengers, and any available payment methods. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -975,7 +975,7 @@
         }
       }
     ],
-    "instruction": "Your user id is harper_davis_5069. You want to retrieve the details for a specific reservation but cannot remember the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if asked to verify your identity, you prefer to provide information available in your user profile.",
+    "instruction": "Your user id is harper_davis_5069. You need to retrieve the details for your reservation with the ID WLXS0L. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -989,7 +989,7 @@
         }
       }
     ],
-    "instruction": "Your user id is olivia_garcia_3026. You want to check the details of your upcoming reservation, but you do not remember the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You are eager to get confirmation about your flight details as soon as possible.",
+    "instruction": "Your user id is olivia_garcia_3026. You want to view the details of your reservation with the ID AO5N50, which includes your upcoming one-way trip from Miami to Philadelphia. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -1003,7 +1003,7 @@
         }
       }
     ],
-    "instruction": "Your user id is liam_wilson_9173. You want to retrieve the details of your reservation but do not remember the reservation id. If and only if the agent asks, you are willing to provide any necessary verification, except your birthday, as it is in your user profile and you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked.",
+    "instruction": "Your user id is liam_wilson_9173. You want to retrieve the details of your reservation with the ID 238F2V. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -1017,7 +1017,7 @@
         }
       }
     ],
-    "instruction": "Your user id is olivia_anderson_8651. You are calling to confirm or update personal details associated with your account. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If the agent needs to verify your identity, you are prepared to answer security questions, but only if asked. You are not in a hurry, so you will patiently follow the agent's guidance during the process.",
+    "instruction": "Your user id is olivia_anderson_8651. You would like to review and confirm your user details for accuracy. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -1031,7 +1031,7 @@
         }
       }
     ],
-    "instruction": "Your user id is amelia_davis_7067. You want to inquire about the details of your existing reservation, but you do not recall the reservation ID. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if the agent cannot retrieve your reservation details, you will consider providing additional information as requested.",
+    "instruction": "Your user id is amelia_davis_7067. You want to review the details of your existing reservation with the ID ZAC5BK. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -1045,7 +1045,7 @@
         }
       }
     ],
-    "instruction": "Your user id is evelyn_brown_8513. You want to retrieve the details of your reservation for an upcoming trip, but you do not remember the reservation ID. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If there are multiple reservations, you prefer to get information on the one with the earliest departure date.",
+    "instruction": "Your user id is evelyn_brown_8513. You want to retrieve the details of your reservation with the ID 0TN6YG. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -1059,7 +1059,7 @@
         }
       }
     ],
-    "instruction": "Your user id is raj_khan_9352. You are seeking assistance from the agent to retrieve your user details. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You are patient and await further questions or instructions from the agent to proceed with any additional requests.",
+    "instruction": "Your user id is raj_khan_9352. You want to verify your account details, including your saved payment methods, upcoming reservations, and any other personal information associated with your account. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -1073,7 +1073,7 @@
         }
       }
     ],
-    "instruction": "Your user id is lei_anderson_2319. You want to know the details of your current reservation but can't recall the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You are feeling a bit anxious about ensuring your travel details are correct, so you would appreciate a prompt response from the agent.",
+    "instruction": "Your user id is lei_anderson_2319. You want to get the details of your upcoming trip with the reservation ID KFSKBR. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -1087,7 +1087,7 @@
         }
       }
     ],
-    "instruction": "Your user id is lei_ito_5790. You need to retrieve the details for a specific reservation, but you do not remember the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If there are any further steps required, you will rely on the agent to guide you through them.",
+    "instruction": "Your user id is lei_ito_5790. You want to retrieve the details of your reservation with the ID 6ZQNOS. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -1101,7 +1101,7 @@
         }
       }
     ],
-    "instruction": "Your user id is mia_ahmed_3713. You want to retrieve the reservation details for your upcoming trip. You do not remember the reservation id, so you are relying on the agent to find it for you. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked. If and only if the reservation cannot be located, you are open to providing additional information upon request to assist in the search.",
+    "instruction": "Your user id is mia_ahmed_3713. You want to obtain the details of your reservation with the id M2RFTA. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -1115,7 +1115,7 @@
         }
       }
     ],
-    "instruction": "Your user id is noah_martin_7498. You want to check the details of your upcoming reservation, but you do not recall the reservation ID. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You prefer the agent to retrieve the reservation details for you.",
+    "instruction": "Your user id is noah_martin_7498. You want to retrieve the details for your reservation with the ID 6UJKDA. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -1129,7 +1129,7 @@
         }
       }
     ],
-    "instruction": "Your user id is ethan_davis_3996. You want to retrieve the details for your current reservation, but you don't remember the reservation id. If and only if you are prompted for any information that is already in your user profile, such as your birthday, you prefer not to provide it. You are reactive to the agent and will not say anything that is not asked.",
+    "instruction": "Your user id is ethan_davis_3996. You want to obtain the details of your reservation with the ID I2URCD. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -1143,7 +1143,7 @@
         }
       }
     ],
-    "instruction": "Your user id is mei_thomas_2630. You want to retrieve the details of a specific reservation, though you do not recall the reservation id. You prefer the agent to ask for necessary information, as you are reactive and will not provide details unless prompted. Your birthday is in your user profile, so you do not prefer to provide it. If and only if additional identification is required, you are open to verifying your identity with your stored personal details.",
+    "instruction": "Your user id is mei_thomas_2630. You want the agent to provide detailed information for your reservation with the reservation ID U1YV6I. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -1157,7 +1157,7 @@
         }
       }
     ],
-    "instruction": "Your user id is sofia_ahmed_9069. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+    "instruction": "Your user id is sofia_ahmed_9069. You want to confirm your account details. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -1171,7 +1171,7 @@
         }
       }
     ],
-    "instruction": "Your user id is amelia_li_2415. You want to inquire about the details of your reservation, which you cannot recall fully, but the reservation id is NUCNX0. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+    "instruction": "Your user id is amelia_li_2415. You want to retrieve the details of your reservation with the ID NUCNX0. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -1185,7 +1185,7 @@
         }
       }
     ],
-    "instruction": "Your user id is anya_khan_1074. You want to retrieve the details of your existing reservation for further review. If and only if there are any discrepancies or changes needed in your itinerary, you will decide on the next steps. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+    "instruction": "Your user id is anya_khan_1074. You want to retrieve the details for your reservation with the ID 77VWO5. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -1199,7 +1199,7 @@
         }
       }
     ],
-    "instruction": "Your user id is noah_khan_8166. You want to inquire about the details of your existing reservation, but you do not remember the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You are not in a hurry, but you would appreciate the information as soon as it's convenient.",
+    "instruction": "Your user id is noah_khan_8166. You want to review the details of your reservation with the ID Y1ZIDC. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -1213,7 +1213,7 @@
         }
       }
     ],
-    "instruction": "Your user id is lei_kim_9517. You are planning a trip and require the agent to first confirm your user details. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You want to ensure all personal details are correctly captured in your profile before proceeding with any bookings or inquiries.",
+    "instruction": "Your user id is lei_kim_9517. You need to verify your account details, including your current address and saved payment methods. You prefer to use your $100 certificate for any future bookings. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -1227,7 +1227,7 @@
         }
       }
     ],
-    "instruction": "Your user id is sofia_santos_3403. You want to retrieve the details of your reservation, but you do not remember the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+    "instruction": "Your user id is sofia_santos_3403. You want to retrieve the details of your reservation with the ID JOHYVS. Please provide information such as flight numbers, travel dates, passenger names, and any payment history associated with this reservation. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -1241,7 +1241,7 @@
         }
       }
     ],
-    "instruction": "Your user id is liam_jackson_9794. You want the agent to verify your user details to ensure everything is up-to-date, given your recent travels. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. You are generally calm but expect efficiency in handling your request. If and only if there's an issue with your account details, you prefer to be contacted via email rather than a phone call.",
+    "instruction": "Your user id is liam_jackson_9794. You want to retrieve your profile details to confirm your current reservations, payment methods, and any other pertinent information. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -1255,7 +1255,7 @@
         }
       }
     ],
-    "instruction": "Your user id is lucas_martin_2833. You want to retrieve the details of your upcoming reservation. You are reactive to the agent and will not say anything that is not asked. If you need to provide information, your birthday is in your user profile so you do not prefer to provide it. Remember to maintain privacy and use discretion when sharing details.",
+    "instruction": "Your user id is lucas_martin_2833. You want to review the details of your existing reservation with the reservation ID FFMQB1. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -1269,7 +1269,7 @@
         }
       }
     ],
-    "instruction": "Your user id is noah_muller_9847. You want to retrieve the details of your current reservation. If and only if the agent needs additional information, you will provide the reservation id. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.",
+    "instruction": "Your user id is noah_muller_9847. You want to retrieve the details of your reservation with the ID SDZQKO. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -1283,7 +1283,7 @@
         }
       }
     ],
-    "instruction": "Your user id is anya_anderson_8280. You want to retrieve the details for a reservation, but you do not remember the specific reservation id. You will not provide additional information such as your birthday, as it is already in your user profile. You are reactive to the agent and will not say anything that is not asked. If and only if further details are required to identify the reservation, you are willing to assist with any non-sensitive information.",
+    "instruction": "Your user id is anya_anderson_8280. You want to retrieve the details of your upcoming trip with reservation ID ZXIYE7. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -1297,7 +1297,7 @@
         }
       }
     ],
-    "instruction": "Your user id is ethan_nguyen_7360. You need to retrieve the details of your reservation, but you cannot recall the reservation id. If and only if the reservation details are incomplete or missing, you are willing to provide additional necessary information as prompted by the agent. Your birthday is in your user profile so you do not prefer to provide it. You are reactive to the agent and will not say anything that is not asked.",
+    "instruction": "Your user id is ethan_nguyen_7360. You want to obtain the details for your existing reservation with the ID G2LTC4. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -1311,7 +1311,7 @@
         }
       }
     ],
-    "instruction": "Your user id is juan_lopez_1974. You want to retrieve the details of a reservation but do not recall the reservation id explicitly. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If and only if the agent cannot locate the reservation with this information, you would be willing to provide any other identifying details as requested.",
+    "instruction": "Your user id is juan_lopez_1974. You want to retrieve the details of your flight reservation with the ID YFYFKQ. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -1325,7 +1325,7 @@
         }
       }
     ],
-    "instruction": "Your user id is raj_garcia_4690. You want to retrieve the details of your existing reservation but cannot recall the reservation id. If and only if the agent needs further information, you are willing to confirm the trip dates or destinations. However, you prefer not to provide your birthday because it is already in your user profile. You are reactive to the agent and will not say anything that is not asked. You tend to be concise and direct in your communication, ensuring efficiency and clarity in your interactions.",
+    "instruction": "Your user id is raj_garcia_4690. You want to retrieve the details for your reservation with the ID 4NQCM5. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -1339,7 +1339,7 @@
         }
       }
     ],
-    "instruction": "Your user id is lucas_wilson_8118. You need to retrieve the details for a reservation, but you don't remember the specifics except for the reservation id, which is 'I6XC2H'. You do not prefer to provide your birthday as it is already in your user profile. If and only if the agent asks for additional information, you will provide it. You are reactive to the agent and will not say anything that is not asked.",
+    "instruction": "Your user id is lucas_wilson_8118. You want to retrieve the details of your reservation with the reservation ID I6XC2H. You prefer not to provide any additional information unless specifically asked by the agent. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -1353,7 +1353,7 @@
         }
       }
     ],
-    "instruction": "Your user id is evelyn_smith_6580. You want to retrieve the details of your reservation but you do not remember the reservation ID. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If the reservation details include sensitive information, you prefer to verify it through secure methods.",
+    "instruction": "Your user id is evelyn_smith_6580. You want to retrieve the details of your reservation with the ID 63QBEX. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -1367,7 +1367,7 @@
         }
       }
     ],
-    "instruction": "Your user id is chen_lee_6825. You want to retrieve the details of your reservation, for which the reservation ID is not remembered but stored in your profile. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile, so you do not prefer to provide it. You have no specific payment or class preferences for this inquiry, but if any changes are needed, you prefer to be informed of all options.",
+    "instruction": "Your user id is chen_lee_6825. You need to retrieve the details of your reservation with the ID JW6LEQ. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -1381,7 +1381,7 @@
         }
       }
     ],
-    "instruction": "Your user id is emma_jackson_2190. You are contacting the agent to verify your user details. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it. If any payment information is required, you prefer to use your certificate first. If and only if the certificate cannot cover the amount, you will use your 7447 card for the remaining balance.",
+    "instruction": "Your user id is emma_jackson_2190. You want to confirm your user details. Please ensure all your personal information is up to date, including your address at 512 Elm Avenue, Suite 764, Denver, CO, 80278, and your email, emma.jackson2892@example.com. You want to verify that your saved passengers include Amelia Lee with a birth date of March 24, 1976. You have multiple payment methods available, including a Mastercard ending in 7828 and another ending in 8086, as well as certificates valued at $250, $150, and $500. You are reactive to the agent and will not say anything that is not asked. Ensure that your Gold membership status is also reflected correctly. Please assist with this verification.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   },
@@ -1395,7 +1395,7 @@
         }
       }
     ],
-    "instruction": "Your user id is amelia_nguyen_7778. You want to inquire about the details of your current reservation. You expect the agent to retrieve the information for you without needing any additional details from your side, as you are reactive to the agent and will not say anything that is not asked. Since your birthday is in your user profile, you do not prefer to provide it again. If and only if the agent cannot retrieve your reservation details directly, you are open to providing minimal necessary information to assist them.",
+    "instruction": "Your user id is amelia_nguyen_7778. You need the details for your reservation with the ID U7QTYY. You are reactive to the agent and will not say anything that is not asked.",
     "difficulty": "easy",
     "method": "few_shot_learning"
   }

@@ -88,3 +88,6 @@ class RunConfig(BaseModel):
     shuffle: int = 0
     user_strategy: str = "llm"
     few_shot_displays_path: Optional[str] = None
+    memory_collection_name: str = "action_memory"
+    memory_top_k: int = 3
+    memory_db_path: Optional[str] = None

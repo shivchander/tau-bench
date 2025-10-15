@@ -40,7 +40,7 @@ def parse_args() -> RunConfig:
         "--agent-strategy",
         type=str,
         default="tool-calling",
-        choices=["tool-calling", "act", "react", "few-shot"],
+        choices=["tool-calling", "act", "react", "few-shot", "memory"],
     )
     parser.add_argument(
         "--temperature",
@@ -69,6 +69,9 @@ def parse_args() -> RunConfig:
     parser.add_argument("--shuffle", type=int, default=0)
     parser.add_argument("--user-strategy", type=str, default="llm", choices=[item.value for item in UserStrategy])
     parser.add_argument("--few-shot-displays-path", type=str, help="Path to a jsonlines file containing few shot displays")
+    parser.add_argument("--memory-collection-name", type=str, default="action_memory", help="Name of the ChromaDB collection for memory agent")
+    parser.add_argument("--memory-top-k", type=int, default=3, help="Number of top similar actions to retrieve from memory")
+    parser.add_argument("--memory-db-path", type=str, default=None, help="Path to ChromaDB database (defaults to syntoolmem/chroma_db)")
     args = parser.parse_args()
     print(args)
     return RunConfig(
@@ -90,6 +93,9 @@ def parse_args() -> RunConfig:
         shuffle=args.shuffle,
         user_strategy=args.user_strategy,
         few_shot_displays_path=args.few_shot_displays_path,
+        memory_collection_name=args.memory_collection_name,
+        memory_top_k=args.memory_top_k,
+        memory_db_path=args.memory_db_path,
     )
 
 

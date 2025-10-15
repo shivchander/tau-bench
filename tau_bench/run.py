@@ -21,7 +21,7 @@ def run(config: RunConfig) -> List[EnvRunResult]:
     assert config.env in ["retail", "airline"], "Only retail and airline envs are supported"
     assert config.model_provider in provider_list, "Invalid model provider"
     assert config.user_model_provider in provider_list, "Invalid user model provider"
-    assert config.agent_strategy in ["tool-calling", "act", "react", "few-shot"], "Invalid agent strategy"
+    assert config.agent_strategy in ["tool-calling", "act", "react", "few-shot", "memory"], "Invalid agent strategy"
     assert config.task_split in ["train", "test", "dev", "synthetic"], "Invalid task split"
     assert config.user_strategy in [item.value for item in UserStrategy], "Invalid user strategy"
 
@@ -172,6 +172,20 @@ def agent_factory(
             provider=config.model_provider,
             few_shot_displays=few_shot_displays,
             temperature=config.temperature,
+        )
+    elif config.agent_strategy == "memory":
+        # Memory-augmented tool calling agent with ChromaDB retrieval
+        from tau_bench.agents.memory_agent import MemoryAgent
+
+        return MemoryAgent(
+            tools_info=tools_info,
+            wiki=wiki,
+            model=config.model,
+            provider=config.model_provider,
+            temperature=config.temperature,
+            memory_collection_name=config.memory_collection_name,
+            memory_top_k=config.memory_top_k,
+            memory_db_path=config.memory_db_path,
         )
     else:
         raise ValueError(f"Unknown agent strategy: {config.agent_strategy}")

@@ -40,7 +40,7 @@ def parse_args() -> RunConfig:
         "--agent-strategy",
         type=str,
         default="tool-calling",
-        choices=["tool-calling", "act", "react", "few-shot", "memory"],
+        choices=["tool-calling", "act", "react", "few-shot", "memory", "tool-memory"],
     )
     parser.add_argument(
         "--temperature",
@@ -69,11 +69,23 @@ def parse_args() -> RunConfig:
     parser.add_argument("--shuffle", type=int, default=0)
     parser.add_argument("--user-strategy", type=str, default="llm", choices=[item.value for item in UserStrategy])
     parser.add_argument("--few-shot-displays-path", type=str, help="Path to a jsonlines file containing few shot displays")
-    parser.add_argument("--memory-collection-name", type=str, default="action_memory", help="Name of the ChromaDB collection for memory agent")
+    parser.add_argument("--memory-collection-name", type=str, default=None, help="Name of the ChromaDB collection for memory agent (defaults to action_memory_{env})")
     parser.add_argument("--memory-top-k", type=int, default=3, help="Number of top similar actions to retrieve from memory")
-    parser.add_argument("--memory-db-path", type=str, default=None, help="Path to ChromaDB database (defaults to syntoolmem/chroma_db)")
+    parser.add_argument("--memory-db-path", type=str, default=None, help="Path to ChromaDB database (defaults to syntoolmem/chroma_db_{env})")
+    parser.add_argument("--check-outputs", action="store_true", help="Check if expected outputs appear in agent responses (default: False, only check actions)")
+    parser.add_argument("--no-check-outputs", dest="check_outputs", action="store_false", help="Disable output checking (only check actions)")
+    parser.set_defaults(check_outputs=False)
     args = parser.parse_args()
     print(args)
+
+    # Set default memory collection name based on environment and strategy if not specified
+    memory_collection_name = args.memory_collection_name
+    if memory_collection_name is None:
+        if args.agent_strategy == "tool-memory":
+            memory_collection_name = f"tool_memory_{args.env}"
+        else:
+            memory_collection_name = f"action_memory_{args.env}"
+
     return RunConfig(
         model_provider=args.model_provider,
         user_model_provider=args.user_model_provider,
@@ -93,9 +105,10 @@ def parse_args() -> RunConfig:
         shuffle=args.shuffle,
         user_strategy=args.user_strategy,
         few_shot_displays_path=args.few_shot_displays_path,
-        memory_collection_name=args.memory_collection_name,
+        memory_collection_name=memory_collection_name,
         memory_top_k=args.memory_top_k,
         memory_db_path=args.memory_db_path,
+        check_outputs=args.check_outputs,
     )
 
 

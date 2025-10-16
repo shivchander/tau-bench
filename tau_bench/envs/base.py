@@ -53,6 +53,7 @@ class Env(object):
         user_model: str,
         user_provider: Optional[str] = None,
         task_index: Optional[int] = None,
+        check_outputs: bool = True,
     ) -> None:
         super().__init__()
         self.data_load_func = data_load_func
@@ -74,6 +75,7 @@ class Env(object):
             user_strategy=user_strategy, model=user_model, provider=user_provider
         )
         self.actions: List[Action] = []
+        self.check_outputs = check_outputs
 
     def reset(self, task_index: Optional[int] = None) -> EnvResetResponse:
         if task_index is None:
@@ -141,7 +143,7 @@ class Env(object):
         if not info.r_actions:
             reward = 0.0
 
-        if len(self.task.outputs) > 0:
+        if self.check_outputs and len(self.task.outputs) > 0:
             # check outputs
             r_outputs = 1.0
             outputs = {}

@@ -91,3 +91,4 @@ class RunConfig(BaseModel):
     memory_collection_name: str = "action_memory"
     memory_top_k: int = 3
     memory_db_path: Optional[str] = None
+    check_outputs: bool = True

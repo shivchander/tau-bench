@@ -4,23 +4,37 @@ Inspect the action memory database created by build_action_memory.py
 
 import chromadb
 import json
+import argparse
 from pathlib import Path
 from pprint import pprint
 
+# Parse command line arguments
+parser = argparse.ArgumentParser(description="Inspect action memory database")
+parser.add_argument(
+    "--env",
+    type=str,
+    choices=["airline", "retail"],
+    default="airline",
+    help="Environment to inspect (default: airline)"
+)
+args = parser.parse_args()
+
 # Connect to ChromaDB (persistent)
 script_dir = Path(__file__).parent
-db_path = script_dir / "chroma_db"
+db_path = script_dir / f"chroma_db_{args.env}"
 client = chromadb.PersistentClient(path=str(db_path))
 
 # Get the collection
+collection_name = f"action_memory_{args.env}"
 try:
-    collection = client.get_collection("action_memory")
+    collection = client.get_collection(collection_name)
 except:
-    print("Collection 'action_memory' not found. Run build_action_memory.py first.")
+    print(f"Collection '{collection_name}' not found in {db_path}.")
+    print(f"Run: uv run python -m syntoolmem.build_action_memory --env {args.env}")
     exit(1)
 
 print("=" * 80)
-print("ACTION MEMORY INSPECTION")
+print(f"ACTION MEMORY INSPECTION - {args.env.upper()} ENVIRONMENT")
 print("=" * 80)
 
 # Get collection stats
@@ -63,19 +77,36 @@ print("\n" + "=" * 80)
 print("TESTING QUERIES")
 print("=" * 80)
 
-queries = [
-    "I want to modify my economy class reservation",
-    "Cancel my flight",
-    "Add baggage with gift card",
-    "Book a business class flight",
-    "Update flight dates"
-]
+if args.env == "airline":
+    queries = [
+        "I want to modify my economy class reservation",
+        "Cancel my flight",
+        "Add baggage with gift card",
+        "Book a business class flight",
+        "Update flight dates"
+    ]
+else:  # retail
+    queries = [
+        "I want to return items from my order",
+        "Cancel my pending order",
+        "Modify my order address",
+        "Exchange items in my delivered order",
+        "Change payment method"
+    ]
 
 for query in queries:
-    print(f"\nQuery: '{query}'")
+    print(f"\n{'='*80}")
+    print(f"Query: '{query}'")
+    print(f"{'='*80}")
+
     results = collection.query(query_texts=[query], n_results=2)
 
-    for i, (doc, metadata) in enumerate(zip(results['documents'][0], results['metadatas'][0]), 1):
-        action_name = metadata['action_name']
-        print(doc)
-        print(metadata)
+    print("\n# Similar Actions from Memory\n")
+    print("Here are some relevant action examples from past trajectories:\n")
+
+    for idx, (doc, metadata) in enumerate(zip(results['documents'][0], results['metadatas'][0]), 1):
+        action = json.loads(metadata['action'])
+        print(f"\n## Example {idx}")
+        print(f"Description: {doc}")
+        print(f"Action: {action['name']}")
+        print(f"Parameters: {json.dumps(action['kwargs'], indent=2)}")

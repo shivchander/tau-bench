@@ -1,0 +1,7608 @@
+from tau_bench.types import Action, Task
+
+TASKS = [
+    Task(
+        annotator="synthetic",
+        user_id="anya_lee_9572",
+        instruction="Your user id is anya_lee_9572. You want to cancel your existing reservation from JFK to LAS, which has the reservation ID 7KYHMW. After that, you wish to rebook a round-trip flight from New York (JFK) to Las Vegas (LAS) departing on May 20 and returning on May 28. You prefer to travel in economy class on the following flights: HAT136 and HAT281 on May 20, and HAT047 and HAT021 on May 28. You will be traveling with one piece of baggage and would like to include insurance. You want to use your Visa card ending in 3963 to pay for this booking. Additionally, you wish to update your existing reservation with ID ABB0M7 to confirm that all flights on May 28 and 30 remain in economy class, and charge any necessary fees to your Visa card ending in 9975. Lastly, please update your reservation ID I6KKNF to include a total of three pieces of baggage, with one being a non-free baggage, charged to your Mastercard ending in 1507. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '7KYHMW'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'anya_lee_9572', 'origin': 'JFK', 'destination': 'LAS', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT136', 'date': '2024-05-20'}, {'flight_number': 'HAT281', 'date': '2024-05-20'}, {'flight_number': 'HAT047', 'date': '2024-05-28'}, {'flight_number': 'HAT021', 'date': '2024-05-28'}], 'passengers': [{'first_name': 'Anya', 'last_name': 'Lee', 'dob': '1986-07-25'}], 'payment_methods': [{'payment_id': 'credit_card_4589036', 'amount': 665}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'ABB0M7', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT011', 'date': '2024-05-28'}, {'flight_number': 'HAT163', 'date': '2024-05-28'}, {'flight_number': 'HAT186', 'date': '2024-05-30'}, {'flight_number': 'HAT099', 'date': '2024-05-30'}], 'payment_id': 'credit_card_4390028'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'I6KKNF', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'credit_card_9909970'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="noah_lopez_2532",
+        instruction="Your user id is noah_lopez_2532. You need to update your current reservation (ID: E9E7HC) from Las Vegas to New York. You want to change the flight dates to May 17 for both outbound flights, and May 20 for the return flights, and upgrade the cabin to economy class. You also want to add a total of 2 baggages, one of which is nonfree. Please charge the cost of these updates to your Visa ending in 5999. Additionally, you want to book a new one-way business class flight for Evelyn Lee from New York LaGuardia to Phoenix on May 19, using your $500 certificate for this purchase. This booking should include 1 checked baggage, which is nonfree, and you would like to add travel insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'E9E7HC', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT077', 'date': '2024-05-17'}, {'flight_number': 'HAT233', 'date': '2024-05-17'}, {'flight_number': 'HAT060', 'date': '2024-05-20'}, {'flight_number': 'HAT288', 'date': '2024-05-20'}], 'payment_id': 'credit_card_3623927'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'E9E7HC', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_3623927'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'noah_lopez_2532', 'origin': 'LGA', 'destination': 'PHX', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT150', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Evelyn', 'last_name': 'Lee', 'dob': '1950-04-04'}], 'payment_methods': [{'payment_id': 'certificate_5542518', 'amount': 349}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ivan_garcia_1794",
+        instruction="Your user id is ivan_garcia_1794. You want to upgrade your existing reservation from Las Vegas to Chicago (reservation id LV5MG2) to business class for your flights on May 21, using your Visa ending in 8790 for this upgrade. You also want to add one non-free checked baggage to this reservation, and you prefer to pay for this with your Visa ending in 8149. Additionally, you are interested in flying from Philadelphia to San Francisco with a one-stop flight, departing on May 20. For this, you want to book a one-way ticket in economy class for Omar Santos, with flights departing from Philadelphia on May 19 and connecting on May 20, using your Visa ending in 8790 to pay. You want a total of 2 checked baggages for this new reservation, both non-free, and you would like to include insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'LV5MG2', 'cabin': 'business', 'flights': [{'flight_number': 'HAT115', 'date': '2024-05-21'}, {'flight_number': 'HAT129', 'date': '2024-05-21'}], 'payment_id': 'credit_card_8638712'},
+            ),
+            Action(
+                name="calculate",
+                kwargs={'expression': '378 + 337 + 30'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'LV5MG2', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_7155120'},
+            ),
+            Action(
+                name="search_onestop_flight",
+                kwargs={'origin': 'PHL', 'destination': 'SFO', 'date': '2024-05-20'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'ivan_garcia_1794', 'origin': 'PHL', 'destination': 'SFO', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT296', 'date': '2024-05-19'}, {'flight_number': 'HAT082', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Omar', 'last_name': 'Santos', 'dob': '1969-09-19'}], 'payment_methods': [{'payment_id': 'credit_card_8638712', 'amount': 372}], 'total_baggages': 2, 'nonfree_baggages': 2, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="yusuf_gonzalez_6436",
+        instruction="Your user id is yusuf_gonzalez_6436. You want to first update your existing reservation USJI8D, which is a flight from Atlanta to Los Angeles. The changes you want to make include upgrading the cabin to business class and slightly altering the date of the second leg, so you will now fly on HAT252 on May 22 and HAT170 on May 23. You will be adding 2 checked bags, and you would like to use your Visa card ending in 6613 for the payment of both the upgrade and the baggage fees.\n\nNext, you want to cancel your reservation with ID Z9B996, which was for a round-trip flight from Philadelphia to Boston.\n\nAfter canceling, you want to book a new round-trip reservation from Philadelphia to Boston. You would like to travel in economy class, with flights HAT269 departing on May 20 and returning with HAT287 on May 21, HAT260 on May 22, and HAT205 on May 23. The passenger will be Mohamed Wilson, and you have specified that you want 2 baggages included. For this booking, you prefer to use your $119 gift card first, and then cover the remaining balance with your Visa card ending in 6613. You also want to add insurance to this booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'USJI8D'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'USJI8D', 'cabin': 'business', 'flights': [{'flight_number': 'HAT252', 'date': '2024-05-22'}, {'flight_number': 'HAT170', 'date': '2024-05-23'}], 'payment_id': 'credit_card_8843042'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'USJI8D', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'credit_card_8843042'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'Z9B996'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'yusuf_gonzalez_6436', 'origin': 'PHL', 'destination': 'BOS', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT269', 'date': '2024-05-20'}, {'flight_number': 'HAT287', 'date': '2024-05-21'}, {'flight_number': 'HAT260', 'date': '2024-05-22'}, {'flight_number': 'HAT205', 'date': '2024-05-23'}], 'passengers': [{'first_name': 'Mohamed', 'last_name': 'Wilson', 'dob': '1981-11-04'}], 'payment_methods': [{'payment_id': 'gift_card_4562457', 'amount': 119}, {'payment_id': 'credit_card_8843042', 'amount': 567}], 'total_baggages': 2, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ethan_hernandez_6400",
+        instruction="Your user id is ethan_hernandez_6400. You want to update your reservation with ID 4069WE to change the cabin class to economy for your flights on May 25, flight numbers HAT083 and HAT194. Please use your Visa card ending in 1332 for this update. Additionally, for your reservation with ID O1DIJJ, you want to add a total of 2 baggages, with 1 being non-free, and use the same Visa card ending in 1332 for payment. Lastly, you need to book a new one-way flight from Minneapolis to Newark on May 18, in economy class, for Mohamed Santos. The flight number is HAT300, and you want to include 1 baggage with no additional insurance. Please charge your Visa card ending in 1332 for the amount of $189. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '4069WE', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT083', 'date': '2024-05-25'}, {'flight_number': 'HAT194', 'date': '2024-05-25'}], 'payment_id': 'credit_card_9038105'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'O1DIJJ', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_9038105'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'ethan_hernandez_6400', 'origin': 'MSP', 'destination': 'EWR', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT300', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Mohamed', 'last_name': 'Santos', 'dob': '1993-02-15'}], 'payment_methods': [{'payment_id': 'credit_card_9038105', 'amount': 189}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="aarav_anderson_6237",
+        instruction="Your user id is aarav_anderson_6237. You want to update your existing reservation from New York LaGuardia to Phoenix (reservation ID BU71UY) to fly on May 20 in business class on flight number HAT002. Please use your Visa card ending in 5537 for this update. Additionally, you want to increase the total baggage allowance on this reservation to 4 bags, with one of them being non-free. Use your gift card to cover any baggage fees. \n\nFurthermore, you need to cancel your other reservation from JFK to Phoenix set for May 15 (reservation ID HPABG7).\n\nLastly, you wish to book a new one-way trip from JFK to Phoenix for May 17, in economy class, on flights HAT088 and HAT097. The passenger will be Chen Muller, with a date of birth of July 1, 1999. You would like to include 1 checked bag and opt for travel insurance. For this booking, please use your Mastercard ending in 8119 for the payment. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'BU71UY', 'cabin': 'business', 'flights': [{'flight_number': 'HAT002', 'date': '2024-05-20'}], 'payment_id': 'credit_card_5252591'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'BU71UY', 'total_baggages': 4, 'nonfree_baggages': 1, 'payment_id': 'gift_card_5333120'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'HPABG7'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'aarav_anderson_6237', 'origin': 'JFK', 'destination': 'PHX', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT088', 'date': '2024-05-17'}, {'flight_number': 'HAT097', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Chen', 'last_name': 'Muller', 'dob': '1999-07-01'}], 'payment_methods': [{'payment_id': 'credit_card_5100220', 'amount': 377}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ava_smith_9007",
+        instruction="Your user id is ava_smith_9007. You need to cancel your current reservation from Seattle to New York with flight number HAT100 on May 21 (reservation ID ZO9C7T). After that, you want to book a new one-way flight from Seattle to New York in business class on May 19. The flight number for this trip should be HAT100. You will be the passenger, so please note your birthday, which is in your profile. You want to use your $250 certificate and your $150 certificate for the payment, and you will have 2 pieces of checked luggage. You do not require insurance for this trip. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'ZO9C7T'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'ava_smith_9007', 'origin': 'SEA', 'destination': 'JFK', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT100', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Ava', 'last_name': 'Smith', 'dob': '1985-01-15'}], 'payment_methods': [{'payment_id': 'certificate_2759037', 'amount': 250}, {'payment_id': 'certificate_7130054', 'amount': 106}], 'total_baggages': 2, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="aarav_brown_5556",
+        instruction="Your user id is aarav_brown_5556. You want to update your reservation from Phoenix to Philadelphia (reservation id 269EJV) to include one checked baggage, using your gift card with a $106 balance for payment. Additionally, you want to cancel your reservation from San Francisco to Seattle with reservation id 00GMVN. Furthermore, you would like to book a new one-way flight from San Francisco to Seattle on May 20 in business class. You will be flying on flight number HAT204, and Emma Brown will be the passenger. You plan to bring 2 pieces of baggage, and you would like to add travel insurance. For this booking, use your $299 gift card first, and cover any remaining balance with your Visa card ending in 2581. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '269EJV', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'gift_card_9998687'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '00GMVN'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'aarav_brown_5556', 'origin': 'SFO', 'destination': 'SEA', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT204', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Emma', 'last_name': 'Brown', 'dob': '1969-03-01'}], 'payment_methods': [{'payment_id': 'gift_card_7654035', 'amount': 299}, {'payment_id': 'credit_card_3029145', 'amount': 58}], 'total_baggages': 2, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ethan_li_4016",
+        instruction="Your user id is ethan_li_4016. You want to cancel your existing reservation from Dallas to Boston with reservation ID 9WQ9ND. After canceling, you want to book a new one-way flight from Dallas to Boston for Ivan Kovacs and Olivia Hernandez on May 20. You prefer to fly economy class on flights HAT183 and HAT253. You want to add travel insurance to this booking. You want to pay for this new reservation using your Visa card ending in 5735. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '9WQ9ND'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'ethan_li_4016', 'origin': 'DFW', 'destination': 'BOS', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT183', 'date': '2024-05-20'}, {'flight_number': 'HAT253', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Ivan', 'last_name': 'Kovacs', 'dob': '1996-09-18'}, {'first_name': 'Olivia', 'last_name': 'Hernandez', 'dob': '1967-05-20'}], 'payment_methods': [{'payment_id': 'credit_card_3129816', 'amount': 650}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mason_johnson_9566",
+        instruction="Your user id is mason_johnson_9566. You want to update your existing reservation from Boston to Phoenix (reservation ID YWZEQN). Please change your cabin class to business on all flights. The flight numbers and dates are as follows: HAT235 on May 18, HAT214 on May 18, HAT181 on May 27, and HAT217 on May 28. You also want to add one piece of baggage to this reservation. For these changes, please use your Mastercard ending in 3523. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'YWZEQN'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'YWZEQN', 'cabin': 'business', 'flights': [{'flight_number': 'HAT235', 'date': '2024-05-18'}, {'flight_number': 'HAT214', 'date': '2024-05-18'}, {'flight_number': 'HAT181', 'date': '2024-05-27'}, {'flight_number': 'HAT217', 'date': '2024-05-28'}], 'payment_id': 'credit_card_3562064'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'YWZEQN', 'total_baggages': 1, 'nonfree_baggages': 0, 'payment_id': 'credit_card_3562064'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="james_lopez_2996",
+        instruction="Your user id is james_lopez_2996. You want to make a few updates to your existing reservations. Firstly, for reservation 4G711O, you want to change the cabin class to business. The flights will be as follows: from ORD to ATL on May 26 with flight number HAT093, from ATL to SEA on May 26 with flight number HAT039, from SEA to JFK on May 19 with flight number HAT100, and from JFK to ORD on May 29 with flight number HAT261. You also want to increase your total baggages to 2 with 1 being a non-free baggage. You prefer to pay for these changes using your Mastercard ending in 4494. Additionally, you want to cancel your reservation 9TB533 entirely. Please note, you are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '4G711O', 'cabin': 'business', 'flights': [{'flight_number': 'HAT093', 'date': '2024-05-26'}, {'flight_number': 'HAT039', 'date': '2024-05-26'}, {'flight_number': 'HAT100', 'date': '2024-05-19'}, {'flight_number': 'HAT261', 'date': '2024-05-29'}], 'payment_id': 'credit_card_3035616'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '4G711O', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_3035616'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '9TB533'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="aarav_brown_5556",
+        instruction="Your user id is aarav_brown_5556. You want to update your reservation 269EJV to include one checked bag, and you prefer to use your gift card with the remaining balance for this. Additionally, you want to make changes to your reservation 6BL29B. Specifically, you want to change the cabin class to economy and update the flight dates to May 18 for flight HAT281, and May 20 for flights HAT003, HAT046, and HAT282. For these changes, you want to use your Visa card ending in 2581 for payment. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '269EJV', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'gift_card_9998687'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '6BL29B', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT281', 'date': '2024-05-18'}, {'flight_number': 'HAT003', 'date': '2024-05-20'}, {'flight_number': 'HAT046', 'date': '2024-05-20'}, {'flight_number': 'HAT282', 'date': '2024-05-20'}], 'payment_id': 'credit_card_3029145'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="emma_kim_9957",
+        instruction="Your user id is emma_kim_9957. You need to retrieve the details of your reservation with ID 66EEUA and then update the flights within that reservation to all occur on May 17, while maintaining the economy cabin class. For this update, you prefer to use your Visa card ending in 5241. Additionally, you want to increase your total baggage count to 3, with 2 being non-free. For this baggage update, you'd like to use your $103 gift card. \n\nNext, you want to book a new one-way flight from Seattle to Dallas on May 18. You will be traveling in economy class on flight number HAT113. For this booking, you want to use your Visa card ending in 5241 for the payment. No insurance is required for this booking. Additionally, please cancel your existing reservation with ID MDCLVA. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': '66EEUA'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '66EEUA', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT102', 'date': '2024-05-17'}, {'flight_number': 'HAT137', 'date': '2024-05-17'}, {'flight_number': 'HAT299', 'date': '2024-05-17'}, {'flight_number': 'HAT005', 'date': '2024-05-17'}], 'payment_id': 'credit_card_5832574'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '66EEUA', 'total_baggages': 3, 'nonfree_baggages': 2, 'payment_id': 'gift_card_9562694'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'emma_kim_9957', 'origin': 'SEA', 'destination': 'DFW', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT113', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Emma', 'last_name': 'Kim', 'dob': '1985-03-22'}], 'payment_methods': [{'payment_id': 'credit_card_5832574', 'amount': 107}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'MDCLVA'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="james_ito_7657",
+        instruction="Your user id is james_ito_7657. You need to cancel your existing reservation from Seattle to Houston (reservation id BK8BS0). Then, you want to book a new one-way flight from Seattle to Houston on May 17 in business class. Please include Aarav Sanchez, James Ito, and Maria Lopez as passengers. You want to use your two $100 certificates and your $181 gift card for payment, and cover any remaining balance with your Visa ending in 9421. You also need three bags included in this reservation, and you want to add travel insurance.\n\nAdditionally, you want to adjust your round-trip reservation from Charlotte to Detroit (reservation id PLRJB9) to business class, with flights on May 18 and returning on May 19. Please update this reservation to include two baggages. You will pay for any additional costs with your Visa ending in 9421. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'BK8BS0'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'james_ito_7657', 'origin': 'SEA', 'destination': 'IAH', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT021', 'date': '2024-05-17'}, {'flight_number': 'HAT279', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Aarav', 'last_name': 'Sanchez', 'dob': '1988-12-04'}, {'first_name': 'James', 'last_name': 'Ito', 'dob': '1990-04-05'}, {'first_name': 'Maria', 'last_name': 'Lopez', 'dob': '1992-11-12'}], 'payment_methods': [{'payment_id': 'certificate_4327009', 'amount': 100}, {'payment_id': 'certificate_7949562', 'amount': 100}, {'payment_id': 'gift_card_2049139', 'amount': 181}, {'payment_id': 'credit_card_9712053', 'amount': 2190}], 'total_baggages': 3, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'PLRJB9', 'cabin': 'business', 'flights': [{'flight_number': 'HAT176', 'date': '2024-05-18'}, {'flight_number': 'HAT191', 'date': '2024-05-19'}], 'payment_id': 'credit_card_9712053'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'PLRJB9', 'total_baggages': 2, 'nonfree_baggages': 0, 'payment_id': 'credit_card_9712053'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="emma_johansson_6252",
+        instruction="Your user id is emma_johansson_6252. You want to cancel your existing reservation from Charlotte to Minneapolis with reservation ID 3AU451. After canceling, you wish to search for a one-stop flight from Charlotte (CLT) to Minneapolis (MSP) on May 20, 2024. Once you find a suitable flight, you want to book a one-way ticket in economy class for yourself, Emma Johansson, with the birth date listed in your profile. You prefer flights HAT176 and HAT254 on May 20. You want to include one checked baggage and add travel insurance. For payment, you would like to use your $150 certificate, and for any remaining balance, please charge your Visa card ending in 4149. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '3AU451'},
+            ),
+            Action(
+                name="search_onestop_flight",
+                kwargs={'origin': 'CLT', 'destination': 'MSP', 'date': '2024-05-20'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'emma_johansson_6252', 'origin': 'CLT', 'destination': 'MSP', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT176', 'date': '2024-05-20'}, {'flight_number': 'HAT254', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Emma', 'last_name': 'Johansson', 'dob': '1995-07-10'}], 'payment_methods': [{'payment_id': 'certificate_2345492', 'amount': 150}, {'payment_id': 'credit_card_4255859', 'amount': 146}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="yusuf_thomas_7802",
+        instruction="Your user id is yusuf_thomas_7802. You want to update your existing reservation from Phoenix to San Francisco (reservation id 0SZHSV) by changing the departure flights to May 19 in business class and adding one checked bag. Use your Visa ending in 8264 for the flight changes and your Visa ending in 6833 for the baggage fee. Additionally, you want to cancel your upcoming trip from Phoenix to Los Angeles (reservation id ZI0T78). After canceling, you want to book a new round-trip flight from Phoenix to Los Angeles for Lucas Santos with the following itinerary: depart on May 20 (flight numbers HAT159 and HAT163) and return on May 24 (flight numbers HAT034 and HAT123) in business class. You do not want insurance and prefer to use your $252 gift card first, followed by your $122 gift card, and then your Mastercard ending in 5011 for any remaining balance. You want one bag included in this new booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': '0SZHSV'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '0SZHSV', 'cabin': 'business', 'flights': [{'flight_number': 'HAT156', 'date': '2024-05-19'}, {'flight_number': 'HAT274', 'date': '2024-05-19'}, {'flight_number': 'HAT204', 'date': '2024-05-28'}, {'flight_number': 'HAT236', 'date': '2024-05-28'}], 'payment_id': 'credit_card_6263035'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '0SZHSV', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_1321177'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'ZI0T78'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'yusuf_thomas_7802', 'origin': 'PHX', 'destination': 'LAX', 'flight_type': 'round_trip', 'cabin': 'business', 'flights': [{'flight_number': 'HAT159', 'date': '2024-05-20'}, {'flight_number': 'HAT163', 'date': '2024-05-20'}, {'flight_number': 'HAT034', 'date': '2024-05-24'}, {'flight_number': 'HAT123', 'date': '2024-05-24'}], 'passengers': [{'first_name': 'Lucas', 'last_name': 'Santos', 'dob': '1989-07-11'}], 'payment_methods': [{'payment_id': 'gift_card_4714517', 'amount': 252}, {'payment_id': 'gift_card_5627081', 'amount': 122}, {'payment_id': 'credit_card_8008565', 'amount': 920}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="sophia_jackson_1792",
+        instruction="Your user id is sophia_jackson_1792. You would like to make a few updates to your travel arrangements. First, for your reservation LJD302, you want to upgrade the cabin to business class for your flight from Denver to Chicago on May 16, flight number HAT105, and you prefer to pay with your Mastercard ending in 5019. Next, for reservation 8CQ5UE, you want to adjust the baggage allowance to a total of 8 bags, with 1 of those being a non-free checked bag, and you would like to use your $258 gift card to cover the cost. Lastly, you want to cancel your reservation TBETXF. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'LJD302', 'cabin': 'business', 'flights': [{'flight_number': 'HAT105', 'date': '2024-05-16'}], 'payment_id': 'credit_card_8938426'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '8CQ5UE', 'total_baggages': 8, 'nonfree_baggages': 1, 'payment_id': 'gift_card_2643754'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'TBETXF'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="harper_smith_3981",
+        instruction="Your user id is harper_smith_3981. You want to retrieve the details of your reservation with the ID WXZ65N. For this reservation, you wish to update the return flights to depart Phoenix on May 20 instead of May 19, keeping the same flight numbers HAT173 and HAT047. You prefer to stay in economy class and want to charge any additional costs to your Mastercard ending in 1680. You also want to add two checked bags to this reservation, paying for them with your gift card valued at $162. Additionally, you would like to book a new one-way flight from Denver to Las Vegas on May 18, in economy class. This flight is HAT084, and you will be traveling with one non-free checked bag. Please use your Mastercard ending in 1680 for the payment of this new flight. You do not want to include travel insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'WXZ65N'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'WXZ65N', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT236', 'date': '2024-05-18'}, {'flight_number': 'HAT173', 'date': '2024-05-20'}, {'flight_number': 'HAT047', 'date': '2024-05-20'}], 'payment_id': 'credit_card_9955122'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'WXZ65N', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'gift_card_7747327'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'harper_smith_3981', 'origin': 'DEN', 'destination': 'LAS', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT084', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Harper', 'last_name': 'Smith', 'dob': '1985-07-14'}], 'payment_methods': [{'payment_id': 'credit_card_9955122', 'amount': 163}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mia_silva_9133",
+        instruction="Your user id is mia_silva_9133. You want to update your reservation ID IDFCNB by adding one more checked baggage, making it a total of two, and you’ll be using your $234 gift card to cover the cost of the additional baggage. Also, please update the flights for this reservation to ensure they remain in economy class for the flights on May 20, specifically on flight numbers HAT144 and HAT159. You want to pay for any changes to these flights with your Visa card ending in 2436.\n\nAdditionally, you would like to cancel your reservation ID TD3FPM. Once that is done, you want to book a new one-way flight for Amelia Johansson from Chicago (ORD) to Las Vegas (LAS) on May 18. You prefer flights HAT049 and HAT290 in economy class. For this new reservation, you want to include one checked bag and opt-out of travel insurance. To pay, use your $203 gift card first, and cover any remaining balance with your Visa card ending in 7854. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'IDFCNB', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'gift_card_1267960'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'IDFCNB', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT144', 'date': '2024-05-20'}, {'flight_number': 'HAT159', 'date': '2024-05-20'}], 'payment_id': 'credit_card_9663703'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'TD3FPM'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mia_silva_9133', 'origin': 'ORD', 'destination': 'LAS', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT049', 'date': '2024-05-18'}, {'flight_number': 'HAT290', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Amelia', 'last_name': 'Johansson', 'dob': '1966-05-22'}], 'payment_methods': [{'payment_id': 'gift_card_5086914', 'amount': 203}, {'payment_id': 'credit_card_3163658', 'amount': 95}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="isabella_garcia_4633",
+        instruction="Your user id is isabella_garcia_4633. You want to cancel your existing reservation from Atlanta to Houston and back, with the reservation ID MHH4XU. Following this, you want to book a new round-trip flight from Atlanta to Houston on May 19. You prefer to fly in economy class and will be traveling with one checked baggage. You want to use your gift card with a value of $238 and cover any remaining balance with your Visa card ending in 4310. You also want to add travel insurance to this booking.\n\nAdditionally, you need to upgrade your reservation XTL8SU (from LaGuardia to Boston on May 27) to business class. For this, please charge your Visa card ending in 4310. Lastly, update your baggage for reservation C913YC to a total of two, including one non-free baggage, and again use your Visa card ending in 4310 for any additional charges. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'MHH4XU'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'isabella_garcia_4633', 'origin': 'ATL', 'destination': 'IAH', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT052', 'date': '2024-05-19'}, {'flight_number': 'HAT266', 'date': '2024-05-19'}, {'flight_number': 'HAT085', 'date': '2024-05-19'}, {'flight_number': 'HAT136', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Isabella', 'last_name': 'Garcia', 'dob': ''}], 'payment_methods': [{'payment_id': 'gift_card_7460058', 'amount': 238}, {'payment_id': 'credit_card_3658511', 'amount': 354}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'XTL8SU', 'cabin': 'business', 'flights': [{'flight_number': 'HAT065', 'date': '2024-05-27'}, {'flight_number': 'HAT064', 'date': '2024-05-27'}], 'payment_id': 'credit_card_3658511'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'C913YC', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_3658511'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="liam_muller_3384",
+        instruction="Your user id is liam_muller_3384. You want to cancel the existing reservation for the round-trip flight from Orlando to Phoenix (reservation QWPXBF). Then, you want to book a new round-trip flight from Phoenix to Orlando. The first flight should be on May 18 with flight number HAT181, and return on May 20 with flight number HAT214. You will be traveling in economy class with Ivan Sanchez as the passenger. You want to include 1 checked bag, and add travel insurance. For payment, you want to use your $150 certificate and your $100 certificate first, and then cover any remaining balance with your Mastercard ending in 4133. Finally, you want to update your existing reservation HDUF3Q to include 3 total bags, of which 2 will be non-free, using your Mastercard ending in 4133 to cover any additional charges. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'QWPXBF'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'liam_muller_3384', 'origin': 'PHX', 'destination': 'MCO', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT181', 'date': '2024-05-18'}, {'flight_number': 'HAT214', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Ivan', 'last_name': 'Sanchez', 'dob': '1998-09-20'}], 'payment_methods': [{'payment_id': 'certificate_2323707', 'amount': 150}, {'payment_id': 'certificate_3681264', 'amount': 100}, {'payment_id': 'credit_card_1689335', 'amount': 155}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'HDUF3Q', 'total_baggages': 3, 'nonfree_baggages': 2, 'payment_id': 'credit_card_1689335'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="harper_ahmed_9365",
+        instruction="Your user id is harper_ahmed_9365. You want to update your reservation with ID 53WBRH to change the flights to an earlier date. You will be flying in business class, and you want the following flights on May 16: HAT180 from IAH to SFO, HAT163 from SFO to LAX, HAT228 from LAX to EWR, and HAT056 from EWR to IAH. To cover this update, you wish to use your gift card amount. Additionally, you want to book a new round-trip reservation from New York (LGA) to Phoenix (PHX), departing on May 16 with flight HAT002 and returning on May 18 with flight HAT051. The passenger for this trip will be Yusuf Johnson, whose details are in your user profile. You prefer to fly in economy class and will have one checked bag. For payment, you want to use your $150 certificate and your $250 certificate, with the remaining balance covered by the latter. You do not require travel insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '53WBRH', 'cabin': 'business', 'flights': [{'flight_number': 'HAT180', 'date': '2024-05-16'}, {'flight_number': 'HAT163', 'date': '2024-05-16'}, {'flight_number': 'HAT228', 'date': '2024-05-16'}, {'flight_number': 'HAT056', 'date': '2024-05-16'}], 'payment_id': 'gift_card_4614903'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'harper_ahmed_9365', 'origin': 'LGA', 'destination': 'PHX', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT002', 'date': '2024-05-16'}, {'flight_number': 'HAT051', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Yusuf', 'last_name': 'Johnson', 'dob': '1959-11-17'}], 'payment_methods': [{'payment_id': 'certificate_1337987', 'amount': 150}, {'payment_id': 'certificate_4335815', 'amount': 222}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="liam_taylor_6683",
+        instruction="Your user id is liam_taylor_6683. You want to update your existing reservation (ID L4BO1G) for the round-trip between Charlotte and Detroit. You want to change the cabin to economy and adjust the flight dates to depart on May 17 with flight HAT167 and return on May 18 with flight HAT053. You will use your Visa card ending in 4489 for this update. Additionally, you want to add a total of 3 bags to this reservation, with one being non-free, and you want to pay for these with your $85 gift card.\n\nFurthermore, you want to book a new one-way flight for Omar Kim from Chicago to Philadelphia in business class on May 18, taking flight HAT139. You want to add one checked bag and include travel insurance for this booking. You will pay for this new reservation using your Visa card ending in 4489. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'L4BO1G', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT167', 'date': '2024-05-17'}, {'flight_number': 'HAT053', 'date': '2024-05-18'}], 'payment_id': 'credit_card_2441469'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'L4BO1G', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'gift_card_8193861'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'liam_taylor_6683', 'origin': 'ORD', 'destination': 'PHL', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT139', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Omar', 'last_name': 'Kim', 'dob': '1989-12-03'}], 'payment_methods': [{'payment_id': 'credit_card_2441469', 'amount': 401}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mei_hernandez_9827",
+        instruction="Your user id is mei_hernandez_9827. You want to cancel your existing reservation from San Francisco to New York (reservation ID Z65U3F). After canceling, you wish to rebook a one-way trip from San Francisco to New York, departing on May 16 on flight HAT082 and continuing on May 17 on flight HAT068. You would like to travel in economy class and have Isabella Johansson as the passenger. You want to use your $100 certificate and cover the remaining balance with your Mastercard ending in 1382. You do not need any baggage for this reservation and do not require travel insurance. Additionally, for your other reservation (ID 672VDE), you want to add one nonfree checked bag and pay for it with your Mastercard ending in 1382. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'Z65U3F'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mei_hernandez_9827', 'origin': 'SFO', 'destination': 'JFK', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT082', 'date': '2024-05-16'}, {'flight_number': 'HAT068', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Isabella', 'last_name': 'Johansson', 'dob': '1971-09-14'}], 'payment_methods': [{'payment_id': 'certificate_3080156', 'amount': 100}, {'payment_id': 'credit_card_9355028', 'amount': 202}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '672VDE', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_9355028'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="sofia_ahmed_9069",
+        instruction="Your user id is sofia_ahmed_9069. You want to make several changes to your reservations. First, for your trip from JFK to EWR under reservation L2TMRS, you want to change the flight dates to May 19 and upgrade your seating to business class on both flights, HAT279 and HAT207. You also want to add a total of 2 checked bags, which are non-free. You want to pay for these changes using your Mastercard ending in 9744. Additionally, you want to cancel your one-way reservation from DEN to CLT with reservation ID AFWKA2. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'L2TMRS', 'cabin': 'business', 'flights': [{'flight_number': 'HAT279', 'date': '2024-05-19'}, {'flight_number': 'HAT207', 'date': '2024-05-19'}], 'payment_id': 'credit_card_1236431'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'L2TMRS', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'credit_card_1236431'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'AFWKA2'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="harper_ito_2309",
+        instruction="Your user id is harper_ito_2309. You want to make a few changes to your travel plans. First, for your reservation with the ID MCO2H9, which involves a trip from Detroit to Miami, you would like to increase the total baggage count to 4. This includes 1 extra non-free baggage. You want to use your Mastercard ending in 5171 to pay for the additional baggage. Next, you need to cancel your reservation with the ID 0LJQ9Y. Lastly, you wish to book a new one-way business class flight from Las Vegas to Atlanta on May 19, 2024. The flight number is HAT077. This trip will be for Evelyn Davis, and you want to include 2 baggages. You prefer not to include travel insurance. You would like the payment for this new reservation to be processed using your Visa card ending in 7986. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'MCO2H9', 'total_baggages': 4, 'nonfree_baggages': 1, 'payment_id': 'credit_card_3005515'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '0LJQ9Y'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'harper_ito_2309', 'origin': 'LAS', 'destination': 'ATL', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT077', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Evelyn', 'last_name': 'Davis', 'dob': '1957-02-07'}], 'payment_methods': [{'payment_id': 'credit_card_1330512', 'amount': 228}], 'total_baggages': 2, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="olivia_jackson_7257",
+        instruction="Your user id is olivia_jackson_7257. You want to update your existing reservation from Chicago to Phoenix (reservation ID LDZCLM) with the following changes: You wish to fly in business class on May 10th for the flights from Chicago to Detroit (HAT230) and from Detroit to Phoenix (HAT035). For your return, you want to fly from Phoenix to Houston on May 18th (HAT152) and from Houston to Chicago on May 19th (HAT044). Additionally, you want to adjust your baggage allowance to include a total of 2 bags, with 1 of them being a paid baggage. You prefer to use your Visa credit card ending in 3838 for all payments. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'LDZCLM', 'cabin': 'business', 'flights': [{'flight_number': 'HAT230', 'date': '2024-05-10'}, {'flight_number': 'HAT035', 'date': '2024-05-10'}, {'flight_number': 'HAT152', 'date': '2024-05-18'}, {'flight_number': 'HAT044', 'date': '2024-05-19'}], 'payment_id': 'credit_card_2480682'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'LDZCLM', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_2480682'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="harper_martin_8348",
+        instruction="Your user id is harper_martin_8348. You want to make a few changes and bookings for your travel plans. First, please cancel your existing reservation from Detroit to Phoenix with reservation ID MU96D4. Next, you want to book a new one-way flight from New York (JFK) to Miami (MIA) in business class for Mason Rossi, traveling on May 18 on flight number HAT209. You would like to include one checked baggage and opt for insurance. To pay for this, use your gift card of $186 and cover the remaining amount with your Visa card ending in 2492.\n\nAdditionally, you wish to update your existing reservation with ID ER7A5P. Please change the cabin class to business for all flights on this reservation. Also, increase the total baggage allowance to two, including one non-free baggage. Use your Visa card ending in 2492 to cover any additional costs associated with these updates. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="think",
+                kwargs={'thought': 'The user harper_martin_8348 is looking to book a new flight and update an existing reservation while efficiently using available payment methods and ensuring all flights have available seats.'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'MU96D4'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'harper_martin_8348', 'origin': 'JFK', 'destination': 'MIA', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT209', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Mason', 'last_name': 'Rossi', 'dob': '1973-07-25'}], 'payment_methods': [{'payment_id': 'gift_card_3771493', 'amount': 186}, {'payment_id': 'credit_card_4852851', 'amount': 388}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'ER7A5P', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_4852851'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'ER7A5P', 'cabin': 'business', 'flights': [{'flight_number': 'HAT165', 'date': '2024-05-26'}, {'flight_number': 'HAT044', 'date': '2024-05-26'}, {'flight_number': 'HAT238', 'date': '2024-05-28'}, {'flight_number': 'HAT105', 'date': '2024-05-28'}], 'payment_id': 'credit_card_4852851'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="juan_smith_7200",
+        instruction="Your user id is juan_smith_7200. You want to modify your reservation from Los Angeles to Phoenix (reservation ID V4FGCR). Change your flight dates to May 16 for both outbound flights (HAT094 and HAT123) and May 18 for the return flights (HAT032 and HAT163), and upgrade the cabin to business class. Please charge the cost of this upgrade to your Mastercard ending in 5577. Next, for your trip from Phoenix to JFK (reservation ID RXJUHI), increase the total baggage allowance to 5 bags, with 2 of them being paid. Use your gift card for this payment. Lastly, you would like to cancel your round-trip reservation from Minneapolis to Detroit (reservation ID ZU8KF9). You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'V4FGCR'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'V4FGCR', 'cabin': 'business', 'flights': [{'flight_number': 'HAT094', 'date': '2024-05-16'}, {'flight_number': 'HAT123', 'date': '2024-05-16'}, {'flight_number': 'HAT032', 'date': '2024-05-18'}, {'flight_number': 'HAT163', 'date': '2024-05-18'}], 'payment_id': 'credit_card_5747809'},
+            ),
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'RXJUHI'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'RXJUHI', 'total_baggages': 5, 'nonfree_baggages': 2, 'payment_id': 'gift_card_9305264'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'ZU8KF9'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mei_wilson_9061",
+        instruction="Your user id is mei_wilson_9061. You need to update your reservation with the ID VJMK2V to include a total of 1 checked bag, which is non-free, and you wish to pay for this using your Mastercard ending in 9525. Additionally, you want to book a one-way flight from Phoenix to New York (LGA) on May 19th in economy class for Daiki Gonzalez, whose birthdate is December 26, 2000. The flight number is HAT081. You want to include 1 checked baggage, which should be free, and you prefer to have travel insurance. You will pay for this reservation using your Mastercard ending in 9525. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'VJMK2V', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_1813435'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mei_wilson_9061', 'origin': 'PHX', 'destination': 'LGA', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT081', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Daiki', 'last_name': 'Gonzalez', 'dob': '2000-12-26'}], 'payment_methods': [{'payment_id': 'credit_card_1813435', 'amount': 138}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="fatima_silva_7735",
+        instruction="Your user id is fatima_silva_7735. You want to access the details of your existing reservation (ID: ASFFI5) for your round-trip journey from New York (LGA) to Chicago (ORD). You wish to update your baggage for this trip to include a total of two items, with one being a paid checked bag. Please charge the additional baggage fee to your Visa card ending in 8731. You also want to search for a one-stop flight option from New York (LGA) to Chicago (ORD) on May 17, 2024. Additionally, you need to adjust your reservation so that the leg of your journey from Philadelphia (PHL) to Chicago (ORD) is now on May 17, 2024, while keeping the cabin class as business. For this update, please use your Visa card ending in 1239. Remember, you are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'ASFFI5'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'ASFFI5', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_9590541'},
+            ),
+            Action(
+                name="search_onestop_flight",
+                kwargs={'origin': 'LGA', 'destination': 'ORD', 'date': '2024-05-17'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'ASFFI5', 'cabin': 'business', 'flights': [{'flight_number': 'HAT172', 'date': '2024-05-15'}, {'flight_number': 'HAT197', 'date': '2024-05-17'}, {'flight_number': 'HAT093', 'date': '2024-05-18'}, {'flight_number': 'HAT110', 'date': '2024-05-18'}], 'payment_id': 'credit_card_5147732'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="james_patel_9828",
+        instruction="Your user id is james_patel_9828. You want to update your existing reservation GV1N64 from Las Vegas to Denver for May 20. You want to keep the business class but ensure both flights on the return leg are on the same day, May 20, with flight numbers HAT003 and HAT290. You also want to increase the total number of baggages to 4, with one being non-free. You want to use your gift card for these changes. Additionally, you want to book a new one-way business class flight from Phoenix to New York LaGuardia on May 20 for James Sanchez. The flight number is HAT081, and you want to include 2 baggages, with one being non-free. Please use your gift card to pay for this reservation as well. Lastly, you want to cancel the reservation MQHHT6 from Boston to Charlotte. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'GV1N64'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'GV1N64', 'cabin': 'business', 'flights': [{'flight_number': 'HAT003', 'date': '2024-05-20'}, {'flight_number': 'HAT290', 'date': '2024-05-20'}], 'payment_id': 'gift_card_1642017'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'GV1N64', 'total_baggages': 4, 'nonfree_baggages': 1, 'payment_id': 'gift_card_1642017'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'james_patel_9828', 'origin': 'PHX', 'destination': 'LGA', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT081', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'James', 'last_name': 'Sanchez', 'dob': '1956-08-18'}], 'payment_methods': [{'payment_id': 'gift_card_1642017', 'amount': 469}], 'total_baggages': 2, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'MQHHT6'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="noah_sanchez_4225",
+        instruction="Your user id is noah_sanchez_4225. You want to first check the details of your existing reservation with the ID AQSRNQ. After reviewing it, you want to update this reservation by changing all flights to May 20 and upgrading the cabin to economy. The flights should be HAT284, HAT256, HAT245, and HAT027. You also want to add 2 checked bags to this reservation, and you prefer to pay for these changes using your Visa card ending in 9338. Additionally, you want to book a one-way flight from Las Vegas to Houston on May 17 for Daiki Moore. This flight should be on flight HAT175. You want to add one checked bag for this booking, and you do not need insurance. You would like to use your $61 gift card first, and then cover any remaining balance with your Visa card ending in 9338. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'AQSRNQ'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'AQSRNQ', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT284', 'date': '2024-05-20'}, {'flight_number': 'HAT256', 'date': '2024-05-20'}, {'flight_number': 'HAT245', 'date': '2024-05-20'}, {'flight_number': 'HAT027', 'date': '2024-05-20'}], 'payment_id': 'credit_card_8798553'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'AQSRNQ', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'credit_card_8798553'},
+            ),
+            Action(
+                name="calculate",
+                kwargs={'expression': '88 + 183 + 481 + 60'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'noah_sanchez_4225', 'origin': 'LAS', 'destination': 'IAH', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT175', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Daiki', 'last_name': 'Moore', 'dob': '1970-03-14'}], 'payment_methods': [{'payment_id': 'gift_card_9329193', 'amount': 61}, {'payment_id': 'credit_card_8798553', 'amount': 167}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="anya_anderson_8280",
+        instruction="Your user id is anya_anderson_8280. You want to update your reservation with the ID J590M3 for your trip from Las Vegas to Newark. You want to upgrade your cabin to economy and ensure the flights remain as previously scheduled on May 17 and May 24, with flight numbers HAT115, HAT192, HAT202, and HAT288. You prefer to pay for this upgrade using your Visa card ending in 1550. Additionally, you want to add two bags to your reservation, one of which is non-free, and you would like to use your gift card with a $101 balance to pay for the baggage fees. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'J590M3', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT115', 'date': '2024-05-17'}, {'flight_number': 'HAT192', 'date': '2024-05-17'}, {'flight_number': 'HAT202', 'date': '2024-05-24'}, {'flight_number': 'HAT288', 'date': '2024-05-24'}], 'payment_id': 'credit_card_1757702'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'J590M3', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'gift_card_1075788'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="noah_jackson_7027",
+        instruction="Your user id is noah_jackson_7027. You want to first get the details for your reservation 6T4RGF, and then proceed to cancel it. Afterward, you want to book a new one-way business class flight from San Francisco to New York with flight numbers HAT082 on May 19 and HAT025 on May 20. This booking is for Mason Brown. You will use your $122 gift card first, and the remaining balance should be paid with your Visa card ending in 3150. You also need to include 3 checked bags with this booking and do not want insurance.\n\nAdditionally, you would like to update your existing reservation LRTPLQ by adding one checked bag, which includes 1 non-free bag, and you want this to be charged to your Mastercard ending in 5769.\n\nLastly, please upgrade your reservation 3VIYOC to business class and adjust the departure flights to HAT017 and HAT260 on May 17, while keeping the return flights on May 19 as they are. Use your Mastercard ending in 7382 for this upgrade. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': '6T4RGF'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '6T4RGF'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'noah_jackson_7027', 'origin': 'SFO', 'destination': 'JFK', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT082', 'date': '2024-05-19'}, {'flight_number': 'HAT025', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Mason', 'last_name': 'Brown', 'dob': '1970-04-28'}], 'payment_methods': [{'payment_id': 'gift_card_1093667', 'amount': 122}, {'payment_id': 'credit_card_3909926', 'amount': 475}], 'total_baggages': 3, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'LRTPLQ', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_2522320'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '3VIYOC', 'cabin': 'business', 'flights': [{'flight_number': 'HAT017', 'date': '2024-05-17'}, {'flight_number': 'HAT260', 'date': '2024-05-17'}, {'flight_number': 'HAT287', 'date': '2024-05-19'}, {'flight_number': 'HAT013', 'date': '2024-05-19'}], 'payment_id': 'credit_card_1655492'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="yusuf_patel_4029",
+        instruction="Your user id is yusuf_patel_4029. You want to cancel your existing reservation from Philadelphia to Chicago (reservation ID 847MY1). After that, you want to book a new one-way flight from Philadelphia to Chicago for May 18, flying in economy class on flight number HAT197. You will be the passenger for this booking. You want to use your Visa card ending in 1576 for the payment. You want to check one bag, and you would like to include insurance with this booking. Additionally, for your existing reservation to Boston (reservation ID 7P3LPD), you need to update the baggage allowance to include a total of two checked bags, with one being a non-free bag. For this extra baggage charge, you want to use your Mastercard ending in 6922. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '847MY1'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'yusuf_patel_4029', 'origin': 'PHL', 'destination': 'ORD', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT197', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Yusuf', 'last_name': 'Patel', 'dob': '1990-01-15'}], 'payment_methods': [{'payment_id': 'credit_card_5254946', 'amount': 182}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '7P3LPD', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_6642109'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="lucas_hernandez_9581",
+        instruction="Your user id is lucas_hernandez_9581. You want to cancel your existing reservation from Miami to Denver, which is reservation B0NCA1. After canceling, you need to find and book a direct one-way flight from Miami to Denver on May 20, 2024, for Yusuf Hernandez, who was born on March 18, 1975. You prefer to book in economy class and use your gift card with a $152 balance to pay for the new flight. Please ensure no baggage and no insurance is added to this booking.\n\nAdditionally, you want to update your reservation 2IGMCH from business to economy class for the flights on May 20, 2024, using your Visa card ending in 1497 to cover any differences. Finally, for your reservation 9XZ6MK, you need to increase the total baggage count to 4, including 1 nonfree baggage, using your gift card with a $138 balance to cover any fees. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'B0NCA1'},
+            ),
+            Action(
+                name="search_direct_flight",
+                kwargs={'origin': 'MIA', 'destination': 'DEN', 'date': '2024-05-20'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'lucas_hernandez_9581', 'origin': 'MIA', 'destination': 'DEN', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT193', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Yusuf', 'last_name': 'Hernandez', 'dob': '1975-03-18'}], 'payment_methods': [{'payment_id': 'gift_card_6514357', 'amount': 115}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '2IGMCH', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT291', 'date': '2024-05-20'}, {'flight_number': 'HAT257', 'date': '2024-05-20'}], 'payment_id': 'credit_card_2560121'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '9XZ6MK', 'total_baggages': 4, 'nonfree_baggages': 1, 'payment_id': 'gift_card_1324693'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="isabella_khan_3247",
+        instruction="Your user id is isabella_khan_3247. You want to update your existing reservation with ID 437BPO. Change the departure flights from Charlotte to Minneapolis to May 18, on flight numbers HAT176 and HAT210, and the return flights from Minneapolis to Charlotte to May 20, on flight numbers HAT300 and HAT270. Ensure that the cabin class remains economy. Use your Visa card ending in 4156 for any payment adjustments needed. \n\nAdditionally, for your reservation ID OI2XRY, you want to increase the total baggage allowance to 3, with one of them being a non-free checked bag. Use your gift card with a $162 balance to cover any additional baggage fees.\n\nFinally, book a new one-way business class flight for Juan Thomas from Miami to Newark on May 17. The flight number should be HAT031. Include 2 checked bags, but no additional non-free bags, and add travel insurance. Use your $128 gift card first, and cover the remaining balance with your Visa card ending in 4156. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '437BPO', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT176', 'date': '2024-05-18'}, {'flight_number': 'HAT210', 'date': '2024-05-18'}, {'flight_number': 'HAT300', 'date': '2024-05-20'}, {'flight_number': 'HAT270', 'date': '2024-05-20'}], 'payment_id': 'credit_card_2364106'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'OI2XRY', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'gift_card_5055609'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'isabella_khan_3247', 'origin': 'MIA', 'destination': 'EWR', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT031', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Juan', 'last_name': 'Thomas', 'dob': '1962-10-27'}], 'payment_methods': [{'payment_id': 'gift_card_5749103', 'amount': 128}, {'payment_id': 'credit_card_2364106', 'amount': 245}], 'total_baggages': 2, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="sofia_ahmed_9069",
+        instruction="Your user id is sofia_ahmed_9069. You want to update two of your existing reservations. For your Seattle to New York trip (reservation RGWRKS), you would like to change the travel dates to May 19 for the outbound flights (flight numbers HAT220 and HAT110) and May 20 for the return flights (flight numbers HAT201 and HAT251). You want to upgrade this reservation to economy class and use your Mastercard ending in 9744 for the payment. Additionally, for your New York to Newark trip (reservation L2TMRS), you wish to add 2 checked bags, which will be non-free. You would like to use your gift card to cover this cost. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'RGWRKS', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT220', 'date': '2024-05-19'}, {'flight_number': 'HAT110', 'date': '2024-05-19'}, {'flight_number': 'HAT201', 'date': '2024-05-20'}, {'flight_number': 'HAT251', 'date': '2024-05-20'}], 'payment_id': 'credit_card_1236431'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'L2TMRS', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'gift_card_9115943'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="anya_anderson_8280",
+        instruction="Your user id is anya_anderson_8280. You want to update your current reservation from Las Vegas to Newark (reservation id J590M3) to change the cabin to economy for all flights on May 17 and May 24 and add one checked bag. You want to pay for the cabin upgrade with your Visa ending in 1550 and the baggage fee with your $69 gift card. \n\nAdditionally, you want to cancel your Miami to Miami reservation (reservation id ZXIYE7). \n\nYou then want to book a new round-trip flight from Miami to Denver, departing on May 20 and returning on May 26, in business class. You will be traveling with Lei Martin. You prefer to pay using your $250 certificate, your $500 certificate, your $285 gift card, and the remaining balance with your Visa ending in 1550. You want to include insurance for this trip. \n\nYou are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'J590M3', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT115', 'date': '2024-05-17'}, {'flight_number': 'HAT192', 'date': '2024-05-17'}, {'flight_number': 'HAT202', 'date': '2024-05-24'}, {'flight_number': 'HAT288', 'date': '2024-05-24'}], 'payment_id': 'credit_card_1757702'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'J590M3', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'gift_card_7680607'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'ZXIYE7'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'anya_anderson_8280', 'origin': 'MIA', 'destination': 'DEN', 'flight_type': 'round_trip', 'cabin': 'business', 'flights': [{'flight_number': 'HAT148', 'date': '2024-05-20'}, {'flight_number': 'HAT255', 'date': '2024-05-26'}], 'passengers': [{'first_name': 'Anya', 'last_name': 'Anderson'}, {'first_name': 'Lei', 'last_name': 'Martin', 'dob': '1973-11-22'}], 'payment_methods': [{'payment_id': 'certificate_9447212', 'amount': 250}, {'payment_id': 'certificate_8643027', 'amount': 500}, {'payment_id': 'gift_card_1693682', 'amount': 285}, {'payment_id': 'credit_card_1757702', 'amount': 497}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ethan_hernandez_8041",
+        instruction="Your user id is ethan_hernandez_8041. You want to make several changes and bookings for your flights. First, for your reservation from New York to Orlando (reservation ID S6D2EB), you want to change the travel date to May 18 and stay in economy class. Please use your Visa ending in 4041 for any additional charges.\n\nNext, you want to update the baggage allowance for your reservation from Boston to New York (reservation ID S7MNZE). You want to include a total of 3 bags, with 1 being a paid bag. Please use your gift card with a balance of $194 for the baggage fees.\n\nAdditionally, you need to cancel your current reservation from Charlotte to Los Angeles (reservation ID 8AXB7D).\n\nFinally, you want to book a new round-trip flight from Charlotte to Los Angeles on May 18, returning on May 19, in economy class. Please use your Mastercard ending in 8952 for this booking, which should cover the full amount. You also want to include 1 checked bag and add travel insurance. Please ensure all these changes are made, and you are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'S6D2EB', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT245', 'date': '2024-05-18'}, {'flight_number': 'HAT181', 'date': '2024-05-18'}], 'payment_id': 'credit_card_4051240'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'S7MNZE', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'gift_card_7936162'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '8AXB7D'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'ethan_hernandez_8041', 'origin': 'CLT', 'destination': 'LAX', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT015', 'date': '2024-05-18'}, {'flight_number': 'HAT041', 'date': '2024-05-18'}, {'flight_number': 'HAT228', 'date': '2024-05-19'}, {'flight_number': 'HAT043', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Ethan', 'last_name': 'Hernandez', 'dob': ''}], 'payment_methods': [{'payment_id': 'credit_card_4480709', 'amount': 708}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="evelyn_garcia_6211",
+        instruction="Your user id is evelyn_garcia_6211. You want to make a few updates and a new booking. First, change your reservation from Dallas-Fort Worth to Newark (reservation id DD7D1N) to have the outbound flight on May 20 and the return flight on May 26. You want to upgrade to economy class and use your Visa card ending in 3459 for payment. Additionally, for your Minneapolis to Phoenix trip (reservation id I2GNN5), increase your total bag count to 2, with 1 non-free baggage, and pay using your $242 gift card. Lastly, you want to book a new one-way flight from Los Angeles to Dallas-Fort Worth on May 19 for Ethan Brown. You want this ticket in economy class with 1 baggage and no insurance. Use your $250 certificate for payment, covering the amount required. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'DD7D1N', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT142', 'date': '2024-05-20'}, {'flight_number': 'HAT231', 'date': '2024-05-26'}], 'payment_id': 'credit_card_4906704'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'I2GNN5', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'gift_card_2283063'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'evelyn_garcia_6211', 'origin': 'LAX', 'destination': 'DFW', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT187', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Ethan', 'last_name': 'Brown', 'dob': '1996-02-20'}], 'payment_methods': [{'payment_id': 'certificate_5860376', 'amount': 121}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="chen_lopez_2451",
+        instruction="Your user id is chen_lopez_2451. You want to cancel your existing round-trip reservation from Las Vegas to New York (reservation id LP32EB). After that, you want to book a new round-trip flight from Las Vegas to New York for Yara Lopez, departing on May 18 and returning on May 20. The outbound flight numbers are HAT242 and HAT081, and the return flight numbers are HAT114 and HAT027. You want to fly in economy class, have one piece of checked baggage, and you do not want travel insurance. You want to pay for this booking with your Mastercard ending in 2121.\n\nAdditionally, you want to update your reservation 71Y56R to adjust the outbound flight dates to May 18 and May 19, and the return to May 20 and May 28, keeping the cabin as business class. You prefer to use your Visa ending in 9890 for this update.\n\nFor your one-way reservation from Phoenix to Minneapolis (reservation id DNL44T), you want to add a second piece of baggage, making one of them a non-free checked bag. You would like to pay for this baggage update with your Mastercard ending in 7254.\n\nFinally, you want to ensure a time calculation of 8 hours and 30 minutes is completed by the agent. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'LP32EB'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'chen_lopez_2451', 'origin': 'LAS', 'destination': 'LGA', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT242', 'date': '2024-05-18'}, {'flight_number': 'HAT081', 'date': '2024-05-18'}, {'flight_number': 'HAT114', 'date': '2024-05-20'}, {'flight_number': 'HAT027', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Yara', 'last_name': 'Lopez', 'dob': '1992-01-06'}], 'payment_methods': [{'payment_id': 'credit_card_7912636', 'amount': 608}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '71Y56R', 'cabin': 'business', 'flights': [{'flight_number': 'HAT253', 'date': '2024-05-18'}, {'flight_number': 'HAT013', 'date': '2024-05-19'}, {'flight_number': 'HAT161', 'date': '2024-05-20'}, {'flight_number': 'HAT045', 'date': '2024-05-28'}], 'payment_id': 'credit_card_4073554'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'DNL44T', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_2602486'},
+            ),
+            Action(
+                name="calculate",
+                kwargs={'expression': '8 * 60 + 30'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="liam_wilson_9173",
+        instruction="Your user id is liam_wilson_9173. You would like to make a few changes and cancellations for your reservations. First, for your trip from JFK to ORD under reservation 238F2V, update the flight to HAT079, departing on May 19. You want to keep the business class cabin and use your Mastercard ending in 5500 for payment. Next, for reservation 9RWK8C, you want to increase your total baggage allowance to 4, including one non-free baggage, and pay for this with your gift card valued at $204. Lastly, you need to cancel your reservation with ID HY4UPB. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '238F2V', 'cabin': 'business', 'flights': [{'flight_number': 'HAT079', 'date': '2024-05-19'}], 'payment_id': 'credit_card_2767730'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '9RWK8C', 'total_baggages': 4, 'nonfree_baggages': 1, 'payment_id': 'gift_card_3863533'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'HY4UPB'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="chen_lopez_2451",
+        instruction="Your user id is chen_lopez_2451. First, you want to retrieve the details for your reservation with ID 71Y56R. After reviewing, you want to update this reservation to maintain the business class and ensure your flights are as follows: Flight HAT253 on May 18, HAT013 on May 20, HAT161 and HAT045 both on May 28. You prefer to use your Mastercard ending in 2121 for any additional charges. Next, you want to cancel your existing reservation DNL44T. Instead, you wish to book a new one-way trip from Phoenix to Minneapolis on May 18. The flights should be HAT106 followed by HAT254, and you plan to travel in economy class with two passengers, Yara Lopez and Chen Lopez. You will have a total of 2 baggages, of which 1 will incur a fee. Use your Visa ending in 9890 for the payment of this new booking. Finally, you want to update your reservation LP32EB to include a total of 2 baggages, with 1 being a non-free baggage, and pay any related fees with your Mastercard ending in 2121. You do not require insurance for any of these reservations. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': '71Y56R'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '71Y56R', 'cabin': 'business', 'flights': [{'flight_number': 'HAT253', 'date': '2024-05-18'}, {'flight_number': 'HAT013', 'date': '2024-05-20'}, {'flight_number': 'HAT161', 'date': '2024-05-28'}, {'flight_number': 'HAT045', 'date': '2024-05-28'}], 'payment_id': 'credit_card_7912636'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'DNL44T'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'chen_lopez_2451', 'origin': 'PHX', 'destination': 'MSP', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT106', 'date': '2024-05-18'}, {'flight_number': 'HAT254', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Yara', 'last_name': 'Lopez', 'dob': '1992-01-06'}, {'first_name': 'Chen', 'last_name': 'Lopez', 'dob': '1970-02-10'}], 'payment_methods': [{'payment_id': 'credit_card_4073554', 'amount': 574}], 'total_baggages': 2, 'nonfree_baggages': 1, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'LP32EB', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_7912636'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="harper_ito_2309",
+        instruction="Your user id is harper_ito_2309. For your existing reservation with id MCO2H9 from Detroit to Miami on May 17, you want to upgrade from economy to business class on both flights, HAT263 and HAT126. You want to use your Mastercard ending in 5171 for this upgrade. Additionally, you wish to update the baggage allowance to a total of 5 bags, with 2 being non-free. Please use your Visa ending in 7986 to cover any additional baggage fees. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'MCO2H9', 'cabin': 'business', 'flights': [{'flight_number': 'HAT263', 'date': '2024-05-17'}, {'flight_number': 'HAT126', 'date': '2024-05-17'}], 'payment_id': 'credit_card_3005515'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'MCO2H9', 'total_baggages': 5, 'nonfree_baggages': 2, 'payment_id': 'credit_card_1330512'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="omar_johnson_8493",
+        instruction="Your user id is omar_johnson_8493. You need to update your reservation with the ID RHW2N7. For your flights from Detroit to Atlanta on May 20, you want to upgrade to business class on the flights with numbers HAT169 and HAT268. Please also increase your total baggage to 3, with 1 of them being a non-free baggage. You would like to use your Visa card ending in 9615 for these updates. Additionally, you want to cancel your reservation with the ID FFW5ZX. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'RHW2N7', 'cabin': 'business', 'flights': [{'flight_number': 'HAT169', 'date': '2024-05-20'}, {'flight_number': 'HAT268', 'date': '2024-05-20'}], 'payment_id': 'credit_card_3032518'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'RHW2N7', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'credit_card_3032518'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'FFW5ZX'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="james_santos_9046",
+        instruction="Your user id is james_santos_9046. You want to cancel your existing one-way reservation from Denver to Las Vegas (reservation ID T6HMDP) where you were the passenger. Then, you wish to book a new one-way flight from Denver to Las Vegas on May 19 in economy class. The passenger for this new reservation should be Sofia Johnson, born on July 16, 1959. You do not require any baggage or insurance for this trip. You want to use your $250 certificate to pay for the flight. Please ensure these changes are made, and you are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'T6HMDP'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'james_santos_9046', 'origin': 'DEN', 'destination': 'LAS', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT229', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Sofia', 'last_name': 'Johnson', 'dob': '1959-07-16'}], 'payment_methods': [{'payment_id': 'certificate_3501924', 'amount': 103}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="fatima_taylor_8297",
+        instruction="Your user id is fatima_taylor_8297. You want to update your flight reservation with the ID RVEZA8 from Los Angeles to Denver. You would like to keep your flight on May 23 with flight number HAT030, and change the return date to May 19 instead, keeping it in economy class. You want to use your Mastercard ending in 4118 for any additional charges related to the flight update. Additionally, you want to add one checked bag to this reservation and pay for it using your $144 gift card. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'RVEZA8', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT030', 'date': '2024-05-23'}, {'flight_number': 'HAT049', 'date': '2024-05-19'}], 'payment_id': 'credit_card_1672809'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'RVEZA8', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'gift_card_9166037'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="omar_patel_2218",
+        instruction="Your user id is omar_patel_2218. You want to update your reservation 32ZS5N to change the flight dates and cabin class. Your flights should now be on May 18 (HAT123), May 19 (HAT181), and May 20 (HAT214 and HAT159) in business class. You also want to add a total of 3 baggages, 2 of which are non-free, and use your gift card worth $234 to pay for the baggage fees. Please use your Visa ending in 9565 to cover the flight adjustments. Additionally, you want to cancel your reservation ETUGNL.\n\nYou also wish to book two new flights. The first is a one-way trip in business class from Las Vegas to Orlando on May 20, flight number HAT137. You'd like to include 1 baggage, and insurance, and pay using your $250 certificate and cover the remaining balance with your Mastercard ending in 2563. For the second booking, you want a one-way economy class flight from Chicago to Denver on May 19 for Isabella Silva, with flight number HAT049. This should include 1 non-free baggage, and you'll use your $150 certificate and cover the rest with your Visa ending in 8811. You do not require insurance for this flight. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '32ZS5N', 'cabin': 'business', 'flights': [{'flight_number': 'HAT123', 'date': '2024-05-18'}, {'flight_number': 'HAT181', 'date': '2024-05-19'}, {'flight_number': 'HAT214', 'date': '2024-05-20'}, {'flight_number': 'HAT159', 'date': '2024-05-20'}], 'payment_id': 'credit_card_7019609'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '32ZS5N', 'total_baggages': 3, 'nonfree_baggages': 2, 'payment_id': 'gift_card_4194895'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'ETUGNL'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'omar_patel_2218', 'origin': 'LAS', 'destination': 'MCO', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT137', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Omar', 'last_name': 'Patel', 'dob': '1988-09-15'}], 'payment_methods': [{'payment_id': 'certificate_9633193', 'amount': 250}, {'payment_id': 'credit_card_9103032', 'amount': 64}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'omar_patel_2218', 'origin': 'ORD', 'destination': 'DEN', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT049', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Isabella', 'last_name': 'Silva', 'dob': '1997-12-03'}], 'payment_methods': [{'payment_id': 'certificate_5815185', 'amount': 150}, {'payment_id': 'credit_card_5087987', 'amount': 77}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="raj_kim_9822",
+        instruction="Your user id is raj_kim_9822. You want to update your existing reservation from Minneapolis to Phoenix (reservation ID ZWG1NR) by changing the cabin to business class for all flights on May 19. Please ensure the flights are HAT071, HAT153, HAT106, and HAT254. You want to use your Visa card ending in 1430 for this upgrade. Additionally, you want to adjust the baggage to include a total of 3 bags, with 1 of them being non-free, and you'd like to use your gift card worth $225 for this payment. Furthermore, you need to cancel another reservation with the ID 8NCYH8. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'ZWG1NR', 'cabin': 'business', 'flights': [{'flight_number': 'HAT071', 'date': '2024-05-19'}, {'flight_number': 'HAT153', 'date': '2024-05-19'}, {'flight_number': 'HAT106', 'date': '2024-05-19'}, {'flight_number': 'HAT254', 'date': '2024-05-19'}], 'payment_id': 'credit_card_1065152'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'ZWG1NR', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'gift_card_2123269'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '8NCYH8'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="fatima_ito_3977",
+        instruction="Your user id is fatima_ito_3977. You want to cancel your current reservation from New York (LGA) to Las Vegas (LAS) for May 24. After that, you want to book a new one-way flight from New York (LGA) to Las Vegas (LAS) on May 19. You want to fly in economy class and prefer flights HAT245 and HAT173. This trip is for Harper Johansson, whose details are already in your profile. You want to use your $228 gift card, your $54 gift card, and cover any remaining balance with your Visa ending in 4391. You want to include travel insurance and will not have any checked baggage. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'YX38CU'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'fatima_ito_3977', 'origin': 'LGA', 'destination': 'LAS', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT245', 'date': '2024-05-19'}, {'flight_number': 'HAT173', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Harper', 'last_name': 'Johansson', 'dob': '1980-10-20'}], 'payment_methods': [{'payment_id': 'gift_card_2858570', 'amount': 228}, {'payment_id': 'gift_card_6112402', 'amount': 54}, {'payment_id': 'credit_card_4481781', 'amount': 14}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="harper_ahmed_8302",
+        instruction="Your user id is harper_ahmed_8302. You want to book a one-way flight for Evelyn Silva from Newark to Charlotte on May 17. You prefer a flight with one stop and want to fly in basic economy class. Specify flight number HAT270 for this trip. You plan to check one bag and you want travel insurance included. You would like to use your $250 certificate to cover the payment. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="search_onestop_flight",
+                kwargs={'origin': 'EWR', 'destination': 'CLT', 'date': '2024-05-17'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'harper_ahmed_8302', 'origin': 'EWR', 'destination': 'CLT', 'flight_type': 'one_way', 'cabin': 'basic_economy', 'flights': [{'flight_number': 'HAT270', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Evelyn', 'last_name': 'Silva', 'dob': '1974-09-18'}], 'payment_methods': [{'payment_id': 'certificate_5422029', 'amount': 106}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="get_user_details",
+                kwargs={'user_id': 'harper_ahmed_8302'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="yara_rossi_1806",
+        instruction="Your user id is yara_rossi_1806. You want to make several changes and new bookings for your upcoming travel plans. First, for your existing reservation from San Francisco to Boston with reservation ID LQZT3N, you want to change the date of your flight HAT295 to May 18 and upgrade the cabin to economy. Use your Visa ending in 3926 for this transaction. \n\nNext, you want to book a one-way business class flight from Philadelphia to San Francisco on May 17 for Amelia Muller. The flight number is HAT199. Please include insurance in this booking and use your Visa ending in 3926 to pay the amount of $324.\n\nYou also need to cancel the reservation with ID GBPS10, which involves a one-way trip from Philadelphia to Houston.\n\nLastly, update the baggage allowance for your reservation VKKI7L, increasing the total bags to 4, with 1 of them being non-free. Again, use your Visa ending in 3926 for any additional charges. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'LQZT3N', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT295', 'date': '2024-05-18'}], 'payment_id': 'credit_card_6432530'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'yara_rossi_1806', 'origin': 'PHL', 'destination': 'SFO', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT199', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Amelia', 'last_name': 'Muller', 'dob': '1958-07-13'}], 'payment_methods': [{'payment_id': 'credit_card_6432530', 'amount': 324}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'GBPS10'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'VKKI7L', 'total_baggages': 4, 'nonfree_baggages': 1, 'payment_id': 'credit_card_6432530'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="yara_wilson_1123",
+        instruction="Your user id is yara_wilson_1123. You want to update your existing reservation from Charlotte to New York (reservation ID 43TOIE) by changing the cabin to business class and adjusting your travel date to May 19, on flight number HAT087. You would like to use your Mastercard ending in 8096 for this update. Additionally, you want to add 2 checked bags, and for this, you will use your Mastercard ending in 5901.\n\nFurthermore, you want to book a new one-way flight from Houston to Newark on May 18. You want to fly in economy class on flight HAT195. The passenger details for this booking should be in the name Yara Wilson, with your date of birth as March 10, 1985 (please note this may need updating in your profile). You will also need 1 checked bag for this trip. You want to pay using your $29 gift card first, and then cover the remaining balance with your Mastercard ending in 8096. You would like to have travel insurance included for this trip. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '43TOIE', 'cabin': 'business', 'flights': [{'flight_number': 'HAT087', 'date': '2024-05-19'}], 'payment_id': 'credit_card_9901939'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '43TOIE', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'credit_card_4266791'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'yara_wilson_1123', 'origin': 'IAH', 'destination': 'EWR', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT195', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Yara', 'last_name': 'Wilson', 'dob': '1985-03-10'}], 'payment_methods': [{'payment_id': 'gift_card_8845666', 'amount': 29}, {'payment_id': 'credit_card_9901939', 'amount': 230}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="raj_sanchez_7079",
+        instruction="Your user id is raj_sanchez_7079. You want to cancel your current reservation from Orlando to Charlotte with reservation id GLJC55. After that, you would like to book a new round-trip flight from Orlando to Charlotte. You want to fly in basic economy class and your travel dates are as follows: depart Orlando on May 16 with flight number HAT217, and then fly from Charlotte on May 17 with flight number HAT277. Continue from Charlotte to Orlando on May 19 with flight number HAT287, and finally return to Orlando on May 20 with flight number HAT235. You want Juan Santos to be the passenger on this trip. For payment, you would like to use your $69 gift card first, and then cover the remaining balance using your Visa card ending in 9869. You don’t require any additional baggage allowance or travel insurance for this reservation. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'GLJC55'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'raj_sanchez_7079', 'origin': 'MCO', 'destination': 'CLT', 'flight_type': 'round_trip', 'cabin': 'basic_economy', 'flights': [{'flight_number': 'HAT217', 'date': '2024-05-16'}, {'flight_number': 'HAT277', 'date': '2024-05-17'}, {'flight_number': 'HAT287', 'date': '2024-05-19'}, {'flight_number': 'HAT235', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Juan', 'last_name': 'Santos', 'dob': '1950-10-25'}], 'payment_methods': [{'payment_id': 'gift_card_1188934', 'amount': 69}, {'payment_id': 'credit_card_3881008', 'amount': 217}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="sofia_taylor_8420",
+        instruction="Your user id is sofia_taylor_8420. You want to update your existing reservation RVSBD8 for your trip from Dallas to Phoenix. You want to change the cabin to business class and keep the same flights on May 26, 2024, with flight numbers HAT038 and HAT236. However, you want to change the return flight to an earlier date, May 19, 2024, on flight HAT251, while keeping the last segment on May 30, 2024, with flight HAT113. You want to add one more checked bag, making it a total of 2 bags, with 1 being non-free. To pay for the flight upgrade, use your Mastercard ending in 6800, and for the baggage fees, use your $115 gift card. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'RVSBD8', 'cabin': 'business', 'flights': [{'flight_number': 'HAT038', 'date': '2024-05-26'}, {'flight_number': 'HAT236', 'date': '2024-05-26'}, {'flight_number': 'HAT251', 'date': '2024-05-19'}, {'flight_number': 'HAT113', 'date': '2024-05-30'}], 'payment_id': 'credit_card_6032740'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'RVSBD8', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'gift_card_5351803'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="evelyn_lee_2325",
+        instruction="Your user id is evelyn_lee_2325. You want to update your existing reservation (RH8JD7) to fly in business class from Houston to San Francisco on May 17 with flight number HAT180. Your return flights from San Francisco to Phoenix and then to Houston on May 20 should be on flight numbers HAT123 and HAT152, respectively. You wish to increase the total number of checked bags to 3, with 2 being additional paid bags. Use your Visa card ending in 7370 for this update.\n\nAdditionally, you need to cancel your reservation HT17KB. \n\nFurthermore, you would like to book a new one-way flight from Phoenix to Las Vegas on May 19, in economy class, on flight number HAT131. The passenger on this booking should be Evelyn Lee, born on March 22, 1990. You want to check one bag, which will incur a fee, and pay with your Visa card ending in 7370. You do not require insurance for this booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'RH8JD7', 'cabin': 'business', 'flights': [{'flight_number': 'HAT180', 'date': '2024-05-17'}, {'flight_number': 'HAT123', 'date': '2024-05-20'}, {'flight_number': 'HAT152', 'date': '2024-05-20'}], 'payment_id': 'credit_card_5787244'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'RH8JD7', 'total_baggages': 3, 'nonfree_baggages': 2, 'payment_id': 'credit_card_5787244'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'HT17KB'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'evelyn_lee_2325', 'origin': 'PHX', 'destination': 'LAS', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT131', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Evelyn', 'last_name': 'Lee', 'dob': '1990-03-22'}], 'payment_methods': [{'payment_id': 'credit_card_5787244', 'amount': 186}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="lucas_hernandez_9581",
+        instruction="Your user id is lucas_hernandez_9581. You want to update your Philadelphia to Denver reservation, identified by reservation ID 9XZ6MK. You want to change the return flight to May 17, still flying in economy class. For this change, you prefer to use your gift card with a $152 balance. Additionally, for your Phoenix to Las Vegas trip with reservation ID XZRB9Q, you want to increase the total number of baggages to 3, with one non-free baggage. You would like to use your $75 gift card for any associated fees. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '9XZ6MK', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT076', 'date': '2024-05-16'}, {'flight_number': 'HAT080', 'date': '2024-05-17'}], 'payment_id': 'gift_card_6514357'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'XZRB9Q', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'gift_card_1863023'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ivan_garcia_1794",
+        instruction="Your user id is ivan_garcia_1794. You want to make the following changes for your travel plans: \n\nFirst, for your reservation with ID LV5MG2 from Las Vegas to Chicago on May 21, you want to upgrade your seat to business class for flights HAT115 and HAT129. You also want to add two checked bags, both of which are non-free. Please use your Visa card ending in 8790 for these changes.\n\nNext, you need to cancel your existing reservation with ID PG7O11 from Philadelphia to New York and back.\n\nAfter canceling, you would like to book a new round-trip reservation from Philadelphia to New York. You want to travel in business class on flight HAT296 departing on May 19 and returning on flight HAT172 on May 20. The passengers for this trip will be yourself, Ivan Garcia, Omar Santos, and Ana Lopez. You’ll be bringing two bags, and you want to include travel insurance. Please charge your Visa card ending in 8790 for the total amount of 1968 USD for this booking.\n\nYou are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'LV5MG2', 'cabin': 'business', 'flights': [{'flight_number': 'HAT115', 'date': '2024-05-21'}, {'flight_number': 'HAT129', 'date': '2024-05-21'}], 'payment_id': 'credit_card_8638712'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'LV5MG2', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'credit_card_8638712'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'PG7O11'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'ivan_garcia_1794', 'origin': 'PHL', 'destination': 'LGA', 'flight_type': 'round_trip', 'cabin': 'business', 'flights': [{'flight_number': 'HAT296', 'date': '2024-05-19'}, {'flight_number': 'HAT172', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Ivan', 'last_name': 'Garcia', 'dob': '1970-01-01'}, {'first_name': 'Omar', 'last_name': 'Santos', 'dob': '1969-09-19'}, {'first_name': 'Ana', 'last_name': 'Lopez', 'dob': '1980-07-12'}], 'payment_methods': [{'payment_id': 'credit_card_8638712', 'amount': 1968}], 'total_baggages': 2, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="harper_davis_5069",
+        instruction="Your user id is harper_davis_5069. You want to update your existing reservation WLXS0L with one checked bag, and you would like to use your gift card of $282 for payment. Additionally, for your reservation W0I4AJ, you want to change your flight to May 16, keeping the same flight number HAT184, and upgrade to economy class. You wish to use your Mastercard ending in 5038 for this transaction. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'WLXS0L', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'gift_card_7215260'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'W0I4AJ', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT184', 'date': '2024-05-16'}], 'payment_id': 'credit_card_7396423'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="olivia_garcia_3026",
+        instruction="Your user id is olivia_garcia_3026. You need to make several updates to your travel plans. First, for your Detroit to Charlotte round trip (reservation ID: LD9PUK), you want to correct your date of birth to August 19, 1985. Next, for your San Francisco to Charlotte trip (reservation ID: MIR482), you want to change the flight to May 17 in economy class and pay with your Mastercard ending in 3573. \n\nAdditionally, you wish to cancel your Chicago to Charlotte round trip (reservation ID: U85JRX). After that, you want to book a new round-trip flight from Chicago to Charlotte, departing on May 18 and returning on May 19, in economy class. You want to add Yara Brown and Isabella Kovacs as passengers, include 2 baggages (1 non-free), and add travel insurance. You prefer to use your $160 gift card first, and cover the remaining balance with your Visa ending in 4196.\n\nLastly, for your Minneapolis to Orlando round trip (reservation ID: HFLKUF), you want to update the baggage to 4 in total (2 non-free) and pay using your gift card that has a remaining balance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_passengers",
+                kwargs={'reservation_id': 'LD9PUK', 'passengers': [{'first_name': 'Olivia', 'last_name': 'Garcia', 'dob': '1985-08-19'}]},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'MIR482', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT295', 'date': '2024-05-17'}, {'flight_number': 'HAT277', 'date': '2024-05-17'}], 'payment_id': 'credit_card_7156345'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'U85JRX'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'olivia_garcia_3026', 'origin': 'ORD', 'destination': 'CLT', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT168', 'date': '2024-05-18'}, {'flight_number': 'HAT176', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Yara', 'last_name': 'Brown', 'dob': '1961-08-19'}, {'first_name': 'Isabella', 'last_name': 'Kovacs', 'dob': '1966-11-13'}], 'payment_methods': [{'payment_id': 'gift_card_1967449', 'amount': 160}, {'payment_id': 'credit_card_9471861', 'amount': 632}], 'total_baggages': 2, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'HFLKUF', 'total_baggages': 4, 'nonfree_baggages': 2, 'payment_id': 'gift_card_9296055'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ava_jackson_6651",
+        instruction="Your user id is ava_jackson_6651. You want to cancel your current reservation for the trip from New York (JFK) to Chicago (ORD) under the reservation ID GLJF1R. After canceling, you wish to rebook a round-trip flight in economy class from JFK to ORD. The flights should include flight numbers HAT060 and HAT129 on May 20, and HAT230 and HAT263 on May 27. You will be the only passenger, with your details already in the system. You want to add 2 checked bags and include travel insurance. You prefer to use your Mastercard ending in 3671 to pay for this booking. For your existing reservation M1OT79, please update the baggage allowance to include 4 total bags, with 2 being non-free, and charge this update to your Visa ending in 4906. Additionally, you need to retrieve the details of your reservation F5T6Y0. Finally, you are looking for a one-stop flight from Chicago (ORD) to Los Angeles (LAX) on May 20. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'GLJF1R'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'ava_jackson_6651', 'origin': 'JFK', 'destination': 'ORD', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT060', 'date': '2024-05-20'}, {'flight_number': 'HAT129', 'date': '2024-05-20'}, {'flight_number': 'HAT230', 'date': '2024-05-27'}, {'flight_number': 'HAT263', 'date': '2024-05-27'}], 'passengers': [{'first_name': 'Ava', 'last_name': 'Jackson', 'dob': '1985-07-12'}], 'payment_methods': [{'payment_id': 'credit_card_1534658', 'amount': 727}], 'total_baggages': 2, 'nonfree_baggages': 2, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'M1OT79', 'total_baggages': 4, 'nonfree_baggages': 2, 'payment_id': 'credit_card_5969112'},
+            ),
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'F5T6Y0'},
+            ),
+            Action(
+                name="search_onestop_flight",
+                kwargs={'origin': 'ORD', 'destination': 'LAX', 'date': '2024-05-20'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="harper_smith_3981",
+        instruction="Your user id is harper_smith_3981. You want to cancel your existing reservation from Seattle to Phoenix with the reservation ID WXZ65N. After that, you want to book a new round-trip flight from Seattle to Phoenix in economy class, departing on May 18 and returning on May 19. The flights should be on flight numbers HAT236, HAT173, and HAT047. You will be traveling with Isabella Li, and you want to include 2 baggages, with no additional charges for nonfree baggages. You prefer to add travel insurance. For payment, you want to use your gift card for $162 and pay the remaining balance with your Mastercard ending in 1680.\n\nAdditionally, for your reservation with ID KT71XO, you prefer to update the flight to May 18 on flight number HAT299, maintaining business class, and you want to pay any additional costs with your Mastercard ending in 1680.\n\nLastly, for your reservation with ID 4WGAEF, you want to increase the total baggage allowance to 2, including 1 nonfree baggage, and pay for this with your Mastercard ending in 1680. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'WXZ65N'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'harper_smith_3981', 'origin': 'SEA', 'destination': 'PHX', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT236', 'date': '2024-05-18'}, {'flight_number': 'HAT173', 'date': '2024-05-19'}, {'flight_number': 'HAT047', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Harper', 'last_name': 'Smith', 'dob': '1970-01-01'}, {'first_name': 'Isabella', 'last_name': 'Li', 'dob': '1968-10-09'}], 'payment_methods': [{'payment_id': 'gift_card_7747327', 'amount': 162}, {'payment_id': 'credit_card_9955122', 'amount': 868}], 'total_baggages': 2, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'KT71XO', 'cabin': 'business', 'flights': [{'flight_number': 'HAT299', 'date': '2024-05-18'}], 'payment_id': 'credit_card_9955122'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '4WGAEF', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_9955122'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="lei_patel_4666",
+        instruction="Your user id is lei_patel_4666. You want to upgrade your reservation EU6W3B from economy to business class. The flights should be on May 17 from Atlanta to Denver, returning on May 30. You prefer to use your Mastercard ending in 1592 for payment. Additionally, you want to book a one-way flight for Fatima Moore from Las Vegas to Atlanta on May 19 in economy class. You want to include one checked bag and one non-free baggage, and you would like to add insurance. For this booking, please use your Mastercard ending in 5468. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'EU6W3B', 'cabin': 'business', 'flights': [{'flight_number': 'HAT052', 'date': '2024-05-17'}, {'flight_number': 'HAT003', 'date': '2024-05-17'}, {'flight_number': 'HAT046', 'date': '2024-05-30'}, {'flight_number': 'HAT177', 'date': '2024-05-30'}], 'payment_id': 'credit_card_8391262'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'lei_patel_4666', 'origin': 'LAS', 'destination': 'ATL', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT061', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Fatima', 'last_name': 'Moore', 'dob': '2000-03-10'}], 'payment_methods': [{'payment_id': 'credit_card_2675929', 'amount': 238}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mei_brown_7075",
+        instruction="Your user id is mei_brown_7075. You want to update your existing reservation (reservation id DB1Y70) for your trip from Phoenix to Charlotte. You need to change the travel date to May 19 and remain in economy class. You want to pay for this update with your Visa card ending in 8764. Additionally, you want to add two checked bags to this reservation, and you'd like to use your gift card with a $130 balance for this payment.\n\nFurthermore, you want to book a new one-way flight from Phoenix to New York (LaGuardia) on May 18 for Yusuf Silva. You prefer the economy class and want to use your $250 certificate to cover $156 for this booking. No additional baggage or travel insurance is required for this new reservation. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'DB1Y70', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT265', 'date': '2024-05-19'}, {'flight_number': 'HAT053', 'date': '2024-05-19'}], 'payment_id': 'credit_card_5667188'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'DB1Y70', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'gift_card_8987598'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mei_brown_7075', 'origin': 'PHX', 'destination': 'LGA', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT051', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Yusuf', 'last_name': 'Silva', 'dob': '1972-03-03'}], 'payment_methods': [{'payment_id': 'certificate_6761175', 'amount': 156}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="daiki_muller_1116",
+        instruction="Your user id is daiki_muller_1116. You want to make changes to your existing reservation XEHM4B. Please upgrade the cabin to economy for both flights on May 20 and May 30, and charge this to your Visa ending in 2135. Additionally, add one checked bag and charge the baggage fees to your Visa ending in 5541. Also, you need to book a new one-way flight from Denver to Las Vegas on May 20 for Amelia Kim in basic economy. Use your Visa ending in 2135 to pay for this ticket. You do not require any additional baggage or insurance for this booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'XEHM4B', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT005', 'date': '2024-05-20'}, {'flight_number': 'HAT178', 'date': '2024-05-30'}], 'payment_id': 'credit_card_2408938'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'XEHM4B', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_4303738'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'daiki_muller_1116', 'origin': 'DEN', 'destination': 'LAS', 'flight_type': 'one_way', 'cabin': 'basic_economy', 'flights': [{'flight_number': 'HAT290', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Amelia', 'last_name': 'Kim', 'dob': '1978-04-20'}], 'payment_methods': [{'payment_id': 'credit_card_2408938', 'amount': 99}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="james_ito_7657",
+        instruction="Your user id is james_ito_7657. You want to cancel your current reservation from Charlotte to Detroit (reservation ID PLRJB9). Then, you want to book a new round-trip flight from Charlotte to Detroit in economy class. For the outbound flight, you want to take flight HAT176 on May 18, 2024, and for the return, flight HAT191 on May 20, 2024. The passengers will be Aarav Sanchez and yourself, James Ito. You want to have 2 checked bags and include travel insurance. You would like to pay for this reservation using your $100 certificate and the remaining balance with your Visa card ending in 9421. Additionally, you want to update your existing reservation (reservation ID LVVTRZ) by adding one more checked bag, totaling 3 bags, with one being non-free. You would like to use your $181 gift card to cover this additional baggage fee. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'PLRJB9'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'james_ito_7657', 'origin': 'CLT', 'destination': 'DTW', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT176', 'date': '2024-05-18'}, {'flight_number': 'HAT191', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Aarav', 'last_name': 'Sanchez', 'dob': '1988-12-04'}, {'first_name': 'James', 'last_name': 'Ito', 'dob': '1980-05-27'}], 'payment_methods': [{'payment_id': 'certificate_7949562', 'amount': 100}, {'payment_id': 'credit_card_9712053', 'amount': 504}], 'total_baggages': 2, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'LVVTRZ', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'gift_card_2049139'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mei_patel_4436",
+        instruction="Your user id is mei_patel_4436. You want to update your reservation with ID E17VRA to change the cabin class from basic economy to economy for your flights from LaGuardia to Seattle, which include flight HAT114 on May 19 and flight HAT156 on May 20. You prefer to use your Mastercard ending in 1562 for this upgrade. Additionally, you want to add 3 checked bags to this reservation, and for this, you wish to use your Mastercard ending in 4094. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'E17VRA', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT114', 'date': '2024-05-19'}, {'flight_number': 'HAT156', 'date': '2024-05-20'}], 'payment_id': 'credit_card_2126547'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'E17VRA', 'total_baggages': 3, 'nonfree_baggages': 3, 'payment_id': 'credit_card_4435842'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mason_lee_6824",
+        instruction="Your user id is mason_lee_6824. You want to update your reservation with ID XLIDX4. You wish to increase your total baggage allowance to 2 bags, with 1 of them being a non-free checked bag. Please use your gift card with a $260 balance to cover any additional charges for this baggage update. \n\nAdditionally, for your reservation with ID 8PL5HT, you want to change your flight dates and cabin class. You want to fly in economy class with the following updated flights: flight HAT188 on May 18 from EWR to IAH, flight HAT180 on May 18 from IAH to SFO, flight HAT082 on May 19 from SFO to IAH, and flight HAT207 on May 19 from IAH to EWR. Please charge any additional costs for this update to your Mastercard ending in 4633. \n\nYou are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'XLIDX4', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'gift_card_5996755'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '8PL5HT', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT188', 'date': '2024-05-18'}, {'flight_number': 'HAT180', 'date': '2024-05-18'}, {'flight_number': 'HAT082', 'date': '2024-05-19'}, {'flight_number': 'HAT207', 'date': '2024-05-19'}], 'payment_id': 'credit_card_3147068'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="amelia_khan_8728",
+        instruction="Your user id is amelia_khan_8728. You want to cancel your current reservation from Philadelphia to Houston with reservation id 7YCYND. After canceling, you want to book a new one-way flight from Philadelphia to Houston on May 19. You want to travel in economy class on flight number HAT199. You will be traveling with Raj Jackson, and you want to include one checked bag. You prefer to pay using your $250 certificate, specifically using $190 from it. You do not require travel insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '7YCYND'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'amelia_khan_8728', 'origin': 'PHL', 'destination': 'IAH', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT199', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Raj', 'last_name': 'Jackson', 'dob': '1981-06-20'}], 'payment_methods': [{'payment_id': 'certificate_2197494', 'amount': 190}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="olivia_garcia_3026",
+        instruction="Your user id is olivia_garcia_3026. You want to upgrade your existing reservation from Detroit to Charlotte (reservation ID LD9PUK) to business class for both legs of the trip on May 28 and May 30. Please use your Mastercard ending in 3573 for this upgrade. Additionally, you want to add one checked baggage and pay for it using your $160 gift card. You also wish to cancel your reservation from San Francisco to Charlotte (reservation ID MIR482). Following this, you want to book a new one-way trip from San Francisco to Philadelphia on May 16 in business class. The flight numbers for this trip are HAT295 and HAT277. You want to be the passenger on this booking, and please use your $123 gift card and Visa ending in 4196 for payment. Make sure to include travel insurance for this new booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'LD9PUK', 'cabin': 'business', 'flights': [{'flight_number': 'HAT168', 'date': '2024-05-28'}, {'flight_number': 'HAT176', 'date': '2024-05-30'}], 'payment_id': 'credit_card_7156345'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'LD9PUK', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'gift_card_1967449'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'MIR482'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'olivia_garcia_3026', 'origin': 'SFO', 'destination': 'PHL', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT295', 'date': '2024-05-16'}, {'flight_number': 'HAT277', 'date': '2024-05-16'}], 'passengers': [{'first_name': 'Olivia', 'last_name': 'Garcia', 'dob': '1979-04-22'}], 'payment_methods': [{'payment_id': 'gift_card_9296055', 'amount': 123}, {'payment_id': 'credit_card_9471861', 'amount': 456}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="chen_hernandez_2608",
+        instruction="Your user id is chen_hernandez_2608. You want to cancel your existing round-trip reservation from Las Vegas to Orlando with reservation ID TANH6H. After canceling, you want to book a new round-trip flight from Las Vegas to Orlando in economy class. The flight details are as follows: departing on May 16 with flight number HAT137, and returning on May 18 with flight number HAT214, followed by a connecting flight on May 19 with flight number HAT259. The passengers for this booking will be yourself, Chen Hernandez, and Liam Nguyen. You want to take 2 baggages with this trip. You want to use your Mastercard ending in 6680 for payment, and you prefer to have travel insurance included. \n\nAdditionally, for your reservation ID V25KYO, you need to update the total baggages to 4, with 2 of them being non-free. You want to use your Visa ending in 7969 to cover any additional charges for this baggage update.\n\nLastly, for your reservation ID OC39IW, you wish to change the cabin class to economy for the flights on May 19 (flight number HAT197) and May 24 (flight number HAT289). You want this update to be charged to your Mastercard ending in 6680. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'TANH6H'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'chen_hernandez_2608', 'origin': 'LAS', 'destination': 'MCO', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT137', 'date': '2024-05-16'}, {'flight_number': 'HAT214', 'date': '2024-05-18'}, {'flight_number': 'HAT259', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Chen', 'last_name': 'Hernandez', 'dob': '1980-01-15'}, {'first_name': 'Liam', 'last_name': 'Nguyen', 'dob': '1960-08-07'}], 'payment_methods': [{'payment_id': 'credit_card_8453507', 'amount': 932}], 'total_baggages': 2, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'V25KYO', 'total_baggages': 4, 'nonfree_baggages': 2, 'payment_id': 'credit_card_6123046'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'OC39IW', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT197', 'date': '2024-05-19'}, {'flight_number': 'HAT289', 'date': '2024-05-24'}], 'payment_id': 'credit_card_8453507'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="yara_jackson_7992",
+        instruction="Your user id is yara_jackson_7992. You want to update your reservation with id L0UAFK to change the flight dates and upgrade the cabin to economy. The new flight dates should be May 17 for flights HAT035 and HAT065, and May 20 for flight HAT066, while flight HAT167 also changes to May 17. You prefer to use your Mastercard ending in 3505 for any additional costs. Additionally, for your reservation with id Y8L4FO, you want to increase the total baggages to 2, with 1 being non-free. You would like to use your gift card with a balance of $87 to cover the baggage expenses. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'L0UAFK', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT035', 'date': '2024-05-17'}, {'flight_number': 'HAT066', 'date': '2024-05-20'}, {'flight_number': 'HAT065', 'date': '2024-05-17'}, {'flight_number': 'HAT167', 'date': '2024-05-17'}], 'payment_id': 'credit_card_6633575'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'Y8L4FO', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'gift_card_6955135'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="omar_nguyen_3427",
+        instruction="Your user id is omar_nguyen_3427. You want to update your reservation for a round-trip from Detroit to Las Vegas (reservation ID: VI3YET). You want to change your flights to depart on May 17 and return on May 19. Your flight numbers on May 17 should be HAT275 and HAT173, and on May 19, they should be HAT284 and HAT106. You want to remain in business class. Additionally, you want to add 2 checked bags for the trip. You prefer to use your gift card to cover any associated costs. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'VI3YET', 'cabin': 'business', 'flights': [{'flight_number': 'HAT275', 'date': '2024-05-17'}, {'flight_number': 'HAT173', 'date': '2024-05-17'}, {'flight_number': 'HAT284', 'date': '2024-05-19'}, {'flight_number': 'HAT106', 'date': '2024-05-19'}], 'payment_id': 'gift_card_8789811'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'VI3YET', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'gift_card_8789811'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mei_wilson_9061",
+        instruction="Your user id is mei_wilson_9061. You want to make some changes to your existing reservations. First, for your reservation with ID VJMK2V, you want to update the flights to economy class, specifically flying on flight HAT181 on May 18 and flight HAT217 on May 19. Please use your Mastercard ending in 9525 for any payment adjustments needed. Next, for your reservation with ID XATIGU, you want to update the baggage allowance to a total of 2 bags, with 1 as a non-free baggage. Again, please use your Mastercard ending in 9525 for this. Finally, you would like to cancel your reservation with ID Q69CZH. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'VJMK2V', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT181', 'date': '2024-05-18'}, {'flight_number': 'HAT217', 'date': '2024-05-19'}], 'payment_id': 'credit_card_1813435'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'XATIGU', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_1813435'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'Q69CZH'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="liam_taylor_6683",
+        instruction="Your user id is liam_taylor_6683. First, you want to update your existing reservation with ID OWCNP2. You want to change your baggage allowance to include 3 nonfree baggages, paying with your Visa card ending in 4489. You also want to modify the flights in this reservation to the following schedule: fly from DTW to JFK on flight HAT240 on May 17, then from JFK to MIA on flight HAT209 on May 18, returning from MIA to JFK on flight HAT292 on May 19, and finally from JFK to DTW on flight HAT212 on May 20. You will remain in the business cabin, and this will be charged to your Visa card ending in 4489.\n\nNext, you want to cancel your reservation with ID L4BO1G.\n\nAdditionally, you would like to book a new round-trip flight from Charlotte (CLT) to Detroit (DTW), departing on flight HAT167 on May 17 and returning on flight HAT053 on May 18. This trip will be for Omar Kim, born on December 3, 1989. You prefer to fly in economy class and do not require any checked baggage or insurance. You wish to use your $85 gift card, and any remaining balance should be paid with your Visa card ending in 4489.\n\nYou are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'OWCNP2', 'total_baggages': 6, 'nonfree_baggages': 3, 'payment_id': 'credit_card_2441469'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'L4BO1G'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'liam_taylor_6683', 'origin': 'CLT', 'destination': 'DTW', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT167', 'date': '2024-05-17'}, {'flight_number': 'HAT053', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Omar', 'last_name': 'Kim', 'dob': '1989-12-03'}], 'payment_methods': [{'payment_id': 'gift_card_8193861', 'amount': 85}, {'payment_id': 'credit_card_2441469', 'amount': 152}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'OWCNP2', 'cabin': 'business', 'flights': [{'flight_number': 'HAT240', 'date': '2024-05-17'}, {'flight_number': 'HAT209', 'date': '2024-05-18'}, {'flight_number': 'HAT292', 'date': '2024-05-19'}, {'flight_number': 'HAT212', 'date': '2024-05-20'}], 'payment_id': 'credit_card_2441469'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="raj_moore_8640",
+        instruction="Your user id is raj_moore_8640. First, you want to cancel your existing reservation from Phoenix to Las Vegas with the reservation ID PVUB64. After that, you want to book a new round-trip flight from Phoenix to Las Vegas on May 17 with return on May 18. You want to travel in economy class and have Sophia Nguyen as the passenger. You will have 2 checked bags. You want to pay using two of your $150 certificates and your gift card for $92. You do not want insurance for this trip.\n\nAdditionally, for your reservation with ID JT8DB7, you want to update the baggage allowance to include 3 total bags, 2 of which are non-free, and you prefer to use your Visa ending in 8862 for the payment.\n\nLastly, for your reservation with ID TI7NSI, you want to change the return flight date to May 19, while maintaining business class, and pay any additional costs with your gift card. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'PVUB64'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'raj_moore_8640', 'origin': 'PHX', 'destination': 'LAS', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT259', 'date': '2024-05-17'}, {'flight_number': 'HAT095', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Sophia', 'last_name': 'Nguyen', 'dob': '1973-09-23'}], 'payment_methods': [{'payment_id': 'certificate_5202702', 'amount': 150}, {'payment_id': 'certificate_9871082', 'amount': 150}, {'payment_id': 'gift_card_5282321', 'amount': 92}], 'total_baggages': 2, 'nonfree_baggages': 2, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'JT8DB7', 'total_baggages': 3, 'nonfree_baggages': 2, 'payment_id': 'credit_card_4444015'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'TI7NSI', 'cabin': 'business', 'flights': [{'flight_number': 'HAT145', 'date': '2024-05-23'}, {'flight_number': 'HAT217', 'date': '2024-05-19'}], 'payment_id': 'gift_card_5282321'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="isabella_muller_2311",
+        instruction="Your user id is isabella_muller_2311. You want to cancel your upcoming flight from New York LaGuardia (LGA) to San Francisco (SFO) under reservation ID BMH70T. After that, you wish to book a new one-way flight on May 18 in business class from the same origin and destination, with Mason Gonzalez traveling. The flights should be HAT245 and HAT009. You will pay using your $56 gift card and cover the remaining balance of $651 with your Visa ending in 3014. Please ensure one checked bag is included, and you want to add travel insurance. \n\nAdditionally, for the reservation ID N6L5KU, please update it to include a total of three bags, one of which will incur a fee. Use your $52 gift card for this payment. \n\nFor reservation ID UL436B, you want to retrieve the details and then update the flights to business class scheduled for May 19 and May 20 with the following flight numbers: HAT168, HAT157, HAT215, and HAT167. Use your Visa ending in 3014 for any necessary payments. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'BMH70T'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'isabella_muller_2311', 'origin': 'LGA', 'destination': 'SFO', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT245', 'date': '2024-05-18'}, {'flight_number': 'HAT009', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Mason', 'last_name': 'Gonzalez', 'dob': '1959-08-24'}], 'payment_methods': [{'payment_id': 'gift_card_4033665', 'amount': 56}, {'payment_id': 'credit_card_2655640', 'amount': 651}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'N6L5KU', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'gift_card_9916885'},
+            ),
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'UL436B'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'UL436B', 'cabin': 'business', 'flights': [{'flight_number': 'HAT168', 'date': '2024-05-19'}, {'flight_number': 'HAT157', 'date': '2024-05-19'}, {'flight_number': 'HAT215', 'date': '2024-05-20'}, {'flight_number': 'HAT167', 'date': '2024-05-20'}], 'payment_id': 'credit_card_2655640'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mei_hernandez_8984",
+        instruction="Your user id is mei_hernandez_8984. For your upcoming reservation from Las Vegas to Dallas (reservation id 1AKIA8), you want to update the baggage allowance to a total of 3 bags, with 2 of them being non-free. You wish to pay for this baggage update using your Mastercard ending in 1698. Additionally, you want to book a new one-way flight from Houston to Chicago for May 17th. You prefer to fly in economy class on flight number HAT044. For this new booking, you want to use your $250 certificate to cover the payment. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile, so you do not prefer to provide it.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '1AKIA8', 'total_baggages': 3, 'nonfree_baggages': 2, 'payment_id': 'credit_card_2140654'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mei_hernandez_8984', 'origin': 'IAH', 'destination': 'ORD', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT044', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Mei', 'last_name': 'Hernandez', 'dob': '1984-11-23'}], 'payment_methods': [{'payment_id': 'certificate_7502997', 'amount': 169}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="aarav_anderson_6237",
+        instruction="Your user id is aarav_anderson_6237. You want to update your existing reservation from JFK to PHX (Reservation ID: HPABG7). The changes you want include updating the flight dates to May 17, 2024, for flights with numbers HAT088 and HAT097, still in economy class. You prefer to use your Mastercard ending in 8119 for this payment. Additionally, you want to add one non-free baggage to this reservation, and you prefer to use your gift card with a $264 balance for this payment.\n\nFurthermore, you want to book a new one-way reservation from MCO to LAS for Chen Muller, with a flight on May 19, 2024, in business class on flight number HAT101. You will be using your Visa ending in 5537 for the payment of this booking, and you want to include two free bags and travel insurance in the reservation.\n\nFinally, you wish to speak with a human agent to discuss further options on travel insurance for your trips. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'HPABG7'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'HPABG7', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT088', 'date': '2024-05-17'}, {'flight_number': 'HAT097', 'date': '2024-05-17'}], 'payment_id': 'credit_card_5100220'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'HPABG7', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'gift_card_5333120'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'aarav_anderson_6237', 'origin': 'MCO', 'destination': 'LAS', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT101', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Chen', 'last_name': 'Muller', 'dob': '1999-07-01'}], 'payment_methods': [{'payment_id': 'credit_card_5252591', 'amount': 260}], 'total_baggages': 2, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="transfer_to_human_agents",
+                kwargs={'summary': 'User wants to modify their reservation and discuss further options on travel insurance'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="olivia_smith_4705",
+        instruction="Your user id is olivia_smith_4705. You want to first retrieve the details of your reservation with the ID MEMLVX. Then, you need to update your reservation MEMLVX to change the flight dates while remaining in business class. The new flights are HAT235 on May 20, HAT153 on May 18, HAT045 on May 19, and HAT194 on May 20. Please charge the payment to your Mastercard ending in 3802. For your reservation HVU16N, you want to add one additional checked bag, making it a total of two bags, with one being non-free, and pay for this using your $60 gift card. After updating the baggage, you want to cancel the entire reservation HVU16N.\n\nLastly, you would like to book a new one-way flight from Los Angeles to Dallas for May 18 in economy class with the flight number HAT186. Make sure the passenger details use your name, Olivia Smith. Please pay for this new reservation using your Mastercard ending in 4329. Your new booking should include one baggage and no insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'MEMLVX'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'MEMLVX', 'cabin': 'business', 'flights': [{'flight_number': 'HAT235', 'date': '2024-05-20'}, {'flight_number': 'HAT153', 'date': '2024-05-18'}, {'flight_number': 'HAT045', 'date': '2024-05-19'}, {'flight_number': 'HAT194', 'date': '2024-05-20'}], 'payment_id': 'credit_card_1070466'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'HVU16N', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'gift_card_6752973'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'HVU16N'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'olivia_smith_4705', 'origin': 'LAX', 'destination': 'DFW', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT186', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Olivia', 'last_name': 'Smith', 'dob': '1995-06-15'}], 'payment_methods': [{'payment_id': 'credit_card_9460700', 'amount': 187}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mohamed_hernandez_5188",
+        instruction="Your user id is mohamed_hernandez_5188. You want to cancel your existing reservation from Denver to Phoenix with the reservation ID XXDC1M. After canceling, you want to book a new round-trip flight from Denver to Phoenix on the same dates, May 21 to May 22, in basic economy. Your flights should be HAT084 from Denver to Las Vegas, then HAT244 from Las Vegas to Phoenix on May 21, and for the return, HAT027 from Phoenix to Las Vegas, then HAT162 from Las Vegas to Denver on May 22. The passengers will be yourself, Mohamed Hernandez, alongside Evelyn Rossi and James Sanchez. To pay for this booking, you want to use your $500 certificate and cover any remaining balance with your Mastercard ending in 7393. Furthermore, for your reservation DGZSYX, you want to update the flight dates to May 19 for both legs, keeping the same flight numbers, HAT014 and HAT288, in business class. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'XXDC1M'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mohamed_hernandez_5188', 'origin': 'DEN', 'destination': 'PHX', 'flight_type': 'round_trip', 'cabin': 'basic_economy', 'flights': [{'flight_number': 'HAT084', 'date': '2024-05-21'}, {'flight_number': 'HAT244', 'date': '2024-05-21'}, {'flight_number': 'HAT027', 'date': '2024-05-22'}, {'flight_number': 'HAT162', 'date': '2024-05-22'}], 'passengers': [{'first_name': 'Mohamed', 'last_name': 'Hernandez', 'dob': '1985-06-15'}, {'first_name': 'Evelyn', 'last_name': 'Rossi', 'dob': '1972-09-13'}, {'first_name': 'James', 'last_name': 'Sanchez', 'dob': '1952-09-13'}], 'payment_methods': [{'payment_id': 'certificate_6969088', 'amount': 500}, {'payment_id': 'credit_card_5417084', 'amount': 310}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'DGZSYX'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'DGZSYX', 'cabin': 'business', 'flights': [{'flight_number': 'HAT014', 'date': '2024-05-19'}, {'flight_number': 'HAT288', 'date': '2024-05-19'}], 'payment_id': 'credit_card_5417084'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mei_wilson_9061",
+        instruction="Your user id is mei_wilson_9061. You want to cancel your existing reservation for the trip from Phoenix to Boston on May 27 under reservation ID VJMK2V. After canceling, you are looking for a one-stop flight from Phoenix to Boston on the same date, May 27, and you would like to book a one-way economy flight. You prefer to fly on flight number HAT181 and HAT217, both departing on May 19, and want to use your Mastercard ending in 9525 for the payment of $390. You do not require any additional baggage allowance and would like to include travel insurance. Additionally, you want to update your existing reservation AF845Z to include one additional non-free baggage, also using your Mastercard ending in 9525. Finally, you want to review the details of this reservation AF845Z. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'VJMK2V'},
+            ),
+            Action(
+                name="search_onestop_flight",
+                kwargs={'origin': 'PHX', 'destination': 'BOS', 'date': '2024-05-27'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mei_wilson_9061', 'origin': 'PHX', 'destination': 'BOS', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT181', 'date': '2024-05-19'}, {'flight_number': 'HAT217', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Mei', 'last_name': 'Wilson', 'dob': '1990-04-05'}], 'payment_methods': [{'payment_id': 'credit_card_1813435', 'amount': 390}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'AF845Z', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_1813435'},
+            ),
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'AF845Z'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="sofia_taylor_8420",
+        instruction="Your user id is sofia_taylor_8420. You want to make several updates and a new booking. First, retrieve the details of your reservation with ID T47U0O. For this reservation, update the flights so that they all occur on May 19 and May 20, keeping it in business class. Use your Mastercard ending in 1323 for any additional payment required. Next, for your reservation with ID RVSBD8, increase the total baggage to 2 and ensure one is a paid baggage, using your $65 gift card for the payment. Update the passengers for reservation V638TK to include yourself with the birthdate July 23, 1985, and Olivia Smith. Lastly, book a new one-way flight from San Francisco to Boston on May 18 for Olivia Smith in economy class. Use your $115 gift card first, and cover any remaining balance with your Mastercard ending in 6800. Ensure she has one checked baggage and add travel insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'T47U0O'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'T47U0O', 'cabin': 'business', 'flights': [{'flight_number': 'HAT220', 'date': '2024-05-19'}, {'flight_number': 'HAT110', 'date': '2024-05-19'}, {'flight_number': 'HAT114', 'date': '2024-05-20'}, {'flight_number': 'HAT045', 'date': '2024-05-20'}], 'payment_id': 'credit_card_5236886'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'RVSBD8', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'gift_card_4470015'},
+            ),
+            Action(
+                name="update_reservation_passengers",
+                kwargs={'reservation_id': 'V638TK', 'passengers': [{'first_name': 'Olivia', 'last_name': 'Smith', 'dob': '1982-01-13'}, {'first_name': 'Sofia', 'last_name': 'Taylor', 'dob': '1985-07-23'}]},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'sofia_taylor_8420', 'origin': 'SFO', 'destination': 'BOS', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT294', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Olivia', 'last_name': 'Smith', 'dob': '1982-01-13'}], 'payment_methods': [{'payment_id': 'gift_card_5351803', 'amount': 115}, {'payment_id': 'credit_card_6032740', 'amount': 43}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="amelia_rossi_1297",
+        instruction="Your user id is amelia_rossi_1297. You want to update your reservation from Phoenix to New York (reservation id 9J3E5I) to fly in business class. You would like to change your outbound flight to May 17 with flight number HAT256 and your return flight to May 16 with flight number HAT150. You want to add one checked bag using your gift card with a balance of $118 for payment. For the flight upgrade, you prefer to use your Visa card ending in 3507. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '9J3E5I', 'cabin': 'business', 'flights': [{'flight_number': 'HAT256', 'date': '2024-05-17'}, {'flight_number': 'HAT150', 'date': '2024-05-16'}], 'payment_id': 'credit_card_4579924'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '9J3E5I', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'gift_card_3871331'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="harper_martin_8348",
+        instruction="Your user id is harper_martin_8348. You need to cancel your existing reservation for the Chicago to Houston trip (reservation id ER7A5P). After that, you want to book a new round-trip flight from Chicago to Denver. The outbound flight should be on May 19 with flight number HAT238, and the return flight should be on May 20 with flight number HAT105. You prefer to travel in economy class and will be flying with Mason Rossi. You want to include one checked bag and opt for travel insurance. For payment, first use your gift card valued at $186, and then charge the remaining amount to your Visa card ending in 2492. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'ER7A5P'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'harper_martin_8348', 'origin': 'ORD', 'destination': 'DEN', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT238', 'date': '2024-05-19'}, {'flight_number': 'HAT105', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Harper', 'last_name': 'Martin', 'dob': '1973-07-25'}, {'first_name': 'Mason', 'last_name': 'Rossi', 'dob': '1973-07-25'}], 'payment_methods': [{'payment_id': 'gift_card_3771493', 'amount': 186}, {'payment_id': 'credit_card_4852851', 'amount': 408}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="juan_li_9671",
+        instruction="Your user id is juan_li_9671. You want to update your existing round-trip reservation from New York to Las Vegas (reservation id 7FD2CN) to change the flight dates. You want to fly from JFK to LAS on May 17 using flights HAT057 and HAT281, and return from LAS to JFK on May 18 using flights HAT061 and HAT285. You prefer to remain in economy class. You also want to add 2 checked bags and understand that these are non-free. Please use your Visa card ending in 8442 for all updates and additional baggage fees.\n\nAdditionally, you want to book a one-way flight from Phoenix to Orlando on May 19 for passengers Daiki Garcia and Lei Garcia. The flight number is HAT181, and you prefer to fly in economy class with no additional baggage. You want to add travel insurance for this trip. For the payment, please use your $120 gift card first, and then charge any remaining balance to your Visa card ending in 8442.\n\nYou are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '7FD2CN', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT057', 'date': '2024-05-17'}, {'flight_number': 'HAT281', 'date': '2024-05-17'}, {'flight_number': 'HAT061', 'date': '2024-05-18'}, {'flight_number': 'HAT285', 'date': '2024-05-18'}], 'payment_id': 'credit_card_3086580'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '7FD2CN', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'credit_card_3086580'},
+            ),
+            Action(
+                name="calculate",
+                kwargs={'expression': '(199 + 199) * 2 + 60 + 100'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'juan_li_9671', 'origin': 'PHX', 'destination': 'MCO', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT181', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Daiki', 'last_name': 'Garcia', 'dob': '1973-07-19'}, {'first_name': 'Lei', 'last_name': 'Garcia', 'dob': '1962-08-08'}], 'payment_methods': [{'payment_id': 'gift_card_7745140', 'amount': 120}, {'payment_id': 'credit_card_3086580', 'amount': 338}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mason_johansson_5154",
+        instruction="Your user id is mason_johansson_5154. You want to update your existing reservation for your flight from Charlotte to Denver on May 28 to a new date, May 19, while staying in business class. The flight number is HAT262. You want to pay for this flight change using your Visa card ending in 2961. Additionally, you would like to add one checked bag to this reservation, which will be one non-free baggage, and you prefer to pay for this with your Visa card ending in 1242. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'RB9S17', 'cabin': 'business', 'flights': [{'flight_number': 'HAT262', 'date': '2024-05-19'}], 'payment_id': 'credit_card_5590177'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'RB9S17', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_3358561'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="isabella_garcia_4633",
+        instruction="Your user id is isabella_garcia_4633. You want to update your existing reservation with ID MHH4XU. For the flight from IAH to JFK, you want to change the dates to May 19 and upgrade the cabin to economy. You also want to add one non-free checked bag to this reservation. You prefer to pay for these updates using your gift card worth $238. Additionally, you want to book a new one-way trip for Noah Silva from Miami to Los Angeles on May 16 in economy class on flight HAT200, without any additional baggage or insurance. You prefer to pay for this booking using your Visa card ending in 4310. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'MHH4XU', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT085', 'date': '2024-05-19'}, {'flight_number': 'HAT136', 'date': '2024-05-19'}], 'payment_id': 'gift_card_7460058'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'MHH4XU', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'gift_card_7460058'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'isabella_garcia_4633', 'origin': 'MIA', 'destination': 'LAX', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT200', 'date': '2024-05-16'}], 'passengers': [{'first_name': 'Noah', 'last_name': 'Silva', 'dob': '2000-08-18'}], 'payment_methods': [{'payment_id': 'credit_card_3658511', 'amount': 111}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="fatima_khan_9974",
+        instruction="Your user id is fatima_khan_9974. You want to cancel your existing one-way reservation from Houston to Los Angeles on May 18 (reservation ID RBXOYT). Instead, you are looking for a one-stop flight from Houston to Los Angeles on May 19 and wish to book a new one-way trip in economy class. You have found flights HAT180 and HAT273 on that date and would like to book them. You want to use your $250 certificate for payment, and if there is any remaining balance, you will use your Visa card ending in 9785. You plan to have one checked bag and want to include insurance for this trip. Additionally, you want to update your existing round-trip reservation (reservation ID BV2RJH) to include a total of 10 baggages, of which 2 will incur a fee, and prefer to pay with your Mastercard ending in 3471. Lastly, for your round-trip reservation from Atlanta to Las Vegas (reservation ID XMCPH6), you want to update your return flight to depart on May 17 instead of May 16, while staying in business class, and use your Visa card ending in 9785 for any associated costs. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'RBXOYT'},
+            ),
+            Action(
+                name="search_onestop_flight",
+                kwargs={'origin': 'IAH', 'destination': 'LAX', 'date': '2024-05-19'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'fatima_khan_9974', 'origin': 'IAH', 'destination': 'LAX', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT180', 'date': '2024-05-19'}, {'flight_number': 'HAT273', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Fatima', 'last_name': 'Khan', 'dob': '1980-01-01'}], 'payment_methods': [{'payment_id': 'certificate_3366437', 'amount': 250}, {'payment_id': 'credit_card_5964268', 'amount': 20}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'BV2RJH', 'total_baggages': 10, 'nonfree_baggages': 2, 'payment_id': 'credit_card_6225387'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'XMCPH6', 'cabin': 'business', 'flights': [{'flight_number': 'HAT281', 'date': '2024-05-12'}, {'flight_number': 'HAT077', 'date': '2024-05-17'}], 'payment_id': 'credit_card_5964268'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="olivia_rossi_1087",
+        instruction="Your user id is olivia_rossi_1087. You want to cancel your existing reservation from Denver to Houston (reservation ID 4FORX8). After canceling, you want to book a new round-trip flight from Denver to Houston, departing on May 17 on flight HAT229 and returning on May 19 on flight HAT286. You want to fly in economy class and the passenger will be Anya Brown. For payment, you want to use your $150 certificate and cover the remaining balance with your Mastercard ending in 6883. You also want to add one checked bag and include travel insurance. Additionally, for your existing reservation from Phoenix to Denver (reservation ID 8PR5GU), you want to update the baggage allowance to include a total of three bags, one of which is non-free, and pay for this with your Mastercard ending in 6883. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '4FORX8'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'olivia_rossi_1087', 'origin': 'DEN', 'destination': 'IAH', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT229', 'date': '2024-05-17'}, {'flight_number': 'HAT175', 'date': '2024-05-17'}, {'flight_number': 'HAT286', 'date': '2024-05-19'}, {'flight_number': 'HAT162', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Anya', 'last_name': 'Brown', 'dob': '1996-08-26'}], 'payment_methods': [{'payment_id': 'certificate_9153684', 'amount': 150}, {'payment_id': 'credit_card_8752089', 'amount': 534}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '8PR5GU', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'credit_card_8752089'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mason_johnson_9566",
+        instruction="Your user id is mason_johnson_9566. You want to cancel your existing reservation from Orlando to San Francisco with the reservation ID WWBQSH. After canceling, you want to book a new one-way flight from Orlando to San Francisco on May 17, flying in economy class. You prefer flight HAT214, with a connecting flight HAT159 on May 18. The passengers on this booking should include you, Mason Johnson, Daiki Anderson, and a new passenger, John Doe. You would like to use your Mastercard ending in 3523 for payment, totaling $672. You do not want to add any baggage or insurance to this booking.\n\nAdditionally, you want to update your existing reservation YWZEQN for your trip from Boston to Phoenix. You want to change the cabin to business class and adjust the flight dates to May 16 for flight HAT235 and May 17 for flight HAT214, with the return flights on May 20 using flights HAT181 and HAT217. Use your Mastercard ending in 3523 to pay for any additional charges. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'WWBQSH'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mason_johnson_9566', 'origin': 'MCO', 'destination': 'SFO', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT214', 'date': '2024-05-17'}, {'flight_number': 'HAT159', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Mason', 'last_name': 'Johnson', 'dob': '1990-04-05'}, {'first_name': 'Daiki', 'last_name': 'Anderson', 'dob': '1996-02-22'}, {'first_name': 'John', 'last_name': 'Doe', 'dob': '1991-01-01'}], 'payment_methods': [{'payment_id': 'credit_card_3562064', 'amount': 672}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'YWZEQN', 'cabin': 'business', 'flights': [{'flight_number': 'HAT235', 'date': '2024-05-16'}, {'flight_number': 'HAT214', 'date': '2024-05-17'}, {'flight_number': 'HAT181', 'date': '2024-05-20'}, {'flight_number': 'HAT217', 'date': '2024-05-20'}], 'payment_id': 'credit_card_3562064'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="isabella_khan_3247",
+        instruction="Your user id is isabella_khan_3247. You want to cancel your current reservation from Boston to LaGuardia with the reservation ID OI2XRY. Then, you wish to book a new one-way business class flight from Boston to LaGuardia on May 19. The flights you want are HAT260 and HAT087 on the same day. You will be traveling with a total of 2 checked bags and do not require insurance. To pay for this new booking, you want to use your $162 gift card first, and then cover the remaining balance with your Visa ending in 4156. Additionally, you need to update your existing reservation 437BPO to include two more checked bags, making it a total of 4 bags, with 2 of them being non-free. You prefer to use your gift card with a balance of $128 to cover this baggage fee. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'OI2XRY'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'isabella_khan_3247', 'origin': 'BOS', 'destination': 'LGA', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT260', 'date': '2024-05-19'}, {'flight_number': 'HAT087', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Isabella', 'last_name': 'Khan', 'dob': '1980-02-20'}], 'payment_methods': [{'payment_id': 'gift_card_5055609', 'amount': 162}, {'payment_id': 'credit_card_2364106', 'amount': 421}], 'total_baggages': 2, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '437BPO', 'total_baggages': 4, 'nonfree_baggages': 2, 'payment_id': 'gift_card_5749103'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="anya_anderson_8585",
+        instruction="Your user id is anya_anderson_8585. You want to update your existing reservation SAD0VW. Please change the flights to HAT247 and HAT224 on May 19, and HAT083 and HAT194 on May 20, keeping the economy cabin. You will use your Mastercard ending in 3219 for this change. Additionally, increase the baggage allowance to a total of 2 bags, with one being non-free, and use your gift card with a $193 balance to pay for the baggage.\n\nNext, book a one-way business class trip from New York LaGuardia (LGA) to Phoenix (PHX) on May 20. The flights should be HAT201 and HAT173. Include one piece of checked baggage, which is non-free, and opt for insurance. Use your $92 gift card first, and then cover the remaining amount with your Mastercard ending in 7702.\n\nYou also want to cancel your reservation ME4T3F entirely.\n\nFinally, book a one-way economy class flight from Philadelphia (PHL) to Newark (EWR) on May 20, on flights HAT243 and HAT015. This booking should have no additional baggage and no insurance. Pay for this reservation using your $500 certificate, applying $352 from it. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'SAD0VW', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT247', 'date': '2024-05-19'}, {'flight_number': 'HAT224', 'date': '2024-05-19'}, {'flight_number': 'HAT083', 'date': '2024-05-20'}, {'flight_number': 'HAT194', 'date': '2024-05-20'}], 'payment_id': 'credit_card_4619444'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'SAD0VW', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'gift_card_7656493'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'anya_anderson_8585', 'origin': 'LGA', 'destination': 'PHX', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT201', 'date': '2024-05-20'}, {'flight_number': 'HAT173', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Anya', 'last_name': 'Anderson', 'dob': '1990-10-15'}], 'payment_methods': [{'payment_id': 'gift_card_4354614', 'amount': 92}, {'payment_id': 'credit_card_6461459', 'amount': 717}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'ME4T3F'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'anya_anderson_8585', 'origin': 'PHL', 'destination': 'EWR', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT243', 'date': '2024-05-20'}, {'flight_number': 'HAT015', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Anya', 'last_name': 'Anderson', 'dob': '1990-10-15'}], 'payment_methods': [{'payment_id': 'certificate_3423113', 'amount': 352}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="yara_jackson_7992",
+        instruction="Your user id is yara_jackson_7992. You want to cancel your existing reservation from Detroit to LaGuardia with reservation ID L0UAFK. Then, you want to find a one-stop flight option from Detroit to LaGuardia for May 18, as well as a direct flight from Phoenix to LaGuardia on the same date. After that, you want to book a one-way flight from Phoenix to LaGuardia in economy class on May 18, on flight number HAT066. The passenger for this booking will be Yara Jackson, with a birthday on January 8, 1989. You want to use your gift card worth $87 and cover the remaining balance with your Mastercard ending in 3505. Include one checked bag for this reservation. Additionally, you want to update your reservation with ID 09F9WJ to add one non-free checked bag and pay for it using your Mastercard ending in 3505. You do not require travel insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'L0UAFK'},
+            ),
+            Action(
+                name="search_onestop_flight",
+                kwargs={'origin': 'DTW', 'destination': 'LGA', 'date': '2024-05-18'},
+            ),
+            Action(
+                name="search_direct_flight",
+                kwargs={'origin': 'PHX', 'destination': 'LGA', 'date': '2024-05-18'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'yara_jackson_7992', 'origin': 'PHX', 'destination': 'LGA', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT066', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Yara', 'last_name': 'Jackson', 'dob': '1989-01-08'}], 'payment_methods': [{'payment_id': 'gift_card_6955135', 'amount': 87}, {'payment_id': 'credit_card_6633575', 'amount': 77}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '09F9WJ', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_6633575'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="chen_martin_5489",
+        instruction="Your user id is chen_martin_5489. You want to update your existing reservation (LYSE93) to change the flight dates from May 9 to May 18, flying in economy class. This includes flights from Boston to Seattle (flight number HAT006) and Seattle to New York (flight number HAT100). You also want to increase your total baggage allowance to 2 bags, of which 1 will be a paid checked bag. For both updates, you want to use your Mastercard ending in 6289. Additionally, you would like to book a new one-way flight from Seattle to Las Vegas on May 18 with flight number HAT018 for Chen Wilson, ensuring they travel in economy with 1 free checked bag, and again use your Mastercard ending in 6289 to cover the payment. You do not require travel insurance for this booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'LYSE93'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'LYSE93', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT006', 'date': '2024-05-18'}, {'flight_number': 'HAT100', 'date': '2024-05-18'}], 'payment_id': 'credit_card_3964469'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'LYSE93', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_3964469'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'chen_martin_5489', 'origin': 'SEA', 'destination': 'LAS', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT018', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Chen', 'last_name': 'Wilson', 'dob': '1959-10-03'}], 'payment_methods': [{'payment_id': 'credit_card_3964469', 'amount': 123}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mohamed_silva_9265",
+        instruction="Your user id is mohamed_silva_9265. You want to update your existing reservation (ID: K1NW8N) to change the flights to May 19. This includes flight HAT023 from JFK to SFO, flight HAT204 from SFO to SEA, and flight HAT021 from SEA back to JFK. You prefer to upgrade to economy class. You want to use your Visa card ending in 2395 for the payment of this flight update. Additionally, you want to add 3 checked bags to your reservation, and you would like to use your $198 gift card to cover this baggage fee. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'K1NW8N', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT023', 'date': '2024-05-19'}, {'flight_number': 'HAT204', 'date': '2024-05-19'}, {'flight_number': 'HAT021', 'date': '2024-05-19'}], 'payment_id': 'credit_card_5843230'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'K1NW8N', 'total_baggages': 3, 'nonfree_baggages': 3, 'payment_id': 'gift_card_8020792'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="yusuf_martin_3470",
+        instruction="Your user id is yusuf_martin_3470. You want to cancel your existing reservation from Houston to Phoenix with reservation id UIN4IZ. After that, you want to book a new round-trip flight from Houston (IAH) to Phoenix (PHX) in business class. The flights should be on May 19 with flight numbers HAT180 and HAT123, and return on May 26 with flight number HAT152. The passenger will be Yusuf Muller, with the birthdate of May 6, 1956. You want to include one checked bag and prefer to have travel insurance. For payment, use your $500 certificate first and cover the remaining amount with your Mastercard ending in 6182. Additionally, you want to update your existing reservation FATBVC to include one checked bag, paying for this with your Mastercard ending in 6182. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'UIN4IZ'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'yusuf_martin_3470', 'origin': 'IAH', 'destination': 'PHX', 'flight_type': 'round_trip', 'cabin': 'business', 'flights': [{'flight_number': 'HAT180', 'date': '2024-05-19'}, {'flight_number': 'HAT123', 'date': '2024-05-19'}, {'flight_number': 'HAT152', 'date': '2024-05-26'}], 'passengers': [{'first_name': 'Yusuf', 'last_name': 'Muller', 'dob': '1956-05-06'}], 'payment_methods': [{'payment_id': 'certificate_3071118', 'amount': 500}, {'payment_id': 'credit_card_9067289', 'amount': 741}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'FATBVC', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_9067289'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mia_ito_3194",
+        instruction="Your user id is mia_ito_3194. You want to cancel your existing reservation from Seattle to Orlando with reservation ID JTS5MH. Following that, you want to book a new one-way flight from Seattle to Orlando. You want to fly on May 19 on flight HAT113 and continue on May 20 with flight HAT235 in economy class. This trip is for Mia Anderson, born on April 10, 1976. You will have one bag and want travel insurance. To pay, you would like to use your $100 certificate and cover the remaining balance with your Mastercard ending in 3527.\n\nAdditionally, for your existing reservation 54FLTG from New York to Atlanta, you want to update the flight dates to May 20, keeping the business class. These flights are HAT079 from JFK to ORD, and HAT223 from ORD to ATL. You want to add two checked bags and use your Mastercard ending in 3527 for any additional charges.\n\nFinally, you want to book another one-way flight from Orlando to Las Vegas on May 19 on flight HAT299 in business class for Mia Anderson. You do not want insurance for this trip, and you will use your Mastercard ending in 3527 to pay. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'JTS5MH'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mia_ito_3194', 'origin': 'SEA', 'destination': 'MCO', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT113', 'date': '2024-05-19'}, {'flight_number': 'HAT235', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Mia', 'last_name': 'Anderson', 'dob': '1976-04-10'}], 'payment_methods': [{'payment_id': 'certificate_3248180', 'amount': 100}, {'payment_id': 'credit_card_1611721', 'amount': 234}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '54FLTG', 'cabin': 'business', 'flights': [{'flight_number': 'HAT079', 'date': '2024-05-20'}, {'flight_number': 'HAT223', 'date': '2024-05-20'}], 'payment_id': 'credit_card_1611721'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '54FLTG', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'credit_card_1611721'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mia_ito_3194', 'origin': 'MCO', 'destination': 'LAS', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT299', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Mia', 'last_name': 'Anderson', 'dob': '1976-04-10'}], 'payment_methods': [{'payment_id': 'credit_card_1611721', 'amount': 278}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="juan_brown_1657",
+        instruction="Your user id is juan_brown_1657. You want to cancel your existing reservation for the flight from Orlando to Phoenix on May 19 (reservation id SW3HF8). Then, you want to book a new one-way flight on the same date, May 19, from Orlando (MCO) to Phoenix (PHX) in economy class on flight number HAT048. You want to include two passengers: yourself, Juan Brown, and Omar Lopez. You prefer to pay using your $180 gift card first and cover the remaining amount with your $250 gift card. You want to check in two baggages and do not want any insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'SW3HF8'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'juan_brown_1657', 'origin': 'MCO', 'destination': 'PHX', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT048', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Juan', 'last_name': 'Brown', 'dob': '1980-10-15'}, {'first_name': 'Omar', 'last_name': 'Lopez', 'dob': '1984-03-23'}], 'payment_methods': [{'payment_id': 'gift_card_6095255', 'amount': 180}, {'payment_id': 'gift_card_4699741', 'amount': 140}], 'total_baggages': 2, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ivan_gonzalez_8223",
+        instruction="Your user id is ivan_gonzalez_8223. You need to cancel your existing reservation from Philadelphia to Chicago with the reservation ID BISAAN. After that, you want to book a one-way flight from Philadelphia to Chicago for Juan Silva on May 18th. You prefer to fly in economy class. Please use your Visa card ending in 6753 to pay for the ticket, which costs $182, and ensure that travel insurance is included. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'BISAAN'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'ivan_gonzalez_8223', 'origin': 'PHL', 'destination': 'ORD', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT197', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Juan', 'last_name': 'Silva', 'dob': '2000-03-12'}], 'payment_methods': [{'payment_id': 'credit_card_8306515', 'amount': 182}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mia_kovacs_8269",
+        instruction="Your user id is mia_kovacs_8269. You want to make some updates to your existing reservation with ID 8JIA1I. Please change the flight dates to May 17 for the segments from Phoenix to Seattle (flight number HAT251) and Seattle to JFK (flight number HAT276), and to May 19 for the segments from JFK to Detroit (flight number HAT088) and Detroit to Phoenix (flight number HAT097), all in economy class. You prefer to use your Visa card ending in 8487 for any additional charges. Additionally, please increase the total baggage count to 2, including 1 non-free bag, and use your gift card with a $292 balance for the baggage fee.\n\nFurthermore, you want to book a new one-way trip from Miami to Los Angeles on May 17 for James Rossi (born July 1, 1977), in economy class. The flight number is HAT250. You want to use your $250 certificate for this booking. If the certificate does not cover the full amount, you are okay with paying the rest using your Visa card ending in 8487. You want to add one checked bag and include travel insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': '8JIA1I'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '8JIA1I', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT251', 'date': '2024-05-17'}, {'flight_number': 'HAT276', 'date': '2024-05-17'}, {'flight_number': 'HAT088', 'date': '2024-05-19'}, {'flight_number': 'HAT097', 'date': '2024-05-19'}], 'payment_id': 'credit_card_9725591'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '8JIA1I', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'gift_card_1513886'},
+            ),
+            Action(
+                name="calculate",
+                kwargs={'expression': '628 + 50'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mia_kovacs_8269', 'origin': 'MIA', 'destination': 'LAX', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT250', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'James', 'last_name': 'Rossi', 'dob': '1977-07-01'}], 'payment_methods': [{'payment_id': 'certificate_6876325', 'amount': 170}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ivan_wilson_7416",
+        instruction="Your user id is ivan_wilson_7416. You want to first check the details of your reservation with the ID ZGW4PL. Next, you wish to update your other reservation, 7C0KB0, to upgrade from basic economy to economy, and adjust the flights to depart from Dallas (DFW) to Seattle on May 19 with flight number HAT038, and return from San Francisco to Dallas on May 28, ensuring flights HAT204 and HAT113 are included. You'd like to use your Mastercard ending in 3637 for this update.\n\nThen, you want to increase your total baggage allowance to 2 bags, with one non-free bag, for reservation ZGW4PL, using your $298 gift card. Following this, you intend to cancel the entire reservation ZGW4PL.\n\nFinally, you want to book a new round-trip reservation from Dallas (DFW) to San Francisco (SFO) departing on May 19 and returning on May 28. You prefer to fly in business class and want to include Isabella Silva as the passenger. You want to have 2 bags with no additional non-free baggage charges and would like to opt for travel insurance. Use your Mastercard ending in 3637 for the payment of this booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'ZGW4PL'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '7C0KB0', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT038', 'date': '2024-05-19'}, {'flight_number': 'HAT011', 'date': '2024-05-25'}, {'flight_number': 'HAT204', 'date': '2024-05-28'}, {'flight_number': 'HAT113', 'date': '2024-05-28'}], 'payment_id': 'credit_card_1098682'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'ZGW4PL', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'gift_card_3158743'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'ZGW4PL'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'ivan_wilson_7416', 'origin': 'DFW', 'destination': 'SFO', 'flight_type': 'round_trip', 'cabin': 'business', 'flights': [{'flight_number': 'HAT038', 'date': '2024-05-19'}, {'flight_number': 'HAT011', 'date': '2024-05-25'}, {'flight_number': 'HAT204', 'date': '2024-05-28'}, {'flight_number': 'HAT113', 'date': '2024-05-28'}], 'passengers': [{'first_name': 'Isabella', 'last_name': 'Silva', 'dob': '1961-12-27'}], 'payment_methods': [{'payment_id': 'credit_card_1098682', 'amount': 1244}], 'total_baggages': 2, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="noah_silva_2256",
+        instruction="Your user id is noah_silva_2256. You want to cancel your existing reservation with the reservation ID T8QHPY. After that, you wish to book a new one-way business class flight from Phoenix to Seattle on May 17, with flight numbers HAT173 and HAT047. The passenger for this reservation should be Noah Silva, with the birth date of January 15, 1990. You want to use your gift card valued at $112 and your Mastercard ending in 9170 for the remaining $627 to pay for this booking. Additionally, you would like to include one checked bag with this reservation and opt for travel insurance. Furthermore, you need to update another reservation, 8FRH8D, to include a total of 3 bags, where one is an additional non-free checked bag, using your Mastercard ending in 9170 for payment. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'T8QHPY'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'noah_silva_2256', 'origin': 'PHX', 'destination': 'SEA', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT173', 'date': '2024-05-17'}, {'flight_number': 'HAT047', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Noah', 'last_name': 'Silva', 'dob': '1990-01-15'}], 'payment_methods': [{'payment_id': 'gift_card_9130446', 'amount': 112}, {'payment_id': 'credit_card_7773542', 'amount': 627}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '8FRH8D', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'credit_card_7773542'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="chen_gonzalez_5516",
+        instruction="Your user id is chen_gonzalez_5516. You want to update your reservation RDYIPN, changing the flights to depart on May 18 with flight numbers HAT004 from Atlanta to Dallas and HAT142 from Dallas to Newark, maintaining economy class. You will use your Visa card ending in 6589 for any additional charges. For your reservation 5OY9I3, you wish to add two checked bags, both as non-free baggage, and you will pay with your Visa card ending in 7388. Additionally, you want to book a new one-way flight from Miami to Los Angeles on May 18 in economy class, using flight number HAT008. This new reservation will include one checked bag as non-free baggage, and you wish to use your $250 certificate for payment. Please also include travel insurance for this booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'RDYIPN', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT004', 'date': '2024-05-18'}, {'flight_number': 'HAT142', 'date': '2024-05-18'}], 'payment_id': 'credit_card_9588108'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '5OY9I3', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'credit_card_2870431'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'chen_gonzalez_5516', 'origin': 'MIA', 'destination': 'LAX', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT008', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Chen', 'last_name': 'Gonzalez', 'dob': '1985-07-13'}], 'payment_methods': [{'payment_id': 'certificate_9371471', 'amount': 246}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mason_garcia_8795",
+        instruction="Your user id is mason_garcia_8795. You want to update your existing reservation (ZKBXFF) to increase the total number of baggages to 2, with 1 of those being a non-free baggage. You would like to use your gift card of $229 to cover the cost of this change. Additionally, you would like to cancel your reservation with ID VYVD4J. After that, you want to search for a one-stop flight from Phoenix (PHX) to San Francisco (SFO) on May 18, 2024. Once you find a suitable option, please book a round-trip economy flight from Phoenix to San Francisco. You want to depart on May 18, 2024, with flight number HAT032 and return on May 29, 2024, with flight number HAT123. You will be traveling alone under the name Mason Garcia, born on October 17, 1991. You wish to include 1 checked baggage and prefer not to purchase travel insurance. You would like to pay for this booking using your $500 certificate. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'ZKBXFF'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'ZKBXFF', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'gift_card_2929673'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'VYVD4J'},
+            ),
+            Action(
+                name="search_onestop_flight",
+                kwargs={'origin': 'PHX', 'destination': 'SFO', 'date': '2024-05-18'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mason_garcia_8795', 'origin': 'PHX', 'destination': 'SFO', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT032', 'date': '2024-05-18'}, {'flight_number': 'HAT123', 'date': '2024-05-29'}], 'passengers': [{'first_name': 'Mason', 'last_name': 'Garcia', 'dob': '1988-03-15'}], 'payment_methods': [{'payment_id': 'certificate_2511595', 'amount': 349}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="lucas_taylor_8203",
+        instruction="Your user id is lucas_taylor_8203. You want to modify your reservation for the trip from Philadelphia to Houston (reservation id 6BL7WH). You want to upgrade your cabin to business class for all flights on May 19 and May 23, specifically flights HAT291, HAT082, HAT116, and HAT271. Please use your Mastercard ending in 9678 for this upgrade. Additionally, for your one-way trip from Boston to Denver (reservation id U1DEHM), you want to include 3 checked bags, and you prefer to use your gift card with the amount of $292 to cover this. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '6BL7WH', 'cabin': 'business', 'flights': [{'flight_number': 'HAT291', 'date': '2024-05-19'}, {'flight_number': 'HAT082', 'date': '2024-05-19'}, {'flight_number': 'HAT116', 'date': '2024-05-23'}, {'flight_number': 'HAT271', 'date': '2024-05-23'}], 'payment_id': 'credit_card_8476340'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'U1DEHM', 'total_baggages': 3, 'nonfree_baggages': 3, 'payment_id': 'gift_card_2856574'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="daiki_lee_6144",
+        instruction="Your user id is daiki_lee_6144. You want to cancel your current reservation for the round-trip flight from New York (JFK) to Detroit (DTW) with the reservation ID DF89BM. After canceling, you want to rebook a similar round-trip flight in economy class for the same dates and flights: leaving on May 17 with flight numbers HAT079 and HAT020, and returning on May 24 with flight number HAT263. This reservation should be for Raj Muller. You want to have one checked bag and one carry-on, and you prefer to have travel insurance included. To pay for this, you want to use your $262 gift card first, and then cover the remaining balance with your Visa card ending in 9734. Additionally, for your existing reservation from Philadelphia (PHL) to San Francisco (SFO) with reservation ID IIHXDG, you want to update the baggage allowance to include a total of four bags, with one being chargeable. You would like to use your $51 gift card to cover the cost of this baggage update. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'DF89BM'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'daiki_lee_6144', 'origin': 'JFK', 'destination': 'DTW', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT079', 'date': '2024-05-17'}, {'flight_number': 'HAT020', 'date': '2024-05-17'}, {'flight_number': 'HAT263', 'date': '2024-05-24'}], 'passengers': [{'first_name': 'Raj', 'last_name': 'Muller', 'dob': '1967-10-16'}], 'payment_methods': [{'payment_id': 'gift_card_5128346', 'amount': 262}, {'payment_id': 'credit_card_6198952', 'amount': 313}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'IIHXDG', 'total_baggages': 4, 'nonfree_baggages': 1, 'payment_id': 'gift_card_3112961'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="chen_davis_2676",
+        instruction="Your user id is chen_davis_2676. You want to update your current reservation from Detroit to Orlando with reservation ID 42J4Y4 by adding one checked bag. You prefer to use your gift card with the highest balance for this payment. Additionally, you wish to modify your existing reservation (ID MUO9FW) from Boston to Philadelphia by changing the cabin to economy and updating the travel dates to May 18 for both segments on flight numbers HAT260 and HAT205. Use your gift card with the highest balance for these changes as well. Furthermore, you would like to book a new one-way business class flight from Newark to Houston on May 19 for James Brown, on flight number HAT166. You want to pay for this flight using your $500 certificate. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '42J4Y4', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'gift_card_9413667'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'MUO9FW', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT260', 'date': '2024-05-18'}, {'flight_number': 'HAT205', 'date': '2024-05-18'}], 'payment_id': 'gift_card_9413667'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'chen_davis_2676', 'origin': 'EWR', 'destination': 'IAH', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT166', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'James', 'last_name': 'Brown', 'dob': '1988-01-13'}], 'payment_methods': [{'payment_id': 'certificate_3985933', 'amount': 252}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="amelia_taylor_4937",
+        instruction="Your user id is amelia_taylor_4937. You want to make several updates to your reservations. First, for your reservation R8XD2X, you want to change your flights to depart from DFW to SEA on May 19 with flight HAT222, and from SEA to SFO on the same day with flight HAT274. Your return from SFO to SEA on May 22 will be with flight HAT204, and from SEA to DFW with flight HAT037 on the same day. You want to stay in economy class and use your Mastercard ending in 1756 for payment.\n\nNext, for reservation LT77K6, you wish to increase your total baggage count to 5, with 2 being non-free. You prefer to use your $299 gift card for this payment.\n\nAdditionally, you need to cancel your reservation PIMHHE entirely.\n\nYou also want to book a new one-way trip from New York (JFK) to Houston (IAH) on May 18 in business class. You will be the passenger on this reservation, and you want to use your $238 gift card for payment. You do not require any baggage or insurance for this trip.\n\nLastly, for reservation XRC5CB, you want to update the passenger to Emma Kim with the birthdate October 13, 1954. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'R8XD2X', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT222', 'date': '2024-05-19'}, {'flight_number': 'HAT274', 'date': '2024-05-19'}, {'flight_number': 'HAT204', 'date': '2024-05-22'}, {'flight_number': 'HAT037', 'date': '2024-05-22'}], 'payment_id': 'credit_card_1430006'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'LT77K6', 'total_baggages': 5, 'nonfree_baggages': 2, 'payment_id': 'gift_card_4788785'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'PIMHHE'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'amelia_taylor_4937', 'origin': 'JFK', 'destination': 'IAH', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT279', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Amelia', 'last_name': 'Taylor', 'dob': '1970-01-01'}], 'payment_methods': [{'payment_id': 'gift_card_1822448', 'amount': 209}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_passengers",
+                kwargs={'reservation_id': 'XRC5CB', 'passengers': [{'first_name': 'Emma', 'last_name': 'Kim', 'dob': '1954-10-13'}]},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="fatima_johnson_3148",
+        instruction="Your user id is fatima_johnson_3148. You want to cancel your current one-way reservation from Detroit to Minneapolis with reservation ID JN6LLC. Following that, you want to book a new round-trip flight from Detroit to Minneapolis in basic economy class. The departure flight should be on May 20 with flight number HAT254, and the return flight on the same day with flight number HAT127. The passenger on this reservation should be Fatima Kovacs, whose birthday is already in your user profile. You will have one checked bag, and you want to purchase travel insurance. For payment, you would like to use your $100 certificate first, and then cover the remaining balance with your Mastercard ending in 9287. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'JN6LLC'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'fatima_johnson_3148', 'origin': 'DTW', 'destination': 'MSP', 'flight_type': 'round_trip', 'cabin': 'basic_economy', 'flights': [{'flight_number': 'HAT254', 'date': '2024-05-20'}, {'flight_number': 'HAT127', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Fatima', 'last_name': 'Kovacs', 'dob': '1998-08-10'}], 'payment_methods': [{'payment_id': 'certificate_1153817', 'amount': 100}, {'payment_id': 'credit_card_6216489', 'amount': 110}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="anya_lee_9572",
+        instruction="Your user id is anya_lee_9572. You want to cancel your reservation from Houston to Chicago with the reservation ID GL1CZL. After canceling, you want to book a new one-way flight from Houston to Chicago on May 17 in economy class for Amelia Ahmed. You would like to use your Visa card ending in 3963 to pay for this booking, and you want to include insurance. Additionally, for your existing reservation ABB0M7, you need to update it to ensure all flights remain in economy class. You prefer to pay for any associated costs with your Visa card ending in 9975. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'GL1CZL'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'anya_lee_9572', 'origin': 'IAH', 'destination': 'ORD', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT116', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Amelia', 'last_name': 'Ahmed', 'dob': '1960-09-14'}], 'payment_methods': [{'payment_id': 'credit_card_4589036', 'amount': 208}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'ABB0M7', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT011', 'date': '2024-05-28'}, {'flight_number': 'HAT163', 'date': '2024-05-28'}, {'flight_number': 'HAT186', 'date': '2024-05-30'}, {'flight_number': 'HAT099', 'date': '2024-05-30'}], 'payment_id': 'credit_card_4390028'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="daiki_martin_9991",
+        instruction="Your user id is daiki_martin_9991. You want to cancel your current reservation from Seattle to New York (reservation ID MH0T63). After canceling, you want to book a new round-trip flight from Seattle (SEA) to New York (LGA) with economy class seating. Your outbound flights should be on May 19, with flight numbers HAT121 and HAT081, and your return flights should be on May 20, with flight numbers HAT245 and HAT156. The passengers on this reservation are Olivia Taylor and Ethan Moore. You want to include 2 pieces of baggage and opt for travel insurance. For payment, use your gift card with $194 balance, and cover the remaining amount with your Mastercard ending in 5570. Additionally, you want to update your existing reservation from Newark to Charlotte (reservation ID WH0PVT) to include one checked baggage, using your gift card with a $97 balance for payment. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'MH0T63'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'daiki_martin_9991', 'origin': 'SEA', 'destination': 'LGA', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT121', 'date': '2024-05-19'}, {'flight_number': 'HAT081', 'date': '2024-05-19'}, {'flight_number': 'HAT245', 'date': '2024-05-20'}, {'flight_number': 'HAT156', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Olivia', 'last_name': 'Taylor', 'dob': '1994-08-10'}, {'first_name': 'Ethan', 'last_name': 'Moore', 'dob': '1962-05-19'}], 'payment_methods': [{'payment_id': 'gift_card_9217496', 'amount': 194}, {'payment_id': 'credit_card_6921949', 'amount': 934}], 'total_baggages': 2, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'WH0PVT', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'gift_card_6896424'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mia_silva_9133",
+        instruction="Your user id is mia_silva_9133. You want to update your reservation with ID YZF0F6. Change the cabin class to business for the flight from Houston to Atlanta, with flight numbers HAT085 on May 19 and HAT218 on May 20. Use your Visa card ending in 2436 for this payment. Additionally, for the reservation ID TD3FPM, add one checked bag and use your $234 gift card for payment. You also want to cancel your reservation ID P1D9KS entirely. Finally, book a new round-trip flight from Dallas to Los Angeles in business class for Amelia Johansson. The flights should be on May 18 (HAT124) and May 20 (HAT022). Include one checked bag and insurance for this trip. Pay with your $203 gift card and the remaining balance with your Visa card ending in 7854. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'YZF0F6', 'cabin': 'business', 'flights': [{'flight_number': 'HAT085', 'date': '2024-05-19'}, {'flight_number': 'HAT218', 'date': '2024-05-20'}], 'payment_id': 'credit_card_9663703'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'TD3FPM', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'gift_card_1267960'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'P1D9KS'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mia_silva_9133', 'origin': 'DFW', 'destination': 'LAX', 'flight_type': 'round_trip', 'cabin': 'business', 'flights': [{'flight_number': 'HAT124', 'date': '2024-05-18'}, {'flight_number': 'HAT022', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Amelia', 'last_name': 'Johansson', 'dob': '1966-05-22'}], 'payment_methods': [{'payment_id': 'gift_card_5086914', 'amount': 203}, {'payment_id': 'credit_card_3163658', 'amount': 518}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="omar_nguyen_3427",
+        instruction="Your user id is omar_nguyen_3427. You want to make the following changes to your reservations: \n\n1. For your trip from Detroit to Las Vegas (reservation ID VI3YET), you want to change the flights to May 19 in business class. The flights should be HAT275 from Detroit to Phoenix, HAT173 from Phoenix to Las Vegas, HAT284 from Las Vegas to Phoenix, and HAT106 from Phoenix to Detroit. You prefer to use your gift card to cover any applicable costs.\n\n2. For your trip from Charlotte to Minneapolis (reservation ID ZUFZHY), you want to add one checked bag and use your gift card for payment.\n\n3. Additionally, you want to book a one-way business class flight from Chicago to Denver for Ethan Ahmed on May 19, using flight HAT118. You want to use your gift card to pay for this booking, and you do not need to add any baggage or insurance for this trip.\n\nYou are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'VI3YET', 'cabin': 'business', 'flights': [{'flight_number': 'HAT275', 'date': '2024-05-19'}, {'flight_number': 'HAT173', 'date': '2024-05-19'}, {'flight_number': 'HAT284', 'date': '2024-05-19'}, {'flight_number': 'HAT106', 'date': '2024-05-19'}], 'payment_id': 'gift_card_8789811'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'ZUFZHY', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'gift_card_8789811'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'omar_nguyen_3427', 'origin': 'ORD', 'destination': 'DEN', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT118', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Ethan', 'last_name': 'Ahmed', 'dob': '1965-05-15'}], 'payment_methods': [{'payment_id': 'gift_card_8789811', 'amount': 324}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="lei_patel_4666",
+        instruction="Your user id is lei_patel_4666. You need to retrieve the details of your Boston to Orlando reservation with ID BPR8YJ. Then, you want to cancel your reservation from Atlanta to Minneapolis with ID KKQUEK. For your trip from Atlanta to Denver with reservation ID EU6W3B, you need to update your flights to the following: fly from Atlanta to Las Vegas on May 19 with flight HAT052 and from Las Vegas to Denver on the same day with flight HAT003; return from Denver to Dallas on May 30 with flight HAT046 and from Dallas to Atlanta on the same day with flight HAT177. Please use your Mastercard ending in 5468 for this update. Additionally, you want to book a new one-way trip from Orlando to Minneapolis in basic economy on May 19, with flights HAT203 and HAT298, for passengers Fatima Moore and Lei Patel. Use your Mastercard ending in 1592 to pay for this booking. You have no checked bags and do not require insurance for this trip. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'BPR8YJ'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'KKQUEK'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'EU6W3B', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT052', 'date': '2024-05-19'}, {'flight_number': 'HAT003', 'date': '2024-05-19'}, {'flight_number': 'HAT046', 'date': '2024-05-30'}, {'flight_number': 'HAT177', 'date': '2024-05-30'}], 'payment_id': 'credit_card_2675929'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'lei_patel_4666', 'origin': 'MCO', 'destination': 'MSP', 'flight_type': 'one_way', 'cabin': 'basic_economy', 'flights': [{'flight_number': 'HAT203', 'date': '2024-05-19'}, {'flight_number': 'HAT298', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Fatima', 'last_name': 'Moore', 'dob': '2000-03-10'}, {'first_name': 'Lei', 'last_name': 'Patel', 'dob': '2000-01-01'}], 'payment_methods': [{'payment_id': 'credit_card_8391262', 'amount': 320}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ivan_kim_3844",
+        instruction="Your user id is ivan_kim_3844. You want to update your round-trip reservation from Los Angeles to Denver with reservation ID SGXUUZ. Change your flights to the following schedule: fly from Los Angeles to Chicago on flight HAT030 on May 17, then continue from Chicago to Denver on flight HAT118 on May 19. Return from Denver to Miami on flight HAT130 on May 18, and finally fly from Miami back to Los Angeles on flight HAT120 on May 20. You want to upgrade your cabin to economy and add one checked baggage. Use your Mastercard ending in 4808 for the flight changes and your gift card for the baggage fee.\n\nAdditionally, you want to book a one-way trip from Las Vegas to Houston for Amelia Khan, departing on May 17 on flight HAT175. Ensure the booking is in economy class with no additional baggage and include insurance. Use your gift card to cover the payment for this booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'SGXUUZ', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT030', 'date': '2024-05-17'}, {'flight_number': 'HAT118', 'date': '2024-05-19'}, {'flight_number': 'HAT130', 'date': '2024-05-18'}, {'flight_number': 'HAT120', 'date': '2024-05-20'}], 'payment_id': 'credit_card_1718968'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'SGXUUZ', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'gift_card_3503323'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'ivan_kim_3844', 'origin': 'LAS', 'destination': 'IAH', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT175', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Amelia', 'last_name': 'Khan', 'dob': '1983-01-21'}], 'payment_methods': [{'payment_id': 'gift_card_3503323', 'amount': 208}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="evelyn_anderson_4579",
+        instruction="Your user id is evelyn_anderson_4579. You want to cancel your existing reservation from Newark to Philadelphia with reservation ID Y12XHX. Then, search for a direct flight from Newark to Philadelphia on May 20, 2024. For the new booking, you want a round-trip flight in basic economy on May 20, with flight numbers HAT215 and HAT015. The passengers will be yourself, Evelyn Anderson, and Olivia Moore. For payment, use your gift card worth $104 and the remaining amount with your Visa ending in 2413. You prefer to include travel insurance for this booking. Additionally, for your reservation DIA17O, you want to update the total baggage count to 5, including 2 non-free baggages, and pay for this using your Visa ending in 2413. Lastly, for reservation F8ITT8, update the flights to economy class with flight numbers HAT165, HAT180, HAT204 on May 18, and HAT116, using the same Visa card. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'Y12XHX'},
+            ),
+            Action(
+                name="search_direct_flight",
+                kwargs={'origin': 'EWR', 'destination': 'PHL', 'date': '2024-05-20'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'evelyn_anderson_4579', 'origin': 'EWR', 'destination': 'PHL', 'flight_type': 'round_trip', 'cabin': 'basic_economy', 'flights': [{'flight_number': 'HAT215', 'date': '2024-05-20'}, {'flight_number': 'HAT015', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Evelyn', 'last_name': 'Anderson', 'dob': '1967-11-04'}, {'first_name': 'Olivia', 'last_name': 'Moore', 'dob': '1967-11-04'}], 'payment_methods': [{'payment_id': 'gift_card_4482008', 'amount': 104}, {'payment_id': 'credit_card_3972353', 'amount': 236}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'DIA17O', 'total_baggages': 5, 'nonfree_baggages': 2, 'payment_id': 'credit_card_3972353'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'F8ITT8', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT165', 'date': '2024-05-25'}, {'flight_number': 'HAT180', 'date': '2024-05-25'}, {'flight_number': 'HAT204', 'date': '2024-05-18'}, {'flight_number': 'HAT116', 'date': '2024-05-28'}], 'payment_id': 'credit_card_3972353'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="olivia_garcia_3026",
+        instruction="Your user id is olivia_garcia_3026. You want to cancel your existing reservation from Detroit to Charlotte with reservation ID LD9PUK. After canceling, you wish to book a new round-trip from Detroit to Charlotte, departing on May 19 and returning on May 20, in economy class. For this new reservation, you will be the passenger, and you want to include 2 total baggages, with 1 being non-free. You prefer to use your $160 gift card first, and then pay the remaining balance with your Mastercard ending in 3573. Additionally, ensure you add travel insurance.\n\nFor your reservation AO5N50, you want to update the flight dates to May 19 for both legs, and keep the cabin as business class. You also wish to increase the total number of baggages to 5, with 1 being non-free, and you will use your gift card with the balance of $123 to pay for this. Finally, for reservation MIR482, change the passenger details to Yara Brown, born on August 19, 1961. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'LD9PUK'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'olivia_garcia_3026', 'origin': 'DTW', 'destination': 'CLT', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT168', 'date': '2024-05-19'}, {'flight_number': 'HAT176', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Olivia', 'last_name': 'Garcia', 'dob': '1989-03-15'}], 'payment_methods': [{'payment_id': 'gift_card_1967449', 'amount': 160}, {'payment_id': 'credit_card_7156345', 'amount': 224}], 'total_baggages': 2, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'AO5N50', 'cabin': 'business', 'flights': [{'flight_number': 'HAT129', 'date': '2024-05-19'}, {'flight_number': 'HAT139', 'date': '2024-05-19'}], 'payment_id': 'credit_card_9471861'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'AO5N50', 'total_baggages': 5, 'nonfree_baggages': 1, 'payment_id': 'gift_card_9296055'},
+            ),
+            Action(
+                name="update_reservation_passengers",
+                kwargs={'reservation_id': 'MIR482', 'passengers': [{'first_name': 'Yara', 'last_name': 'Brown', 'dob': '1961-08-19'}]},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="james_santos_9046",
+        instruction="Your user id is james_santos_9046. You want to update your reservation with ID 5GAZGX for the Houston to Seattle trip to change the flight dates to May 19 for flight HAT112 and May 20 for flight HAT047, still flying in business class. Please use your Visa card ending in 5993 for this update. Additionally, for your reservation MWJZ87 from Las Vegas to Houston, you want to add one checked bag, with one being non-free, and pay for this using your gift card with a $113 balance. You also want to cancel your reservation with ID R557QS entirely. Finally, you need to book a new round-trip flight from Las Vegas to Dallas/Fort Worth for Sofia Johnson and Isabella Khan, departing on May 19 with flight HAT047 and returning on May 20 with flight HAT113, flying in economy class. Ensure there is no baggage included and add travel insurance to this booking. You would like to use your $250 certificate for part of the payment, and for the remaining amount, use your Visa card ending in 1130. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '5GAZGX', 'cabin': 'business', 'flights': [{'flight_number': 'HAT112', 'date': '2024-05-19'}, {'flight_number': 'HAT047', 'date': '2024-05-20'}], 'payment_id': 'credit_card_6899560'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'MWJZ87', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'gift_card_4635686'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'R557QS'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'james_santos_9046', 'origin': 'LAS', 'destination': 'DFW', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT047', 'date': '2024-05-19'}, {'flight_number': 'HAT113', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Sofia', 'last_name': 'Johnson', 'dob': '1959-07-16'}, {'first_name': 'Isabella', 'last_name': 'Khan', 'dob': '1964-03-10'}], 'payment_methods': [{'payment_id': 'certificate_3501924', 'amount': 250}, {'payment_id': 'credit_card_4407306', 'amount': 530}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ivan_garcia_1794",
+        instruction="Your user id is ivan_garcia_1794. You want to cancel your existing reservation from Las Vegas to Chicago (reservation ID LV5MG2), and then book a new one-way flight on May 18 instead. The new flight should be in economy class and will have Omar Santos as the passenger. You want to ensure that the flight numbers are HAT115 and HAT129. You will pay using your Visa card ending in 8790. You want to keep insurance for this trip and do not need any additional baggage. Additionally, for your round-trip reservation from Philadelphia to New York (reservation ID PG7O11), you want to update the return date to May 19, keeping the cabin class as business. You also want to increase your total baggage to 3, with 1 being a non-free bag, and use your Visa card ending in 8149 for this payment. Finally, you want to check the current details of the reservation PG7O11. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'LV5MG2'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'ivan_garcia_1794', 'origin': 'LAS', 'destination': 'ORD', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT115', 'date': '2024-05-18'}, {'flight_number': 'HAT129', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Omar', 'last_name': 'Santos', 'dob': '1969-09-19'}], 'payment_methods': [{'payment_id': 'credit_card_8638712', 'amount': 314}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'PG7O11', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'credit_card_7155120'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'PG7O11', 'cabin': 'business', 'flights': [{'flight_number': 'HAT296', 'date': '2024-05-19'}, {'flight_number': 'HAT172', 'date': '2024-05-19'}], 'payment_id': 'credit_card_8638712'},
+            ),
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'PG7O11'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mia_ito_3194",
+        instruction="Your user id is mia_ito_3194. You want to cancel your current reservation from New York (JFK) to Atlanta (ATL) with reservation ID 54FLTG. After canceling, you are looking for a direct flight from JFK to ATL on May 19, but you are open to booking a flight on May 18 if it meets your needs. You want to book a business class flight for that route, specifically on flight number HAT079 connecting to HAT223, both on May 18. The passengers for this booking should be Mia Anderson, born April 10, 1976, and Alex Anderson, born August 15, 1980. For payment, use your $100 certificate first, and the remaining balance should be charged to your Mastercard ending in 3527. You have no checked baggage for this trip and do not require insurance.\n\nAdditionally, you need to update your reservation with ID JTS5MH to include a total of 2 bags, of which 1 is a non-free baggage, and pay for this with your Mastercard ending in 3527. Lastly, update your reservation G1736L to change the flight dates to May 18, keeping the same flight numbers HAT219 and HAT181, and pay for any changes with your Mastercard ending in 3527. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '54FLTG'},
+            ),
+            Action(
+                name="search_direct_flight",
+                kwargs={'origin': 'JFK', 'destination': 'ATL', 'date': '2024-05-19'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mia_ito_3194', 'origin': 'JFK', 'destination': 'ATL', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT079', 'date': '2024-05-18'}, {'flight_number': 'HAT223', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Mia', 'last_name': 'Anderson', 'dob': '1976-04-10'}, {'first_name': 'Alex', 'last_name': 'Anderson', 'dob': '1980-08-15'}], 'payment_methods': [{'payment_id': 'certificate_3248180', 'amount': 100}, {'payment_id': 'credit_card_1611721', 'amount': 1214}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'JTS5MH', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_1611721'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'G1736L', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT219', 'date': '2024-05-18'}, {'flight_number': 'HAT181', 'date': '2024-05-18'}], 'payment_id': 'credit_card_1611721'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="juan_smith_7200",
+        instruction="Your user id is juan_smith_7200. You want to update your reservation with ID V4FGCR, flying from Los Angeles to Phoenix, to change all flights to business class. The flights should now occur on May 18 and May 19, with the same flight numbers: HAT094, HAT123, HAT032, and HAT163. Additionally, you want to add a total of 3 checked bags, all of which are non-free. You prefer to use your Mastercard ending in 5577 for the flight class upgrade and your gift card for the baggage fees. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'V4FGCR', 'cabin': 'business', 'flights': [{'flight_number': 'HAT094', 'date': '2024-05-18'}, {'flight_number': 'HAT123', 'date': '2024-05-19'}, {'flight_number': 'HAT032', 'date': '2024-05-18'}, {'flight_number': 'HAT163', 'date': '2024-05-18'}], 'payment_id': 'credit_card_5747809'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'V4FGCR', 'total_baggages': 3, 'nonfree_baggages': 3, 'payment_id': 'gift_card_9305264'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ivan_kim_3844",
+        instruction="Your user id is ivan_kim_3844. You need to make several changes to your travel plans. First, you want to cancel your reservation from Dallas to San Francisco with the reservation ID 8BBU9J. After that, you wish to book a new one-way flight from Dallas (DFW) to San Francisco (SFO) on May 18. This booking should be for Amelia Gonzalez and Amelia Khan, in the economy cabin. You want to use your gift card worth $268 and pay the remaining amount with your Mastercard ending in 4808. For this trip, you require insurance and will be checking in 2 baggages. \n\nAdditionally, you need to update your current reservation with the ID RGCGI3, flying from Denver to Boston. The flights on this reservation should now be on May 17 for the outbound and on May 22 for the return, and you wish to fly in the economy cabin. Payment should be made using your Mastercard ending in 4808. \n\nFurthermore, you need to adjust your reservation 1M8D2L by adding one non-free baggage, and this should also be paid with your Mastercard ending in 4808.\n\nLastly, for your reservation 0SN11T, please update the passenger details to reflect Amelia Gonzalez as the traveler. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '8BBU9J'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'ivan_kim_3844', 'origin': 'DFW', 'destination': 'SFO', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT067', 'date': '2024-05-18'}, {'flight_number': 'HAT258', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Amelia', 'last_name': 'Gonzalez', 'dob': '1988-01-09'}, {'first_name': 'Amelia', 'last_name': 'Khan', 'dob': '1983-01-21'}], 'payment_methods': [{'payment_id': 'gift_card_3503323', 'amount': 268}, {'payment_id': 'credit_card_1718968', 'amount': 470}], 'total_baggages': 2, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'RGCGI3', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT225', 'date': '2024-05-17'}, {'flight_number': 'HAT064', 'date': '2024-05-17'}, {'flight_number': 'HAT086', 'date': '2024-05-22'}, {'flight_number': 'HAT148', 'date': '2024-05-22'}], 'payment_id': 'credit_card_1718968'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '1M8D2L', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_1718968'},
+            ),
+            Action(
+                name="update_reservation_passengers",
+                kwargs={'reservation_id': '0SN11T', 'passengers': [{'first_name': 'Amelia', 'last_name': 'Gonzalez', 'dob': '1988-01-09'}]},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="fatima_rossi_1941",
+        instruction="Your user id is fatima_rossi_1941. For your existing reservation FNYF5Q, you want to update the flight to ensure you're traveling on May 19, on flight number HAT220, keeping the cabin in business class. You prefer to use your Mastercard ending in 1988 for this update. Additionally, you want to book a new one-way flight from Phoenix to Boston on May 19, flying business class on flight number HAT027. You will be traveling alone, and you wish to bring one checked bag. You want this new booking to include insurance. For payment, you prefer to use your $100 certificate first, and then cover the remaining amount with your Mastercard ending in 1988. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'FNYF5Q', 'cabin': 'business', 'flights': [{'flight_number': 'HAT220', 'date': '2024-05-19'}], 'payment_id': 'credit_card_1732101'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'fatima_rossi_1941', 'origin': 'PHX', 'destination': 'BOS', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT027', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Fatima', 'last_name': 'Rossi', 'dob': 'none'}], 'payment_methods': [{'payment_id': 'certificate_1959696', 'amount': 100}, {'payment_id': 'credit_card_1732101', 'amount': 413}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mohamed_brown_3623",
+        instruction="Your user id is mohamed_brown_3623. You want to cancel your current reservation from Houston to Dallas (reservation id 750WGS) scheduled for May 17th. Instead, you want to book a new one-way trip on May 18th from Houston to Dallas in business class for Fatima Gonzalez. The flights should be HAT149 and HAT231. You want to include one checked bag with this booking. You prefer to use your $500 certificate for the payment and the remaining balance with your Mastercard ending in 3777. You also want to update your existing reservation for Ava Kovacs from Charlotte to Philadelphia (reservation id KNBLB9). Change the cabin to economy and adjust the flight dates to May 17th (HAT205) and May 19th (HAT269). Use your gift card for any costs associated with this change. Additionally, you want to update your reservation under id UEMRO5 by adding one more checked bag, making it a total of 5 bags, with one being non-free. Use your Mastercard ending in 3777 for any additional costs. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '750WGS'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mohamed_brown_3623', 'origin': 'IAH', 'destination': 'DFW', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT149', 'date': '2024-05-18'}, {'flight_number': 'HAT231', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Fatima', 'last_name': 'Gonzalez', 'dob': '1953-07-22'}], 'payment_methods': [{'payment_id': 'certificate_9820732', 'amount': 500}, {'payment_id': 'credit_card_8077450', 'amount': 375}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'KNBLB9', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT205', 'date': '2024-05-17'}, {'flight_number': 'HAT269', 'date': '2024-05-19'}], 'payment_id': 'gift_card_5758869'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'UEMRO5', 'total_baggages': 5, 'nonfree_baggages': 1, 'payment_id': 'credit_card_8077450'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="chen_jackson_3290",
+        instruction="Your user id is chen_jackson_3290. You want to update your existing reservation with ID 4WQ150 for your Dallas to Los Angeles round trip. You wish to adjust the departure to May 20 while maintaining business class. For the return trip on May 26, keep the same flight. Please use your gift card to cover any additional costs. Additionally, you want to book a new one-way flight for Raj Smith from Miami to Newark on May 19 in basic economy, with no additional baggage and no insurance. Again, use your gift card for the payment. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '4WQ150', 'cabin': 'business', 'flights': [{'flight_number': 'HAT170', 'date': '2024-05-20'}, {'flight_number': 'HAT022', 'date': '2024-05-26'}], 'payment_id': 'gift_card_3576581'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'chen_jackson_3290', 'origin': 'MIA', 'destination': 'EWR', 'flight_type': 'one_way', 'cabin': 'basic_economy', 'flights': [{'flight_number': 'HAT192', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Raj', 'last_name': 'Smith', 'dob': '1967-04-01'}], 'payment_methods': [{'payment_id': 'gift_card_3576581', 'amount': 91}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="olivia_patel_3577",
+        instruction="Your user id is olivia_patel_3577. You want to cancel your existing reservation from Seattle to Houston with the reservation ID 71MZYC. After that, you want to book a new round-trip flight from Seattle to Houston in economy class. The outbound flights should be on May 19 with flight numbers HAT274 and HAT082, and the return flights should be on May 20 with flight numbers HAT190 and HAT047. The passengers for this reservation will be yourself, Olivia Patel, and Ethan Li. You want to use your Mastercard ending in 9586 for the payment amounting to $1020. Additionally, for your current reservation AMXEH7, you want to increase the total baggage allowance to 2, adding one non-free baggage, and pay with your Mastercard ending in 9586. Similarly, for your reservation FA3Q0Z, increase the total baggage to 1, which is non-free, and also pay for this with your Mastercard ending in 9586. You do not require any travel insurance for these bookings. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '71MZYC'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'olivia_patel_3577', 'origin': 'SEA', 'destination': 'IAH', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT274', 'date': '2024-05-19'}, {'flight_number': 'HAT082', 'date': '2024-05-19'}, {'flight_number': 'HAT190', 'date': '2024-05-20'}, {'flight_number': 'HAT047', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Olivia', 'last_name': 'Patel', 'dob': '1980-02-10'}, {'first_name': 'Ethan', 'last_name': 'Li', 'dob': '1997-04-15'}], 'payment_methods': [{'payment_id': 'credit_card_6807937', 'amount': 1020}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'AMXEH7', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_6807937'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'FA3Q0Z', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_6807937'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="harper_li_1258",
+        instruction="Your user id is harper_li_1258. You want to cancel your current reservation from New York LaGuardia to Philadelphia (reservation ID TOVYFC). After that, search for one-stop flights from LGA to PHL on May 20th. You would like to book a new one-way ticket in basic economy class for the flight number HAT172 on May 20th, with passengers Sofia Thomas (born March 1, 1953) and yourself, Harper Li (born October 19, 1970). You want to use your $500 certificate for payment and would like travel insurance included. Additionally, for your round-trip flight from Chicago O'Hare to Atlanta (reservation ID X53YKA), update the cabin class to economy for all flights on May 20th and May 24th, and use your Mastercard ending in 8455 for any additional charges. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'TOVYFC'},
+            ),
+            Action(
+                name="search_onestop_flight",
+                kwargs={'origin': 'LGA', 'destination': 'PHL', 'date': '2024-05-20'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'harper_li_1258', 'origin': 'LGA', 'destination': 'PHL', 'flight_type': 'one_way', 'cabin': 'basic_economy', 'flights': [{'flight_number': 'HAT172', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Sofia', 'last_name': 'Thomas', 'dob': '1953-03-01'}, {'first_name': 'Harper', 'last_name': 'Li', 'dob': '1990-04-05'}], 'payment_methods': [{'payment_id': 'certificate_8846424', 'amount': 212}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'X53YKA', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT223', 'date': '2024-05-20'}, {'flight_number': 'HAT233', 'date': '2024-05-24'}, {'flight_number': 'HAT261', 'date': '2024-05-24'}], 'payment_id': 'credit_card_2007333'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="isabella_khan_4151",
+        instruction="Your user id is isabella_khan_4151. You want to cancel your current reservation from New York (JFK) to Atlanta (ATL) and back, with the reservation ID 9G6CN3. Following the cancellation, you want to book a new round-trip flight from New York (JFK) to Seattle (SEA) in business class. The outbound flight is on May 16 with flight number HAT057, and the return flight is on May 18 with flight number HAT239. The passengers for this trip are Isabella Khan and Raj Lopez, and you will have a total of 2 checked bags. You would like to purchase travel insurance for this booking. For payment, you want to use your $250 certificate first, and then cover the remaining balance with your Mastercard ending in 3445. Additionally, you want to update your existing reservation with the ID M6N3KG to include 3 total baggages, of which 1 will have a fee, using your Mastercard ending in 3445 to pay for any additional charges. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '9G6CN3'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'isabella_khan_4151', 'origin': 'JFK', 'destination': 'SEA', 'flight_type': 'round_trip', 'cabin': 'business', 'flights': [{'flight_number': 'HAT057', 'date': '2024-05-16'}, {'flight_number': 'HAT239', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Isabella', 'last_name': 'Khan'}, {'first_name': 'Raj', 'last_name': 'Lopez'}], 'payment_methods': [{'payment_id': 'certificate_3442452', 'amount': 250}, {'payment_id': 'credit_card_4651498', 'amount': 1132}], 'total_baggages': 2, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'M6N3KG', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'credit_card_4651498'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="daiki_johnson_1294",
+        instruction="Your user id is daiki_johnson_1294. You want to update your reservation OQU7IJ, maintaining economy class, with the following flights: HAT078 and HAT020 on May 23, HAT275 on May 19, and HAT152 on May 24. Please use your Mastercard ending in 2867 for any payment adjustments. Additionally, for reservation QSVCK4, you want to increase the total baggage allowance to 2, with 1 being non-free. Again, use your Mastercard ending in 2867 for the payment. Lastly, you want to cancel your reservation 6J3QG0 completely. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'OQU7IJ', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT078', 'date': '2024-05-23'}, {'flight_number': 'HAT020', 'date': '2024-05-23'}, {'flight_number': 'HAT275', 'date': '2024-05-19'}, {'flight_number': 'HAT152', 'date': '2024-05-24'}], 'payment_id': 'credit_card_6241774'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'QSVCK4', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_6241774'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '6J3QG0'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ava_santos_3700",
+        instruction="Your user id is ava_santos_3700. You want to update your reservation with ID KZD31Z for your trip from Houston to Newark and back. You would like to maintain your business class seating and increase your total baggages to 4, with 1 being a paid baggage. Please use your gift card to cover any additional costs. Additionally, you need to adjust the return flight to be on May 20 instead of May 27, still on flight number HAT056. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'KZD31Z', 'total_baggages': 4, 'nonfree_baggages': 1, 'payment_id': 'gift_card_1756078'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'KZD31Z', 'cabin': 'business', 'flights': [{'flight_number': 'HAT149', 'date': '2024-05-26'}, {'flight_number': 'HAT056', 'date': '2024-05-20'}], 'payment_id': 'gift_card_1756078'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="james_ahmed_4322",
+        instruction="Your user id is james_ahmed_4322. You want to make some updates and new bookings for your upcoming travels. First, you want to upgrade your current round-trip reservation from Detroit to Charlotte (reservation ID JX6LB3) to business class. The flight to Charlotte should remain on May 19 with flight number HAT168. However, you want to change your return flight from Charlotte to Detroit to May 20, using flight number HAT167. You prefer to pay for this upgrade using your Mastercard ending in 3379. Additionally, you want to include two checked bags for this trip, and you prefer to use your gift card with a $138 balance to cover the baggage fees.\n\nNext, you want to book a new one-way flight from Phoenix to Seattle for May 18, in economy class. The flight number should be HAT251, and you want Mohamed Patel and Ethan Thomas to be the passengers on this flight. You prefer to pay for this new reservation using your $500 certificate. Please ensure that travel insurance is included for this booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'JX6LB3', 'cabin': 'business', 'flights': [{'flight_number': 'HAT168', 'date': '2024-05-19'}, {'flight_number': 'HAT167', 'date': '2024-05-20'}], 'payment_id': 'credit_card_5747649'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'JX6LB3', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'gift_card_3192460'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'james_ahmed_4322', 'origin': 'PHX', 'destination': 'SEA', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT251', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Mohamed', 'last_name': 'Patel', 'dob': '1984-03-10'}, {'first_name': 'Ethan', 'last_name': 'Thomas', 'dob': '1981-09-16'}], 'payment_methods': [{'payment_id': 'certificate_1731593', 'amount': 416}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="isabella_ito_3653",
+        instruction="Your user id is isabella_ito_3653. You want to cancel your current reservation from Phoenix to New York (reservation id 6J6VUQ). Following this, you need to book a new one-way flight from Phoenix to New York with flights HAT045 on May 19 and HAT276 on May 20, in economy class. The passengers for this trip are Sophia Brown and Mason Hernandez. Please ensure to add travel insurance. For payment, you want to use your $150 certificate first and then cover the remaining amount with your Mastercard ending in 2671. Additionally, you want to upgrade your existing reservation K6O2E6 to business class with flights HAT276 on May 18 and HAT279 on May 19, using your Mastercard ending in 2671. Lastly, update your reservation MXCGN8 to include 2 checked bags, both paid for with the same Mastercard. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '6J6VUQ'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'isabella_ito_3653', 'origin': 'PHX', 'destination': 'JFK', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT045', 'date': '2024-05-19'}, {'flight_number': 'HAT276', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Sophia', 'last_name': 'Brown', 'dob': '1980-02-01'}, {'first_name': 'Mason', 'last_name': 'Hernandez', 'dob': '1965-08-06'}], 'payment_methods': [{'payment_id': 'certificate_6881574', 'amount': 150}, {'payment_id': 'credit_card_2551589', 'amount': 564}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'K6O2E6', 'cabin': 'business', 'flights': [{'flight_number': 'HAT276', 'date': '2024-05-18'}, {'flight_number': 'HAT279', 'date': '2024-05-19'}], 'payment_id': 'credit_card_2551589'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'MXCGN8', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'credit_card_2551589'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="harper_anderson_7659",
+        instruction="Your user id is harper_anderson_7659. You want to update your existing reservation from Newark to Dallas (reservation id MNUA2Z) to change the flight date to May 19 while keeping the cabin class as economy. Additionally, you would like to increase your total baggage allowance to 2 bags, with one being non-free. You prefer to use your gift card for the flight update and your Mastercard ending in 9225 for the additional baggage fees. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'MNUA2Z', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT213', 'date': '2024-05-19'}], 'payment_id': 'gift_card_5394070'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'MNUA2Z', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_5783015'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="juan_muller_6989",
+        instruction="Your user id is juan_muller_6989. You want to cancel your current reservation from Chicago to Phoenix on May 12 (reservation ID TPN0ET) and book a new one-way flight from Chicago to Phoenix on May 18. You want to travel in economy class. The flights you prefer are HAT230 and HAT035, both on May 18. The passengers will be yourself, Juan Muller, and Liam Brown. For payment, you want to use your $179 gift card first, and then your Visa card ending in 5805 for any remaining balance. You want to include travel insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'TPN0ET'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'juan_muller_6989', 'origin': 'ORD', 'destination': 'PHX', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT230', 'date': '2024-05-18'}, {'flight_number': 'HAT035', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Juan', 'last_name': 'Muller', 'dob': '1985-12-15'}, {'first_name': 'Liam', 'last_name': 'Brown', 'dob': '1971-02-08'}], 'payment_methods': [{'payment_id': 'gift_card_5807094', 'amount': 179}, {'payment_id': 'credit_card_7668338', 'amount': 429}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ivan_taylor_6615",
+        instruction="Your user id is ivan_taylor_6615. You want to make a few changes to your travel plans. First, you want to upgrade your flight from Atlanta to Las Vegas on May 20 (reservation id 06K2QN) to business class and add two checked bags to this reservation. Please use your Visa card ending in 1656 for these changes. Additionally, you would like to cancel your round-trip reservation from Phoenix to Seattle (reservation id 9R3EI5). You also want to book a new one-way flight from Phoenix to Seattle for May 20 in economy class for Aarav Kim. You want to include one checked bag and purchase travel insurance for this trip. Use your $500 certificate to pay for this new booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '06K2QN', 'cabin': 'business', 'flights': [{'flight_number': 'HAT052', 'date': '2024-05-20'}], 'payment_id': 'credit_card_1885633'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '06K2QN', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'credit_card_1885633'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '9R3EI5'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'ivan_taylor_6615', 'origin': 'PHX', 'destination': 'SEA', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT156', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Aarav', 'last_name': 'Kim', 'dob': '1962-10-28'}], 'payment_methods': [{'payment_id': 'certificate_1960821', 'amount': 202}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="aarav_anderson_6237",
+        instruction="Your user id is aarav_anderson_6237. You need to access the details of your reservation BU71UY for a flight from LaGuardia (LGA) to Phoenix (PHX). Then, you want to update this reservation by changing the flight date to May 20, still on flight HAT002, but downgrade from business to economy class. For this change, use your Visa card ending in 5537. You also want to modify the baggage allowance to include a total of 4 pieces, of which 1 is non-free; use your gift card for this additional baggage charge. Additionally, you plan to book a new one-way flight from JFK to PHX on May 19 in business class, with flight numbers HAT088 and HAT097. This booking should be made for yourself, Aarav Anderson, and you want to purchase travel insurance. Use your Mastercard ending in 8119 to cover this booking, which totals $709. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'BU71UY'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'BU71UY', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT002', 'date': '2024-05-20'}], 'payment_id': 'credit_card_5252591'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'BU71UY', 'total_baggages': 4, 'nonfree_baggages': 1, 'payment_id': 'gift_card_5333120'},
+            ),
+            Action(
+                name="calculate",
+                kwargs={'expression': '(218 * 2) + (30 * 2) + 50'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'aarav_anderson_6237', 'origin': 'JFK', 'destination': 'PHX', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT088', 'date': '2024-05-19'}, {'flight_number': 'HAT097', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Aarav', 'last_name': 'Anderson'}], 'payment_methods': [{'payment_id': 'credit_card_5100220', 'amount': 709}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="evelyn_smith_6580",
+        instruction="Your user id is evelyn_smith_6580. First, you want to retrieve the details of your reservation with ID 63QBEX. You then wish to update this reservation to ensure you are flying in business class on the following flights: flight HAT082 on May 19, flight HAT085 on May 19, and flight HAT023 on May 21. You want to use your gift card for this payment.\n\nNext, you want to book a one-way flight for James Patel from Seattle to New York on May 19, 2024. This flight should be in economy class, specifically flight HAT089. You want to include 2 pieces of baggage, one of which will incur a fee, and you want travel insurance. For this booking, use your $250 certificate.\n\nAdditionally, you need to update your reservation with ID DL5D98 to include one checked bag, with the payment made through your gift card.\n\nFinally, you wish to cancel your reservation with ID Q25XMO. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': '63QBEX'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '63QBEX', 'cabin': 'business', 'flights': [{'flight_number': 'HAT082', 'date': '2024-05-19'}, {'flight_number': 'HAT085', 'date': '2024-05-19'}, {'flight_number': 'HAT023', 'date': '2024-05-21'}], 'payment_id': 'gift_card_3816522'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'evelyn_smith_6580', 'origin': 'SEA', 'destination': 'JFK', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT089', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'James', 'last_name': 'Patel', 'dob': '1979-11-17'}], 'payment_methods': [{'payment_id': 'certificate_8272834', 'amount': 212}], 'total_baggages': 2, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'DL5D98', 'total_baggages': 1, 'nonfree_baggages': 0, 'payment_id': 'gift_card_3816522'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'Q25XMO'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="chen_nguyen_2677",
+        instruction="Your user id is chen_nguyen_2677. You want to make several changes to your current reservations. First, for your existing reservation with the id 5HVW7S, you want to upgrade the cabin from economy to business for all flights. The flights should be on May 16, 18, 19, and 20 with the flight numbers HAT277, HAT157, HAT270, and HAT064 respectively. Use your Mastercard ending in 9744 for any additional charges. However, you also want to cancel this reservation entirely afterward.\n\nFor your other reservation, VHV4BG, please update the baggage allowance to include a total of 3 bags, with 1 being non-free. Use your Mastercard ending in 7566 to cover any baggage fees.\n\nFurthermore, you want to book a new round-trip reservation from Boston to Newark. The flights should be on May 17, 18, 19, and 20, with the same flight numbers: HAT277, HAT157, HAT270, and HAT064. You want to fly in economy class and include insurance for the trip. The passenger will be Yusuf Nguyen. Use your Mastercard ending in 9744 to pay for this new reservation. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '5HVW7S', 'cabin': 'business', 'flights': [{'flight_number': 'HAT277', 'date': '2024-05-16'}, {'flight_number': 'HAT157', 'date': '2024-05-18'}, {'flight_number': 'HAT270', 'date': '2024-05-19'}, {'flight_number': 'HAT064', 'date': '2024-05-20'}], 'payment_id': 'credit_card_2810906'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'VHV4BG', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'credit_card_1677722'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '5HVW7S'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'chen_nguyen_2677', 'origin': 'BOS', 'destination': 'EWR', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT277', 'date': '2024-05-17'}, {'flight_number': 'HAT157', 'date': '2024-05-18'}, {'flight_number': 'HAT270', 'date': '2024-05-19'}, {'flight_number': 'HAT064', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Yusuf', 'last_name': 'Nguyen', 'dob': '1975-12-05'}], 'payment_methods': [{'payment_id': 'credit_card_2810906', 'amount': 548}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="chen_nguyen_2677",
+        instruction="Your user id is chen_nguyen_2677. You want to make several changes and bookings for your upcoming trips. For reservation 5HVW7S, you want to change your flights to fly in business class, specifically on May 16 with flight number HAT277 and returning on May 17 with flight number HAT270. You will return from Charlotte to Boston on May 20 with flight number HAT064. You want to use your Mastercard ending in 9744 for this transaction. For reservation VHV4BG, you want to add one additional piece of baggage, bringing the total to 3, and use your Mastercard ending in 7566 to pay for the extra baggage. Additionally, you want to book a one-way flight from Charlotte to LaGuardia on May 16 in economy class. You will fly with flight number HAT087 and want to add insurance. You will use your Mastercard ending in 9744 for this booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '5HVW7S', 'cabin': 'business', 'flights': [{'flight_number': 'HAT277', 'date': '2024-05-16'}, {'flight_number': 'HAT157', 'date': '2024-05-16'}, {'flight_number': 'HAT270', 'date': '2024-05-17'}, {'flight_number': 'HAT064', 'date': '2024-05-20'}], 'payment_id': 'credit_card_2810906'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'VHV4BG', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'credit_card_1677722'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'chen_nguyen_2677', 'origin': 'CLT', 'destination': 'LGA', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT087', 'date': '2024-05-16'}], 'passengers': [{'first_name': 'Yusuf', 'last_name': 'Nguyen', 'dob': '1975-12-05'}], 'payment_methods': [{'payment_id': 'credit_card_2810906', 'amount': 213}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="amelia_sanchez_4739",
+        instruction="Your user id is amelia_sanchez_4739. You want to update your existing reservation 3FRNFB to change the flights to May 19, keeping the same flight numbers HAT028 and HAT277, and upgrade to economy class. You also want to add 2 non-free checked bags to this reservation. Please charge these updates to your Mastercard ending in 3658. Additionally, you need to cancel your reservation Q4L9HS and then rebook a one-way business class ticket from Newark to Seattle on May 18, with flights HAT213 and HAT067. Ensure you include one non-free checked bag and add travel insurance for this new booking. Please use your Mastercard ending in 3658 for the payment of $881. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '3FRNFB', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT028', 'date': '2024-05-19'}, {'flight_number': 'HAT277', 'date': '2024-05-19'}], 'payment_id': 'credit_card_4065275'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '3FRNFB', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'credit_card_4065275'},
+            ),
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'Q4L9HS'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'Q4L9HS'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'amelia_sanchez_4739', 'origin': 'EWR', 'destination': 'SEA', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT213', 'date': '2024-05-18'}, {'flight_number': 'HAT067', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Amelia', 'last_name': 'Sanchez', 'dob': '1970-01-01'}], 'payment_methods': [{'payment_id': 'credit_card_4065275', 'amount': 881}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mei_thomas_2630",
+        instruction="Your user id is mei_thomas_2630. You want to update your existing reservation (ID: U1YV6I) from Orlando to Las Vegas. You prefer to keep it in business class but change the flight date to May 16 using your gift card. Additionally, you want to book a one-way business class flight from Houston to Chicago on May 19 for Aarav Garcia. Please use your Visa ending in 8387 to pay the fare of $445. You do not need any extra baggage allowance or travel insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'U1YV6I', 'cabin': 'business', 'flights': [{'flight_number': 'HAT101', 'date': '2024-05-16'}], 'payment_id': 'gift_card_1173609'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mei_thomas_2630', 'origin': 'IAH', 'destination': 'ORD', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT116', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Aarav', 'last_name': 'Garcia', 'dob': '1990-06-10'}], 'payment_methods': [{'payment_id': 'credit_card_1347098', 'amount': 445}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mia_silva_4267",
+        instruction="Your user id is mia_silva_4267. You want to update your existing reservation VII5EK for a round trip from Houston to Philadelphia. You want to keep the business class and reschedule the flights to May 17 for the outbound flights (flight numbers HAT116 and HAT139) and May 20 for the return flights (flight numbers HAT291 and HAT278). You would like to use your Visa ending in 9091 for this update. Additionally, you want to modify your reservation 42NIFZ to include a total of 4 baggages, with 1 being non-free, and you want to pay for this with your Visa ending in 8838. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'VII5EK', 'cabin': 'business', 'flights': [{'flight_number': 'HAT116', 'date': '2024-05-17'}, {'flight_number': 'HAT139', 'date': '2024-05-17'}, {'flight_number': 'HAT291', 'date': '2024-05-20'}, {'flight_number': 'HAT278', 'date': '2024-05-20'}], 'payment_id': 'credit_card_7747326'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '42NIFZ', 'total_baggages': 4, 'nonfree_baggages': 1, 'payment_id': 'credit_card_8649838'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="sophia_patel_6859",
+        instruction="Your user id is sophia_patel_6859. You want to update your reservation from Charlotte to Newark (reservation ID NASS9T) to upgrade the cabin to economy for both flights on May 16 and May 22. You also want to add 2 checked bags to this reservation. You prefer to use your Mastercard ending in 7741 for any additional charges. Additionally, you want to book a new one-way flight from Houston to Las Vegas on May 17 in economy class. For this new reservation, you want to include 1 checked bag and purchase travel insurance. You would like to use your $500 certificate to cover the cost of this booking, ensuring the amount used is $209. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'NASS9T', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT015', 'date': '2024-05-16'}, {'flight_number': 'HAT043', 'date': '2024-05-22'}], 'payment_id': 'credit_card_5278427'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'NASS9T', 'total_baggages': 2, 'nonfree_baggages': 0, 'payment_id': 'credit_card_5278427'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'sophia_patel_6859', 'origin': 'IAH', 'destination': 'LAS', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT190', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Sophia', 'last_name': 'Patel', 'dob': '1990-04-05'}], 'payment_methods': [{'payment_id': 'certificate_2627584', 'amount': 209}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="juan_sanchez_3680",
+        instruction="Your user id is juan_sanchez_3680. You want to update your reservation for the flight from Charlotte to New York (reservation ID 42IIXI) to business class for both segments on May 20. You are flying on flight HAT176 from Charlotte to Detroit and then on flight HAT263 from Detroit to New York. You would like to add an extra bag, totaling 2 bags, with 1 being non-free. For the flight upgrade, please charge your Visa ending in 8861, and for the additional baggage, use your $76 gift card. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '42IIXI', 'cabin': 'business', 'flights': [{'flight_number': 'HAT176', 'date': '2024-05-20'}, {'flight_number': 'HAT263', 'date': '2024-05-20'}], 'payment_id': 'credit_card_6952762'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '42IIXI', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'gift_card_2850297'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="harper_garcia_8677",
+        instruction="Your user id is harper_garcia_8677. You need to cancel your existing reservation (CUPYN7) for the round trip from Philadelphia to Denver. After canceling, you want to book a one-way flight from Philadelphia to Denver in economy class for Ivan Brown on May 17, with flight number HAT076. You wish to use your $150 certificate and your gift card with a $27 balance to cover the payment. Please ensure to include insurance for this booking. Additionally, for your reservation from Houston to Boston (V1B1WU), you want to update the baggage allowance to include 2 bags, with one being a non-free checked bag. Use your Mastercard ending in 7286 for any related charges. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'CUPYN7'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'harper_garcia_8677', 'origin': 'PHL', 'destination': 'DEN', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT076', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Ivan', 'last_name': 'Brown', 'dob': '1954-11-22'}], 'payment_methods': [{'payment_id': 'certificate_6803610', 'amount': 150}, {'payment_id': 'gift_card_8173468', 'amount': 27}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'V1B1WU', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_3107218'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="sofia_anderson_8718",
+        instruction="Your user id is sofia_anderson_8718. You want to update your existing reservation from Detroit to Chicago with reservation id 1DMPHR. You prefer to change the cabin class to economy for both flights on May 19 and May 20, using flight numbers HAT119 and HAT020, respectively. You want to use your Mastercard ending in 4760 for this change. Additionally, you need to add 2 checked bags for which you prefer to use your $267 gift card. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '1DMPHR', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT119', 'date': '2024-05-19'}, {'flight_number': 'HAT020', 'date': '2024-05-20'}], 'payment_id': 'credit_card_7385026'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '1DMPHR', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'gift_card_9530220'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="daiki_lee_6144",
+        instruction="Your user id is daiki_lee_6144. You want to update your existing reservation DF89BM from New York to Detroit, changing the cabin class to economy. The flights you need are HAT079 and HAT020 on May 17, and HAT263 on May 24. For this change, you want to use your Visa card ending in 9734. Additionally, you wish to add one checked bag to this reservation, and you'd like to use your $51 gift card for this baggage charge.\n\nFurthermore, you want to book a new one-way flight for Raj Muller from Miami to Boston on May 20, in economy class. The flight number is HAT184, and you prefer to use your $262 gift card for this booking. You do not require any additional baggage or travel insurance for this trip. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'DF89BM', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT079', 'date': '2024-05-17'}, {'flight_number': 'HAT020', 'date': '2024-05-17'}, {'flight_number': 'HAT263', 'date': '2024-05-24'}], 'payment_id': 'credit_card_6198952'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'DF89BM', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'gift_card_3112961'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'daiki_lee_6144', 'origin': 'MIA', 'destination': 'BOS', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT184', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Raj', 'last_name': 'Muller', 'dob': '1967-10-16'}], 'payment_methods': [{'payment_id': 'gift_card_5128346', 'amount': 170}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ava_jackson_6651",
+        instruction="Your user id is ava_jackson_6651. You want to update your existing Denver reservation (reservation id M1OT79) to change the departure date to May 17 and upgrade to business class. Please use your Visa ending in 4906 for this change. You also want to increase the baggage allowance to 3, with one being a non-free bag, and use your Mastercard ending in 3671 for the payment of the additional baggage. Additionally, you want to cancel your current reservation from New York to Chicago (reservation id GLJF1R). After canceling, please book a new round-trip flight from New York (JFK) to Chicago (ORD) with a departure on May 17 and return on May 20, flying in economy class. You want to include yourself as the passenger, with your birthday listed as April 15, 1985, and add one non-free bag. For this new booking, use your Mastercard ending in 6404 for payment, and remember to include travel insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'M1OT79'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'M1OT79', 'cabin': 'business', 'flights': [{'flight_number': 'HAT270', 'date': '2024-05-17'}, {'flight_number': 'HAT262', 'date': '2024-05-17'}], 'payment_id': 'credit_card_5969112'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'M1OT79', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'credit_card_1534658'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'GLJF1R'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'ava_jackson_6651', 'origin': 'JFK', 'destination': 'ORD', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT209', 'date': '2024-05-17'}, {'flight_number': 'HAT129', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Ava', 'last_name': 'Jackson', 'dob': '1985-04-15'}], 'payment_methods': [{'payment_id': 'credit_card_4284769', 'amount': 433}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="lei_santos_6163",
+        instruction="Your user id is lei_santos_6163. You want to update your existing reservation from Boston to Seattle, reservation ID COL0TD, by changing the cabin to economy class while keeping the flight number HAT006 on May 19, 2024. You'd like to pay for this change using your $147 gift card. You also want to add one checked bag, paying for it with your Visa card ending in 2295.\n\nAdditionally, you want to make a new booking for a one-way business class flight from Miami to Los Angeles on May 19, 2024, for Daiki Li, with flight number HAT120. You will use your Mastercard ending in 7100 to pay for this reservation. You do not require any additional baggage or insurance for this new booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'COL0TD'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'COL0TD', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT006', 'date': '2024-05-19'}], 'payment_id': 'gift_card_7236157'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'COL0TD', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_1730622'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'lei_santos_6163', 'origin': 'MIA', 'destination': 'LAX', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT120', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Daiki', 'last_name': 'Li', 'dob': '1996-04-13'}], 'payment_methods': [{'payment_id': 'credit_card_4044683', 'amount': 311}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ethan_hernandez_6400",
+        instruction="Your user id is ethan_hernandez_6400. You want to cancel your existing reservation from Denver to Houston with reservation ID O1DIJJ. After canceling, you want to book a new one-way flight from Denver to Houston for May 20, traveling in economy class. You will be flying on flight numbers HAT229 and HAT175, and you want reservations for both yourself and Mohamed Santos. You want to pay the total amount of $486 using your Visa card ending in 1332, and you will have one piece of luggage, all of which is covered in the flight fare.\n\nAdditionally, for your existing reservation with ID 7HXRPX, you want to update the return flight dates to May 20. You want to remain in business class for these flights, specifically on flight numbers HAT284 and HAT009 for the outbound journey and HAT134 and HAT259 for the return journey. Use your Visa card ending in 1332 for any required payment adjustments.\n\nFor your reservation with ID 0IGX7A, please update the baggage allowance to include a total of two pieces of luggage, with one being a non-free baggage, and charge this to your Visa card ending in 1332.\n\nFinally, you want to book a separate one-way business class flight from Phoenix to San Francisco on May 20, on flight number HAT009. This booking will be for yourself, and you will not require any baggage allowance or travel insurance. Please use your Visa card ending in 1332 to cover the $461 cost of this flight. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'O1DIJJ'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'ethan_hernandez_6400', 'origin': 'DEN', 'destination': 'IAH', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT229', 'date': '2024-05-20'}, {'flight_number': 'HAT175', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Ethan', 'last_name': 'Hernandez', 'dob': '1993-02-15'}, {'first_name': 'Mohamed', 'last_name': 'Santos', 'dob': '1993-02-15'}], 'payment_methods': [{'payment_id': 'credit_card_9038105', 'amount': 486}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '7HXRPX', 'cabin': 'business', 'flights': [{'flight_number': 'HAT284', 'date': '2024-05-19'}, {'flight_number': 'HAT009', 'date': '2024-05-19'}, {'flight_number': 'HAT134', 'date': '2024-05-20'}, {'flight_number': 'HAT259', 'date': '2024-05-20'}], 'payment_id': 'credit_card_9038105'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '0IGX7A', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_9038105'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'ethan_hernandez_6400', 'origin': 'PHX', 'destination': 'SFO', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT009', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Ethan', 'last_name': 'Hernandez', 'dob': '1993-02-15'}], 'payment_methods': [{'payment_id': 'credit_card_9038105', 'amount': 461}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="liam_johnson_6488",
+        instruction="Your user id is liam_johnson_6488. You want to cancel your existing reservation from San Francisco to Orlando with the reservation ID GAOUDL. After canceling, you want to book a new one-way flight from San Francisco to Orlando on May 19. You want to fly in economy class on flights HAT295 and HAT145. The passenger for this booking should be James Brown, born on May 19, 1980. You need to add one checked bag, which is not included in the fare. You wish to pay using your $150 certificate first, and if there is any remaining amount, use your $500 certificate to cover it. Please note that you do not require travel insurance for this booking. Additionally, for your existing reservation BWHHHG, you want to add two checked bags and pay for them using your Mastercard ending in 4328. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'GAOUDL'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'liam_johnson_6488', 'origin': 'SFO', 'destination': 'MCO', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT295', 'date': '2024-05-19'}, {'flight_number': 'HAT145', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'James', 'last_name': 'Brown', 'dob': '1980-05-19'}], 'payment_methods': [{'payment_id': 'certificate_5070760', 'amount': 150}, {'payment_id': 'certificate_9510509', 'amount': 185}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'BWHHHG', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'credit_card_2015111'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mohamed_gonzalez_6040",
+        instruction="Your user id is mohamed_gonzalez_6040. You want to cancel your one-way reservation from San Francisco to Newark (reservation id OPPHQU). After canceling, you want to book a new one-way flight from San Francisco to Newark, departing on May 19 on flight HAT082 and continuing on May 20 on flight HAT195. You prefer to fly in economy class and include one checked baggage, which is non-free. You want to add travel insurance for this booking. Please use your Mastercard ending in 3905 to pay for the total amount of $403. Additionally, you want to update your existing round-trip reservation from Seattle to Detroit (reservation id K27ZUJ) to include two total baggages, both of which are non-free. Use your Mastercard ending in 3905 for this payment as well. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'OPPHQU'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mohamed_gonzalez_6040', 'origin': 'SFO', 'destination': 'EWR', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT082', 'date': '2024-05-19'}, {'flight_number': 'HAT195', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Mohamed', 'last_name': 'Gonzalez'}], 'payment_methods': [{'payment_id': 'credit_card_3382683', 'amount': 403}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'K27ZUJ', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'credit_card_3382683'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="james_ahmed_4322",
+        instruction="Your user id is james_ahmed_4322. You want to make the following changes to your reservations: \n\nFirst, for your reservation from Detroit to Charlotte with reservation ID JX6LB3, you want to upgrade to business class for both flights: HAT168 departing on May 19 and HAT167 returning on May 20. You also want to add two checked bags and pay for them using your gift card with the amount of $138. The flight upgrade should be paid with your Mastercard ending in 3379.\n\nNext, you want to cancel your current one-way reservation from Atlanta to Las Vegas with reservation ID IG2DP6.\n\nAfter canceling, you want to book a new one-way flight from Atlanta to Las Vegas on May 19. You want to fly in business class on flight HAT178 and include two passengers, Mohamed Patel and Ethan Thomas. This new reservation should include two baggages, and you want to have travel insurance. You prefer to use your $500 certificate for the main payment, and any remaining balance should be paid with your Mastercard ending in 3379. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'JX6LB3', 'cabin': 'business', 'flights': [{'flight_number': 'HAT168', 'date': '2024-05-19'}, {'flight_number': 'HAT167', 'date': '2024-05-20'}], 'payment_id': 'credit_card_5747649'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'JX6LB3', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'gift_card_3192460'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'IG2DP6'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'james_ahmed_4322', 'origin': 'ATL', 'destination': 'LAS', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT178', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Mohamed', 'last_name': 'Patel', 'dob': '1984-03-10'}, {'first_name': 'Ethan', 'last_name': 'Thomas', 'dob': '1981-09-16'}], 'payment_methods': [{'payment_id': 'certificate_1731593', 'amount': 500}, {'payment_id': 'credit_card_5747649', 'amount': 60}], 'total_baggages': 2, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="juan_muller_6989",
+        instruction="Your user id is juan_muller_6989. You want to update your reservation for your upcoming trip from Chicago to Phoenix (reservation ID: TPN0ET) by changing the flights to new dates on May 20, flying on flight number HAT230 to Detroit and HAT035 to Phoenix. You also want to upgrade the cabin to economy. For this change, you want to pay using your Visa card ending in 5805. Furthermore, you want to add 2 checked bags to this reservation, and you prefer to use your $136 gift card to cover the baggage fees. Additionally, you wish to cancel your other reservation from Denver to Boston (reservation ID: B861YZ). You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'TPN0ET', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT230', 'date': '2024-05-20'}, {'flight_number': 'HAT035', 'date': '2024-05-20'}], 'payment_id': 'credit_card_7668338'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'TPN0ET', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'gift_card_8288091'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'B861YZ'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="evelyn_rossi_4078",
+        instruction="Your user id is evelyn_rossi_4078. You want to update your existing reservation from JFK to MIA with reservation ID QMLLG3. You want to change the flight dates to depart on May 19 and return on May 20, keeping the cabin class in economy. You prefer to use your Mastercard ending in 8752 for this update. Additionally, you want to book a new one-way flight from Las Vegas to Orlando on May 17 in business class. You want this booking to be for yourself, Evelyn Rossi. You prefer to use your Mastercard ending in 7176 for this new booking, and you want to include travel insurance. You do not plan to check any baggage for this trip. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'QMLLG3', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT209', 'date': '2024-05-19'}, {'flight_number': 'HAT224', 'date': '2024-05-20'}], 'payment_id': 'credit_card_2355067'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'evelyn_rossi_4078', 'origin': 'LAS', 'destination': 'MCO', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT137', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Evelyn', 'last_name': 'Rossi', 'dob': None}], 'payment_methods': [{'payment_id': 'credit_card_7800202', 'amount': 463}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="raj_khan_7943",
+        instruction="Your user id is raj_khan_7943. You want to update your reservation from Phoenix to San Francisco (reservation id 1FY3L4) to change the travel date to May 18, staying in economy class. Please ensure the flights are updated to HAT267 and HAT011 for that date. Use your Mastercard ending in 9074 for any additional charges. Additionally, for your Denver to Boston trip (reservation id 1YPYPO), you want to add a total of 2 checked bags, with one being non-free. Please use your gift card valued at $229 to cover the baggage fees. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '1FY3L4', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT267', 'date': '2024-05-18'}, {'flight_number': 'HAT011', 'date': '2024-05-18'}], 'payment_id': 'credit_card_7722962'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '1YPYPO', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'gift_card_7880798'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="harper_smith_3981",
+        instruction="Your user id is harper_smith_3981. You want to update your existing reservation WXZ65N for the round trip from Seattle to Phoenix. You wish to maintain the same flights in economy class: flight HAT236 on May 18, flight HAT173 on May 19, and flight HAT047 on May 19. You also want to increase your total baggage allowance to 2 bags, with both being non-free bags. For the flights, please use your Mastercard ending in 1680 to cover any associated costs. For the additional baggage fees, use your $162 gift card. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'WXZ65N', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT236', 'date': '2024-05-18'}, {'flight_number': 'HAT173', 'date': '2024-05-19'}, {'flight_number': 'HAT047', 'date': '2024-05-19'}], 'payment_id': 'credit_card_9955122'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'WXZ65N', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'gift_card_7747327'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="sophia_santos_7035",
+        instruction="Your user id is sophia_santos_7035. You want to cancel your current reservation from Los Angeles to Boston, reservation ID 6XQE7B. After canceling, you wish to book a new round-trip flight from Los Angeles to Boston, but this time in business class. You need the flights on May 17th, with flight numbers HAT034 and HAT026, and on May 18th, with flight numbers HAT086 and HAT120. The passenger for this reservation will be Ava Smith, whose details are already in your profile. You want to have one checked bag and include insurance in this booking. Use your $150 certificate first, and the remaining amount should be charged to your Visa card ending in 5969.\n\nAdditionally, for your reservation P0Q4SM, you want to update both the flights and baggage details. Change the flights to May 18th with flight numbers HAT296 and HAT029, and upgrade the cabin to economy. You want to add two non-free checked bags to this reservation. Please charge all associated costs to your Visa card ending in 5969. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '6XQE7B'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'sophia_santos_7035', 'origin': 'LAX', 'destination': 'BOS', 'flight_type': 'round_trip', 'cabin': 'business', 'flights': [{'flight_number': 'HAT034', 'date': '2024-05-17'}, {'flight_number': 'HAT026', 'date': '2024-05-17'}, {'flight_number': 'HAT086', 'date': '2024-05-18'}, {'flight_number': 'HAT120', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Ava', 'last_name': 'Smith', 'dob': '1984-10-26'}], 'payment_methods': [{'payment_id': 'certificate_1349303', 'amount': 150}, {'payment_id': 'credit_card_3767393', 'amount': 1442}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'P0Q4SM', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'credit_card_3767393'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'P0Q4SM', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT296', 'date': '2024-05-18'}, {'flight_number': 'HAT029', 'date': '2024-05-18'}], 'payment_id': 'credit_card_3767393'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="raj_garcia_4690",
+        instruction="Your user id is raj_garcia_4690. You want to view the details of your current reservation with the ID 4NQCM5. Additionally, you would like to cancel your existing reservation with the ID P9L9FV. You're searching for a one-stop flight from Miami to Los Angeles on May 19. Afterward, you plan to book a one-way economy flight from Miami to Los Angeles for Noah Santos on May 20, using flight number HAT200. You want to use your gift card valued at $220 to cover the payment, and you prefer to include travel insurance. Furthermore, for your reservation 4NQCM5, you wish to add one checked baggage, which is not free, and use your remaining gift card balance for payment. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': '4NQCM5'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'P9L9FV'},
+            ),
+            Action(
+                name="search_onestop_flight",
+                kwargs={'origin': 'MIA', 'destination': 'LAX', 'date': '2024-05-19'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'raj_garcia_4690', 'origin': 'MIA', 'destination': 'LAX', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT200', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Noah', 'last_name': 'Santos', 'dob': '1977-10-26'}], 'payment_methods': [{'payment_id': 'gift_card_2698099', 'amount': 151}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '4NQCM5', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'gift_card_2698099'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="raj_khan_7943",
+        instruction="Your user id is raj_khan_7943. You want to update your existing reservation from Dallas to Los Angeles (reservation ID TXCJL4) by changing the departure date to May 17 and upgrading the cabin to economy class. You prefer to use your Mastercard ending in 1804 for this update. Additionally, you want to add one checked baggage for this reservation and pay for it using your gift card that has a balance of $229. \n\nFurthermore, you want to book a new one-way flight from New York (JFK) to Miami on May 17 for Harper Silva. You prefer to fly in economy class on flight number HAT014. For payment, use your $150 certificate and cover the remaining amount with your Mastercard ending in 9074. You also want to include travel insurance with this booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'TXCJL4', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT124', 'date': '2024-05-17'}], 'payment_id': 'credit_card_3892791'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'TXCJL4', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'gift_card_7880798'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'raj_khan_7943', 'origin': 'JFK', 'destination': 'MIA', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT014', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Harper', 'last_name': 'Silva', 'dob': '1996-08-05'}], 'payment_methods': [{'payment_id': 'certificate_7092481', 'amount': 150}, {'payment_id': 'credit_card_7722962', 'amount': 78}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="anya_lee_3112",
+        instruction="Your user id is anya_lee_3112. You want to retrieve the details for your flight reservation with the ID AS49TL. Then, you wish to update this reservation to fly in business class from San Francisco to Las Vegas on new dates: departing on May 17 with flight number HAT082, and arriving on May 18 with flight number HAT131. For this update, you want to pay with your gift card. Additionally, you want to increase your total baggage allowance to 3 pieces, with 1 of them being a paid baggage, using the same gift card for payment.\n\nFurthermore, you want to book a new one-way flight from Seattle to New York on May 19 in economy class. The flight number for this trip is HAT276, and it is for a passenger named Anya Lee with a birthdate of January 10, 1980. You want to include 1 piece of checked baggage and opt for travel insurance. You would like to use your gift card to cover the payment for this new booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'AS49TL'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'AS49TL', 'cabin': 'business', 'flights': [{'flight_number': 'HAT082', 'date': '2024-05-17'}, {'flight_number': 'HAT131', 'date': '2024-05-18'}], 'payment_id': 'gift_card_1406984'},
+            ),
+            Action(
+                name="calculate",
+                kwargs={'expression': '(455 + 437) * 1'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'AS49TL', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'gift_card_1406984'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'anya_lee_3112', 'origin': 'SEA', 'destination': 'JFK', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT276', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Anya', 'last_name': 'Lee', 'dob': '1980-01-10'}], 'payment_methods': [{'payment_id': 'gift_card_1406984', 'amount': 213}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mia_hernandez_2149",
+        instruction="Your user id is mia_hernandez_2149. For your upcoming round-trip from Las Vegas to New York under reservation T1VXC7, you want to make a few updates. First, you want to change the cabin class to economy. Also, you want to adjust the flight dates so that your flight from Seattle to New York (flight number HAT021) departs on May 19 instead of May 20. You want to keep the rest of the flights as originally planned. You would like to use your Mastercard ending in 1120 for these flight changes. Additionally, you want to add two checked bags to your reservation and use your $268 gift card for the baggage fees. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'T1VXC7', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT040', 'date': '2024-05-20'}, {'flight_number': 'HAT021', 'date': '2024-05-19'}, {'flight_number': 'HAT083', 'date': '2024-05-23'}, {'flight_number': 'HAT018', 'date': '2024-05-23'}], 'payment_id': 'credit_card_2367440'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'T1VXC7', 'total_baggages': 2, 'nonfree_baggages': 0, 'payment_id': 'gift_card_2109041'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="james_li_5992",
+        instruction="Your user id is james_li_5992. You want to cancel your existing reservation from Miami to Seattle with the reservation ID R2G81O. After that, you want to book a new one-way flight from Miami to Seattle on May 19 in business class for Raj Davis. The flights you want are HAT062 and HAT047, both on the same day. You prefer not to have any checked baggage or travel insurance for this trip. For payment, you want to use your $250 certificate first, and then cover the remaining balance with your Mastercard ending in 5020. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'R2G81O'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'james_li_5992', 'origin': 'MIA', 'destination': 'SEA', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT062', 'date': '2024-05-19'}, {'flight_number': 'HAT047', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Raj', 'last_name': 'Davis', 'dob': '1951-06-23'}], 'payment_methods': [{'payment_id': 'certificate_3412363', 'amount': 250}, {'payment_id': 'credit_card_8972239', 'amount': 520}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="juan_taylor_8806",
+        instruction="Your user id is juan_taylor_8806. You want to cancel your current reservation from LaGuardia to Houston with reservation ID 6VOH1R. After canceling, you wish to book a new one-way flight from Phoenix to LaGuardia on May 19 in economy class. You will be flying under the name Juan Taylor, using the date of birth January 1, 1990. You do not require any baggage services or travel insurance. For payment, you wish to use your $500 certificate, applying $124 towards this booking. You are reactive to the agent and will not say anything that is not asked. If any further clarification is needed, please refer to your user profile.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '6VOH1R'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'juan_taylor_8806', 'origin': 'PHX', 'destination': 'LGA', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT226', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Juan', 'last_name': 'Taylor', 'dob': '1990-01-01'}], 'payment_methods': [{'payment_id': 'certificate_5896676', 'amount': 124}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="yusuf_patel_4029",
+        instruction="Your user id is yusuf_patel_4029. You want to update your reservation 7P3LPD for your trip from San Francisco to Boston. Please ensure the flights are on May 16 and 17, maintaining business class, and use your Visa ending in 1576 for any payment adjustments. Add an extra checked bag, bringing the total to 2, and use your Mastercard ending in 6922 for this. Additionally, you need to cancel your one-way flight from Philadelphia to Chicago (reservation 847MY1) and rebook it for May 16 in economy class with one checked bag. Use your Visa ending in 1576 for the payment, including insurance. Lastly, please send a $50 certificate to your account. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '7P3LPD', 'cabin': 'business', 'flights': [{'flight_number': 'HAT204', 'date': '2024-05-17'}, {'flight_number': 'HAT194', 'date': '2024-05-16'}, {'flight_number': 'HAT006', 'date': '2024-05-17'}, {'flight_number': 'HAT107', 'date': '2024-05-17'}], 'payment_id': 'credit_card_5254946'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '847MY1'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'yusuf_patel_4029', 'origin': 'PHL', 'destination': 'ORD', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT197', 'date': '2024-05-16'}], 'passengers': [{'first_name': 'Yusuf', 'last_name': 'Patel', 'dob': 'unknown'}], 'payment_methods': [{'payment_id': 'credit_card_5254946', 'amount': 207}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '7P3LPD', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_6642109'},
+            ),
+            Action(
+                name="send_certificate",
+                kwargs={'user_id': 'yusuf_patel_4029', 'amount': 50},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="evelyn_martin_3582",
+        instruction="Your user id is evelyn_martin_3582. You want to cancel your existing reservation from Chicago to Orlando with reservation id Z0TAWW. After canceling, you would like to book a new one-way flight from Chicago to Orlando on May 19. You want to travel in economy class on flights HAT093 and HAT010 and include one checked bag. This reservation is for Aarav Rossi, whose details are saved in your profile. You want to use your $184 gift card and your $248 gift card to pay, ensuring that the remaining balance of $110 is covered by the second gift card. Additionally, you would like to update your current reservation 9V43HC from Chicago to Detroit to economy class. The outbound flight should now be on May 18 on HAT020, with the return on May 25 on HAT119. For this update, please use your Visa ending in 2183. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'Z0TAWW'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'evelyn_martin_3582', 'origin': 'ORD', 'destination': 'MCO', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT093', 'date': '2024-05-19'}, {'flight_number': 'HAT010', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Aarav', 'last_name': 'Rossi', 'dob': '1952-08-28'}], 'payment_methods': [{'payment_id': 'gift_card_9147751', 'amount': 184}, {'payment_id': 'gift_card_2860331', 'amount': 110}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '9V43HC', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT020', 'date': '2024-05-18'}, {'flight_number': 'HAT119', 'date': '2024-05-25'}], 'payment_id': 'credit_card_1351239'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="raj_kovacs_8102",
+        instruction="Your user id is raj_kovacs_8102. You need to cancel your reservation from Los Angeles to Atlanta with reservation ID AP72BD. After canceling, you want to book a new one-way business class flight from Los Angeles to Atlanta on May 19. The flights you are interested in are HAT186 and HAT282. The passenger traveling will be Raj Hernandez. You want to use your two $100 certificates and pay the remaining balance with your Mastercard ending in 5274. You would like to check one bag and do not require travel insurance.\n\nAdditionally, you want to update your existing reservation L5CCL5 to maintain the economy cabin class for the flights on May 19 and May 21, which include flight numbers HAT031, HAT043, HAT015, and HAT202. You also want to add one checked bag to this reservation and use your Mastercard ending in 5274 for any additional charges.\n\nLastly, please update the passenger details for reservation O8IHB3 to include Raj Hernandez and Mason Sanchez. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'AP72BD'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'raj_kovacs_8102', 'origin': 'LAX', 'destination': 'ATL', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT186', 'date': '2024-05-19'}, {'flight_number': 'HAT282', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Raj', 'last_name': 'Hernandez', 'dob': '1960-12-09'}], 'payment_methods': [{'payment_id': 'certificate_3408172', 'amount': 100}, {'payment_id': 'certificate_2307880', 'amount': 100}, {'payment_id': 'credit_card_7320675', 'amount': 599}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'L5CCL5', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT031', 'date': '2024-05-19'}, {'flight_number': 'HAT043', 'date': '2024-05-19'}, {'flight_number': 'HAT015', 'date': '2024-05-21'}, {'flight_number': 'HAT202', 'date': '2024-05-21'}], 'payment_id': 'credit_card_7320675'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'L5CCL5', 'total_baggages': 1, 'nonfree_baggages': 0, 'payment_id': 'credit_card_7320675'},
+            ),
+            Action(
+                name="update_reservation_passengers",
+                kwargs={'reservation_id': 'O8IHB3', 'passengers': [{'first_name': 'Raj', 'last_name': 'Hernandez', 'dob': '1960-12-09'}, {'first_name': 'Mason', 'last_name': 'Sanchez', 'dob': '1976-05-16'}]},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mei_ito_6207",
+        instruction="Your user id is mei_ito_6207. You want to upgrade your current reservation from Atlanta to Seattle (reservation ID Q8YZY1) to business class for both flights, departing on May 16 and returning on May 17. You intend to use your Mastercard ending in 4474 for this upgrade. Additionally, you wish to add a total of 2 checked bags, with 1 of them being non-free, and for this baggage payment, you would like to use your Mastercard ending in 1276. Lastly, you wish to cancel your one-way reservation from Los Angeles to Boston (reservation ID I9GT07). You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'Q8YZY1', 'cabin': 'business', 'flights': [{'flight_number': 'HAT133', 'date': '2024-05-16'}, {'flight_number': 'HAT220', 'date': '2024-05-17'}], 'payment_id': 'credit_card_8547862'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'Q8YZY1', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_4134857'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'I9GT07'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mei_davis_9362",
+        instruction="Your user id is mei_davis_9362. You want to update your round-trip reservation from Houston to Charlotte (reservation ID: E1VXR2) to economy class, with flights on May 18 and returning on May 19. You prefer to use your Mastercard ending in 6723 for this update. Additionally, you would like to cancel your one-way reservation from New York to Las Vegas (reservation ID: TK73D9). After canceling, you want to book a new one-way business class flight from New York (LGA) to Las Vegas (LAS) on May 20. This new booking will be for Liam Li, born on November 27, 1968, and will include 2 checked bags. You wish to use your $184 gift card and cover the remaining cost with your Mastercard ending in 6723. Please ensure that travel insurance is included. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'E1VXR2', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT149', 'date': '2024-05-18'}, {'flight_number': 'HAT270', 'date': '2024-05-18'}, {'flight_number': 'HAT108', 'date': '2024-05-19'}, {'flight_number': 'HAT166', 'date': '2024-05-19'}], 'payment_id': 'credit_card_4541014'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'TK73D9'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mei_davis_9362', 'origin': 'LGA', 'destination': 'LAS', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT002', 'date': '2024-05-20'}, {'flight_number': 'HAT173', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Liam', 'last_name': 'Li', 'dob': '1968-11-27'}], 'payment_methods': [{'payment_id': 'gift_card_9134969', 'amount': 184}, {'payment_id': 'credit_card_4541014', 'amount': 647}], 'total_baggages': 2, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ivan_garcia_1794",
+        instruction="Your user id is ivan_garcia_1794. You want to update your existing reservation from Las Vegas to Chicago (reservation ID LV5MG2) by changing the cabin class to business for your flights on May 21, flight numbers HAT115 and HAT129. Please use your Visa ending in 8790 for this change. Additionally, you would like to add one checked baggage to this reservation, paying for it with your Visa ending in 8149. Furthermore, you wish to cancel your round-trip reservation from Philadelphia to LaGuardia (reservation ID PG7O11). You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'LV5MG2', 'cabin': 'business', 'flights': [{'flight_number': 'HAT115', 'date': '2024-05-21'}, {'flight_number': 'HAT129', 'date': '2024-05-21'}], 'payment_id': 'credit_card_8638712'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'LV5MG2', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_7155120'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'PG7O11'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ivan_brown_5554",
+        instruction="Your user id is ivan_brown_5554. You want to cancel your one-way flight reservation from Denver to Dallas with reservation id 8ZJN85. After canceling, you would like to book a new one-way flight from Denver to Dallas on May 18, 2024. You prefer to fly in economy class on flight number HAT140. You will be traveling with one checked baggage. You want to use your Visa credit card ending in 3198 to pay for this booking. Additionally, for your existing reservation FN7VRF, you would like to update the baggage allowance to include 2 checked bags. You want to pay for this baggage update with your Visa card ending in 3198. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '8ZJN85'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'ivan_brown_5554', 'origin': 'DEN', 'destination': 'DFW', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT140', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Ivan', 'last_name': 'Brown', 'dob': '1990-01-01'}], 'payment_methods': [{'payment_id': 'credit_card_8269856', 'amount': 127}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'FN7VRF', 'total_baggages': 2, 'nonfree_baggages': 0, 'payment_id': 'credit_card_8269856'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="sofia_santos_3403",
+        instruction="Your user id is sofia_santos_3403. You need to make several updates and bookings: \n\nFirstly, for your existing reservation from Atlanta to Detroit (reservation ID JOHYVS), change the flight dates to May 17, keeping the same flight numbers HAT227 and HAT020, and maintain the business class cabin. Use your gift card to cover any costs.\n\nNext, for your reservation from Houston to Denver (reservation ID 8UW4LT), increase your total baggages to 3, with 2 of them being non-free. Pay for this additional baggage using your gift card.\n\nFinally, you want to book a new one-way flight for Anya Moore from Detroit to Charlotte on May 16, in business class. The flight number is HAT168. This booking should include 1 non-free baggage, and you would like to purchase insurance. Pay for this reservation using your gift card.\n\nYou are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'JOHYVS', 'cabin': 'business', 'flights': [{'flight_number': 'HAT227', 'date': '2024-05-17'}, {'flight_number': 'HAT020', 'date': '2024-05-17'}], 'payment_id': 'gift_card_8467750'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '8UW4LT', 'total_baggages': 3, 'nonfree_baggages': 2, 'payment_id': 'gift_card_8467750'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'sofia_santos_3403', 'origin': 'DTW', 'destination': 'CLT', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT168', 'date': '2024-05-16'}], 'passengers': [{'first_name': 'Anya', 'last_name': 'Moore', 'dob': '1952-10-26'}], 'payment_methods': [{'payment_id': 'gift_card_8467750', 'amount': 530}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="evelyn_smith_6580",
+        instruction="Your user id is evelyn_smith_6580. You want to update your existing round-trip reservation from Los Angeles to Seattle with reservation ID PVOA0U by adding one more checked bag, making it a total of 2 bags, with one of them being a paid baggage. You want to use your gift card to cover the cost of the additional baggage. Additionally, you wish to book a new one-way flight from New York (JFK) to Seattle (SEA) for James Patel on May 20, 2024, in economy class, on flight number HAT069. You want to purchase insurance for this booking and use your $250 certificate to pay, applying $151 from it. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'PVOA0U', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'gift_card_3816522'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'evelyn_smith_6580', 'origin': 'JFK', 'destination': 'SEA', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT069', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'James', 'last_name': 'Patel', 'dob': '1979-11-17'}], 'payment_methods': [{'payment_id': 'certificate_8272834', 'amount': 151}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="raj_davis_3310",
+        instruction="Your user id is raj_davis_3310. You want to cancel your current reservation from Atlanta to Chicago (reservation ID GFRGX5). After that, you want to book a new one-way flight from Atlanta to Chicago on May 19th in economy class for Sophia Wilson. The flight number is HAT227. You would like one checked bag, which is not included in the fare, and you want travel insurance for this trip. Please use your Mastercard ending in 5752 to pay for this booking. Additionally, you want to update your existing reservation PNK4UO to include one checked bag, which is also not included in the fare. Use the same Mastercard ending in 5752 for this payment as well. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'GFRGX5'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'raj_davis_3310', 'origin': 'ATL', 'destination': 'ORD', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT227', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Sophia', 'last_name': 'Wilson', 'dob': '1987-05-21'}], 'payment_methods': [{'payment_id': 'credit_card_5390700', 'amount': 256}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'PNK4UO', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_5390700'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mohamed_gonzalez_6188",
+        instruction="Your user id is mohamed_gonzalez_6188. You want to cancel your existing reservation with the ID 75U65S for the round-trip from LaGuardia to San Francisco. Once canceled, you wish to book a new round-trip flight from LaGuardia to San Francisco in business class for Ethan Garcia, departing on May 19 and returning on May 20. The flight numbers for this trip are HAT264 and HAT291 on May 19, and HAT123 and HAT066 on May 20. You want to use the following gift cards for payment: $229, $203, and $72. Any remaining amount should be paid with your Mastercard ending in 3745. You will have 2 checked baggages and want to include insurance.\n\nAdditionally, you need to update your reservation with ID F2ZX9D to change the outbound and return flight dates to May 18 and May 20, respectively, keeping the flight numbers HAT248, HAT240, HAT212, and HAT210. This should be in economy class, and you want to pay for these changes with your Mastercard ending in 3745.\n\nAlso, you want to update your reservation with ID YHUD9D to include a total of 2 baggages, with 1 being a non-free baggage, using your gift card with the largest balance.\n\nLastly, you want to book a one-way business class flight for Ethan Garcia from JFK to Detroit on May 20 with flight number HAT212. You will pay for this booking using your Mastercard ending in 3745. No additional baggage is required, and you do not need insurance for this trip. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '75U65S'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mohamed_gonzalez_6188', 'origin': 'LGA', 'destination': 'SFO', 'flight_type': 'round_trip', 'cabin': 'business', 'flights': [{'flight_number': 'HAT264', 'date': '2024-05-19'}, {'flight_number': 'HAT291', 'date': '2024-05-19'}, {'flight_number': 'HAT123', 'date': '2024-05-20'}, {'flight_number': 'HAT066', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Ethan', 'last_name': 'Garcia', 'dob': '1981-07-17'}], 'payment_methods': [{'payment_id': 'gift_card_9659287', 'amount': 229}, {'payment_id': 'gift_card_6959577', 'amount': 203}, {'payment_id': 'gift_card_3390787', 'amount': 72}, {'payment_id': 'credit_card_8311916', 'amount': 1078}], 'total_baggages': 2, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'F2ZX9D', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT248', 'date': '2024-05-18'}, {'flight_number': 'HAT240', 'date': '2024-05-18'}, {'flight_number': 'HAT212', 'date': '2024-05-20'}, {'flight_number': 'HAT210', 'date': '2024-05-20'}], 'payment_id': 'credit_card_8311916'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'YHUD9D', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'gift_card_7158052'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mohamed_gonzalez_6188', 'origin': 'JFK', 'destination': 'DTW', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT212', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Ethan', 'last_name': 'Garcia', 'dob': '1981-07-17'}], 'payment_methods': [{'payment_id': 'credit_card_8311916', 'amount': 365}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="chen_martin_5489",
+        instruction="Your user id is chen_martin_5489. You want to modify your existing flight reservation with ID LYSE93. You need to upgrade the cabin class to business for your flights on May 17, which include flight HAT006 and flight HAT100, and you will use your Mastercard ending in 6289 for this transaction. Additionally, you want to increase your total baggage allowance to 3 bags, with 2 of them being paid for, and use the same Mastercard for this payment.\n\nFurthermore, you would like to book a new one-way flight from New York (JFK) to Atlanta (ATL) on May 19 in economy class for Chen Wilson, born on October 3, 1959. You will carry one bag, and the payment will be made using your Mastercard ending in 6289.\n\nLastly, you want to confirm the details of your reservation LYSE93. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'LYSE93', 'cabin': 'business', 'flights': [{'flight_number': 'HAT006', 'date': '2024-05-17'}, {'flight_number': 'HAT100', 'date': '2024-05-17'}], 'payment_id': 'credit_card_3964469'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'LYSE93', 'total_baggages': 3, 'nonfree_baggages': 2, 'payment_id': 'credit_card_3964469'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'chen_martin_5489', 'origin': 'JFK', 'destination': 'ATL', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT057', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Chen', 'last_name': 'Wilson', 'dob': '1959-10-03'}], 'payment_methods': [{'payment_id': 'credit_card_3964469', 'amount': 123}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'LYSE93'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="sophia_wilson_1550",
+        instruction="Your user id is sophia_wilson_1550. You want to update your reservation from Seattle to Orlando (reservation ID ADY1RZ) by changing the flight dates to depart on May 18 and arrive on May 19, while remaining in business class. Use your gift card with a balance of $101 for this update. Additionally, for your Phoenix to Las Vegas reservation (reservation ID B1SKNU), you want to add an extra checked bag, making it a total of 2 bags, with 1 being a non-free baggage. Use your $276 gift card for this transaction. Moreover, you need to book a new one-way flight from Atlanta to Seattle on May 18 for Sofia Lopez in economy class, using your $150 certificate. This booking should include 1 bag, and you do not require insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'ADY1RZ'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'ADY1RZ', 'cabin': 'business', 'flights': [{'flight_number': 'HAT194', 'date': '2024-05-18'}, {'flight_number': 'HAT235', 'date': '2024-05-19'}], 'payment_id': 'gift_card_5914430'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'B1SKNU', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'gift_card_5084861'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'sophia_wilson_1550', 'origin': 'ATL', 'destination': 'SEA', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT239', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Sofia', 'last_name': 'Lopez', 'dob': '1988-10-06'}], 'payment_methods': [{'payment_id': 'certificate_1810837', 'amount': 146}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="lucas_hernandez_9581",
+        instruction="Your user id is lucas_hernandez_9581. You want to update your reservation for the trip from Philadelphia to Denver (reservation ID 9XZ6MK). You need to change the flight dates to May 19 for your departure and May 25 for your return, keeping the cabin class as business. You wish to use your Visa card ending in 1497 for any additional charges related to this flight change. Additionally, you want to increase the total number of baggages to 4, with one being nonfree. For this baggage update, you'd like to pay using your gift card with the amount of $152. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '9XZ6MK', 'cabin': 'business', 'flights': [{'flight_number': 'HAT076', 'date': '2024-05-19'}, {'flight_number': 'HAT080', 'date': '2024-05-25'}], 'payment_id': 'credit_card_2560121'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '9XZ6MK', 'total_baggages': 4, 'nonfree_baggages': 1, 'payment_id': 'gift_card_6514357'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="amelia_rossi_1651",
+        instruction="Your user id is amelia_rossi_1651. You want to cancel your existing reservation with id MZLGZ8. After that, you want to book a new round-trip flight from New York (JFK) to Houston (IAH), departing on May 17 and returning on May 20. The flight numbers are HAT023, HAT082, and HAT085, and you prefer to travel in economy class. The passengers for this booking are yourself, Amelia Rossi, born on May 19, 1954, and Yusuf Brown, born on November 3, 1986. You'd like to use your Mastercard ending in 7564 for the payment of $1090. You do not require additional baggage for this trip, but you want travel insurance included. \n\nFurthermore, you need to update your reservation with id 5R125W to include 4 total baggages, 2 of which are not free, and charge this to your Mastercard ending in 7564. Lastly, confirm that your flights for reservation DVT8V8, flying business class from LaGuardia (LGA) to Phoenix (PHX) on May 26 (HAT219) and returning on May 27 (HAT051), are correct and settled with your Mastercard. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'MZLGZ8'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'amelia_rossi_1651', 'origin': 'JFK', 'destination': 'IAH', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT023', 'date': '2024-05-17'}, {'flight_number': 'HAT082', 'date': '2024-05-17'}, {'flight_number': 'HAT085', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Amelia', 'last_name': 'Rossi', 'dob': '1972-05-01'}, {'first_name': 'Yusuf', 'last_name': 'Brown', 'dob': '1986-11-03'}], 'payment_methods': [{'payment_id': 'credit_card_4240750', 'amount': 1090}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '5R125W', 'total_baggages': 4, 'nonfree_baggages': 2, 'payment_id': 'credit_card_4240750'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'DVT8V8', 'cabin': 'business', 'flights': [{'flight_number': 'HAT219', 'date': '2024-05-26'}, {'flight_number': 'HAT051', 'date': '2024-05-27'}], 'payment_id': 'credit_card_4240750'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="harper_johnson_9249",
+        instruction="Your user id is harper_johnson_9249. You want to update your existing reservation with ID EB17TJ. Change the cabin to business class for the flights on May 19 (HAT083), May 17 (HAT221), May 26 (HAT282), and May 18 (HAT233). Use your Mastercard ending in 4851 for payment. Additionally, for your reservation DJ40OY, add 3 checked bags and use your gift card with a $290 balance for payment. Furthermore, you want to book a one-way flight from Phoenix to New York LaGuardia on May 17 for passenger Olivia Nguyen, flying in economy class. Use your gift card with a $272 balance for the payment. There are no additional bags or insurance for this booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'EB17TJ', 'cabin': 'business', 'flights': [{'flight_number': 'HAT083', 'date': '2024-05-19'}, {'flight_number': 'HAT221', 'date': '2024-05-17'}, {'flight_number': 'HAT282', 'date': '2024-05-26'}, {'flight_number': 'HAT233', 'date': '2024-05-18'}], 'payment_id': 'credit_card_6678874'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'DJ40OY', 'total_baggages': 3, 'nonfree_baggages': 3, 'payment_id': 'gift_card_5535249'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'harper_johnson_9249', 'origin': 'PHX', 'destination': 'LGA', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT256', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Olivia', 'last_name': 'Nguyen', 'dob': '1966-05-16'}], 'payment_methods': [{'payment_id': 'gift_card_9320056', 'amount': 175}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mei_ito_6207",
+        instruction="Your user id is mei_ito_6207. You want to upgrade your reservation for the trip from Atlanta to Seattle on May 16 and return on May 17 (reservation ID Q8YZY1) to business class. You would like to bring a total of 2 checked bags, with 1 of them being non-free. You prefer to use your Mastercard ending in 4474 to pay for the flight upgrade, and your Mastercard ending in 1276 for the additional baggage fee. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'Q8YZY1', 'cabin': 'business', 'flights': [{'flight_number': 'HAT133', 'date': '2024-05-16'}, {'flight_number': 'HAT220', 'date': '2024-05-17'}], 'payment_id': 'credit_card_8547862'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'Q8YZY1', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_4134857'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="liam_sanchez_8204",
+        instruction="Your user id is liam_sanchez_8204. You want to upgrade your existing reservation from Seattle to New York (reservation id XGS9D8) to business class. The outbound flight should be on May 19 with flight number HAT100, and the return flight should be on May 20 with flight number HAT069. You would like to use your Visa card ending in 4916 for this upgrade. Additionally, you want to book a new round-trip flight from Las Vegas to Houston for Olivia Lee on May 20. The flights should be on flight numbers HAT175 and HAT190, both in economy class. You plan to bring one checked bag and do not want any travel insurance. You prefer to pay for this new booking using your $150 certificate and the remaining balance with your $300 gift card. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'XGS9D8', 'cabin': 'business', 'flights': [{'flight_number': 'HAT100', 'date': '2024-05-19'}, {'flight_number': 'HAT069', 'date': '2024-05-20'}], 'payment_id': 'credit_card_7979469'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'liam_sanchez_8204', 'origin': 'LAS', 'destination': 'IAH', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT175', 'date': '2024-05-20'}, {'flight_number': 'HAT190', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Olivia', 'last_name': 'Lee', 'dob': '1959-08-23'}], 'payment_methods': [{'payment_id': 'certificate_4009020', 'amount': 150}, {'payment_id': 'gift_card_3371116', 'amount': 80}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mason_johnson_9566",
+        instruction="Your user id is mason_johnson_9566. You want to upgrade your Boston to Phoenix round-trip flight (reservation id YWZEQN) to business class while keeping the same flights on May 17, 18, 27, and 28 (flight numbers HAT235, HAT214, HAT181, and HAT217, respectively). You want to add one checked bag to this reservation. Please use your Mastercard ending in 3523 for any additional charges. Additionally, you need to cancel your one-way flight from Seattle to Dallas (reservation id WM6OS0). Lastly, you want to book a new one-way flight from Phoenix to Dallas on May 17 in economy class for yourself, Mason Johnson, born on February 22, 1996, using your Mastercard ending in 3523 to pay the $127 fare. Ensure there is no baggage included in this booking, and you do not require any travel insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'YWZEQN', 'cabin': 'business', 'flights': [{'flight_number': 'HAT235', 'date': '2024-05-17'}, {'flight_number': 'HAT214', 'date': '2024-05-18'}, {'flight_number': 'HAT181', 'date': '2024-05-27'}, {'flight_number': 'HAT217', 'date': '2024-05-28'}], 'payment_id': 'credit_card_3562064'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'YWZEQN', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_3562064'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'WM6OS0'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mason_johnson_9566', 'origin': 'PHX', 'destination': 'DFW', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT230', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Mason', 'last_name': 'Johnson', 'dob': '1996-02-22'}], 'payment_methods': [{'payment_id': 'credit_card_3562064', 'amount': 127}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="olivia_martin_3924",
+        instruction="Your user id is olivia_martin_3924. You want to cancel your current reservation from Denver to JFK with the reservation ID DVONGW. After that, you want to book a new round-trip flight from Denver to Los Angeles. The outbound flight should be on May 17 with flight number HAT130, and the return flight should be on May 18 with flight number HAT232. You prefer to fly in economy class. You will be traveling with your own information, and your birthday is already in your user profile, so you do not prefer to provide it. You want to include 1 checked bag in this reservation and do not require travel insurance. Please use your $500 certificate to cover the cost of this booking. Additionally, for your existing reservation from Charlotte to Boston (reservation ID H0MVIE), you want to update it to include a total of 2 bags, with 1 of them being non-free. Use your Visa card ending in 7324 for any additional baggage fees. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'DVONGW'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'olivia_martin_3924', 'origin': 'DEN', 'destination': 'LAX', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT130', 'date': '2024-05-17'}, {'flight_number': 'HAT232', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Olivia', 'last_name': 'Martin', 'dob': '1990-04-05'}], 'payment_methods': [{'payment_id': 'certificate_5658877', 'amount': 284}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'H0MVIE', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_1048722'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="yara_jackson_7992",
+        instruction="Your user id is yara_jackson_7992. You want to update your existing reservation Y8L4FO to include an additional baggage, bringing the total to 2, with 1 of them being a non-free bag. You wish to pay for this using your Mastercard ending in 3505. Next, you are looking to find a direct flight from Denver to Las Vegas on May 19. Additionally, you want to modify your reservation with ID 09F9WJ to adjust the flight schedule: keep the flights on May 21 from PHX to LAS (HAT027) and LAS to DEN (HAT162), change the DEN to LAS flight to May 19 (HAT229), and keep the LAS to PHX flight on May 23 (HAT095). Please use your Mastercard ending in 3505 for any associated costs. Finally, you want to cancel your reservation with ID 2RAMS3. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'Y8L4FO'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'Y8L4FO', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_6633575'},
+            ),
+            Action(
+                name="search_direct_flight",
+                kwargs={'origin': 'DEN', 'destination': 'LAS', 'date': '2024-05-19'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '09F9WJ', 'cabin': 'basic_economy', 'flights': [{'flight_number': 'HAT027', 'date': '2024-05-21'}, {'flight_number': 'HAT162', 'date': '2024-05-21'}, {'flight_number': 'HAT229', 'date': '2024-05-19'}, {'flight_number': 'HAT095', 'date': '2024-05-23'}], 'payment_id': 'credit_card_6633575'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '2RAMS3'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ethan_kovacs_5869",
+        instruction="Your user id is ethan_kovacs_5869. You want to update your reservation from New York to Orlando (reservation ID 2N6PRK) to change the flight dates. You want to fly from LGA to MCO in economy class with flights on May 16, May 17, May 18, and returning on May 19. You also want to add one checked bag to this reservation. You prefer to pay for the flight changes with your Visa ending in 3970 and use your gift card with the balance of $286 to cover the baggage fees. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '2N6PRK', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT219', 'date': '2024-05-16'}, {'flight_number': 'HAT181', 'date': '2024-05-17'}, {'flight_number': 'HAT214', 'date': '2024-05-18'}, {'flight_number': 'HAT256', 'date': '2024-05-19'}], 'payment_id': 'credit_card_1490482'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '2N6PRK', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'gift_card_9604369'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="amelia_brown_8516",
+        instruction="Your user id is amelia_brown_8516. You need to update your existing reservation MJ3GPX, which is a one-way trip from New York (JFK) to Phoenix (PHX). You want to ensure you have a total of 4 checked baggages, out of which 2 are nonfree baggages. You would like to use your $125 gift card to cover any additional baggage fees. Additionally, you want to cancel your reservation 9C3A3Z, which is a business class trip from Newark (EWR) to Seattle (SEA). You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'MJ3GPX', 'total_baggages': 4, 'nonfree_baggages': 2, 'payment_id': 'gift_card_8552977'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '9C3A3Z'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ivan_garcia_1794",
+        instruction="Your user id is ivan_garcia_1794. You want to update your existing reservation LV5MG2 from Las Vegas to Chicago, flying on May 20, to business class. You prefer to keep the same flights, HAT115 and HAT129, and you want to add two checked baggages. Please use your Visa card ending in 8790 for any additional charges. Additionally, you want to book a new one-way flight from Atlanta to Dallas on May 19 in economy class with flight number HAT059. This reservation will be for yourself, Ivan Garcia, and you want to use your Visa card ending in 8149 for payment. Include travel insurance and one carry-on bag for this new booking. Lastly, you wish to cancel your reservation PG7O11. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'LV5MG2'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'LV5MG2', 'cabin': 'business', 'flights': [{'flight_number': 'HAT115', 'date': '2024-05-20'}, {'flight_number': 'HAT129', 'date': '2024-05-20'}], 'payment_id': 'credit_card_8638712'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'LV5MG2', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'credit_card_8638712'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'ivan_garcia_1794', 'origin': 'ATL', 'destination': 'DFW', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT059', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Ivan', 'last_name': 'Garcia', 'dob': '1980-02-15'}], 'payment_methods': [{'payment_id': 'credit_card_7155120', 'amount': 137}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'PG7O11'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="chen_sanchez_3298",
+        instruction="Your user id is chen_sanchez_3298. You want to update your reservation WNVCCD, maintaining your business class seat for the flights on May 17 (HAT082), May 18 (HAT025), and May 20 (HAT023). You prefer to use your Mastercard ending in 3638 for payment. Additionally, for your ORA23Z reservation, you would like to increase the total number of baggages to 4, with 2 being non-free, and use your $181 gift card for payment. You also want to cancel your reservation RFT43O. Lastly, you want to book a new one-way trip from Chicago (ORD) to New York (JFK) on May 19 in economy class. The flights should be HAT165 and HAT025 on that date, and you will be traveling with 1 non-free baggage. Use your $100 certificate first, and then charge the remaining balance to your Visa card ending in 4181. You do not want travel insurance for this booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'WNVCCD', 'cabin': 'business', 'flights': [{'flight_number': 'HAT082', 'date': '2024-05-17'}, {'flight_number': 'HAT025', 'date': '2024-05-18'}, {'flight_number': 'HAT023', 'date': '2024-05-20'}], 'payment_id': 'credit_card_6114028'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'ORA23Z', 'total_baggages': 4, 'nonfree_baggages': 2, 'payment_id': 'gift_card_8227124'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'RFT43O'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'chen_sanchez_3298', 'origin': 'ORD', 'destination': 'JFK', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT165', 'date': '2024-05-19'}, {'flight_number': 'HAT025', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Chen', 'last_name': 'Sanchez', 'dob': '1980-06-15'}], 'payment_methods': [{'payment_id': 'certificate_7960836', 'amount': 100}, {'payment_id': 'credit_card_6051598', 'amount': 256}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ava_gonzalez_2934",
+        instruction="Your user id is ava_gonzalez_2934. You want to update your reservation from San Francisco to LaGuardia (reservation ID HZBXN1) to travel on May 16 instead. You want to fly in business class for all legs of the trip on flights HAT144, HAT226, HAT201, and HAT283. Additionally, you need to update your baggage to include a total of 3 bags, with 2 of them being non-free. For these changes, you prefer to use your Mastercard ending in 6758. Furthermore, you would like to cancel your one-way trip from Newark to Las Vegas (reservation ID 7FVJG2). You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'HZBXN1', 'cabin': 'business', 'flights': [{'flight_number': 'HAT144', 'date': '2024-05-16'}, {'flight_number': 'HAT226', 'date': '2024-05-16'}, {'flight_number': 'HAT201', 'date': '2024-05-16'}, {'flight_number': 'HAT283', 'date': '2024-05-16'}], 'payment_id': 'credit_card_7957134'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'HZBXN1', 'total_baggages': 3, 'nonfree_baggages': 2, 'payment_id': 'credit_card_7957134'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '7FVJG2'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="daiki_lopez_8334",
+        instruction="Your user id is daiki_lopez_8334. You want to update your existing reservation from Phoenix to Los Angeles (reservation ID N5XKBC) to adjust the travel date for both flights to May 19, while remaining in business class. Additionally, you would like to keep 2 baggages, but make sure 1 is nonfree. For the flight change, please use your gift card with a balance of $244, and for the baggage payment, use your gift card with a balance of $158. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'N5XKBC', 'cabin': 'business', 'flights': [{'flight_number': 'HAT283', 'date': '2024-05-19'}, {'flight_number': 'HAT257', 'date': '2024-05-19'}], 'payment_id': 'gift_card_6700138'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'N5XKBC', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'gift_card_5115095'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="amelia_ito_8544",
+        instruction="Your user id is amelia_ito_8544. You need to make several changes and bookings. First, you want to change your existing reservation from Phoenix to Houston (reservation id K4J0ER) to fly in economy class instead of business, and move your flight to May 19, keeping the same flight number HAT152. Please use your gift card with a balance of $113 to pay for this change.\n\nNext, for your reservation from Miami to San Francisco (reservation id EP5RQO), you want to update your baggage allowance to include a total of 2 bags, with 1 being non-free. Use your gift card with a balance of $117 for this payment.\n\nYou also need to cancel your reservation from Detroit to Houston (reservation id 7WGE88).\n\nFurthermore, you want to book a new round-trip flight from Detroit to Houston. You will depart on May 19 with flight number HAT169 and return on May 20 with flight number HAT279. You want to travel in economy class and include both yourself and Mason Kim as passengers. For this booking, you want to use your $500 certificate first, and cover the remaining balance of $138 with your Visa card ending in 5300. Ensure there are no additional bags and that you include travel insurance. Remember, you are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'K4J0ER', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT152', 'date': '2024-05-19'}], 'payment_id': 'gift_card_1791920'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'EP5RQO', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'gift_card_5891189'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '7WGE88'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'amelia_ito_8544', 'origin': 'DTW', 'destination': 'IAH', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT169', 'date': '2024-05-19'}, {'flight_number': 'HAT279', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Amelia', 'last_name': 'Ito', 'dob': 'DOB_NOT_PROVIDED'}, {'first_name': 'Mason', 'last_name': 'Kim', 'dob': '1976-06-10'}], 'payment_methods': [{'payment_id': 'certificate_4381655', 'amount': 500}, {'payment_id': 'credit_card_2540841', 'amount': 138}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="olivia_jackson_7257",
+        instruction="Your user id is olivia_jackson_7257. You want to add two baggages to your existing reservation from JFK to LGA (reservation id 9YE5D6), with one being a paid checked bag. You would like to use your Visa card ending in 3838 to cover any additional charges. Additionally, you want to book a new one-way flight from Detroit to Phoenix on May 20 in economy class. You will be flying on flight number HAT035. The passenger for this booking should be yourself, Olivia Jackson. You do not require any baggage for this new booking, and you do not want insurance. You prefer to pay for this reservation using your Visa card ending in 3838. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '9YE5D6', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_2480682'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'olivia_jackson_7257', 'origin': 'DTW', 'destination': 'PHX', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT035', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Olivia', 'last_name': 'Jackson', 'dob': '1983-04-19'}], 'payment_methods': [{'payment_id': 'credit_card_2480682', 'amount': 174}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="raj_ito_8898",
+        instruction="Your user id is raj_ito_8898. You want to cancel your existing reservation with ID JNV20G. Then, you want to find a direct flight from Boston to Orlando on May 17, 2024. You aim to book a new round-trip reservation for Isabella Johansson, departing from Boston to Orlando on May 17 with flight HAT145 and returning on May 18 with flight HAT017. You prefer to travel in economy class and want to include one checked bag. Make sure to add travel insurance to this booking. You’d like to pay for this new reservation using your Visa card ending in 7324.\n\nAdditionally, you need to update your reservation with ID ZWI06B. Please change the flight to depart on May 18 instead of May 21, while keeping the return date the same. Upgrade the cabin to economy class and include one checked bag, paying for the additional baggage with your Mastercard ending in 9546. Use your Visa card ending in 7324 for any additional charges related to the flight change. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'JNV20G'},
+            ),
+            Action(
+                name="search_direct_flight",
+                kwargs={'origin': 'BOS', 'destination': 'MCO', 'date': '2024-05-17'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'raj_ito_8898', 'origin': 'BOS', 'destination': 'MCO', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT145', 'date': '2024-05-17'}, {'flight_number': 'HAT017', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Isabella', 'last_name': 'Johansson', 'dob': '1960-08-21'}], 'payment_methods': [{'payment_id': 'credit_card_8368961', 'amount': 330}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'ZWI06B', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_7614961'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'ZWI06B', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT098', 'date': '2024-05-18'}, {'flight_number': 'HAT298', 'date': '2024-05-29'}], 'payment_id': 'credit_card_8368961'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="juan_johansson_1492",
+        instruction="Your user id is juan_johansson_1492. You want to cancel your round-trip reservation from Seattle to New York with the reservation id 816Y7T. After canceling, you want to book a new round-trip flight from Seattle to New York. You plan to depart on May 19, taking flight HAT276, and return on May 20 on flight HAT083. You prefer to fly in economy class. You will be traveling with two passengers: yourself, Juan Johansson, and Ivan Ahmed, born on April 12, 1950. You want to include two baggages in the reservation and opt for travel insurance. For payment, you wish to use your $250 certificate first and cover the remaining balance with your Mastercard ending in 1999. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '816Y7T'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'juan_johansson_1492', 'origin': 'SEA', 'destination': 'JFK', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT276', 'date': '2024-05-19'}, {'flight_number': 'HAT083', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Juan', 'last_name': 'Johansson'}, {'first_name': 'Ivan', 'last_name': 'Ahmed', 'dob': '1950-04-12'}], 'payment_methods': [{'payment_id': 'certificate_9197564', 'amount': 250}, {'payment_id': 'credit_card_1500537', 'amount': 376}], 'total_baggages': 2, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="chen_rossi_8135",
+        instruction="Your user id is chen_rossi_8135. You want to cancel your existing reservation for the trip from Phoenix to Orlando with the reservation ID UGHGGR. After canceling, you want to book a new round-trip flight from Phoenix to Orlando. You prefer to travel in business class. The outbound flight should be on May 19 with flight number HAT181, and the return flight should be on May 20 with flight number HAT161. You want to travel with one piece of baggage and do not require any travel insurance. You wish to use your $100 certificate and pay the remaining balance using your Mastercard ending in 1609. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'UGHGGR'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'chen_rossi_8135', 'origin': 'PHX', 'destination': 'MCO', 'flight_type': 'round_trip', 'cabin': 'business', 'flights': [{'flight_number': 'HAT181', 'date': '2024-05-19'}, {'flight_number': 'HAT161', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Chen', 'last_name': 'Rossi', 'dob': '1985-08-13'}], 'payment_methods': [{'payment_id': 'certificate_9001327', 'amount': 100}, {'payment_id': 'credit_card_8191674', 'amount': 721}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mei_ito_6207",
+        instruction="Your user id is mei_ito_6207. You want to retrieve the details of your reservation with ID Q8YZY1. Then, you want to upgrade your round-trip flight from Atlanta to Seattle on May 16 and returning on May 17 to business class, using your Mastercard ending in 4474 for the payment. Additionally, you want to update this reservation to include a total of 2 baggages, with 1 being non-free, and you wish to pay for this baggage update with your Mastercard ending in 1276. Furthermore, you would like to book a one-way flight from Atlanta to Seattle on May 18 in economy class for yourself, using your Mastercard ending in 4474 to pay an amount of 162. You do not need any additional baggage for this new reservation, but you do want to include insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'Q8YZY1'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'Q8YZY1', 'cabin': 'business', 'flights': [{'flight_number': 'HAT133', 'date': '2024-05-16'}, {'flight_number': 'HAT220', 'date': '2024-05-17'}], 'payment_id': 'credit_card_8547862'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'Q8YZY1', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_4134857'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mei_ito_6207', 'origin': 'ATL', 'destination': 'SEA', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT133', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Mei', 'last_name': 'Ito', 'dob': 'None'}], 'payment_methods': [{'payment_id': 'credit_card_8547862', 'amount': 162}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="aarav_anderson_6237",
+        instruction="Your user id is aarav_anderson_6237. You want to make a few changes and new bookings regarding your upcoming trips:\n\n1. For your reservation with ID RH6XFN, which involves a round trip from Orlando to Atlanta, update the flight dates. The flight HAT101 should now be on May 20, and flights HAT070 and HAT293 remain on May 19 and May 22, respectively. Ensure you stay in business class and use your Visa card ending in 5537 to cover any payments needed for this update.\n\n2. Update your baggage allowance for reservation BU71UY from New York to Phoenix. Increase the total baggage to 4, with 1 non-free baggage. Use your gift card with a $264 balance to cover any additional charges for the baggage.\n\n3. Cancel your existing reservation HPABG7 from JFK to Phoenix.\n\n4. Book a new one-way flight from JFK to Phoenix on May 19. You want to travel in economy class on flights HAT088 and HAT097. The passenger for this booking should be Aarav Anderson, born on March 15, 1985. Use your MasterCard ending in 8119 for the payment, which will total $387. Include 1 checked baggage and add insurance to this booking.\n\n5. For reservation 2RRU3H, update the passenger list to include Chen Muller, yourself (Aarav Anderson, born on March 15, 1985), and Alex Doe, born on November 3, 1990.\n\nYou are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'RH6XFN', 'cabin': 'business', 'flights': [{'flight_number': 'HAT101', 'date': '2024-05-20'}, {'flight_number': 'HAT070', 'date': '2024-05-19'}, {'flight_number': 'HAT293', 'date': '2024-05-22'}], 'payment_id': 'credit_card_5252591'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'BU71UY', 'total_baggages': 4, 'nonfree_baggages': 1, 'payment_id': 'gift_card_5333120'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'HPABG7'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'aarav_anderson_6237', 'origin': 'JFK', 'destination': 'PHX', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT088', 'date': '2024-05-19'}, {'flight_number': 'HAT097', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Aarav', 'last_name': 'Anderson', 'dob': '1985-03-15'}], 'payment_methods': [{'payment_id': 'credit_card_5100220', 'amount': 387}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_passengers",
+                kwargs={'reservation_id': '2RRU3H', 'passengers': [{'first_name': 'Chen', 'last_name': 'Muller', 'dob': '1999-07-01'}, {'first_name': 'Aarav', 'last_name': 'Anderson', 'dob': '1985-03-15'}, {'first_name': 'Alex', 'last_name': 'Doe', 'dob': '1990-11-03'}]},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="daiki_lee_6144",
+        instruction="Your user id is daiki_lee_6144. You want to cancel your existing reservation with the id IIHXDG for the one-way flight from Philadelphia to San Francisco. Instead, you want to book a new one-way flight on May 18 with flight number HAT199 in economy class. You will be traveling with Raj Muller and another passenger, also named Raj Muller, whose details are already saved in your profile. You want to use your $262 gift card and cover any remaining balance with your Visa ending in 9734. You will have a total of 3 baggages and you want to include insurance for this trip.\n\nAdditionally, for your reservation COVE6R, you want to update the baggages to a total of 3, with 1 non-free baggage, and charge it to your Visa ending in 9734.\n\nLastly, for reservation DF89BM, you want to update the flights to new dates on May 19 with flights HAT079 and HAT020, and retain the return flight HAT263 on May 24. You want to pay for these updates using your Visa ending in 9734. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'IIHXDG'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'daiki_lee_6144', 'origin': 'PHL', 'destination': 'SFO', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT199', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Daiki', 'last_name': 'Lee', 'dob': '1991-05-14'}, {'first_name': 'Raj', 'last_name': 'Muller', 'dob': '1967-10-16'}, {'first_name': 'Raj', 'last_name': 'Muller', 'dob': '1967-10-16'}], 'payment_methods': [{'payment_id': 'gift_card_5128346', 'amount': 262}, {'payment_id': 'credit_card_6198952', 'amount': 212}], 'total_baggages': 3, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'COVE6R', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'credit_card_6198952'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'DF89BM', 'cabin': 'basic_economy', 'flights': [{'flight_number': 'HAT079', 'date': '2024-05-19'}, {'flight_number': 'HAT020', 'date': '2024-05-19'}, {'flight_number': 'HAT263', 'date': '2024-05-24'}], 'payment_id': 'credit_card_6198952'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="juan_brown_7405",
+        instruction="Your user id is juan_brown_7405. You want to make a few changes to your current bookings. First, for your reservation with the id 5Q7ZUK, you would like to upgrade your flights on May 20 from economy to business class, specifically on flight numbers HAT065 and HAT064. To pay for this upgrade, you prefer to use your Mastercard ending in 1752. Additionally, you want to add two checked bags to this reservation and use your $255 gift card for the baggage fees. Lastly, you wish to cancel your reservation with the id 4ALCKY. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '5Q7ZUK', 'cabin': 'business', 'flights': [{'flight_number': 'HAT065', 'date': '2024-05-20'}, {'flight_number': 'HAT064', 'date': '2024-05-20'}], 'payment_id': 'credit_card_2567048'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '5Q7ZUK', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'gift_card_7372169'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '4ALCKY'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="lucas_hernandez_9581",
+        instruction="Your user id is lucas_hernandez_9581. You want to cancel your existing reservation for a one-way trip from Miami to Dallas Fort Worth on May 17 (reservation ID 8833H3). After that, you wish to book a new one-way flight from Miami to Dallas Fort Worth, departing on May 17 and returning on May 18, in economy class. For this new reservation, you want to include Yusuf Hernandez as the passenger. You prefer to pay using your $75 gift card first and cover the remaining balance with your Visa ending in 1497. You want to check in one bag. You do not require travel insurance. Please proceed with these requests, and you are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '8833H3'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'lucas_hernandez_9581', 'origin': 'MIA', 'destination': 'DFW', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT148', 'date': '2024-05-17'}, {'flight_number': 'HAT241', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Yusuf', 'last_name': 'Hernandez', 'dob': '1975-03-18'}], 'payment_methods': [{'payment_id': 'gift_card_1863023', 'amount': 75}, {'payment_id': 'credit_card_2560121', 'amount': 266}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ivan_garcia_1794",
+        instruction="Your user id is ivan_garcia_1794. You want to update your existing reservation (LV5MG2) from Las Vegas to Chicago. You wish to change your flights to May 20, keeping the same flight numbers HAT115 and HAT129. You also want to upgrade to business class for this trip. Additionally, you need to add a total of 2 checked baggages for this reservation. Please use your Visa card ending in 8790 for these updates. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'LV5MG2', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'credit_card_8638712'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'LV5MG2', 'cabin': 'business', 'flights': [{'flight_number': 'HAT115', 'date': '2024-05-20'}, {'flight_number': 'HAT129', 'date': '2024-05-20'}], 'payment_id': 'credit_card_8638712'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="sophia_wilson_1550",
+        instruction="Your user id is sophia_wilson_1550. You need to update your existing reservation ADY1RZ to increase the total number of baggages to 4, with 2 of them being non-free. For this update, you want to use your gift card valued at $276. Additionally, you want to book a one-way flight from Chicago (ORD) to Houston (IAH) on May 18, 2024. You prefer to travel in economy class on flight number HAT147. The passenger for this trip will be Sofia Lopez. You want to include 1 baggage at no additional cost and do not need travel insurance. To pay for this booking, use your $150 certificate, applying $112 from it. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'ADY1RZ', 'total_baggages': 4, 'nonfree_baggages': 2, 'payment_id': 'gift_card_5084861'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'sophia_wilson_1550', 'origin': 'ORD', 'destination': 'IAH', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT147', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Sofia', 'last_name': 'Lopez', 'dob': '1988-10-06'}], 'payment_methods': [{'payment_id': 'certificate_1810837', 'amount': 112}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="noah_kim_6383",
+        instruction="Your user id is noah_kim_6383. For your reservation with ID 6CS5HN, you want to first check the reservation details. Then, you want to update the flights to have a new schedule: fly on flight HAT230 on May 16, flight HAT254 on May 18, flight HAT127 on May 20, and flight HAT119 also on May 20. You want to change the cabin to economy. For the payment of the updated flights, you prefer to use your Mastercard ending in 7476. You also want to add 2 checked bags, paying for them with your gift card valued at $227. Finally, you want to cancel the entire reservation. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': '6CS5HN'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '6CS5HN', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT230', 'date': '2024-05-16'}, {'flight_number': 'HAT254', 'date': '2024-05-18'}, {'flight_number': 'HAT127', 'date': '2024-05-20'}, {'flight_number': 'HAT119', 'date': '2024-05-20'}], 'payment_id': 'credit_card_5904082'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '6CS5HN', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'gift_card_9087959'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '6CS5HN'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="anya_lopez_8637",
+        instruction="Your user id is anya_lopez_8637. You want to make a few changes and bookings for your upcoming travels. First, you would like to update your reservation with ID M7H5MD to change the flights to May 18 with flight numbers HAT197 and HAT020, and upgrade the cabin to economy. You also want to add one checked bag and use your Mastercard ending in 1830 for payment.\n\nNext, you wish to book a new one-way flight from Seattle to San Francisco on May 18 for Daiki Ito, flying in economy class on flight number HAT258. No baggage or insurance is needed for this booking, and you want to pay $153 using your Mastercard ending in 1830.\n\nFinally, you want to cancel your reservation with ID BIW5RK. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'M7H5MD', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT197', 'date': '2024-05-18'}, {'flight_number': 'HAT020', 'date': '2024-05-18'}], 'payment_id': 'credit_card_9701690'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'M7H5MD', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_9701690'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'anya_lopez_8637', 'origin': 'SEA', 'destination': 'SFO', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT258', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Daiki', 'last_name': 'Ito', 'dob': '1993-09-04'}], 'payment_methods': [{'payment_id': 'credit_card_9701690', 'amount': 153}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'BIW5RK'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="chen_martin_5489",
+        instruction="Your user id is chen_martin_5489. You want to modify your existing reservation LYSE93. Please update the flights for this reservation to new dates, specifically flying from Boston to Seattle on May 19 with flight HAT006 and from Seattle to JFK on the same day with flight HAT100. You wish to remain in economy class. Additionally, you want to increase your total baggage to 2, with 1 non-free checked bag. Use your Mastercard ending in 6289 for any additional costs. \n\nAfterward, please search for a direct flight from Boston to Seattle departing on May 20. Following that, book a new one-way reservation for Chen Wilson from Seattle to JFK on May 20, using flight HAT258 in economy class and including 1 checked bag. Use the same Mastercard ending in 6289 for this booking as well. There is no need for travel insurance.\n\nFinally, cancel the current reservation LYSE93 once these changes and new bookings are confirmed. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'LYSE93', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT006', 'date': '2024-05-19'}, {'flight_number': 'HAT100', 'date': '2024-05-19'}], 'payment_id': 'credit_card_3964469'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'LYSE93', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_3964469'},
+            ),
+            Action(
+                name="search_direct_flight",
+                kwargs={'origin': 'BOS', 'destination': 'SEA', 'date': '2024-05-20'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'chen_martin_5489', 'origin': 'SEA', 'destination': 'JFK', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT258', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Chen', 'last_name': 'Wilson', 'dob': '1959-10-03'}], 'payment_methods': [{'payment_id': 'credit_card_3964469', 'amount': 171}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'LYSE93'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="aarav_silva_6452",
+        instruction="Your user id is aarav_silva_6452. You want to update your existing reservation DKGIIH. For your round-trip from Newark to Las Vegas, you want to keep your current flights on May 16th (HAT188 and HAT286) and return on May 19th (HAT192), but change your returning flight from Las Vegas to Houston on May 21st to HAT112. Ensure the cabin remains in business class. Use your Visa card ending in 5471 for this update. Additionally, you want to adjust the baggage on this reservation to a total of 2 bags, with 1 being non-free, and pay for the extra baggage with your Visa card ending in 9752.\n\nFurthermore, you want to book a new one-way flight from Orlando to Detroit on May 17th. You prefer flights HAT214 and HAT106, traveling in economy class. You will be the only passenger, with your details as Aarav Silva, born on April 15, 1990. You want to include 1 non-free baggage and opt for travel insurance. Pay for this booking using your Visa card ending in 5471. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'DKGIIH', 'cabin': 'business', 'flights': [{'flight_number': 'HAT188', 'date': '2024-05-16'}, {'flight_number': 'HAT286', 'date': '2024-05-16'}, {'flight_number': 'HAT112', 'date': '2024-05-21'}, {'flight_number': 'HAT192', 'date': '2024-05-19'}], 'payment_id': 'credit_card_1049698'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'DKGIIH', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_6280160'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'aarav_silva_6452', 'origin': 'MCO', 'destination': 'DTW', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT214', 'date': '2024-05-17'}, {'flight_number': 'HAT106', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Aarav', 'last_name': 'Silva', 'dob': '1990-04-15'}], 'payment_methods': [{'payment_id': 'credit_card_1049698', 'amount': 349}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="emma_kim_9957",
+        instruction="Your user id is emma_kim_9957. You want to update your Atlanta to Orlando trip (reservation id 66EEUA) by adding an extra checked bag, making a total of two bags, and you are using your gift card to cover any additional costs. Also, for your Phoenix to New York trip (reservation id EHGLP3), you want to upgrade your cabin to economy and confirm the same flights on May 17 with flight numbers HAT156 and HAT021. Please charge these changes to your Visa card ending in 5241. Additionally, you want to book a new one-way flight from Newark to Houston on May 17, flying in economy class with flight number HAT188. You are the passenger, and you want to include one checked bag, with payment for this booking to be made using your Visa card ending in 5241. You do not require insurance for this trip. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '66EEUA', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'gift_card_9562694'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'EHGLP3', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT156', 'date': '2024-05-17'}, {'flight_number': 'HAT021', 'date': '2024-05-17'}], 'payment_id': 'credit_card_5832574'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'emma_kim_9957', 'origin': 'EWR', 'destination': 'IAH', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT188', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Emma', 'last_name': 'Kim', 'dob': '1980-03-05'}], 'payment_methods': [{'payment_id': 'credit_card_5832574', 'amount': 198}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="yara_anderson_2080",
+        instruction="Your user id is yara_anderson_2080. You want to update your reservation with id I242VT to maintain the cabin class as business. You need to adjust the flights so that flight number HAT264 remains on May 25, but change flight number HAT197 to May 17. You also want to update your baggage allowance to include 2 bags, with 1 being a non-free baggage. Use your Visa ending in 1777 for these changes.\n\nAdditionally, you want to book a new one-way flight in economy from JFK to Seattle for Raj Patel on May 20, 2024, with flight number HAT276. This reservation should include 1 non-free baggage and travel insurance. You'd like to use your $250 certificate first, and pay the remaining $22 with your Visa ending in 1777. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'I242VT', 'cabin': 'business', 'flights': [{'flight_number': 'HAT264', 'date': '2024-05-25'}, {'flight_number': 'HAT197', 'date': '2024-05-17'}], 'payment_id': 'credit_card_9551009'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'I242VT', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_9551009'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'yara_anderson_2080', 'origin': 'JFK', 'destination': 'SEA', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT276', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Raj', 'last_name': 'Patel', 'dob': '1982-06-08'}], 'payment_methods': [{'payment_id': 'certificate_9706590', 'amount': 250}, {'payment_id': 'credit_card_9551009', 'amount': 22}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="liam_johnson_6488",
+        instruction="Your user id is liam_johnson_6488. You need to cancel your existing reservation with id GAOUDL to free up the necessary funds. Following that, you want to book a one-way flight from San Francisco to Orlando on May 20th. You prefer to fly in economy class and are looking to book on flights HAT295 and HAT145. The passengers for this trip will be James Brown and John Doe. You want to pay using three certificates: two valued at $150 each and one valued at $298. Additionally, you will need to check in two bags and you want to include travel insurance for this reservation.\n\nYou also need to update another reservation with id BWHHHG. You want to adjust the departure dates to May 19th for the flights HAT077 and HAT010, and the return flight HAT299 should be on May 29th. This reservation should remain in business class. For this update, use your Mastercard ending in 1271.\n\nLastly, for your reservation with id P2YRA6, you want to increase the total number of bags to five, with two of them being non-free. Use your Mastercard ending in 1271 for any additional charges. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'GAOUDL'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'liam_johnson_6488', 'origin': 'SFO', 'destination': 'MCO', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT295', 'date': '2024-05-20'}, {'flight_number': 'HAT145', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'James', 'last_name': 'Brown', 'dob': '1980-05-19'}, {'first_name': 'John', 'last_name': 'Doe', 'dob': '1985-03-15'}], 'payment_methods': [{'payment_id': 'certificate_5291966', 'amount': 150}, {'payment_id': 'certificate_5070760', 'amount': 150}, {'payment_id': 'certificate_9510509', 'amount': 298}], 'total_baggages': 2, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'BWHHHG', 'cabin': 'business', 'flights': [{'flight_number': 'HAT077', 'date': '2024-05-19'}, {'flight_number': 'HAT010', 'date': '2024-05-19'}, {'flight_number': 'HAT299', 'date': '2024-05-29'}], 'payment_id': 'credit_card_7726435'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'P2YRA6', 'total_baggages': 5, 'nonfree_baggages': 2, 'payment_id': 'credit_card_7726435'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="juan_li_9671",
+        instruction="Your user id is juan_li_9671. You want to update the reservation with ID ITSLB7 to change the flight dates to May 20, keeping the cabin as business class. Use your Visa card ending in 8442 for any payment adjustments. Additionally, you need to add one more checked bag to your reservation VQWQGF, making it a total of 3 bags, with 1 being non-free. Please use your $120 gift card for this payment. You also wish to cancel your reservation PPHW67. Finally, you want to book a new round-trip flight from Charlotte to Orlando for Daiki and Lei Garcia, departing on May 19 and returning on May 20, in economy class. You prefer using your $500 certificate first and then your Visa ending in 8442 for the remaining balance. Include one checked bag with this booking, and opt for insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'ITSLB7'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'ITSLB7', 'cabin': 'business', 'flights': [{'flight_number': 'HAT133', 'date': '2024-05-20'}, {'flight_number': 'HAT220', 'date': '2024-05-20'}], 'payment_id': 'credit_card_3086580'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'VQWQGF', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'gift_card_7745140'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'PPHW67'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'juan_li_9671', 'origin': 'CLT', 'destination': 'MCO', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT064', 'date': '2024-05-19'}, {'flight_number': 'HAT017', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Daiki', 'last_name': 'Garcia', 'dob': '1973-07-19'}, {'first_name': 'Lei', 'last_name': 'Garcia', 'dob': '1962-08-08'}], 'payment_methods': [{'payment_id': 'certificate_4380964', 'amount': 500}, {'payment_id': 'credit_card_3086580', 'amount': 180}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="evelyn_lee_2325",
+        instruction="Your user id is evelyn_lee_2325. You need to make several changes regarding your travel plans. First, for your existing reservation with the ID RH8JD7, you want to change the cabin to business class for all flights and update the flight dates to May 19, 2024. The flights in question are HAT180, HAT123, and HAT152. Additionally, you want to increase the total baggage allowance to 3 pieces, with 2 of those being non-free. You prefer to use your Visa card ending in 7370 for these changes.\n\nNext, you want to cancel your reservation with the ID HT17KB entirely.\n\nFinally, you would like to book a new one-way flight from IAH to SFO for May 17, 2024, in economy class. The flight number is HAT180. This booking is for two passengers: Daiki Anderson, born on June 15, 1975, and Evelyn Lee, born on January 1, 1980. You want to include 1 checked baggage and do not require insurance for this new reservation. You intend to pay for this booking with your Visa card ending in 7370.\n\nYou are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'RH8JD7', 'cabin': 'business', 'flights': [{'flight_number': 'HAT180', 'date': '2024-05-19'}, {'flight_number': 'HAT123', 'date': '2024-05-19'}, {'flight_number': 'HAT152', 'date': '2024-05-19'}], 'payment_id': 'credit_card_5787244'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'RH8JD7', 'total_baggages': 3, 'nonfree_baggages': 2, 'payment_id': 'credit_card_5787244'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'HT17KB'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'evelyn_lee_2325', 'origin': 'IAH', 'destination': 'SFO', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT180', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Daiki', 'last_name': 'Anderson', 'dob': '1975-06-15'}, {'first_name': 'Evelyn', 'last_name': 'Lee', 'dob': '1980-01-01'}], 'payment_methods': [{'payment_id': 'credit_card_5787244', 'amount': 364}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="fatima_davis_9868",
+        instruction="Your user id is fatima_davis_9868. You want to make a couple of changes for your upcoming trips. First, please update the baggage allowance for your Phoenix to Las Vegas trip with reservation ID SJQ857 to include 2 checked bags. You would like to use your gift card to pay for this update. Then, you need to cancel your Detroit to Chicago reservation with the ID 45GR2L. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'SJQ857', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'gift_card_1255998'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '45GR2L'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="aarav_rossi_9663",
+        instruction="Your user id is aarav_rossi_9663. You want to update your existing reservation (ID: 7CPKXA) to change the flights to economy class, with the following schedule: HAT210, HAT036, and HAT214 on May 16, and HAT073 on May 17. For this change, use your Visa card ending in 6557. Additionally, you need to modify another reservation (ID: H5MJJI) to increase the total baggage to 2, including 1 non-free bag, and also pay for this using your Visa card ending in 6557. Lastly, you want to book a new one-way flight from Houston (IAH) to Las Vegas (LAS) for Raj Wilson on May 19 with flight number HAT131 in economy class. This new booking should include 1 bag with an additional fee, and you want to add insurance. Use your $500 certificate to pay for this reservation, covering an amount of $216. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '7CPKXA', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT210', 'date': '2024-05-16'}, {'flight_number': 'HAT036', 'date': '2024-05-16'}, {'flight_number': 'HAT214', 'date': '2024-05-16'}, {'flight_number': 'HAT073', 'date': '2024-05-17'}], 'payment_id': 'credit_card_6235784'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'H5MJJI', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_6235784'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'aarav_rossi_9663', 'origin': 'IAH', 'destination': 'LAS', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT131', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Raj', 'last_name': 'Wilson', 'dob': '1964-07-12'}], 'payment_methods': [{'payment_id': 'certificate_7776391', 'amount': 216}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="evelyn_johnson_4945",
+        instruction="Your user id is evelyn_johnson_4945. You want to cancel your current reservation from Miami to Orlando with reservation ID XGWNRP. Then, you want to search for a one-stop flight from Miami to Orlando on May 18, 2024. Afterward, you plan to book a new one-way business class reservation for the same route on May 19, 2024, using flight numbers HAT288 and HAT137, with yourself, Evelyn Johnson, as the passenger. You want to use your Mastercard ending in 4357 for payment, and you prefer to have 1 checked bag with insurance included.\n\nAdditionally, you need to update your existing reservation IZFHZ7. You want to increase the total number of baggages to 3, with 1 being nonfree, and you wish to use your $243 gift card to cover any additional costs. Finally, ensure the passenger details are updated to reflect yourself, Evelyn Johnson, and Mia Lopez, your previously saved passenger. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'XGWNRP'},
+            ),
+            Action(
+                name="search_onestop_flight",
+                kwargs={'origin': 'MIA', 'destination': 'MCO', 'date': '2024-05-18'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'evelyn_johnson_4945', 'origin': 'MIA', 'destination': 'MCO', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT288', 'date': '2024-05-19'}, {'flight_number': 'HAT137', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Evelyn', 'last_name': 'Johnson', 'dob': '1990-06-15'}], 'payment_methods': [{'payment_id': 'credit_card_4313689', 'amount': 563}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'IZFHZ7', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'gift_card_3898693'},
+            ),
+            Action(
+                name="update_reservation_passengers",
+                kwargs={'reservation_id': 'IZFHZ7', 'passengers': [{'first_name': 'Evelyn', 'last_name': 'Johnson', 'dob': '1990-06-15'}, {'first_name': 'Mia', 'last_name': 'Lopez', 'dob': '1994-07-05'}]},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="amelia_rossi_1651",
+        instruction="Your user id is amelia_rossi_1651. You want to update your existing reservation MZLGZ8. Please change the flights for your round trip from JFK to IAH to economy class and ensure the flights are on May 19 for HAT023 and HAT082, and on May 20 for HAT085. Additionally, add two checked bags to this reservation. Use your Mastercard ending in 7564 for any payment required for these changes. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'MZLGZ8', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'credit_card_4240750'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'MZLGZ8', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT023', 'date': '2024-05-19'}, {'flight_number': 'HAT082', 'date': '2024-05-19'}, {'flight_number': 'HAT085', 'date': '2024-05-20'}], 'payment_id': 'credit_card_4240750'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="raj_moore_3967",
+        instruction="Your user id is raj_moore_3967. You want to cancel your existing reservation from San Francisco to Las Vegas (reservation id Q0N98F). Then, you want to book a new round-trip flight from San Francisco to Phoenix, departing on May 18 and returning on May 19. You prefer to fly in economy class and your selected flights are HAT144 and HAT027 for the outbound trip, and HAT284 and HAT283 for the return trip. You will be traveling with one checked bag and want to add one additional non-free baggage. You do not require travel insurance. For payment, you would like to use your $47 gift card, your $133 gift card, your $41 gift card, and your Visa ending in 9315 for any remaining balance. Additionally, for your existing reservation B3TFQO, you want to update the baggage allowance to include 3 checked bags, all of which are non-free. You would like to use your $252 gift card for this baggage payment. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'Q0N98F'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'raj_moore_3967', 'origin': 'SFO', 'destination': 'PHX', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT144', 'date': '2024-05-18'}, {'flight_number': 'HAT027', 'date': '2024-05-18'}, {'flight_number': 'HAT284', 'date': '2024-05-19'}, {'flight_number': 'HAT283', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Raj', 'last_name': 'Moore', 'dob': '1990-06-10'}], 'payment_methods': [{'payment_id': 'gift_card_7527433', 'amount': 47}, {'payment_id': 'gift_card_4905505', 'amount': 133}, {'payment_id': 'gift_card_2565175', 'amount': 41}, {'payment_id': 'credit_card_7019543', 'amount': 347}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'B3TFQO', 'total_baggages': 3, 'nonfree_baggages': 3, 'payment_id': 'gift_card_6085766'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mei_brown_7075",
+        instruction="Your user id is mei_brown_7075. You want to update your existing round-trip reservation from Phoenix to Boston (reservation ID 3JA7XV) to change the flight dates. Please adjust the flights so that the first leg from Phoenix to Seattle (Flight HAT045) departs on May 17, while the second leg from Seattle to Boston (Flight HAT194) remains on May 16. Also, modify the return flights from Boston to Orlando (Flight HAT182) and from Orlando to Phoenix (Flight HAT153) to May 19. Ensure that this reservation remains in business class. You want to pay for these updated flights using your Visa card ending in 1663. Additionally, increase the total baggage allowance to 4 bags, of which 2 are non-free, and use your $130 gift card for the baggage payment.\n\nFurthermore, you wish to cancel your separate one-way reservation from Phoenix to Charlotte (reservation ID DB1Y70). After cancellation, book a new one-way flight from Phoenix to Charlotte departing on May 18. The flights should be HAT265 from Phoenix to Detroit and HAT053 from Detroit to Charlotte. This booking should be in basic economy class for Yusuf Silva, born on March 3, 1972. Use your $250 certificate to cover the cost of this new reservation, and you do not want any additional insurance or baggage. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': '3JA7XV'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '3JA7XV', 'cabin': 'business', 'flights': [{'flight_number': 'HAT045', 'date': '2024-05-17'}, {'flight_number': 'HAT194', 'date': '2024-05-16'}, {'flight_number': 'HAT182', 'date': '2024-05-19'}, {'flight_number': 'HAT153', 'date': '2024-05-19'}], 'payment_id': 'credit_card_4920843'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '3JA7XV', 'total_baggages': 4, 'nonfree_baggages': 2, 'payment_id': 'gift_card_8987598'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'DB1Y70'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mei_brown_7075', 'origin': 'PHX', 'destination': 'CLT', 'flight_type': 'one_way', 'cabin': 'basic_economy', 'flights': [{'flight_number': 'HAT265', 'date': '2024-05-18'}, {'flight_number': 'HAT053', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Yusuf', 'last_name': 'Silva', 'dob': '1972-03-03'}], 'payment_methods': [{'payment_id': 'certificate_1585255', 'amount': 179}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="sophia_davis_8874",
+        instruction="Your user id is sophia_davis_8874. You want to update your existing Chicago to Miami reservation (reservation id ZVWQ08). You want to keep it in business class and change the flights to depart on May 19 and return on May 20. The flight numbers should be HAT238, HAT255, and HAT050 on May 19, and HAT104 on May 20. You want to use your Visa card ending in 4373 for payment. Additionally, for your Atlanta to Miami trip (reservation id HFMJKS), you want to increase the total baggage allowance to 2 bags, with 1 being a paid bag. Use your Visa card ending in 5962 for this change. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'ZVWQ08', 'cabin': 'business', 'flights': [{'flight_number': 'HAT238', 'date': '2024-05-19'}, {'flight_number': 'HAT255', 'date': '2024-05-19'}, {'flight_number': 'HAT050', 'date': '2024-05-19'}, {'flight_number': 'HAT104', 'date': '2024-05-20'}], 'payment_id': 'credit_card_4801844'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'HFMJKS', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_3309619'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="daiki_martin_9991",
+        instruction="Your user id is daiki_martin_9991. You want to update your existing reservation from Seattle to New York (reservation ID MH0T63) to change the departure date to May 18, while retaining the same flights: HAT121, HAT081, HAT245, and HAT156. You prefer to fly in economy class for this trip. You want to use your Mastercard ending in 5570 for any additional charges related to this update. Additionally, you would like to add one checked baggage to this reservation, and you prefer to use your $194 gift card for this baggage fee. \n\nSeparately, you want to book a one-way flight for Ethan Moore from Phoenix to Seattle on May 20, with flight number HAT156. You prefer the basic economy cabin for this flight. You plan to use your $194 gift card to cover the cost of this booking. You do not want to purchase travel insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'MH0T63', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT121', 'date': '2024-05-18'}, {'flight_number': 'HAT081', 'date': '2024-05-18'}, {'flight_number': 'HAT245', 'date': '2024-05-18'}, {'flight_number': 'HAT156', 'date': '2024-05-18'}], 'payment_id': 'credit_card_6921949'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'MH0T63', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'gift_card_9217496'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'daiki_martin_9991', 'origin': 'PHX', 'destination': 'SEA', 'flight_type': 'one_way', 'cabin': 'basic_economy', 'flights': [{'flight_number': 'HAT156', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Ethan', 'last_name': 'Moore', 'dob': '1962-05-19'}], 'payment_methods': [{'payment_id': 'gift_card_9217496', 'amount': 80}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ava_jackson_6651",
+        instruction="Your user id is ava_jackson_6651. You want to update your flight reservation for trip GLJF1R from JFK to ORD. Change the travel dates to May 18 for the flights HAT060 and HAT129, and May 20 for flights HAT230 and HAT263, and switch to economy class. Use your Mastercard ending in 3671 for any payment adjustments. Next, you need to cancel the reservation M1OT79 from EWR to DEN. After that, you want to book a new one-way business class flight from Newark to Denver on May 19, with flight numbers HAT270 and HAT262, for yourself and Sophia Moore. You want to include 2 non-free baggages and opt for travel insurance, using your Visa ending in 4906 to pay. Finally, update reservation F5T6Y0 to include 4 total baggages, 2 of which are non-free, using your Visa ending in 2790 for any charges. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'GLJF1R', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT060', 'date': '2024-05-18'}, {'flight_number': 'HAT129', 'date': '2024-05-18'}, {'flight_number': 'HAT230', 'date': '2024-05-20'}, {'flight_number': 'HAT263', 'date': '2024-05-20'}], 'payment_id': 'credit_card_1534658'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'M1OT79'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'ava_jackson_6651', 'origin': 'EWR', 'destination': 'DEN', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT270', 'date': '2024-05-19'}, {'flight_number': 'HAT262', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Ava', 'last_name': 'Jackson', 'dob': '1990-08-12'}, {'first_name': 'Sophia', 'last_name': 'Moore', 'dob': '1960-04-21'}], 'payment_methods': [{'payment_id': 'credit_card_5969112', 'amount': 1460}], 'total_baggages': 2, 'nonfree_baggages': 2, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'F5T6Y0', 'total_baggages': 4, 'nonfree_baggages': 2, 'payment_id': 'credit_card_8519436'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="raj_gonzalez_7490",
+        instruction="Your user id is raj_gonzalez_7490. You need to cancel your current reservation from Charlotte to Chicago (reservation id FEQPKI). After that, you want to book a round-trip flight from Charlotte (CLT) to Newark (EWR) for Liam Sanchez, with a departure on May 17 (flight number HAT108) and a return on May 20 (flight number HAT058). You want to book this trip in economy class and include one checked baggage. You also want to add travel insurance. Please use your Mastercard ending in 9177 to pay for this reservation. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'FEQPKI'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'raj_gonzalez_7490', 'origin': 'CLT', 'destination': 'EWR', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT108', 'date': '2024-05-17'}, {'flight_number': 'HAT058', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Liam', 'last_name': 'Sanchez', 'dob': '1966-03-26'}], 'payment_methods': [{'payment_id': 'credit_card_5736502', 'amount': 447}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="sofia_rossi_7655",
+        instruction="Your user id is sofia_rossi_7655. You want to update your existing reservation YUHMRI for a flight from Dallas (DFW) to Newark (EWR) to change the travel date to May 20, with flight number HAT142. You would like to upgrade to economy class and pay using your Mastercard ending in 5051. Additionally, you want to add 2 checked bags for this trip, which you will also pay for with your Mastercard.\n\nFurthermore, you would like to book a new one-way flight from Phoenix (PHX) to Las Vegas (LAS) on May 19. You want to travel in business class on flight HAT242. This reservation should be for yourself, Sofia Rossi, born on July 16, 1985. You will be bringing 1 checked bag and would prefer not to have travel insurance. Please use your Mastercard ending in 5051 to cover the cost of this booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'YUHMRI', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT142', 'date': '2024-05-20'}], 'payment_id': 'credit_card_8240646'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'YUHMRI', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'credit_card_8240646'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'sofia_rossi_7655', 'origin': 'PHX', 'destination': 'LAS', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT242', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Sofia', 'last_name': 'Rossi', 'dob': '1985-07-16'}], 'payment_methods': [{'payment_id': 'credit_card_8240646', 'amount': 498}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ivan_garcia_1794",
+        instruction="Your user id is ivan_garcia_1794. You want to get the details of your existing reservation with id LV5MG2 and then proceed to cancel it. After that, you are looking for a one-stop flight from Las Vegas (LAS) to Chicago (ORD) on May 18, and you prefer to book a flight on May 19 instead. You want to travel one-way in economy class on flights HAT115 and HAT129, and have one piece of baggage. You prefer to use your Visa card ending in 8790 for payment, and you want to include travel insurance. Additionally, for your reservation PG7O11, you want to update the total number of baggages to three, with one being non-free, and charge this to your Visa card ending in 8149. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'LV5MG2'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'LV5MG2'},
+            ),
+            Action(
+                name="search_onestop_flight",
+                kwargs={'origin': 'LAS', 'destination': 'ORD', 'date': '2024-05-18'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'ivan_garcia_1794', 'origin': 'LAS', 'destination': 'ORD', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT115', 'date': '2024-05-19'}, {'flight_number': 'HAT129', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Ivan', 'last_name': 'Garcia', 'dob': '1994-07-15'}], 'payment_methods': [{'payment_id': 'credit_card_8638712', 'amount': 392}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'PG7O11', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'credit_card_7155120'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="raj_johnson_6495",
+        instruction="Your user id is raj_johnson_6495. You want to make several updates to your reservations. First, for your flight from Los Angeles to Chicago (reservation ID X3UE1S), you wish to increase your total baggage to 3, with 1 of those being a non-free checked bag. You prefer to use your gift card valued at $278 for this payment. \n\nNext, you need to update your Detroit to Detroit round trip (reservation ID NA6PZ3) by changing the cabin to business class and adjusting the flight dates. The flights should be on May 19 for flight numbers HAT275 and HAT106, and on May 18 for flight numbers HAT053 and HAT167. You'd like to use your Mastercard ending in 6259 for this update.\n\nYou also want to cancel your one-way reservation from Orlando to Las Vegas (reservation ID L1VQGP). \n\nFinally, you need to make a new one-way booking from Orlando to Las Vegas on May 19 with flight numbers HAT214 and HAT173 in economy class. The passengers are yourself, Raj Johnson, and Sofia Jackson. You want to pay for this reservation using your Mastercard ending in 2426, and you require insurance for this trip. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'X3UE1S', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'gift_card_3613186'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'NA6PZ3', 'cabin': 'business', 'flights': [{'flight_number': 'HAT275', 'date': '2024-05-19'}, {'flight_number': 'HAT106', 'date': '2024-05-19'}, {'flight_number': 'HAT053', 'date': '2024-05-18'}, {'flight_number': 'HAT167', 'date': '2024-05-18'}], 'payment_id': 'credit_card_5296290'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'L1VQGP'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'raj_johnson_6495', 'origin': 'MCO', 'destination': 'LAS', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT214', 'date': '2024-05-19'}, {'flight_number': 'HAT173', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Sofia', 'last_name': 'Jackson', 'dob': '1986-10-03'}, {'first_name': 'Raj', 'last_name': 'Johnson', 'dob': '1990-04-12'}], 'payment_methods': [{'payment_id': 'credit_card_4188609', 'amount': 642}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="raj_muller_5942",
+        instruction="Your user id is raj_muller_5942. You want to update your flight reservation with id 41X7CX from New York LaGuardia to Detroit on May 18, changing the cabin to business class on flights HAT245 and HAT265. You want to pay for this change with your Mastercard ending in 7990. Additionally, for your reservation with id 5Q85YP from Boston to Minneapolis, you want to increase your total baggage to 3 bags, including 1 non-free bag. You would like to use your gift card with the balance of $276 to cover any additional charges. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '41X7CX', 'cabin': 'business', 'flights': [{'flight_number': 'HAT245', 'date': '2024-05-18'}, {'flight_number': 'HAT265', 'date': '2024-05-18'}], 'payment_id': 'credit_card_3719965'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '5Q85YP', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'gift_card_2496311'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mohamed_moore_2190",
+        instruction="Your user id is mohamed_moore_2190. You want to make several updates and bookings related to your travel plans. First, for your reservation from Newark to Orlando (reservation XJFC6B), you want to add an additional baggage, making it a total of 2 baggages, with 1 being a non-free baggage, and you want to use your $278 gift card for this payment. Next, you want to cancel your reservation from Los Angeles to Miami with reservation ID GM333K. After canceling, you would like to book a new one-way flight from Los Angeles to Miami on May 19, flying in economy class. The flights you want are HAT228 and HAT202 on the same day. You will be traveling alone, and you wish to use your $229 gift card first and cover the remaining balance with your Mastercard ending in 4721. You will also need 1 baggage and would like to include insurance for this trip. Finally, you want to upgrade your previous reservation (XJFC6B) to business class and change the flights to HAT208 on May 20, HAT071 on May 19, HAT298 on May 19, and HAT196 on May 18, paying the difference with your Mastercard ending in 4721. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'XJFC6B', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'gift_card_2854613'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'GM333K'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mohamed_moore_2190', 'origin': 'LAX', 'destination': 'MIA', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT228', 'date': '2024-05-19'}, {'flight_number': 'HAT202', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Mohamed', 'last_name': 'Moore', 'dob': '1990-01-01'}], 'payment_methods': [{'payment_id': 'gift_card_3921150', 'amount': 229}, {'payment_id': 'credit_card_6369550', 'amount': 168}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'XJFC6B', 'cabin': 'business', 'flights': [{'flight_number': 'HAT208', 'date': '2024-05-20'}, {'flight_number': 'HAT071', 'date': '2024-05-19'}, {'flight_number': 'HAT298', 'date': '2024-05-19'}, {'flight_number': 'HAT196', 'date': '2024-05-18'}], 'payment_id': 'credit_card_6369550'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="sofia_santos_3403",
+        instruction="Your user id is sofia_santos_3403. You want to update your reservation with ID 8UW4LT by adding a total of 3 checked bags, with 2 of them being non-free. You would like to use your gift card to cover any additional fees. Additionally, you want to cancel your reservation with ID 62U37I. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '8UW4LT', 'total_baggages': 3, 'nonfree_baggages': 2, 'payment_id': 'gift_card_8467750'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '62U37I'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="harper_thomas_8641",
+        instruction="Your user id is harper_thomas_8641. You need details for your reservation from Chicago to Charlotte (reservation id: I0XQR3). You also want to update this reservation to change the flight dates from May 16 to May 17, with flights HAT289 and HAT016, and keep the cabin in basic economy. Use your Mastercard ending in 2008 for any charges. Additionally, for your reservation from Chicago to New York (reservation id: ZU8VTC), you want to increase your total baggage count to 2, with one being a non-free checked bag, and again, use your Mastercard ending in 2008 for payment. Lastly, you want to book a new one-way business class flight from New York to Miami on May 18 on flight HAT292 for Ivan Muller. Use your Mastercard ending in 2008 to pay $200 for this booking. You do not require any additional baggage or insurance for this new reservation. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'I0XQR3'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'I0XQR3', 'cabin': 'basic_economy', 'flights': [{'flight_number': 'HAT289', 'date': '2024-05-17'}, {'flight_number': 'HAT016', 'date': '2024-05-17'}], 'payment_id': 'credit_card_5794036'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'ZU8VTC', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_5794036'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'harper_thomas_8641', 'origin': 'JFK', 'destination': 'MIA', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT292', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Ivan', 'last_name': 'Muller', 'dob': '1964-04-16'}], 'payment_methods': [{'payment_id': 'credit_card_5794036', 'amount': 200}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="amelia_li_2415",
+        instruction="Your user id is amelia_li_2415. You want to update your reservation Q3Q17C to include a flight on May 20 in business class, ensuring the itinerary includes flights HAT289 on May 20, HAT096 on May 8, HAT264 on May 13, and HAT197 on May 14. Please use your Visa card ending in 4846 for any charges related to this change. For reservation NUCNX0, you want to increase the total number of baggages to 3, with 2 of them being non-free, and use the same Visa card ending in 4846 for payment. Additionally, you would like to cancel reservation ZZF2YA entirely. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'Q3Q17C', 'cabin': 'business', 'flights': [{'flight_number': 'HAT289', 'date': '2024-05-20'}, {'flight_number': 'HAT096', 'date': '2024-05-08'}, {'flight_number': 'HAT264', 'date': '2024-05-13'}, {'flight_number': 'HAT197', 'date': '2024-05-14'}], 'payment_id': 'credit_card_1605369'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'NUCNX0', 'total_baggages': 3, 'nonfree_baggages': 2, 'payment_id': 'credit_card_1605369'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'ZZF2YA'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="amelia_li_7843",
+        instruction="Your user id is amelia_li_7843. You want to update your reservation with ID EMJR8J for your business-class trip. You need to change the flights to include flight HAT084 on May 6, flight HAT299 on May 16, flight HAT075 on May 18, and flight HAT162 on May 20. Additionally, for your reservation with ID OMVBWF, you want to increase the total baggage allowance to 4 bags, including 2 non-free bags. You would like to use your gift card to cover any additional costs. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'EMJR8J', 'cabin': 'business', 'flights': [{'flight_number': 'HAT084', 'date': '2024-05-06'}, {'flight_number': 'HAT299', 'date': '2024-05-16'}, {'flight_number': 'HAT075', 'date': '2024-05-18'}, {'flight_number': 'HAT162', 'date': '2024-05-20'}], 'payment_id': 'gift_card_1785635'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'OMVBWF', 'total_baggages': 4, 'nonfree_baggages': 2, 'payment_id': 'gift_card_1785635'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="liam_muller_3384",
+        instruction="Your user id is liam_muller_3384. You want to cancel the existing reservation for the trip from Orlando to Phoenix under reservation ID QWPXBF. After canceling, you wish to book a new round-trip flight from Orlando (MCO) to Phoenix (PHX) in economy class. The outbound flight should be on May 18 with flight number HAT214, and the return flight should be on May 20 with flight number HAT181. The passenger for this trip will be Ivan Sanchez. You want to carry one checked bag. For payment, you prefer to use your $150 certificate first, followed by your $100 certificate, and then cover any remaining balance with your Mastercard ending in 4133. You want to include travel insurance. Additionally, for your existing reservation HDUF3Q, you want to update the baggage allowance to include two checked bags, both of which should be paid using your Mastercard ending in 4133. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'QWPXBF'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'liam_muller_3384', 'origin': 'MCO', 'destination': 'PHX', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT214', 'date': '2024-05-18'}, {'flight_number': 'HAT181', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Ivan', 'last_name': 'Sanchez', 'dob': '1998-09-20'}], 'payment_methods': [{'payment_id': 'certificate_2323707', 'amount': 150}, {'payment_id': 'certificate_3681264', 'amount': 100}, {'payment_id': 'credit_card_1689335', 'amount': 152}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'HDUF3Q', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'credit_card_1689335'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="harper_patel_1045",
+        instruction="Your user id is harper_patel_1045. You want to cancel your existing reservation from Seattle to Orlando, which is currently under the reservation ID FW5WKH. After canceling, you need to book a new one-way flight from Seattle to Orlando. You want to fly on May 17 and 18, with flight numbers HAT194 and HAT235, respectively. You prefer to travel in economy class and want to include one checked bag. For payment, use your $250 certificate first, and cover the remaining balance with your Mastercard ending in 4111. You also wish to add travel insurance.\n\nAdditionally, you want to update your reservation EBC6NH to include a second bag, one of which is non-free, and charge it to your Mastercard ending in 4111. Lastly, you need to modify your reservation 6O6TNG to reflect a flight date change for both legs, now flying on May 18, with the same flight numbers HAT076 and HAT140. These charges should also go to your Mastercard ending in 4111. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'FW5WKH'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'FW5WKH'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'harper_patel_1045', 'origin': 'SEA', 'destination': 'MCO', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT194', 'date': '2024-05-17'}, {'flight_number': 'HAT235', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Harper', 'last_name': 'Patel', 'dob': '1988-07-21'}], 'payment_methods': [{'payment_id': 'certificate_7437549', 'amount': 250}, {'payment_id': 'credit_card_5323638', 'amount': 98}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'EBC6NH', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_5323638'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '6O6TNG', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT076', 'date': '2024-05-18'}, {'flight_number': 'HAT140', 'date': '2024-05-18'}], 'payment_id': 'credit_card_5323638'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="aarav_martin_4744",
+        instruction="Your user id is aarav_martin_4744. You want to cancel your existing reservation from Miami to Denver, identified by reservation ID OYO62W. After canceling, you wish to book a one-way flight from Miami to Los Angeles on May 19, flight number HAT232, in economy class for Noah Ito, born on February 4, 1952. You want to pay using your gift card with a $33 balance and the remaining amount with your Visa ending in 6967. You will be checking in one bag and do not require insurance. Additionally, for your Detroit to Las Vegas trip (reservation ID RC7KVQ), you want to add another checked bag, totaling four bags, with one non-free bag, and you wish to use your Mastercard ending in 6185 for this. Lastly, for your Charlotte to New York trip (reservation ID BTXA2X), please update the flights to include flight HAT087 on May 27, and flights HAT172 and HAT122 on May 30, all in economy class, and charge it to your Mastercard ending in 6185. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'OYO62W'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'aarav_martin_4744', 'origin': 'MIA', 'destination': 'LAX', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT232', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Noah', 'last_name': 'Ito', 'dob': '1952-02-04'}], 'payment_methods': [{'payment_id': 'gift_card_5564061', 'amount': 33}, {'payment_id': 'credit_card_2700485', 'amount': 80}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'RC7KVQ', 'total_baggages': 4, 'nonfree_baggages': 1, 'payment_id': 'credit_card_4742606'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'BTXA2X', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT087', 'date': '2024-05-27'}, {'flight_number': 'HAT172', 'date': '2024-05-30'}, {'flight_number': 'HAT122', 'date': '2024-05-30'}], 'payment_id': 'credit_card_4742606'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="noah_lopez_2532",
+        instruction="Your user id is noah_lopez_2532. You want to make some changes and new bookings for your upcoming travel plans. First, for your existing round trip from Las Vegas to New York (reservation id E9E7HC), you want to change the departure flights to May 17 and the return flights to May 18, all in economy class. You will use your Visa card ending in 5999 for any additional charges. You also want to add a total of 2 checked bags for this trip, with both being non-free, and charge those to the same Visa card.\n\nNext, you want to cancel your one-way reservation from Phoenix to New York (reservation id 5XOFTB). After that, you want to book a new one-way flight from Phoenix to New York for May 19, flying in business class on flight number HAT066. This booking should include yourself, Noah Lopez, as the passenger. You will carry 1 checked bag, which is non-free, and you want to use your $500 certificate for the payment. You do not want to purchase travel insurance for this new booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'E9E7HC', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT077', 'date': '2024-05-17'}, {'flight_number': 'HAT233', 'date': '2024-05-17'}, {'flight_number': 'HAT060', 'date': '2024-05-18'}, {'flight_number': 'HAT288', 'date': '2024-05-18'}], 'payment_id': 'credit_card_3623927'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'E9E7HC', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'credit_card_3623927'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '5XOFTB'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'noah_lopez_2532', 'origin': 'PHX', 'destination': 'LGA', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT066', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Noah', 'last_name': 'Lopez', 'dob': 'N/A'}], 'payment_methods': [{'payment_id': 'certificate_5542518', 'amount': 464}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="harper_davis_5069",
+        instruction="Your user id is harper_davis_5069. You want to cancel your existing reservation from Miami to Boston with reservation ID W0I4AJ. Then, you want to update your Philadelphia to Charlotte reservation (WLXS0L) to change the flight date to May 17 and upgrade to economy class. Please use your Mastercard ending in 5038 for any additional charges. Furthermore, you wish to book a new one-way flight for James Santos from Miami to Los Angeles on May 20 in basic economy. For this new reservation, you want to use your $282 gift card. You do not need to add any baggage to this booking, but you do want travel insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'W0I4AJ'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'WLXS0L', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT016', 'date': '2024-05-17'}], 'payment_id': 'credit_card_7396423'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'harper_davis_5069', 'origin': 'MIA', 'destination': 'LAX', 'flight_type': 'one_way', 'cabin': 'basic_economy', 'flights': [{'flight_number': 'HAT189', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'James', 'last_name': 'Santos', 'dob': '1954-03-23'}], 'payment_methods': [{'payment_id': 'gift_card_7215260', 'amount': 102}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="evelyn_thomas_5530",
+        instruction="Your user id is evelyn_thomas_5530. You have several requests regarding your reservations. Firstly, you want to update your existing reservation with ID 5V4YVN from Seattle to Orlando, changing the flights to all occur on May 19, and keeping the cabin class as business. You want to use your gift card ending in 8180 for this update. Secondly, you want to cancel your reservation with ID RTRGGW entirely. Next, you would like to book a new one-way flight from Chicago to Seattle for Mohamed Silva on May 20, traveling in business class. You want to use your $150 certificate, your gift card ending in 053, and the remaining balance on your gift card ending in 8180 to pay for this booking. Include one checked bag and add insurance to this reservation. Lastly, you want to add two checked bags to your reservation 7B8CH5, using your gift card ending in 053 for payment. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '5V4YVN', 'cabin': 'business', 'flights': [{'flight_number': 'HAT253', 'date': '2024-05-19'}, {'flight_number': 'HAT013', 'date': '2024-05-19'}, {'flight_number': 'HAT299', 'date': '2024-05-19'}, {'flight_number': 'HAT047', 'date': '2024-05-19'}], 'payment_id': 'gift_card_1288180'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'RTRGGW'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'evelyn_thomas_5530', 'origin': 'ORD', 'destination': 'SEA', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT039', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Mohamed', 'last_name': 'Silva', 'dob': '1959-12-21'}], 'payment_methods': [{'payment_id': 'certificate_1610366', 'amount': 150}, {'payment_id': 'gift_card_3146053', 'amount': 27}, {'payment_id': 'gift_card_1288180', 'amount': 136}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '7B8CH5', 'total_baggages': 2, 'nonfree_baggages': 0, 'payment_id': 'gift_card_3146053'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="raj_gonzalez_7490",
+        instruction="Your user id is raj_gonzalez_7490. You want to update your existing reservation MTCVDL for your trip from Las Vegas to Detroit, departing on May 20 and returning on May 24, to upgrade the cabin to business class for all flights: HAT284, HAT265, HAT275, and HAT259. Additionally, you want to add 2 non-free checked bags to this reservation. You prefer to use your Mastercard ending in 9177 for any additional charges. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'MTCVDL', 'cabin': 'business', 'flights': [{'flight_number': 'HAT284', 'date': '2024-05-20'}, {'flight_number': 'HAT265', 'date': '2024-05-20'}, {'flight_number': 'HAT275', 'date': '2024-05-24'}, {'flight_number': 'HAT259', 'date': '2024-05-24'}], 'payment_id': 'credit_card_5736502'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'MTCVDL', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'credit_card_5736502'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="olivia_jackson_7257",
+        instruction="Your user id is olivia_jackson_7257. You want to cancel your existing round-trip reservation from Chicago (ORD) to Phoenix (PHX) with the reservation ID LDZCLM. After canceling, you wish to book a new round-trip flight from Chicago to Phoenix. The flights you prefer are on May 16, with flight numbers HAT230 and HAT035, and returning on May 18 with flight numbers HAT152 and HAT044. You wish to book these flights in business class for two passengers: Aarav Johansson and yourself, Olivia Jackson. You want to pay for this booking using your Visa card ending in 3838. You do not wish to add any baggage or purchase insurance for this reservation. Additionally, for your reservation with ID NQ4Y0O, you would like to update the baggage to a total of 5 bags, of which 2 are non-free, and you want to pay for this update using your Visa card ending in 3838. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'LDZCLM'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'olivia_jackson_7257', 'origin': 'ORD', 'destination': 'PHX', 'flight_type': 'round_trip', 'cabin': 'business', 'flights': [{'flight_number': 'HAT230', 'date': '2024-05-16'}, {'flight_number': 'HAT035', 'date': '2024-05-16'}, {'flight_number': 'HAT152', 'date': '2024-05-18'}, {'flight_number': 'HAT044', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Aarav', 'last_name': 'Johansson', 'dob': '1983-04-19'}, {'first_name': 'Olivia', 'last_name': 'Jackson', 'dob': '1990-07-25'}], 'payment_methods': [{'payment_id': 'credit_card_2480682', 'amount': 2030}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'NQ4Y0O', 'total_baggages': 5, 'nonfree_baggages': 2, 'payment_id': 'credit_card_2480682'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ava_brown_3860",
+        instruction="Your user id is ava_brown_3860. You want to make several changes to your travel plans. First, update your existing reservation JL63HM to change the flight date to May 20, 2024, while keeping the business class cabin. Use your Visa card ending in 3642 for any associated charges. Next, add one checked bag to your reservation A3ARY5, making it one non-free baggage item, and charge this to the same Visa card ending in 3642.\n\nAdditionally, you would like to cancel your one-way reservation from MCO to PHX with the reservation ID GYDZOY. Once that's done, book a new one-way business class flight on May 19, 2024, from MCO to PHX with the flight number HAT048. You want to travel as Ava Brown, born on November 1, 1958, and include insurance and one checked bag. Pay using your $500 certificate first, and any remaining balance should be charged to your Visa card ending in 3642. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'JL63HM', 'cabin': 'business', 'flights': [{'flight_number': 'HAT146', 'date': '2024-05-20'}], 'payment_id': 'credit_card_1684579'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'A3ARY5', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_1684579'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'GYDZOY'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'ava_brown_3860', 'origin': 'MCO', 'destination': 'PHX', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT048', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Ava', 'last_name': 'Brown', 'dob': '1985-02-02'}], 'payment_methods': [{'payment_id': 'certificate_2005805', 'amount': 500}, {'payment_id': 'credit_card_1684579', 'amount': 17}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="sofia_santos_3403",
+        instruction="Your user id is sofia_santos_3403. You want to update your current reservation from Houston to Denver (reservation ID 8UW4LT). You'd like to change the flight dates to May 19, keeping the same cabin class as business. The flights are with the flight numbers HAT190 and HAT162. You also wish to increase your baggage allowance to a total of 3 bags, with 1 being a non-free baggage. Use your gift card to cover these changes.\n\nAdditionally, you want to book a new one-way business class flight for Anya Moore from New York (LGA) to Phoenix on May 17, with the flight number HAT002. There will be no checked bags, and no insurance is required. Please use your gift card to pay for this booking as well. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '8UW4LT', 'cabin': 'business', 'flights': [{'flight_number': 'HAT190', 'date': '2024-05-19'}, {'flight_number': 'HAT162', 'date': '2024-05-19'}], 'payment_id': 'gift_card_8467750'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '8UW4LT', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'gift_card_8467750'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'sofia_santos_3403', 'origin': 'LGA', 'destination': 'PHX', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT002', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Anya', 'last_name': 'Moore', 'dob': '1952-10-26'}], 'payment_methods': [{'payment_id': 'gift_card_8467750', 'amount': 419}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="liam_wilson_9173",
+        instruction="Your user id is liam_wilson_9173. You want to cancel your existing reservation from San Francisco to Newark (reservation ID 8PSKPZ). Then, you wish to book a new one-way flight from San Francisco to Newark in basic economy class. The flights should be on May 19 with flight number HAT082 and on May 20 with flight number HAT207. The passenger for this new booking is Omar Taylor. You want to use your gift card with a balance of $204 to cover the payment. You prefer to include travel insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '8PSKPZ'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'liam_wilson_9173', 'origin': 'SFO', 'destination': 'EWR', 'flight_type': 'one_way', 'cabin': 'basic_economy', 'flights': [{'flight_number': 'HAT082', 'date': '2024-05-19'}, {'flight_number': 'HAT207', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Omar', 'last_name': 'Taylor', 'dob': '1976-04-12'}], 'payment_methods': [{'payment_id': 'gift_card_3863533', 'amount': 190}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ivan_taylor_6615",
+        instruction="Your user id is ivan_taylor_6615. You need to cancel your current one-way flight reservation from Boston to Charlotte on May 12 under reservation ID 7GJ1NY for Aarav Kim. After canceling, you want to book a new one-way flight from Atlanta to Charlotte on May 19 in economy class for Aarav Kim. Use your $500 certificate to cover the cost of this new reservation. Additionally, for your round-trip reservation from Los Angeles to Houston with reservation ID PK9XO8, you want to update the baggage allowance to include 3 total bags, with 1 being a non-free checked bag. Use your Visa card ending in 1656 for any additional charges related to the baggage update. You do not want to add any insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '7GJ1NY'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'ivan_taylor_6615', 'origin': 'ATL', 'destination': 'CLT', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT260', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Aarav', 'last_name': 'Kim', 'dob': '1962-10-28'}], 'payment_methods': [{'payment_id': 'certificate_1960821', 'amount': 196}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'PK9XO8', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'credit_card_1885633'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="fatima_moore_8184",
+        instruction="Your user id is fatima_moore_8184. You want to first retrieve the details of your reservation with ID RDBK8Y. Next, you need to cancel your reservation with ID 9K0R35. After that, you want to book a round-trip flight from San Francisco to Phoenix in economy class. The outbound flight (HAT123) is on May 16, 2024, and the return flight (HAT159) is on May 19, 2024, for the passenger Aarav Khan, born on December 7, 1996. You will have one checked baggage and want to include insurance. You prefer to pay $167 with your gift card and the remaining amount with your Visa ending in 9755.\n\nAdditionally, please update the passengers on the reservation with ID RDBK8Y to include yourself, Fatima Moore, with the correct birth date of May 18, 1961, and Aarav Khan. Finally, you want to update the baggage allowance on reservation T4JX41 to include two bags in total, with one being a non-free baggage. For this, you will use your Visa ending in 9755. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'RDBK8Y'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '9K0R35'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'fatima_moore_8184', 'origin': 'SFO', 'destination': 'PHX', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT123', 'date': '2024-05-16'}, {'flight_number': 'HAT159', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Aarav', 'last_name': 'Khan', 'dob': '1996-12-07'}], 'payment_methods': [{'payment_id': 'gift_card_1034889', 'amount': 167}, {'payment_id': 'credit_card_4151073', 'amount': 161}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_passengers",
+                kwargs={'reservation_id': 'RDBK8Y', 'passengers': [{'first_name': 'Fatima', 'last_name': 'Moore', 'dob': '1980-11-23'}, {'first_name': 'Aarav', 'last_name': 'Khan', 'dob': '1996-12-07'}]},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'T4JX41', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_4151073'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mohamed_silva_9265",
+        instruction="Your user id is mohamed_silva_9265. You want to upgrade your existing reservation (K1NW8N) for flights from JFK to SFO, SFO to SEA, and SEA to JFK on May 26 and May 28 to business class. Additionally, you want to add a total of 3 checked baggages. You would like to use your Mastercard ending in 9363 to cover the costs. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'K1NW8N', 'cabin': 'business', 'flights': [{'flight_number': 'HAT023', 'date': '2024-05-26'}, {'flight_number': 'HAT204', 'date': '2024-05-28'}, {'flight_number': 'HAT021', 'date': '2024-05-28'}], 'payment_id': 'credit_card_2198526'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'K1NW8N', 'total_baggages': 3, 'nonfree_baggages': 0, 'payment_id': 'credit_card_2198526'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="raj_ito_8898",
+        instruction="Your user id is raj_ito_8898. You want to upgrade your Minneapolis to Orlando round-trip reservation (reservation ID ZWI06B) to economy class for flights HAT098 on May 21 and HAT298 on May 29, using your Visa card ending in 7324 for payment. Additionally, for your Boston to Orlando trip (reservation ID JNV20G), you would like to add a second checked bag, making it a total of two bags, with one being non-free. Please use your Mastercard ending in 9546 for this payment. Moreover, you want to book a one-way flight from Detroit to Phoenix on May 18 for Isabella Johansson in economy class on flight HAT275, and you prefer to use your Visa card ending in 7324 to pay. You do not want insurance for this booking, and there are no additional bags. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'ZWI06B', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT098', 'date': '2024-05-21'}, {'flight_number': 'HAT298', 'date': '2024-05-29'}], 'payment_id': 'credit_card_8368961'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'JNV20G', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_7614961'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'raj_ito_8898', 'origin': 'DTW', 'destination': 'PHX', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT275', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Isabella', 'last_name': 'Johansson', 'dob': '1960-08-21'}], 'payment_methods': [{'payment_id': 'credit_card_8368961', 'amount': 195}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="harper_smith_3981",
+        instruction="Your user id is harper_smith_3981. You want to upgrade the cabin for your Seattle to Phoenix round-trip reservation (reservation id WXZ65N) to business class. The flights for this trip are on May 18 and May 19, with flight numbers HAT236, HAT173, and HAT047. You want to use your Mastercard ending in 1680 for this upgrade. Additionally, you need to book a new one-way flight from Las Vegas to Atlanta on May 19 in economy class, on flight number HAT005. You wish to include one checked baggage for this trip and add insurance. You would like to use your gift card balance of $162 first, and cover any remaining amount with your Mastercard ending in 1680. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'WXZ65N', 'cabin': 'business', 'flights': [{'flight_number': 'HAT236', 'date': '2024-05-18'}, {'flight_number': 'HAT173', 'date': '2024-05-19'}, {'flight_number': 'HAT047', 'date': '2024-05-19'}], 'payment_id': 'credit_card_9955122'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'harper_smith_3981', 'origin': 'LAS', 'destination': 'ATL', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT005', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Harper', 'last_name': 'Smith', 'dob': None}], 'payment_methods': [{'payment_id': 'gift_card_7747327', 'amount': 162}, {'payment_id': 'credit_card_9955122', 'amount': 45}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ethan_hernandez_6400",
+        instruction="Your user id is ethan_hernandez_6400. For your reservation from Las Vegas to San Francisco (reservation id 7HXRPX), you want to add an additional checked bag, making it a total of 2 bags, with one being a paid bag. You would like to use your Visa card ending in 1332 for this payment. Additionally, for your one-way trip from New York to Boston (reservation id 4069WE), you would like to change your cabin class to economy for both flights on May 19, with flight numbers HAT083 and HAT194. Again, you wish to use the same Visa card ending in 1332 for this transaction. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '7HXRPX', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_9038105'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '4069WE', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT083', 'date': '2024-05-19'}, {'flight_number': 'HAT194', 'date': '2024-05-19'}], 'payment_id': 'credit_card_9038105'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="daiki_muller_1116",
+        instruction="Your user id is daiki_muller_1116. You need to update your reservation with ID 7WPL39. First, you want to check the details of this reservation. Then, you want to change your flight from Denver to Newark to fly on May 18 instead of May 28, still in economy class. Use flight numbers HAT246 and HAT142 for this update. You want to pay for this flight change with your Visa card ending in 2135. Additionally, you want to add two checked bags to this reservation, one of which is not free. For the baggage fees, you prefer to use your other Visa card ending in 5541.\n\nSeparately, you want to book a one-way business class ticket from Los Angeles to Newark for Amelia Kim on May 19, using flight number HAT228. You want to include one checked bag and opt for travel insurance. Please pay for this new reservation using your Visa card ending in 2135, with a payment amount of $474. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': '7WPL39'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '7WPL39', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT246', 'date': '2024-05-18'}, {'flight_number': 'HAT142', 'date': '2024-05-18'}], 'payment_id': 'credit_card_2408938'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '7WPL39', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_4303738'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'daiki_muller_1116', 'origin': 'LAX', 'destination': 'EWR', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT228', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Amelia', 'last_name': 'Kim', 'dob': '1978-04-20'}], 'payment_methods': [{'payment_id': 'credit_card_2408938', 'amount': 474}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="lucas_lee_1916",
+        instruction="Your user id is lucas_lee_1916. You want to update your existing reservation ZD6TDD from Newark to Philadelphia to change your cabin to business class for both flights on May 18. Use your Visa ending in 7254 to cover this change. Also, increase the baggage allowance to a total of 3 bags, with 1 being a non-free baggage, and use your Visa ending in 2968 for the baggage payment. Additionally, you want to book a new one-way flight from Chicago to Houston on May 19, flying in economy class. The flight number is HAT147, and you want to include 2 bags, with 1 non-free. Please ensure that you add travel insurance for this trip. Use your Visa ending in 3171 for this booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'ZD6TDD', 'cabin': 'business', 'flights': [{'flight_number': 'HAT215', 'date': '2024-05-18'}, {'flight_number': 'HAT205', 'date': '2024-05-18'}], 'payment_id': 'credit_card_2075934'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'ZD6TDD', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'credit_card_5586615'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'lucas_lee_1916', 'origin': 'ORD', 'destination': 'IAH', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT147', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Lucas', 'last_name': 'Lee', 'dob': '1990-01-15'}], 'payment_methods': [{'payment_id': 'credit_card_3182836', 'amount': 262}], 'total_baggages': 2, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="sofia_santos_3403",
+        instruction="Your user id is sofia_santos_3403. You want to update your existing reservation (ID: 8UW4LT) from Houston to Denver to include a total of 3 baggages, with 1 of them being a non-free checked bag. Please use your gift card to cover any additional charges associated with this change. Additionally, you want to book a new one-way flight for Anya Moore from Phoenix to San Francisco on May 17, flying in economy class on flight HAT283. This reservation should not include any baggage or travel insurance. You want to use your gift card to pay for this booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '8UW4LT', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'gift_card_8467750'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'sofia_santos_3403', 'origin': 'PHX', 'destination': 'SFO', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT283', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Anya', 'last_name': 'Moore', 'dob': '1952-10-26'}], 'payment_methods': [{'payment_id': 'gift_card_8467750', 'amount': 135}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="fatima_rossi_9268",
+        instruction="Your user id is fatima_rossi_9268. You want to update your existing reservation NYDGLJ for a round trip from Houston to Chicago. Change the flights to May 18, keeping it in economy class. Use your Visa card ending in 7519 to cover any charges. Additionally, you want to increase the baggage allowance to a total of 3 bags, with 1 being a non-free bag, and pay for the extra baggage with your $110 gift card. Also, you need to cancel your reservation SGTEEY for the one-way trip from New York to Philadelphia. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'NYDGLJ', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT068', 'date': '2024-05-18'}, {'flight_number': 'HAT261', 'date': '2024-05-18'}, {'flight_number': 'HAT165', 'date': '2024-05-18'}], 'payment_id': 'credit_card_5505477'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'NYDGLJ', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'gift_card_2885448'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'SGTEEY'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="evelyn_anderson_4579",
+        instruction="Your user id is evelyn_anderson_4579. You want to update your reservation for the Phoenix to San Francisco trip (reservation id 867TY6) to change the flight dates. You wish to fly from Phoenix to San Francisco on May 16 with flight number HAT009, and then return from San Francisco to Phoenix on May 19 with flights HAT204 and HAT236. You prefer to stay in economy class and want to use your Visa card ending in 2413 for payment.\n\nAdditionally, you want to modify your reservation from New York to Boston (reservation id WR9XBG) to include a total of 3 baggages, one of which will incur a fee. You want to use your Visa card ending in 2413 for this payment as well.\n\nMoreover, you need to cancel your one-way reservation from Miami to Newark (reservation id QY2GP4).\n\nFinally, you would like to book a new one-way flight from Miami to Newark on May 17, choosing flight numbers HAT250 and HAT012. You want to travel in economy class and have no additional baggage requirements or insurance. For payment, you want to use your gift card valued at $104 first, and cover the remaining balance with your Visa card ending in 2413. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '867TY6', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT009', 'date': '2024-05-16'}, {'flight_number': 'HAT204', 'date': '2024-05-19'}, {'flight_number': 'HAT236', 'date': '2024-05-19'}], 'payment_id': 'credit_card_3972353'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'WR9XBG', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'credit_card_3972353'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'QY2GP4'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'evelyn_anderson_4579', 'origin': 'MIA', 'destination': 'EWR', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT250', 'date': '2024-05-17'}, {'flight_number': 'HAT012', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Evelyn', 'last_name': 'Anderson', 'dob': '1980-08-10'}], 'payment_methods': [{'payment_id': 'gift_card_4482008', 'amount': 104}, {'payment_id': 'credit_card_3972353', 'amount': 173}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="juan_sanchez_3680",
+        instruction="Your user id is juan_sanchez_3680. You want to update your existing reservation from Charlotte to New York (reservation ID 42IIXI) to fly on May 19, in business class. You will be on flight HAT176 from Charlotte to Detroit and then flight HAT263 from Detroit to New York. You want to pay for this update using your Visa card ending in 8861. Additionally, for your reservation from Philadelphia to Newark (reservation ID PZUNWM), you want to add a total of two bags, with one being chargeable, and you want to pay for this baggage using your $76 gift card. Finally, you wish to book a new one-way flight for Mason Sanchez from Seattle to San Francisco on May 20, in economy class, on flight HAT107. You want to include one checked bag and decline insurance for this booking, using your Visa card ending in 8861 to pay. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '42IIXI', 'cabin': 'business', 'flights': [{'flight_number': 'HAT176', 'date': '2024-05-19'}, {'flight_number': 'HAT263', 'date': '2024-05-19'}], 'payment_id': 'credit_card_6952762'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'PZUNWM', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'gift_card_2850297'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'juan_sanchez_3680', 'origin': 'SEA', 'destination': 'SFO', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT107', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Mason', 'last_name': 'Sanchez', 'dob': '1992-03-23'}], 'payment_methods': [{'payment_id': 'credit_card_6952762', 'amount': 195}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="yara_rossi_1806",
+        instruction="Your user id is yara_rossi_1806. You want to make changes to two of your reservations. First, for your trip from San Francisco to Boston under reservation ID LQZT3N, you want to change the flight date to May 17, while keeping the flight number HAT295, and upgrade to economy class. Please use your Visa ending in 3926 for any payment required. Additionally, for your round-trip reservation from San Francisco to Newark with reservation ID EEK48Y, you would like to add a total of 3 checked bags. Again, use your Visa ending in 3926 for payment. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'LQZT3N', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT295', 'date': '2024-05-17'}], 'payment_id': 'credit_card_6432530'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'EEK48Y', 'total_baggages': 3, 'nonfree_baggages': 0, 'payment_id': 'credit_card_6432530'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="liam_lee_5870",
+        instruction="Your user id is liam_lee_5870. You want to cancel your existing reservation from Los Angeles to Charlotte with reservation id 1CUG9J. Then, search for a new direct flight from Los Angeles to Charlotte on May 17. Once you find an appropriate flight, book a one-way trip in economy class for Raj Hernandez and Sofia Jackson on May 17, with flight numbers HAT228 and HAT270. You want to use your $49 gift card to pay first, and the remaining balance should be paid with your Mastercard ending in 8261. You also need to include 2 baggages, with 1 being a non-free baggage. Additionally, update your reservation EWO4IQ to change the travel date to May 20 with the same flight numbers HAT299 and HAT047, upgrade to economy class, and add 1 non-free baggage using your Mastercard ending in 8261. You do not want insurance for these bookings. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '1CUG9J'},
+            ),
+            Action(
+                name="search_direct_flight",
+                kwargs={'origin': 'LAX', 'destination': 'CLT', 'date': '2024-05-17'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'liam_lee_5870', 'origin': 'LAX', 'destination': 'CLT', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT228', 'date': '2024-05-17'}, {'flight_number': 'HAT270', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Raj', 'last_name': 'Hernandez', 'dob': '1964-07-10'}, {'first_name': 'Sofia', 'last_name': 'Jackson', 'dob': '1964-10-10'}], 'payment_methods': [{'payment_id': 'gift_card_6478145', 'amount': 49}, {'payment_id': 'credit_card_1015550', 'amount': 625}], 'total_baggages': 2, 'nonfree_baggages': 1, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'EWO4IQ', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_1015550'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'EWO4IQ', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT299', 'date': '2024-05-20'}, {'flight_number': 'HAT047', 'date': '2024-05-20'}], 'payment_id': 'credit_card_1015550'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ivan_garcia_1794",
+        instruction="Your user id is ivan_garcia_1794. You want to update your reservation LV5MG2 to change the cabin to business class. You want to fly on May 20, taking flight HAT115 and then HAT129. You'd like to use your Visa card ending in 8790 for this transaction. Additionally, you want to add one checked bag to this reservation and pay for it with your Visa card ending in 8149. \n\nNext, you need to cancel your current reservation PG7O11. After cancellation, you wish to book a new round-trip from Philadelphia (PHL) to LaGuardia (LGA) in business class, departing on May 18 with flight HAT296 and returning on May 19 with flight HAT172. For this new booking, you want to include three passengers: Omar Santos, yourself, Ivan Garcia, and Maria Garcia. You plan to use your Visa card ending in 8790 to pay for this, and you want to include insurance in the booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'LV5MG2', 'cabin': 'business', 'flights': [{'flight_number': 'HAT115', 'date': '2024-05-20'}, {'flight_number': 'HAT129', 'date': '2024-05-20'}], 'payment_id': 'credit_card_8638712'},
+            ),
+            Action(
+                name="calculate",
+                kwargs={'expression': '378 + 337 + 30'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'LV5MG2', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_7155120'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'PG7O11'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'ivan_garcia_1794', 'origin': 'PHL', 'destination': 'LGA', 'flight_type': 'round_trip', 'cabin': 'business', 'flights': [{'flight_number': 'HAT296', 'date': '2024-05-18'}, {'flight_number': 'HAT172', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Omar', 'last_name': 'Santos', 'dob': '1969-09-19'}, {'first_name': 'Ivan', 'last_name': 'Garcia', 'dob': '1980-02-29'}, {'first_name': 'Maria', 'last_name': 'Garcia', 'dob': '1982-01-15'}], 'payment_methods': [{'payment_id': 'credit_card_8638712', 'amount': 1725}], 'total_baggages': 2, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="harper_kovacs_3082",
+        instruction="Your user id is harper_kovacs_3082. You want to update your reservation Q32WJB for your trip from JFK to DFW. Keep the business class cabin and flights on May 17 and return on May 20. You prefer using your Mastercard ending in 7184 for this update. Additionally, you want to add 2 checked bags to reservation AYVIYO, and you will use your other Mastercard ending in 2526 for this. You are looking for a one-stop flight from JFK to SEA on May 16. Lastly, you want to cancel your one-way reservation I45O37. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'Q32WJB', 'cabin': 'business', 'flights': [{'flight_number': 'HAT083', 'date': '2024-05-17'}, {'flight_number': 'HAT055', 'date': '2024-05-17'}, {'flight_number': 'HAT282', 'date': '2024-05-20'}, {'flight_number': 'HAT233', 'date': '2024-05-20'}], 'payment_id': 'credit_card_1977273'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'AYVIYO', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'credit_card_1779448'},
+            ),
+            Action(
+                name="search_onestop_flight",
+                kwargs={'origin': 'JFK', 'destination': 'SEA', 'date': '2024-05-16'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'I45O37'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="chen_nguyen_2677",
+        instruction="Your user id is chen_nguyen_2677. You want to update your existing reservation with id 5HVW7S from Boston to Newark, returning to Boston. You want to change the cabin to business class and adjust the dates for both outbound and return flights to May 18 and May 19, respectively. Please use your Mastercard ending in 9744 for this update. Additionally, you want to retrieve the details for your reservation with id VHV4BG. For this reservation, you want to increase the total baggage count to 3, with 1 being non-free, and use your Mastercard ending in 7566 for the payment. Lastly, you want to book a new one-way trip from Phoenix to LaGuardia on May 17 in economy class for Yusuf Nguyen, including travel insurance. Please use your Mastercard ending in 7566 to pay for this new booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '5HVW7S', 'cabin': 'business', 'flights': [{'flight_number': 'HAT277', 'date': '2024-05-18'}, {'flight_number': 'HAT157', 'date': '2024-05-18'}, {'flight_number': 'HAT270', 'date': '2024-05-19'}, {'flight_number': 'HAT064', 'date': '2024-05-19'}], 'payment_id': 'credit_card_2810906'},
+            ),
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'VHV4BG'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'VHV4BG', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'credit_card_1677722'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'chen_nguyen_2677', 'origin': 'PHX', 'destination': 'LGA', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT226', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Yusuf', 'last_name': 'Nguyen', 'dob': '1975-12-05'}], 'payment_methods': [{'payment_id': 'credit_card_1677722', 'amount': 167}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="olivia_gonzalez_2305",
+        instruction="Your user id is olivia_gonzalez_2305. You want to update your reservation number THY2DG. You need to upgrade the cabin from economy to business class for your flights on May 19. The flight numbers are HAT248 and HAT119. You would like to use your Mastercard ending in 9475 for this upgrade. Additionally, you want to include two checked bags, for which you will use your gift card. Lastly, you need to cancel the reservation K67C4W. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'THY2DG'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'THY2DG', 'cabin': 'business', 'flights': [{'flight_number': 'HAT248', 'date': '2024-05-19'}, {'flight_number': 'HAT119', 'date': '2024-05-19'}], 'payment_id': 'credit_card_9969263'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'THY2DG', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'gift_card_2200803'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'K67C4W'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mei_thomas_2630",
+        instruction="Your user id is mei_thomas_2630. You want to update your existing reservation with id U1YV6I for a flight from Orlando to Las Vegas. You want to change the flight to economy class on May 18, maintaining the same flight number, HAT101. You also want to add two pieces of baggage, one of which is non-free. Please use your Visa card ending in 8387 for these updates.\n\nAdditionally, you want to book a new one-way flight from Las Vegas to Phoenix on May 18 in business class. The flight number should be HAT244, and the passenger is Mei Thomas, born January 1, 1990. You wish to carry one piece of baggage with no additional charges. For this booking, use your $171 gift card and charge the remaining balance of $297 to your Visa card ending in 8387. You want to include travel insurance for this booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'U1YV6I'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'U1YV6I', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT101', 'date': '2024-05-18'}], 'payment_id': 'credit_card_1347098'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'U1YV6I', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_1347098'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mei_thomas_2630', 'origin': 'LAS', 'destination': 'PHX', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT244', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Mei', 'last_name': 'Thomas', 'dob': '1990-01-01'}], 'payment_methods': [{'payment_id': 'gift_card_1173609', 'amount': 171}, {'payment_id': 'credit_card_1347098', 'amount': 297}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ava_santos_3700",
+        instruction="Your user id is ava_santos_3700. You need to cancel your existing reservation with the id KZD31Z for your round-trip flight between Houston (IAH) and Newark (EWR). After canceling, you want to book a new round-trip in business class for the same route, departing on May 18 with flight HAT149 and returning on May 19 with flight HAT056. Please ensure that only Daiki Jackson is listed as the passenger for this new reservation. You are bringing a total of 3 bags, with no additional nonfree baggages. You prefer not to purchase travel insurance. You want to use your gift card to cover a payment of $574. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'KZD31Z', 'cabin': 'business', 'flights': [{'flight_number': 'HAT149', 'date': '2024-05-18'}, {'flight_number': 'HAT056', 'date': '2024-05-19'}], 'payment_id': 'gift_card_1756078'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'KZD31Z', 'total_baggages': 4, 'nonfree_baggages': 1, 'payment_id': 'gift_card_1756078'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'KZD31Z'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'ava_santos_3700', 'origin': 'IAH', 'destination': 'EWR', 'flight_type': 'round_trip', 'cabin': 'business', 'flights': [{'flight_number': 'HAT149', 'date': '2024-05-18'}, {'flight_number': 'HAT056', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Daiki', 'last_name': 'Jackson', 'dob': '1983-03-16'}], 'payment_methods': [{'payment_id': 'gift_card_1756078', 'amount': 574}], 'total_baggages': 3, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="yusuf_patel_4029",
+        instruction="Your user id is yusuf_patel_4029. You need to update your travel plans. For your San Francisco to Boston round trip under reservation ID 7P3LPD, you'd like to adjust the travel date for the second leg of your journey from May 5 to May 16, while keeping the cabin class as business. The flights involved are HAT204 on May 5, HAT194 on May 16, HAT006 on May 17, and HAT107 on May 17. Please use your Visa card ending in 1576 to handle this update.\n\nAdditionally, for your one-way trip from Philadelphia to Chicago with reservation ID 847MY1, you want to add one checked baggage and one non-free baggage. Please charge this to your Mastercard ending in 6922. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '7P3LPD', 'cabin': 'business', 'flights': [{'flight_number': 'HAT204', 'date': '2024-05-05'}, {'flight_number': 'HAT194', 'date': '2024-05-16'}, {'flight_number': 'HAT006', 'date': '2024-05-17'}, {'flight_number': 'HAT107', 'date': '2024-05-17'}], 'payment_id': 'credit_card_5254946'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '847MY1', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_6642109'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ava_davis_4349",
+        instruction="Your user id is ava_davis_4349. You want to upgrade your existing reservation from Denver to Orlando (reservation ID S81ZOT) to business class on May 20, keeping the same flights, and you want to add one non-free checked bag for this trip. You want to use your Visa ending in 9221 for these changes. Additionally, you wish to cancel your existing round-trip reservation from Houston to Newark (reservation ID J1W1HF). After canceling, you want to book a new round-trip flight from Houston to Newark departing on May 20 and returning on May 30 in economy class. The passengers on this new reservation should be Lucas Jackson and another traveler with the name Ava Davis, born on July 21, 1988. You want to pay for this new booking using your Visa ending in 9221. You do not require any additional baggage or insurance for this new reservation. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'S81ZOT', 'cabin': 'business', 'flights': [{'flight_number': 'HAT084', 'date': '2024-05-20'}, {'flight_number': 'HAT137', 'date': '2024-05-20'}], 'payment_id': 'credit_card_9457450'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'S81ZOT', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_9457450'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'J1W1HF'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'ava_davis_4349', 'origin': 'IAH', 'destination': 'EWR', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT149', 'date': '2024-05-20'}, {'flight_number': 'HAT056', 'date': '2024-05-30'}], 'passengers': [{'first_name': 'Lucas', 'last_name': 'Jackson', 'dob': '1986-11-03'}, {'first_name': 'Ava', 'last_name': 'Davis', 'dob': '1988-07-21'}], 'payment_methods': [{'payment_id': 'credit_card_9457450', 'amount': 760}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="aarav_lee_3563",
+        instruction="Your user id is aarav_lee_3563. You want to change your current reservation from Philadelphia to Denver (reservation id 3UNFGZ) to an economy class flight. Ensure that the new flights on May 20 have the following details: HAT269 from PHL to CLT, HAT262 from CLT to DEN, and HAT080 from DEN back to PHL. You prefer to pay for any potential cost differences using your Mastercard ending in 6559. Additionally, you wish to cancel your round trip reservation from Boston to Seattle (reservation id YKWHVU). You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '3UNFGZ', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT269', 'date': '2024-05-20'}, {'flight_number': 'HAT262', 'date': '2024-05-20'}, {'flight_number': 'HAT080', 'date': '2024-05-20'}], 'payment_id': 'credit_card_7195750'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'YKWHVU'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="sofia_kim_7287",
+        instruction="Your user id is sofia_kim_7287. You want to update your reservation (ID KA7I60) to change the flights from Denver to Detroit to depart on May 19 instead of May 26. You wish to fly in economy class with flights HAT160 and HAT167 on May 19, and HAT191 and HAT262 on May 20. You also want to increase your total checked baggages to 2, with 1 nonfree baggage. For the flight changes, you want to use your Mastercard ending in 9725, and for the baggage charges, you prefer to use your gift card with the $113 balance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'KA7I60', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT160', 'date': '2024-05-19'}, {'flight_number': 'HAT167', 'date': '2024-05-19'}, {'flight_number': 'HAT191', 'date': '2024-05-20'}, {'flight_number': 'HAT262', 'date': '2024-05-20'}], 'payment_id': 'credit_card_9879898'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'KA7I60', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'gift_card_6276644'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="james_silva_1659",
+        instruction="Your user id is james_silva_1659. You want to update your existing reservation (R4H4N6) for a round trip from Minneapolis to New York, ensuring that you fly in economy class. Please adjust the departure flight from Minneapolis to Detroit to May 19 with flight number HAT127, and ensure the Detroit to New York leg is updated to May 20 on flight HAT169. Additionally, modify the return flights: New York to Detroit should be on May 20 with flight number HAT033, and Detroit to Minneapolis on the same day with flight number HAT210. You would also like to add one checked bag to this reservation. For the flight changes, please use your Mastercard ending in 7420 for payment. For the baggage fee, use your gift card. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'R4H4N6', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT127', 'date': '2024-05-19'}, {'flight_number': 'HAT169', 'date': '2024-05-20'}, {'flight_number': 'HAT033', 'date': '2024-05-20'}, {'flight_number': 'HAT210', 'date': '2024-05-20'}], 'payment_id': 'credit_card_1882524'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'R4H4N6', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'gift_card_9230309'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="sophia_martin_4574",
+        instruction="Your user id is sophia_martin_4574. You want to cancel your reservation from New York to Philadelphia with the reservation ID FDZ0T5. Additionally, you need to ensure that your existing reservation under ID MFRB94, which is a round trip from Orlando to New York, remains unchanged in business class. You want to use your Visa card ending in 8834 for any additional charges. Furthermore, you want to book a new one-way business class flight from Orlando to Boston on May 18, 2024, for Ivan Brown. You want to use your $500 certificate for this booking, specifically using $257 from it. You only have one checked baggage and do not want to include insurance. You prefer to let the agent handle any other details and will provide further information if directly asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'FDZ0T5'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'MFRB94', 'cabin': 'business', 'flights': [{'flight_number': 'HAT214', 'date': '2024-05-27'}, {'flight_number': 'HAT256', 'date': '2024-05-28'}, {'flight_number': 'HAT219', 'date': '2024-05-30'}, {'flight_number': 'HAT181', 'date': '2024-05-30'}], 'payment_id': 'credit_card_1402274'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'sophia_martin_4574', 'origin': 'MCO', 'destination': 'BOS', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT017', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Ivan', 'last_name': 'Brown', 'dob': '1979-12-22'}], 'payment_methods': [{'payment_id': 'certificate_4156052', 'amount': 257}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="james_li_5992",
+        instruction="Your user id is james_li_5992. You want to cancel your existing round-trip reservation from Las Vegas to Miami with the reservation id TJRV7S. After canceling, you wish to book a new round-trip flight from Las Vegas to Miami. You want to depart on May 19, 2024, on flight HAT115 and return on May 20, 2024, on flights HAT148 and HAT084. The passengers for this trip will be Raj Davis, Juan Taylor, and yourself, James Li. You want to book this in economy class. For payment, you would like to use your $250 certificate and cover the remaining balance with your Mastercard ending in 5020. You will be checking 3 bags, of which 2 are non-free. You also want to include travel insurance. Additionally, for your reservation with id 7TFQ8S, you want to update the baggage allowance to include 2 total bags, with 1 being non-free, and pay for this with your Mastercard ending in 5020. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'TJRV7S'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'james_li_5992', 'origin': 'LAS', 'destination': 'MIA', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT115', 'date': '2024-05-19'}, {'flight_number': 'HAT148', 'date': '2024-05-20'}, {'flight_number': 'HAT084', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Raj', 'last_name': 'Davis', 'dob': '1951-06-23'}, {'first_name': 'Juan', 'last_name': 'Taylor', 'dob': '1965-03-08'}, {'first_name': 'James', 'last_name': 'Li', 'dob': '1978-11-15'}], 'payment_methods': [{'payment_id': 'certificate_3412363', 'amount': 250}, {'payment_id': 'credit_card_8972239', 'amount': 1389}], 'total_baggages': 3, 'nonfree_baggages': 2, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '7TFQ8S', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_8972239'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="harper_johnson_9249",
+        instruction="Your user id is harper_johnson_9249. You want to update your reservation with ID EB17TJ to upgrade all flights to business class. The flight numbers are HAT083 and HAT221 on May 17, and HAT282 and HAT233 on May 26. You want to use your Mastercard ending in 4851 for this transaction. Additionally, for your reservation with ID DJ40OY, you want to add three checked bags and pay for them using your $290 gift card. Lastly, you want to book a new one-way flight from Minneapolis to Orlando for May 18 in basic economy. The flight number is HAT151, and the passengers are Olivia Nguyen and Chen Martin. You want to use your $100 certificate for this booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'EB17TJ', 'cabin': 'business', 'flights': [{'flight_number': 'HAT083', 'date': '2024-05-17'}, {'flight_number': 'HAT221', 'date': '2024-05-17'}, {'flight_number': 'HAT282', 'date': '2024-05-26'}, {'flight_number': 'HAT233', 'date': '2024-05-26'}], 'payment_id': 'credit_card_6678874'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'DJ40OY', 'total_baggages': 3, 'nonfree_baggages': 3, 'payment_id': 'gift_card_5535249'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'harper_johnson_9249', 'origin': 'MSP', 'destination': 'MCO', 'flight_type': 'one_way', 'cabin': 'basic_economy', 'flights': [{'flight_number': 'HAT151', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Olivia', 'last_name': 'Nguyen', 'dob': '1966-05-16'}, {'first_name': 'Chen', 'last_name': 'Martin', 'dob': '1967-03-24'}], 'payment_methods': [{'payment_id': 'certificate_8992739', 'amount': 100}], 'total_baggages': 2, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="harper_davis_5069",
+        instruction="Your user id is harper_davis_5069. For your existing reservation from Miami to Boston (reservation ID: W0I4AJ), you want to update your flight to economy class and change the travel date to May 16, 2024. You prefer to use your $282 gift card for this change. Additionally, you want to book a new one-way trip from Miami to New York on May 18, 2024, in basic economy for James Santos. You would like to pay for this with your $74 gift card and cover any remaining balance with your Mastercard ending in 5038. Furthermore, you need to update your reservation from Philadelphia to Charlotte (reservation ID: WLXS0L) to include 2 checked bags, paying for these with your Visa ending in 8797. You want to ensure that all flights include travel insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'W0I4AJ'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'W0I4AJ', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT184', 'date': '2024-05-16'}], 'payment_id': 'gift_card_7215260'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'harper_davis_5069', 'origin': 'MIA', 'destination': 'JFK', 'flight_type': 'one_way', 'cabin': 'basic_economy', 'flights': [{'flight_number': 'HAT224', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'James', 'last_name': 'Santos', 'dob': '1954-03-23'}], 'payment_methods': [{'payment_id': 'gift_card_8498369', 'amount': 74}, {'payment_id': 'credit_card_7396423', 'amount': 28}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'WLXS0L', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'credit_card_2048050'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="james_ahmed_4322",
+        instruction="Your user id is james_ahmed_4322. You want to update your existing reservation from Detroit to Charlotte (reservation ID JX6LB3) by adding 2 total baggages. Please charge this to your Mastercard ending in 3379. Additionally, you need to update the passengers on this reservation to include yourself, with a new date of birth of May 21, 1984, and Mohamed Patel, born on March 10, 1984. Simultaneously, you wish to cancel the one-way reservation from Atlanta to Las Vegas (reservation ID IG2DP6).\n\nFurthermore, you want to book a new one-way flight from Atlanta to Las Vegas on May 18, flying in business class. The passengers for this booking should be yourself, with the updated birthdate, and Mohamed Patel. You would like to use your $500 certificate first and cover any remaining balance with your Mastercard ending in 3379. You want to include 2 baggages and opt for travel insurance. Lastly, you require assistance to calculate a specific expression: 277 times 2 plus 30 times 2. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'JX6LB3', 'total_baggages': 2, 'nonfree_baggages': 0, 'payment_id': 'credit_card_5747649'},
+            ),
+            Action(
+                name="update_reservation_passengers",
+                kwargs={'reservation_id': 'JX6LB3', 'passengers': [{'first_name': 'James', 'last_name': 'Ahmed', 'dob': '1984-05-21'}, {'first_name': 'Mohamed', 'last_name': 'Patel', 'dob': '1984-03-10'}]},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'IG2DP6'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'james_ahmed_4322', 'origin': 'ATL', 'destination': 'LAS', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT052', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'James', 'last_name': 'Ahmed', 'dob': '1984-05-21'}, {'first_name': 'Mohamed', 'last_name': 'Patel', 'dob': '1984-03-10'}], 'payment_methods': [{'payment_id': 'certificate_1731593', 'amount': 500}, {'payment_id': 'credit_card_5747649', 'amount': 490}], 'total_baggages': 2, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="calculate",
+                kwargs={'expression': '277 * 2 + 30 * 2'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="fatima_taylor_8297",
+        instruction="Your user id is fatima_taylor_8297. You want to upgrade your existing reservation RVEZA8 from Los Angeles to Denver to business class on the flights HAT030 on May 23 and HAT049 on May 24. For this upgrade, you want to use your Mastercard ending in 4118. Additionally, you want to book a new one-way flight from Minneapolis to Newark for Emma Rossi on flight HAT300 on May 19, in economy class. You want to include one checked baggage and add travel insurance. You prefer to use your $144 gift card first, and cover the remaining balance with your Visa ending in 1733. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'RVEZA8', 'cabin': 'business', 'flights': [{'flight_number': 'HAT030', 'date': '2024-05-23'}, {'flight_number': 'HAT049', 'date': '2024-05-24'}], 'payment_id': 'credit_card_1672809'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'fatima_taylor_8297', 'origin': 'MSP', 'destination': 'EWR', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT300', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Emma', 'last_name': 'Rossi', 'dob': '1971-10-26'}], 'payment_methods': [{'payment_id': 'gift_card_9166037', 'amount': 144}, {'payment_id': 'credit_card_1366921', 'amount': 40}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="sophia_martin_4574",
+        instruction="Your user id is sophia_martin_4574. You want to cancel your current round-trip reservation from Newark to Dallas with reservation ID 5BGGWZ. After this cancellation, you would like to book a new one-way flight from Newark (EWR) to Dallas (DFW) on May 17th in economy class on flight number HAT231. You will be traveling with one piece of checked baggage, and you would like to purchase insurance for this trip. Please use your $100 certificate and cover the remaining balance with your $500 certificate. You will be traveling under the name Sophia Martin, but please note that your date of birth is 1990-10-25 as per your profile. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '5BGGWZ'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'sophia_martin_4574', 'origin': 'EWR', 'destination': 'DFW', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT231', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Sophia', 'last_name': 'Martin', 'dob': '1985-07-21'}], 'payment_methods': [{'payment_id': 'certificate_4328067', 'amount': 100}, {'payment_id': 'certificate_4156052', 'amount': 37}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="yusuf_martin_3470",
+        instruction="Your user id is yusuf_martin_3470. You want to update your reservation UIN4IZ for your upcoming trip from Houston to Phoenix. You want the flights to remain the same for May 19 and May 26, but you prefer to change the cabin to economy. Additionally, you want to add one checked bag, which will be non-free. You want to use your Mastercard ending in 6182 for any additional charges. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'UIN4IZ', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT180', 'date': '2024-05-19'}, {'flight_number': 'HAT123', 'date': '2024-05-19'}, {'flight_number': 'HAT152', 'date': '2024-05-26'}], 'payment_id': 'credit_card_9067289'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'UIN4IZ', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_9067289'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mia_garcia_3833",
+        instruction="Your user id is mia_garcia_3833. You want to retrieve the details of your reservation with ID II4FUS. Additionally, you need to cancel your reservation with ID TNNWN9. After canceling, you wish to book a new one-way flight from Los Angeles (LAX) to Atlanta (ATL) on May 19 in business class for the passenger Aarav Lee, with flight numbers HAT022 and HAT177. Ensure to include one checked baggage and add travel insurance. For this booking, use your Visa card ending in 2771 to pay the amount of $504. Furthermore, you need to update your reservation II4FUS to include an extra non-free baggage, making it a total of two baggages, and use your Mastercard ending in 1991 for this payment. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'II4FUS'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'TNNWN9'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mia_garcia_3833', 'origin': 'LAX', 'destination': 'ATL', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT022', 'date': '2024-05-19'}, {'flight_number': 'HAT177', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Aarav', 'last_name': 'Lee', 'dob': '1996-01-25'}], 'payment_methods': [{'payment_id': 'credit_card_3323151', 'amount': 504}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'II4FUS', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_2157464'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="amelia_ahmed_6605",
+        instruction="Your user id is amelia_ahmed_6605. You want to book a one-way flight from New York LaGuardia (LGA) to Phoenix (PHX) for your saved passenger, Harper Santos, on the 19th of May, 2024. You prefer to fly in basic economy to keep the costs low. You want to use your $250 certificate to cover part of the payment, applying $70 from it for this booking. You do not need any checked baggage or travel insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="think",
+                kwargs={'thought': 'Amelia needs to book a one-way trip from LGA to PHX for her saved passenger Harper Santos. She prefers basic economy to keep costs low and use available certificates.'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'amelia_ahmed_6605', 'origin': 'LGA', 'destination': 'PHX', 'flight_type': 'one_way', 'cabin': 'basic_economy', 'flights': [{'flight_number': 'HAT219', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Harper', 'last_name': 'Santos', 'dob': '1958-02-18'}], 'payment_methods': [{'payment_id': 'certificate_5263417', 'amount': 70}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="raj_sanchez_7079",
+        instruction="Your user id is raj_sanchez_7079. You want to update your reservation for the round-trip from Charlotte to Chicago, specifically the one with reservation ID 3H37BL. You want to add one checked bag, which is a paid baggage item, and you plan to use your $69 gift card to cover this cost. Additionally, you want to book a new one-way flight for Juan Santos from Miami to Denver on May 16, flying in economy class on flight number HAT193. No baggage is needed for this flight, and you do not require travel insurance. You prefer to use your $250 certificate for the payment, applying $156 towards this booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '3H37BL', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'gift_card_1188934'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'raj_sanchez_7079', 'origin': 'MIA', 'destination': 'DEN', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT193', 'date': '2024-05-16'}], 'passengers': [{'first_name': 'Juan', 'last_name': 'Santos', 'dob': '1950-10-25'}], 'payment_methods': [{'payment_id': 'certificate_9134114', 'amount': 156}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="yusuf_thomas_7802",
+        instruction="Your user id is yusuf_thomas_7802. You need to make the following updates and bookings: \n\nFirst, you want to update your existing reservation with ID 05XIX4 to include a total of 3 bags, with 1 of them being non-free. You would like to pay for this using your gift card worth $252.\n\nNext, you want to cancel your reservation with ID U11K7C.\n\nFinally, you want to book a one-way flight from San Francisco to Los Angeles on May 20 in business class. You want to include Lucas Santos as the passenger. The flight you prefer is HAT163. You will have a total of 1 bag, which is a non-free baggage. For payment, you want to use your gift card for $202 and cover the remaining balance with your Visa ending in 6833. You do not require travel insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '05XIX4', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'gift_card_4714517'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'U11K7C'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'yusuf_thomas_7802', 'origin': 'SFO', 'destination': 'LAX', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT163', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Lucas', 'last_name': 'Santos', 'dob': '1989-07-11'}], 'payment_methods': [{'payment_id': 'gift_card_4714517', 'amount': 202}, {'payment_id': 'credit_card_1321177', 'amount': 203}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="yusuf_kovacs_6762",
+        instruction="Your user id is yusuf_kovacs_6762. You want to update your existing reservation 781BHF. You need to adjust the flight dates for your return trip from Las Vegas to Houston, changing the flight HAT266 to May 19, and keep the cabin in economy class. You want to charge these changes to your Visa card ending in 8928. Additionally, you wish to increase your total baggage allowance to 4 pieces, with 2 of them being non-free, and you prefer this charge to go on your Mastercard ending in 3631. \n\nFurthermore, you want to book a new round-trip flight from Houston to Phoenix for Olivia Silva, departing on May 20 with flight HAT286 and returning the same day on flight HAT152, also in economy class. You want to include 1 piece of baggage. For this booking, you prefer using your Mastercard ending in 3631 for the payment. You do not require any travel insurance for this trip. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '781BHF', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT286', 'date': '2024-05-17'}, {'flight_number': 'HAT154', 'date': '2024-05-17'}, {'flight_number': 'HAT299', 'date': '2024-05-17'}, {'flight_number': 'HAT266', 'date': '2024-05-19'}], 'payment_id': 'credit_card_8537479'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '781BHF', 'total_baggages': 4, 'nonfree_baggages': 2, 'payment_id': 'credit_card_7721280'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'yusuf_kovacs_6762', 'origin': 'IAH', 'destination': 'PHX', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT286', 'date': '2024-05-20'}, {'flight_number': 'HAT152', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Olivia', 'last_name': 'Silva', 'dob': '1952-04-16'}], 'payment_methods': [{'payment_id': 'credit_card_7721280', 'amount': 356}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="omar_johnson_8493",
+        instruction="Your user id is omar_johnson_8493. You want to upgrade your reservation RHW2N7 from Detroit to Atlanta on May 20 to business class, with flights HAT169 and HAT268. You also want to increase the total baggage allowance to 5, of which 3 are non-free. Please use your Visa card ending in 9615 for this update. Additionally, you wish to cancel your reservation V3YKVM. After canceling, book a new one-way economy flight from Orlando to Charlotte on May 20, with flight numbers HAT217 and HAT277. This new booking should be under your name, Omar Johnson, with your birth date already on file. Please use your $500 certificate to pay, and select the option for travel insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'RHW2N7', 'cabin': 'business', 'flights': [{'flight_number': 'HAT169', 'date': '2024-05-20'}, {'flight_number': 'HAT268', 'date': '2024-05-20'}], 'payment_id': 'credit_card_3032518'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'RHW2N7', 'total_baggages': 5, 'nonfree_baggages': 3, 'payment_id': 'credit_card_3032518'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'V3YKVM'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'omar_johnson_8493', 'origin': 'MCO', 'destination': 'CLT', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT217', 'date': '2024-05-20'}, {'flight_number': 'HAT277', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Omar', 'last_name': 'Johnson', 'dob': '1990-10-27'}], 'payment_methods': [{'payment_id': 'certificate_2956648', 'amount': 337}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="olivia_rossi_1087",
+        instruction="Your user id is olivia_rossi_1087. You want to cancel your existing reservation from Denver to Houston with reservation id 4FORX8. Then, you want to book a new round-trip flight from Denver to Houston. You want to depart on May 18 with flight number HAT229 and return on May 19 with flight number HAT175. You'll be flying in economy class, and the passenger is Olivia Rossi, born on August 26, 1996. You want to use your $150 certificate and cover the remaining $130 with your Mastercard ending in 6883 for payment. You will have one checked bag and do not require travel insurance. Additionally, you want to update your reservation with id 5JATGA to include a total of two checked bags, one of which is not free, and pay for this with your Mastercard ending in 6883. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '4FORX8'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'olivia_rossi_1087', 'origin': 'DEN', 'destination': 'IAH', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT229', 'date': '2024-05-18'}, {'flight_number': 'HAT175', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Olivia', 'last_name': 'Rossi', 'dob': '1996-08-26'}], 'payment_methods': [{'payment_id': 'certificate_9153684', 'amount': 150}, {'payment_id': 'credit_card_8752089', 'amount': 130}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '5JATGA', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_8752089'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mei_lee_8701",
+        instruction="Your user id is mei_lee_8701. You need to make two updates. First, for your existing reservation from Dallas (DFW) to Newark (EWR) with reservation id UWNK0D, you want to adjust your return flight. Keep the departure flight as scheduled on May 16 with flight number HAT142, but change the return flight to May 19 using flight number HAT213. Please use your $298 gift card for any additional charges.\n\nSecondly, you want to book a new one-way flight from New York (JFK) to Houston (IAH) on May 19 in economy class. The flight number for this journey is HAT279. The passenger will be Mei Lee, with the birth date of March 5, 1980. You want to include travel insurance for this trip. For payment, apply your $100 certificate first, then your $21 gift card, and finally, cover any remaining balance with your Mastercard ending in 2084. You do not need to add any baggage for this booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'UWNK0D', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT142', 'date': '2024-05-16'}, {'flight_number': 'HAT213', 'date': '2024-05-19'}], 'payment_id': 'gift_card_3011170'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mei_lee_8701', 'origin': 'JFK', 'destination': 'IAH', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT279', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Mei', 'last_name': 'Lee', 'dob': '1980-03-05'}], 'payment_methods': [{'payment_id': 'certificate_5864879', 'amount': 100}, {'payment_id': 'gift_card_8583604', 'amount': 21}, {'payment_id': 'credit_card_1904381', 'amount': 23}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mohamed_gonzalez_6040",
+        instruction="Your user id is mohamed_gonzalez_6040. You want to update your existing reservation K27ZUJ to maintain the flights in economy class but change the dates. You want to fly from Seattle to JFK on May 17 with flight HAT021, from JFK to Detroit on May 19 with flight HAT212, from Detroit to Phoenix on May 20 with flight HAT097, and finally from Phoenix back to Seattle on May 29 with flight HAT251. For payment, you would like to use your Mastercard ending in 3905.\n\nAdditionally, for your reservation OPPHQU, which is a one-way trip from San Francisco to Newark, you would like to add two checked bags. Please use your Mastercard ending in 3905 for this payment as well. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'K27ZUJ', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT021', 'date': '2024-05-17'}, {'flight_number': 'HAT212', 'date': '2024-05-19'}, {'flight_number': 'HAT097', 'date': '2024-05-20'}, {'flight_number': 'HAT251', 'date': '2024-05-29'}], 'payment_id': 'credit_card_3382683'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'OPPHQU', 'total_baggages': 2, 'nonfree_baggages': 0, 'payment_id': 'credit_card_3382683'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="harper_lopez_1489",
+        instruction="Your user id is harper_lopez_1489. You want to make several changes and bookings for your travel plans. First, you need to update your reservation with ID FBRWYE to upgrade to business class for all flights. The updated flights should be on May 18 for flight HAT194, May 19 for flight HAT182, and both HAT214 and HAT045 on May 20. For this upgrade, use your Mastercard ending in 9287. You also want to add one baggage to this reservation, which will be a non-free checked bag, and you prefer to use your $69 gift card for this payment.\n\nNext, you want to cancel your reservation with ID T1QOBS. After canceling, book a new one-way flight from JFK to MCO on May 20 in economy class, specifically on flight HAT060. This booking is for two passengers: Ethan Johnson (born on April 7, 1988) and Sophia Taylor (born on June 15, 1987). You will need insurance for this trip, and for the payment, use your Mastercard ending in 9575 for a total of $428. Include 2 free checked bags with this booking.\n\nLastly, update your reservation with ID IQ1B32 to change the passenger to Sophia Taylor, maintaining her date of birth as June 15, 1987. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'FBRWYE', 'cabin': 'business', 'flights': [{'flight_number': 'HAT194', 'date': '2024-05-18'}, {'flight_number': 'HAT182', 'date': '2024-05-19'}, {'flight_number': 'HAT214', 'date': '2024-05-20'}, {'flight_number': 'HAT045', 'date': '2024-05-20'}], 'payment_id': 'credit_card_9875103'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'FBRWYE', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'gift_card_7854500'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'T1QOBS'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'harper_lopez_1489', 'origin': 'JFK', 'destination': 'MCO', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT060', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Ethan', 'last_name': 'Johnson', 'dob': '1988-04-07'}, {'first_name': 'Sophia', 'last_name': 'Taylor', 'dob': '1987-06-15'}], 'payment_methods': [{'payment_id': 'credit_card_3075831', 'amount': 428}], 'total_baggages': 2, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_passengers",
+                kwargs={'reservation_id': 'IQ1B32', 'passengers': [{'first_name': 'Sophia', 'last_name': 'Taylor', 'dob': '1987-06-15'}]},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="fatima_johnson_3148",
+        instruction="Your user id is fatima_johnson_3148. You want to cancel your reservation with the ID MAT62E. After that, you wish to book a new round-trip flight from Chicago (ORD) to Philadelphia (PHL) on May 18, returning on May 20. You prefer to travel in economy class. The flights you are looking for are HAT118 and HAT080 on May 18, and HAT197 on May 20. The passenger for this trip is Fatima Kovacs, born on August 10, 1998. You intend to bring one piece of checked baggage. You want to pay using your $100 certificate and the remaining balance with your Mastercard ending in 9287. Additionally, you would like to update your existing reservation 2BU9EQ to include one more checked bag, making it a total of two, with payment also made using your Mastercard ending in 9287. You require insurance for the new reservation. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'MAT62E'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'fatima_johnson_3148', 'origin': 'ORD', 'destination': 'PHL', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT118', 'date': '2024-05-18'}, {'flight_number': 'HAT080', 'date': '2024-05-18'}, {'flight_number': 'HAT197', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Fatima', 'last_name': 'Kovacs', 'dob': '1998-08-10'}], 'payment_methods': [{'payment_id': 'certificate_1153817', 'amount': 100}, {'payment_id': 'credit_card_6216489', 'amount': 483}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '2BU9EQ', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_6216489'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="yusuf_patel_4029",
+        instruction="Your user id is yusuf_patel_4029. You want to update your San Francisco to Boston round-trip reservation (reservation id 7P3LPD) to include an additional checked bag, making it a total of two, with one being chargeable. You wish to pay for this with your Visa card ending in 1576. Additionally, you want to change your cabin class to economy for this reservation and update your flights to depart on May 18 using flight numbers HAT204 and HAT194, and return on May 17 using flight numbers HAT006 and HAT107, with payment also made using your Visa card ending in 1576. \n\nYou also need to cancel your Philadelphia to Chicago reservation (reservation id 847MY1). Following this, you want to book a new one-way flight from San Francisco to Chicago on May 18 in basic economy, using flight number HAT204. You want to add one chargeable checked bag for this trip, and you prefer to pay with your Mastercard ending in 6922. \n\nLastly, you wish to book a new one-way flight from Philadelphia to Chicago on May 18 in economy class for Emma Brown, with flight number HAT197. This reservation should include insurance, and you want to pay with your Visa card ending in 1576. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '7P3LPD', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_5254946'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '847MY1'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'yusuf_patel_4029', 'origin': 'SFO', 'destination': 'ORD', 'flight_type': 'one_way', 'cabin': 'basic_economy', 'flights': [{'flight_number': 'HAT204', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Yusuf', 'last_name': 'Patel', 'dob': '1985-08-15'}], 'payment_methods': [{'payment_id': 'credit_card_6642109', 'amount': 139}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '7P3LPD', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT204', 'date': '2024-05-18'}, {'flight_number': 'HAT194', 'date': '2024-05-18'}, {'flight_number': 'HAT006', 'date': '2024-05-17'}, {'flight_number': 'HAT107', 'date': '2024-05-17'}], 'payment_id': 'credit_card_5254946'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'yusuf_patel_4029', 'origin': 'PHL', 'destination': 'ORD', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT197', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Emma', 'last_name': 'Brown', 'dob': '1954-03-18'}], 'payment_methods': [{'payment_id': 'credit_card_5254946', 'amount': 182}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mohamed_gonzalez_6188",
+        instruction="Your user id is mohamed_gonzalez_6188. You want to cancel your current reservation from LaGuardia (LGA) to San Francisco (SFO) with reservation id 75U65S. After that, you want to book a new round-trip business class flight for Ethan Garcia from LGA to SFO. The outbound flight should be on May 19, flight number HAT264, and the return on May 20, flight number HAT291. You want to include two checked bags and opt for travel insurance. For payment, use your gift card with the balance of $262 first, and cover the remaining amount with your Mastercard ending in 3745. Additionally, you want to update another reservation with id RZGTT2 to include a third checked bag, one of which is not free. Use your $229 gift card for this transaction. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '75U65S'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mohamed_gonzalez_6188', 'origin': 'LGA', 'destination': 'SFO', 'flight_type': 'round_trip', 'cabin': 'business', 'flights': [{'flight_number': 'HAT264', 'date': '2024-05-19'}, {'flight_number': 'HAT291', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Ethan', 'last_name': 'Garcia', 'dob': '1981-07-17'}], 'payment_methods': [{'payment_id': 'gift_card_7158052', 'amount': 262}, {'payment_id': 'credit_card_8311916', 'amount': 419}], 'total_baggages': 2, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'RZGTT2', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'gift_card_9659287'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mei_ito_6207",
+        instruction="Your user id is mei_ito_6207. You want to upgrade your reservation from Atlanta to Seattle on May 16 and back on May 17 (reservation id Q8YZY1) from economy to business class. You want this change to be charged to your Mastercard ending in 4474. Additionally, for your reservation from New York to Minneapolis (reservation id 5QGJJ1), you want to add 2 checked bags. Please charge this baggage fee to your other Mastercard ending in 1276. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'Q8YZY1', 'cabin': 'business', 'flights': [{'flight_number': 'HAT133', 'date': '2024-05-16'}, {'flight_number': 'HAT220', 'date': '2024-05-17'}], 'payment_id': 'credit_card_8547862'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '5QGJJ1', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'credit_card_4134857'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="harper_ito_2309",
+        instruction="Your user id is harper_ito_2309. You want to update your reservation for the trip from San Francisco to Dallas (reservation id YNI0GV). You need to change the flight dates to May 19 while staying in economy class. The flights should be HAT204 from SFO to SEA and HAT037 from SEA to DFW. Additionally, you want to increase the total baggage allowance to 3 bags, with 1 being non-free. Please use your Mastercard ending in 5171 to pay for the flight changes and your Visa ending in 7986 for the baggage fees. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'YNI0GV', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT204', 'date': '2024-05-19'}, {'flight_number': 'HAT037', 'date': '2024-05-19'}], 'payment_id': 'credit_card_3005515'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'YNI0GV', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'credit_card_1330512'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="daiki_muller_1116",
+        instruction="Your user id is daiki_muller_1116. You want to cancel your existing reservation from Las Vegas to Atlanta with reservation ID XEHM4B. After canceling, you would like to book a new round-trip flight from Las Vegas to Atlanta, departing on May 20 and returning on May 30. You want to travel in economy class on flights HAT005 and HAT178. The passengers for this trip will be yourself, Daiki Muller, and Amelia Kim. You want to ensure travel insurance is included. You prefer to pay for this reservation using your Visa card ending in 2135. Additionally, for your existing reservation with ID 59XX6W, you want to add one checked baggage, which is non-free, and use your Visa card ending in 2135 for this payment as well. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'XEHM4B'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'daiki_muller_1116', 'origin': 'LAS', 'destination': 'ATL', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT005', 'date': '2024-05-20'}, {'flight_number': 'HAT178', 'date': '2024-05-30'}], 'passengers': [{'first_name': 'Daiki', 'last_name': 'Muller', 'dob': '1980-11-16'}, {'first_name': 'Amelia', 'last_name': 'Kim', 'dob': '1978-04-20'}], 'payment_methods': [{'payment_id': 'credit_card_2408938', 'amount': 644}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '59XX6W', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_2408938'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="olivia_jackson_4826",
+        instruction="Your user id is olivia_jackson_4826. You want to cancel your current reservation from Philadelphia to Phoenix, which is scheduled for May 18 (reservation ID: US1MYN). After canceling, you want to book a new one-way flight on May 19 from Philadelphia to Phoenix, but this time in business class. The flights you want are HAT001 and HAT150. The passengers for this booking will be yourself, Olivia Jackson, and Aarav Ahmed. You want to use your Mastercard ending in 6047 to pay for the new reservation, which costs $1100. You do not require any additional baggage or travel insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'US1MYN'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'olivia_jackson_4826', 'origin': 'PHL', 'destination': 'PHX', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT001', 'date': '2024-05-19'}, {'flight_number': 'HAT150', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Olivia', 'last_name': 'Jackson', 'dob': '1990-01-15'}, {'first_name': 'Aarav', 'last_name': 'Ahmed', 'dob': '1970-02-09'}], 'payment_methods': [{'payment_id': 'credit_card_1658508', 'amount': 1100}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="emma_johansson_6252",
+        instruction="Your user id is emma_johansson_6252. You want to upgrade your reservation from Chicago to Dallas (reservation id MJ0YB6) to business class. The new travel dates are May 19, and you will be flying on flight numbers HAT238 and HAT140. You want to use your Visa ending in 4149 for this upgrade. Additionally, you want to book a new one-way flight from San Francisco to Orlando on May 19 for Mason Johnson. This flight should be in economy class on flight number HAT181. You want to include 1 checked bag and select travel insurance. For the payment, please use your $150 certificate first, and then charge the remaining amount to your Visa ending in 4149. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'MJ0YB6', 'cabin': 'business', 'flights': [{'flight_number': 'HAT238', 'date': '2024-05-19'}, {'flight_number': 'HAT140', 'date': '2024-05-19'}], 'payment_id': 'credit_card_4255859'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'emma_johansson_6252', 'origin': 'SFO', 'destination': 'MCO', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT181', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Mason', 'last_name': 'Johnson', 'dob': '1984-09-18'}], 'payment_methods': [{'payment_id': 'certificate_2345492', 'amount': 150}, {'payment_id': 'credit_card_4255859', 'amount': 129}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mia_li_8815",
+        instruction="Your user id is mia_li_8815. You want to change your flight on reservation ID C07GF3 from Phoenix to Boston to an earlier date, May 18, while staying in business class. The flights should be HAT267 from Phoenix to Seattle and HAT194 from Seattle to Boston. Additionally, you want to increase your baggage allowance to 2 total bags, with 1 being a non-free checked bag. You prefer to pay for these changes with your Mastercard ending in 3329. Also, you have decided to cancel your reservation with ID ZHPKHF. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'C07GF3', 'cabin': 'business', 'flights': [{'flight_number': 'HAT267', 'date': '2024-05-18'}, {'flight_number': 'HAT194', 'date': '2024-05-18'}], 'payment_id': 'credit_card_6719194'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'C07GF3', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_6719194'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'ZHPKHF'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="sophia_santos_7035",
+        instruction="Your user id is sophia_santos_7035. You want to cancel your existing reservation from Philadelphia to New York LaGuardia, previously set for May 13 to May 16 with reservation id P0Q4SM. After canceling, you are looking to book a new round-trip flight from Philadelphia to LaGuardia departing on May 18 and returning on May 20. You prefer a one-stop flight in economy class. You want to include one checked baggage and add insurance to this booking. For payment, you want to use your $150 certificate first, and the remaining balance should be covered by your Visa card ending in 5969. Additionally, for your reservation with id 6XQE7B, you would like to update the baggage allowance to include one more checked bag, totaling two, with one being non-free. This should also be paid using your Visa card ending in 5969. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'P0Q4SM'},
+            ),
+            Action(
+                name="search_onestop_flight",
+                kwargs={'origin': 'PHL', 'destination': 'LGA', 'date': '2024-05-18'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'sophia_santos_7035', 'origin': 'PHL', 'destination': 'LGA', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT296', 'date': '2024-05-18'}, {'flight_number': 'HAT029', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Sophia', 'last_name': 'Santos', 'dob': '1984-10-26'}], 'payment_methods': [{'payment_id': 'certificate_1349303', 'amount': 150}, {'payment_id': 'credit_card_3767393', 'amount': 120}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '6XQE7B', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_3767393'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="emma_kim_4489",
+        instruction="Your user id is emma_kim_4489. You want to update your existing reservation (reservation id ERRKJH) for a flight from Miami to New York. The flight should now be on May 18, 2024, with flight number HAT198. Keep the cabin class as economy. You also want to include one checked bag for this trip and use your gift card worth $126 for this baggage payment. For the flight change, please charge the flight cost to your Visa ending in 8019. Additionally, you want to book a new one-way flight from Charlotte to Boston on May 18, 2024, in business class with flight number HAT064. For this new booking, use your $150 certificate first, and pay the remaining balance with your Visa ending in 2090. Include travel insurance for the new booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'ERRKJH', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT198', 'date': '2024-05-18'}], 'payment_id': 'credit_card_2704119'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'ERRKJH', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'gift_card_7218676'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'emma_kim_4489', 'origin': 'CLT', 'destination': 'BOS', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT064', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Emma', 'last_name': 'Kim', 'dob': '1992-08-15'}], 'payment_methods': [{'payment_id': 'certificate_7135104', 'amount': 150}, {'payment_id': 'credit_card_5476036', 'amount': 372}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="lucas_rossi_9280",
+        instruction="Your user id is lucas_rossi_9280. You need to update your reservation MH743C for your trip from Phoenix to Dallas. You want to change the departure and return dates to May 17 and May 20, respectively, while keeping all flights in business class. The specific flights you want are HAT156 and HAT037 on May 17, and HAT067 and HAT121 on May 20. You want to use your Visa card ending in 1842 for any additional charges related to the flight changes. Additionally, you want to add two checked bags for this reservation and use your gift card valued at $277 to cover the baggage fees. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'MH743C', 'cabin': 'business', 'flights': [{'flight_number': 'HAT156', 'date': '2024-05-17'}, {'flight_number': 'HAT037', 'date': '2024-05-17'}, {'flight_number': 'HAT067', 'date': '2024-05-20'}, {'flight_number': 'HAT121', 'date': '2024-05-20'}], 'payment_id': 'credit_card_7507634'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'MH743C', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'gift_card_1600929'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="sofia_anderson_8718",
+        instruction="Your user id is sofia_anderson_8718. You want to cancel your one-way reservation from Detroit to Las Vegas with reservation ID HGKBYI. Following this cancellation, you want to book a new one-way flight from Detroit to Las Vegas on May 19, flying economy class. The flights you want are HAT097 from Detroit to Phoenix and HAT259 from Phoenix to Las Vegas on the same day. The passengers for this booking are Raj Brown, born on September 5, 1959, and Raj Martin, born on April 17, 1996. You do not require any baggage for this booking, and you do not want insurance. For the payment, you prefer to use your $267 gift card first, then your $208 gift card, and if needed, cover the remaining balance with your Mastercard ending in 4760.\n\nAdditionally, you want to update your existing reservation 1DMPHR to ensure it is booked in economy class for both flights HAT119 on May 19 and HAT020 on May 20. Please use your Mastercard ending in 6717 to cover any costs associated with this change.\n\nFinally, for reservation 799HXJ, you want to add a total of 2 checked baggages, noting that 1 of these is nonfree. Again, please use your Mastercard ending in 6717 to pay for any additional baggage fees. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'HGKBYI'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'sofia_anderson_8718', 'origin': 'DTW', 'destination': 'LAS', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT097', 'date': '2024-05-19'}, {'flight_number': 'HAT259', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Raj', 'last_name': 'Brown', 'dob': '1959-09-05'}, {'first_name': 'Raj', 'last_name': 'Martin', 'dob': '1996-04-17'}], 'payment_methods': [{'payment_id': 'gift_card_9530220', 'amount': 267}, {'payment_id': 'gift_card_2686034', 'amount': 208}, {'payment_id': 'credit_card_7385026', 'amount': 107}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '1DMPHR', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT119', 'date': '2024-05-19'}, {'flight_number': 'HAT020', 'date': '2024-05-20'}], 'payment_id': 'credit_card_2046918'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '799HXJ', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_2046918'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="sophia_muller_9002",
+        instruction="Your user id is sophia_muller_9002. You want to cancel your current reservation from Miami to Houston (reservation id RLKLK4). After canceling, you want to book a new round-trip flight from Miami to Houston. The departure flight should be on May 19 with flight number HAT192, and the return flight should be on May 20 with flight number HAT286. You want to travel in economy class and the passengers on this booking should be Evelyn Davis, Chen Silva, and yourself, Sophia Muller. You will be using your Mastercard ending in 4890 to pay for this booking. No additional baggage or insurance is needed. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'RLKLK4'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'sophia_muller_9002', 'origin': 'MIA', 'destination': 'IAH', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT192', 'date': '2024-05-19'}, {'flight_number': 'HAT286', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Evelyn', 'last_name': 'Davis', 'dob': '1971-01-23'}, {'first_name': 'Chen', 'last_name': 'Silva', 'dob': '1952-01-06'}, {'first_name': 'Sophia', 'last_name': 'Muller', 'dob': '1980-05-05'}], 'payment_methods': [{'payment_id': 'credit_card_6665577', 'amount': 975}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ava_jackson_6651",
+        instruction="Your user id is ava_jackson_6651. You want to update your flight reservation with ID GLJF1R from New York (JFK) to Chicago (ORD). Change the flights to depart on May 19, using flight numbers HAT060 and HAT129. The return flights should be on May 20, with flight numbers HAT230 and HAT263. You prefer to fly in economy class. Additionally, you want to add one checked bag to this reservation. For the flight changes, use your Mastercard ending in 3671, and for the baggage payment, use your Visa ending in 4906. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'GLJF1R'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'GLJF1R', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT060', 'date': '2024-05-19'}, {'flight_number': 'HAT129', 'date': '2024-05-19'}, {'flight_number': 'HAT230', 'date': '2024-05-20'}, {'flight_number': 'HAT263', 'date': '2024-05-20'}], 'payment_id': 'credit_card_1534658'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'GLJF1R', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_5969112'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="noah_silva_2256",
+        instruction="Your user id is noah_silva_2256. You need to update your existing reservation (ID: T8QHPY) for your flight from Phoenix to Seattle. Please adjust the flight dates to May 19 with flight numbers HAT173 and HAT047, maintaining business class. You want to add one checked baggage to this reservation, using your gift card with the $112 balance for the baggage fee. For the flight adjustments, use your Mastercard ending in 9170. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'T8QHPY', 'cabin': 'business', 'flights': [{'flight_number': 'HAT173', 'date': '2024-05-19'}, {'flight_number': 'HAT047', 'date': '2024-05-19'}], 'payment_id': 'credit_card_7773542'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'T8QHPY', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'gift_card_9130446'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ethan_hernandez_8041",
+        instruction="Your user id is ethan_hernandez_8041. You want to update your reservation S6D2EB for the flight from New York to Orlando on May 19 to economy class. You will use your Mastercard ending in 8952 for this update. You also want to add two checked bags to this reservation using your gift card with a balance of $194. Additionally, you want to cancel your reservation S7MNZE. After canceling, you want to book a new one-way flight from Boston to New York on May 19 in basic economy. The flight numbers are HAT260 and HAT087, and the passenger should be Sophia Ahmed. You want to pay for this new reservation using your gift card, applying $143 from it. You do not want to include travel insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'S6D2EB', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT245', 'date': '2024-05-19'}, {'flight_number': 'HAT181', 'date': '2024-05-19'}], 'payment_id': 'credit_card_4480709'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'S6D2EB', 'total_baggages': 2, 'nonfree_baggages': 0, 'payment_id': 'gift_card_7936162'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'S7MNZE'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'ethan_hernandez_8041', 'origin': 'BOS', 'destination': 'LGA', 'flight_type': 'one_way', 'cabin': 'basic_economy', 'flights': [{'flight_number': 'HAT260', 'date': '2024-05-19'}, {'flight_number': 'HAT087', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Sophia', 'last_name': 'Ahmed', 'dob': '1974-05-09'}], 'payment_methods': [{'payment_id': 'gift_card_7936162', 'amount': 143}], 'total_baggages': 2, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="get_user_details",
+                kwargs={'user_id': 'ethan_hernandez_8041'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ivan_muller_7015",
+        instruction="Your user id is ivan_muller_7015. You want to upgrade your existing reservation (G72NSF) for your journey from Detroit to Seattle on May 17. You prefer to change your cabin class from economy to business on both flights (HAT097 from Detroit to Phoenix and HAT251 from Phoenix to Seattle). You will use your Mastercard ending in 6710 for this upgrade. Additionally, you want to increase your total checked baggage from 2 to 3, with one non-free baggage. You want to use your gift card worth $128 to pay for the baggage fees. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'G72NSF', 'cabin': 'business', 'flights': [{'flight_number': 'HAT097', 'date': '2024-05-17'}, {'flight_number': 'HAT251', 'date': '2024-05-17'}], 'payment_id': 'credit_card_3563913'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'G72NSF', 'total_baggages': 3, 'nonfree_baggages': 1, 'payment_id': 'gift_card_8516878'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="raj_gonzalez_7490",
+        instruction="Your user id is raj_gonzalez_7490. You want to upgrade your reservation with the ID MTCVDL from economy to business class for your round trip from Las Vegas to Detroit. The flights involved are HAT284 and HAT265 on May 20, and HAT275 and HAT259 on May 24. Additionally, you want to add two pieces of luggage to your reservation, with one being a paid checked bag. You wish to use your Mastercard ending in 9177 for both the upgrade and baggage payment. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'MTCVDL', 'cabin': 'business', 'flights': [{'flight_number': 'HAT284', 'date': '2024-05-20'}, {'flight_number': 'HAT265', 'date': '2024-05-20'}, {'flight_number': 'HAT275', 'date': '2024-05-24'}, {'flight_number': 'HAT259', 'date': '2024-05-24'}], 'payment_id': 'credit_card_5736502'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'MTCVDL', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_5736502'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="amelia_rossi_1297",
+        instruction="Your user id is amelia_rossi_1297. You want to update your existing reservation (ID 18YQSL) from San Francisco to Las Vegas. You want to change the flights to depart on May 20, keeping it in economy class. The flight numbers for this updated itinerary are HAT144, HAT173, HAT284, and HAT159. Use your Visa card ending in 3507 for this transaction. Also, increase your baggage allowance to 4 total, with 2 checked bags, and use your gift card to cover the baggage fees.\n\nAdditionally, you want to book a new round-trip flight from Phoenix to Seattle, departing on May 19 and returning on May 20. You prefer to travel in basic economy and this will be for one passenger, yourself, Amelia Rossi. Use your Visa card ending in 3507 to pay $169 for this booking, and you will have one checked bag included. You do not want to add travel insurance.\n\nFinally, send a $50 certificate to someone from your account. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': '18YQSL'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '18YQSL', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT144', 'date': '2024-05-20'}, {'flight_number': 'HAT173', 'date': '2024-05-20'}, {'flight_number': 'HAT284', 'date': '2024-05-20'}, {'flight_number': 'HAT159', 'date': '2024-05-20'}], 'payment_id': 'credit_card_4579924'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '18YQSL', 'total_baggages': 4, 'nonfree_baggages': 2, 'payment_id': 'gift_card_3871331'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'amelia_rossi_1297', 'origin': 'PHX', 'destination': 'SEA', 'flight_type': 'round_trip', 'cabin': 'basic_economy', 'flights': [{'flight_number': 'HAT267', 'date': '2024-05-19'}, {'flight_number': 'HAT267', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Amelia', 'last_name': 'Rossi', 'dob': '1980-01-01'}], 'payment_methods': [{'payment_id': 'credit_card_4579924', 'amount': 169}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'no'},
+            ),
+            Action(
+                name="send_certificate",
+                kwargs={'user_id': 'amelia_rossi_1297', 'amount': 50},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="juan_li_9671",
+        instruction="Your user id is juan_li_9671. You want to cancel your current reservation from Charlotte to Orlando under reservation ID PPHW67. After that, you are searching for direct flights from Charlotte to Orlando on May 17, 2024. Once you find a suitable option, you wish to book a round-trip in economy class for Daiki Garcia and Lei Garcia, with flights HAT064 on May 17 and HAT017 on May 19. You want 2 checked bags and prefer to include insurance. For payment, use your $500 certificate first, and then the remaining balance with your Visa ending in 8442.\n\nAdditionally, you want to upgrade your existing reservation Y2DJ0A to business class while keeping the same flights on May 25, 2024, and pay for any differences using your Visa ending in 8442. Lastly, for reservation ITSLB7, you want to update the number of total baggages to 4, with 2 of them being non-free, and pay for this update using your gift card worth $120. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'PPHW67'},
+            ),
+            Action(
+                name="search_direct_flight",
+                kwargs={'origin': 'CLT', 'destination': 'MCO', 'date': '2024-05-17'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'juan_li_9671', 'origin': 'CLT', 'destination': 'MCO', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT064', 'date': '2024-05-17'}, {'flight_number': 'HAT017', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Daiki', 'last_name': 'Garcia', 'dob': '1973-07-19'}, {'first_name': 'Lei', 'last_name': 'Garcia', 'dob': '1962-08-08'}], 'payment_methods': [{'payment_id': 'certificate_4380964', 'amount': 500}, {'payment_id': 'credit_card_3086580', 'amount': 146}], 'total_baggages': 2, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'Y2DJ0A', 'cabin': 'business', 'flights': [{'flight_number': 'HAT270', 'date': '2024-05-25'}, {'flight_number': 'HAT064', 'date': '2024-05-25'}], 'payment_id': 'credit_card_3086580'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'ITSLB7', 'total_baggages': 4, 'nonfree_baggages': 2, 'payment_id': 'gift_card_7745140'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="daiki_jackson_9549",
+        instruction="Your user id is daiki_jackson_9549. You want to update your existing reservation H6CD72 from San Francisco to Houston by changing the flight to HAT082 on May 19 while staying in business class. Use your Mastercard ending in 2563 for any payment adjustments. Additionally, for your reservation 98AFPZ from Dallas to Boston, you want to add one non-free checked baggage, using the same Mastercard ending in 2563 for payment. You also want to cancel your reservation ANB3RH from Minneapolis to Detroit. Finally, you want to book a new one-way business class flight from Minneapolis to Orlando on May 18 for Aarav Thomas. Use your $250 certificate first, and then your Mastercard ending in 2563 for the remaining balance. Include one free baggage and add travel insurance for this new booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'H6CD72', 'cabin': 'business', 'flights': [{'flight_number': 'HAT082', 'date': '2024-05-19'}], 'payment_id': 'credit_card_2002533'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '98AFPZ', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_2002533'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'ANB3RH'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'daiki_jackson_9549', 'origin': 'MSP', 'destination': 'MCO', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT098', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Aarav', 'last_name': 'Thomas', 'dob': '1999-09-25'}], 'payment_methods': [{'payment_id': 'certificate_8847636', 'amount': 250}, {'payment_id': 'credit_card_2002533', 'amount': 149}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ava_silva_7424",
+        instruction="Your user id is ava_silva_7424. You want to cancel your existing reservation from San Francisco to Las Vegas (reservation ID 0AIEP0) and book a new round-trip flight. You want to depart from San Francisco to Las Vegas on May 18 and return on May 20. You prefer to fly in economy class. The flight numbers for your outbound trip are HAT134 and HAT173, and for your return trip, they are HAT244 and HAT009. The passengers for this booking are yourself, Ava Silva, and Omar Santos, with the respective birthdays already in your profile. You want to pay using your $250 certificate and cover the remaining balance with your Visa ending in 4785. You also want to include insurance for this trip. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '0AIEP0'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'ava_silva_7424', 'origin': 'SFO', 'destination': 'LAS', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT134', 'date': '2024-05-18'}, {'flight_number': 'HAT173', 'date': '2024-05-18'}, {'flight_number': 'HAT244', 'date': '2024-05-20'}, {'flight_number': 'HAT009', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Ava', 'last_name': 'Silva', 'dob': '2000-01-01'}, {'first_name': 'Omar', 'last_name': 'Santos', 'dob': '1995-05-21'}], 'payment_methods': [{'payment_id': 'certificate_1829572', 'amount': 250}, {'payment_id': 'credit_card_4769809', 'amount': 958}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mohamed_gonzalez_6040",
+        instruction="Your user id is mohamed_gonzalez_6040. You want to cancel your existing reservation from Seattle to Detroit, which has the reservation ID K27ZUJ. After canceling, you want to book a new round-trip flight from Seattle to Detroit. You wish to fly in business class on the following flights: HAT021 on May 17, HAT212 on May 18, HAT097 on May 20, and HAT251 also on May 20. The passenger for this new booking should be Raj Taylor, whose details are already saved in your profile. You plan to travel with 2 non-free checked bags and wish to include travel insurance. You want to use your Mastercard ending in 3905 to pay for this new reservation. Additionally, for another reservation with ID 4FCR1O, you want to update the baggage allowance to include a total of 6 non-free checked bags, and you would like to pay for this using the same Mastercard ending in 3905. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'K27ZUJ'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mohamed_gonzalez_6040', 'origin': 'SEA', 'destination': 'DTW', 'flight_type': 'round_trip', 'cabin': 'business', 'flights': [{'flight_number': 'HAT021', 'date': '2024-05-17'}, {'flight_number': 'HAT212', 'date': '2024-05-18'}, {'flight_number': 'HAT097', 'date': '2024-05-20'}, {'flight_number': 'HAT251', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Raj', 'last_name': 'Taylor', 'dob': '1999-08-23'}], 'payment_methods': [{'payment_id': 'credit_card_3382683', 'amount': 1759}], 'total_baggages': 2, 'nonfree_baggages': 2, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '4FCR1O', 'total_baggages': 6, 'nonfree_baggages': 6, 'payment_id': 'credit_card_3382683'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="raj_ito_8898",
+        instruction="Your user id is raj_ito_8898. You want to make several changes to your flight reservations. First, for your existing reservation from Minneapolis to Orlando (reservation id ZWI06B), you want to change your travel dates to depart on May 18 and return on May 19. You also wish to upgrade your seat to economy class and add one checked bag, of which one is not free. You prefer to use your Visa ending in 7324 for these changes.\n\nNext, you want to cancel your reservation from Boston to Orlando (reservation id JNV20G).\n\nLastly, you want to book a new round-trip flight from Boston to Orlando, departing on May 17 and returning on May 18, in business class. The passenger for this trip will be Isabella Johansson, and you would like to add one checked bag, with one being a non-free bag. You also want to purchase travel insurance. For this booking, you will use your Visa ending in 7324 for payment. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'ZWI06B', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT098', 'date': '2024-05-18'}, {'flight_number': 'HAT298', 'date': '2024-05-19'}], 'payment_id': 'credit_card_8368961'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'ZWI06B', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_8368961'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'JNV20G'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'raj_ito_8898', 'origin': 'BOS', 'destination': 'MCO', 'flight_type': 'round_trip', 'cabin': 'business', 'flights': [{'flight_number': 'HAT145', 'date': '2024-05-17'}, {'flight_number': 'HAT017', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Isabella', 'last_name': 'Johansson', 'dob': '1960-08-21'}], 'payment_methods': [{'payment_id': 'credit_card_8368961', 'amount': 708}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="lei_rossi_4874",
+        instruction="Your user id is lei_rossi_4874. You want to update your existing reservation from Houston to Newark (reservation ID H0HHXO) to change the flight date to May 18 and upgrade the cabin to economy class. You prefer to pay for this change using your gift card with a balance of $275. Additionally, you want to book a new one-way flight from Los Angeles to Dallas on May 19 for Liam Brown in business class. The flight number is HAT022. You want to use your two $250 certificates to cover the payment, and you are open to using the second certificate for the remaining balance of $41. You want to add insurance for this new booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'H0HHXO', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT149', 'date': '2024-05-18'}], 'payment_id': 'gift_card_3106220'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'lei_rossi_4874', 'origin': 'LAX', 'destination': 'DFW', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT022', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Liam', 'last_name': 'Brown', 'dob': '2000-01-10'}], 'payment_methods': [{'payment_id': 'certificate_1465278', 'amount': 250}, {'payment_id': 'certificate_3462125', 'amount': 41}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="sophia_muller_9002",
+        instruction="Your user id is sophia_muller_9002. You want to cancel your existing reservation from Orlando to San Francisco, reservation id X57OV5. After that, you wish to book a new one-way flight from Orlando to San Francisco on May 20, flying economy class on flights HAT214 and HAT283. You will be traveling alone, and you would like to use your $190 gift card first, then cover any remaining balance with your Mastercard ending in 4890. You intend to check in one piece of baggage, and you do not need travel insurance for this trip.\n\nAdditionally, you want to update your reservation 05CS5D by adding two non-free checked bags. You prefer to pay for this with your Visa card ending in 9110.\n\nFor your reservation V5HUST, you would like to change the flight dates and times to May 20, maintaining business class on flights HAT070 and HAT281. Use your Mastercard ending in 4890 for any additional costs associated with this change.\n\nLastly, you want to book a round-trip flight from Charlotte to New York, departing on May 16 with flight HAT176 and returning on May 17 with flight HAT240. You will be traveling in business class with Evelyn Davis and Chen Silva. For this booking, please use your Visa card ending in 9110 to pay the full amount, and ensure you include travel insurance. You plan to check in four pieces of baggage in total. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'X57OV5'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'sophia_muller_9002', 'origin': 'MCO', 'destination': 'SFO', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT214', 'date': '2024-05-20'}, {'flight_number': 'HAT283', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Sophia', 'last_name': 'Muller', 'dob': '1985-06-15'}], 'payment_methods': [{'payment_id': 'gift_card_3286428', 'amount': 190}, {'payment_id': 'credit_card_6665577', 'amount': 61}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '05CS5D', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'credit_card_4201946'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'V5HUST', 'cabin': 'business', 'flights': [{'flight_number': 'HAT070', 'date': '2024-05-20'}, {'flight_number': 'HAT281', 'date': '2024-05-20'}], 'payment_id': 'credit_card_6665577'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'sophia_muller_9002', 'origin': 'CLT', 'destination': 'JFK', 'flight_type': 'round_trip', 'cabin': 'business', 'flights': [{'flight_number': 'HAT176', 'date': '2024-05-16'}, {'flight_number': 'HAT240', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Evelyn', 'last_name': 'Davis', 'dob': '1971-01-23'}, {'first_name': 'Chen', 'last_name': 'Silva', 'dob': '1952-01-06'}], 'payment_methods': [{'payment_id': 'credit_card_4201946', 'amount': 1360}], 'total_baggages': 4, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="sofia_li_6597",
+        instruction="Your user id is sofia_li_6597. You want to update your reservation for your trip from Phoenix to New York and back, reservation ID NGCFQV. You need to change the flights to depart on May 18 for both Phoenix to Seattle (flight number HAT156) and Seattle to New York (flight number HAT276), and return on May 19 from New York to Detroit (flight number HAT092) and then Detroit to Phoenix (flight number HAT035). You want to remain in business class. You also want to increase the total baggage allowance to 2 bags, with 1 being a non-free bag. For the flight changes, please use your Visa card ending in 6765. For the additional baggage fee, use your $75 gift card. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'NGCFQV', 'cabin': 'business', 'flights': [{'flight_number': 'HAT156', 'date': '2024-05-18'}, {'flight_number': 'HAT276', 'date': '2024-05-18'}, {'flight_number': 'HAT092', 'date': '2024-05-19'}, {'flight_number': 'HAT035', 'date': '2024-05-19'}], 'payment_id': 'credit_card_9131473'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'NGCFQV', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'gift_card_9832455'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mason_johansson_5154",
+        instruction="Your user id is mason_johansson_5154. You want to first check the details of your reservation with ID RB9S17. For your existing reservation 2OQQI6 from Chicago to Philadelphia, you wish to update the baggage allowance to include 2 bags, 1 of which is non-free, and you want to cover this cost using your Visa card ending in 1242. Next, you are searching for direct flights from Denver to Charlotte on May 20, 2024. Additionally, you want to book a new one-way flight for James Hernandez from Philadelphia to Charlotte on May 19, 2024, in economy class on flight number HAT269, with no baggage or insurance, and pay for this using your Visa card ending in 2961. Finally, you want to cancel your reservation RB9S17. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'RB9S17'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '2OQQI6', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_3358561'},
+            ),
+            Action(
+                name="search_direct_flight",
+                kwargs={'origin': 'DEN', 'destination': 'CLT', 'date': '2024-05-20'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mason_johansson_5154', 'origin': 'PHL', 'destination': 'CLT', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT269', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'James', 'last_name': 'Hernandez', 'dob': '1987-10-23'}], 'payment_methods': [{'payment_id': 'credit_card_5590177', 'amount': 199}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'RB9S17'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="lei_anderson_2319",
+        instruction="Your user id is lei_anderson_2319. You want to make the following changes and bookings: First, for your trip under reservation KFSKBR, you want to increase your total baggage to 2 pieces, with 1 being a paid baggage. Please use your Visa card ending in 5481 for payment. Next, for your reservation OK5IEN, you want to upgrade all flights to business class for both travel dates, May 16 and May 26. Again, use your Visa ending in 5481 for this upgrade. Finally, you want to book a one-way flight from JFK to MCO on May 17 for Mason Johansson, flying in economy class. This booking should include 1 piece of baggage and does not require insurance. Please charge your Visa ending in 5481 for this booking as well. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'KFSKBR', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_4526808'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'OK5IEN', 'cabin': 'business', 'flights': [{'flight_number': 'HAT014', 'date': '2024-05-16'}, {'flight_number': 'HAT192', 'date': '2024-05-16'}, {'flight_number': 'HAT166', 'date': '2024-05-26'}, {'flight_number': 'HAT068', 'date': '2024-05-26'}], 'payment_id': 'credit_card_4526808'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'lei_anderson_2319', 'origin': 'JFK', 'destination': 'MCO', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT036', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Mason', 'last_name': 'Johansson', 'dob': '1993-07-13'}], 'payment_methods': [{'payment_id': 'credit_card_4526808', 'amount': 152}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="evelyn_lee_2325",
+        instruction="Your user id is evelyn_lee_2325. You want to upgrade your upcoming round-trip reservation from Houston to Phoenix (reservation ID RH8JD7) to business class, for the flights on May 26 and May 29. You also need to add two additional checked bags, totaling three, for this reservation. Please use your Visa card ending in 7370 to pay for these changes. Additionally, you want to cancel your reservation from Chicago to Seattle (reservation ID DGL6IU). After canceling that reservation, you would like to book a new one-way flight from Seattle to Chicago on May 30 for Daiki Anderson, flying in economy class. The flight numbers for this trip are HAT220 and HAT227. Use your Visa card ending in 7370 to handle the payment of $312 for this booking. Lastly, you want to send a $50 certificate to an email address of your choice. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'RH8JD7', 'cabin': 'business', 'flights': [{'flight_number': 'HAT180', 'date': '2024-05-26'}, {'flight_number': 'HAT123', 'date': '2024-05-26'}, {'flight_number': 'HAT152', 'date': '2024-05-29'}], 'payment_id': 'credit_card_5787244'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'RH8JD7', 'total_baggages': 3, 'nonfree_baggages': 2, 'payment_id': 'credit_card_5787244'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'DGL6IU'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'evelyn_lee_2325', 'origin': 'SEA', 'destination': 'ORD', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT220', 'date': '2024-05-30'}, {'flight_number': 'HAT227', 'date': '2024-05-30'}], 'passengers': [{'first_name': 'Daiki', 'last_name': 'Anderson', 'dob': '1975-06-15'}], 'payment_methods': [{'payment_id': 'credit_card_5787244', 'amount': 312}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="send_certificate",
+                kwargs={'user_id': 'evelyn_lee_2325', 'amount': 50},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="amelia_li_2415",
+        instruction="Your user id is amelia_li_2415. First, you want to cancel your current reservation from Houston to Philadelphia with the reservation id NUCNX0. After that, you want to book a new one-way business class flight from Houston to New York LaGuardia on May 16. The flights you want have the numbers HAT138 and HAT271 on the same date. The passengers will be yourself, Isabella Sanchez, and Lucas Kim. You plan to carry a total of 3 bags, all of which are nonfree. You also do not wish to purchase travel insurance. You prefer to use your $500 certificate first and then pay the remaining balance of $1522 with your Visa card ending in 4846.\n\nAdditionally, you want to update your existing reservation with id QDAPM3 to increase the total number of baggages to 4, out of which 2 will be nonfree, and you will use your Visa card ending in 4846 for the payment. Finally, for your reservation ZZF2YA from Newark to Boston, you would like to upgrade the cabin to economy while maintaining the same flights on May 19 and May 22. You will also use your Visa card ending in 4846 for this payment. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'NUCNX0'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'amelia_li_2415', 'origin': 'IAH', 'destination': 'LGA', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT138', 'date': '2024-05-16'}, {'flight_number': 'HAT271', 'date': '2024-05-16'}], 'passengers': [{'first_name': 'Amelia', 'last_name': 'Li', 'dob': 'not_provided'}, {'first_name': 'Isabella', 'last_name': 'Sanchez', 'dob': '1992-05-20'}, {'first_name': 'Lucas', 'last_name': 'Kim', 'dob': '1990-10-15'}], 'payment_methods': [{'payment_id': 'certificate_5431423', 'amount': 500}, {'payment_id': 'credit_card_1605369', 'amount': 1522}], 'total_baggages': 3, 'nonfree_baggages': 3, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'QDAPM3', 'total_baggages': 4, 'nonfree_baggages': 2, 'payment_id': 'credit_card_1605369'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'ZZF2YA', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT270', 'date': '2024-05-19'}, {'flight_number': 'HAT064', 'date': '2024-05-19'}, {'flight_number': 'HAT247', 'date': '2024-05-22'}, {'flight_number': 'HAT192', 'date': '2024-05-22'}], 'payment_id': 'credit_card_1605369'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="noah_jackson_7027",
+        instruction="Your user id is noah_jackson_7027. You want to cancel your current reservation from Charlotte to Dallas (reservation ID LRTPLQ) and make a new booking for the same route. You want to fly on May 18th with flights HAT108 and HAT213 in economy class. You will be traveling with one checked baggage, and you prefer to include travel insurance in this booking. You want to pay for this reservation using your Visa credit card ending in 3150. You are reactive to the agent and will not say anything that is not asked. Please proceed with these changes.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'LRTPLQ'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'noah_jackson_7027', 'origin': 'CLT', 'destination': 'DFW', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT108', 'date': '2024-05-18'}, {'flight_number': 'HAT213', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Noah', 'last_name': 'Jackson', 'dob': '1985-06-15'}], 'payment_methods': [{'payment_id': 'credit_card_3909926', 'amount': 332}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="raj_ito_8898",
+        instruction="Your user id is raj_ito_8898. You want to update your existing reservation (ZWI06B) from Minneapolis to Orlando. Change the travel dates to May 20th for the outbound flight (flight number HAT098) and May 19th for the return flight (flight number HAT298), and upgrade the cabin to economy. For this reservation, you prefer to pay with your Visa ending in 7324. You also want to add one checked bag, which includes one non-free bag, and for that, you wish to use your Mastercard ending in 9546. Additionally, you want to book a new one-way flight from San Francisco to Atlanta for Isabella Johansson on May 20th (flight number HAT268), flying in economy class with no checked bags. You want to use your Visa ending in 7324 to pay for this new reservation. You do not require travel insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'ZWI06B', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT098', 'date': '2024-05-20'}, {'flight_number': 'HAT298', 'date': '2024-05-19'}], 'payment_id': 'credit_card_8368961'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'ZWI06B', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_7614961'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'raj_ito_8898', 'origin': 'SFO', 'destination': 'ATL', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT268', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Isabella', 'last_name': 'Johansson', 'dob': '1960-08-21'}], 'payment_methods': [{'payment_id': 'credit_card_8368961', 'amount': 101}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="fatima_ito_3977",
+        instruction="Your user id is fatima_ito_3977. You need to make several changes to your travel plans. First, for your existing round-trip reservation from Seattle to Detroit (reservation id 5T6UI2), you want to update the flights to economy class. The flights should be on May 17 with flight numbers HAT276 and HAT088, and on May 20 with flight numbers HAT275 and HAT156. You also want to add a total of 1 checked bag, which is not free. For these updates, use your Visa card ending in 4391 for the flight change and your $228 gift card for the baggage fees.\n\nAdditionally, you wish to cancel your one-way flight from New York (LGA) to Las Vegas (LAS) (reservation id YX38CU).\n\nFinally, you want to book a new one-way flight from New York (LGA) to Las Vegas (LAS) on May 19. You prefer economy class with flight numbers HAT245 and HAT173. You want to purchase this reservation using your $500 certificate. This reservation should include no additional baggage, and you want travel insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '5T6UI2', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT276', 'date': '2024-05-17'}, {'flight_number': 'HAT088', 'date': '2024-05-17'}, {'flight_number': 'HAT275', 'date': '2024-05-20'}, {'flight_number': 'HAT156', 'date': '2024-05-20'}], 'payment_id': 'credit_card_4481781'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '5T6UI2', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'gift_card_2858570'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'YX38CU'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'fatima_ito_3977', 'origin': 'LGA', 'destination': 'LAS', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT245', 'date': '2024-05-19'}, {'flight_number': 'HAT173', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Fatima', 'last_name': 'Ito', 'dob': '1985-09-25'}], 'payment_methods': [{'payment_id': 'certificate_5753608', 'amount': 296}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="daiki_kovacs_8569",
+        instruction="Your user id is daiki_kovacs_8569. You want to update your round-trip reservation from Orlando to Phoenix (reservation id ERASFC) to upgrade to economy class on all legs. The flights involved are HAT299 and HAT242 on May 23, and HAT181 on May 28. You want to pay for this upgrade with your Mastercard ending in 1219. Additionally, you would like to add one checked bag to this reservation, paying with your $59 gift card. \n\nYou also want to book a new one-way flight from Phoenix to New York (LGA) for passenger Juan Sanchez on flight HAT051 scheduled for May 18. You prefer to fly in basic economy and do not need any additional baggage or insurance. Use your Mastercard ending in 1219 to pay for this booking.\n\nFinally, you wish to cancel your existing reservation from Boston to Miami (reservation id XZEMHV). You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'ERASFC', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT299', 'date': '2024-05-23'}, {'flight_number': 'HAT242', 'date': '2024-05-23'}, {'flight_number': 'HAT181', 'date': '2024-05-28'}], 'payment_id': 'credit_card_9973222'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'ERASFC', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'gift_card_9424640'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'daiki_kovacs_8569', 'origin': 'PHX', 'destination': 'LGA', 'flight_type': 'one_way', 'cabin': 'basic_economy', 'flights': [{'flight_number': 'HAT051', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Juan', 'last_name': 'Sanchez', 'dob': '1959-02-27'}], 'payment_methods': [{'payment_id': 'credit_card_9973222', 'amount': 61}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'XZEMHV'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="aarav_anderson_6237",
+        instruction="Your user id is aarav_anderson_6237. You want to first get the details of your existing reservation with the reservation ID HPABG7. After that, you wish to upgrade this reservation from economy to business class on your flight from JFK to PHX, changing the flight dates to May 17, using your Visa card ending in 5537 to cover any additional costs. You also want to update the baggage allowance for this reservation to include 2 total bags, with 1 non-free bag, and you want to use your gift card with the balance of $264 for this. Additionally, you want to cancel your reservation with the ID BU71UY. Finally, you want to book a new one-way flight from LGA to PHX on May 18 in economy class for you (Aarav Anderson) and Chen Muller. You would like to pay for this booking using your Mastercard ending in 8119. This booking should include 3 bags total, with 1 non-free bag, and you would like to add insurance to this reservation. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'HPABG7'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'HPABG7', 'cabin': 'business', 'flights': [{'flight_number': 'HAT088', 'date': '2024-05-17'}, {'flight_number': 'HAT097', 'date': '2024-05-17'}], 'payment_id': 'credit_card_5252591'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'HPABG7', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'gift_card_5333120'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'BU71UY'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'aarav_anderson_6237', 'origin': 'LGA', 'destination': 'PHX', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT002', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Aarav', 'last_name': 'Anderson', 'dob': '1990-01-01'}, {'first_name': 'Chen', 'last_name': 'Muller', 'dob': '1999-07-01'}], 'payment_methods': [{'payment_id': 'credit_card_5100220', 'amount': 418}], 'total_baggages': 3, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="fatima_taylor_8297",
+        instruction="Your user id is fatima_taylor_8297. You want to cancel your existing reservation from Newark to Minneapolis with the reservation ID IA3PH8. After that, you want to book a new round-trip flight from Newark (EWR) to Minneapolis (MSP) in economy class. The outbound flight should be on May 19, 2024, with flight number HAT208, and the return flight on May 20, 2024, with flight number HAT141. You want the reservation to be under Emma Rossi. You do not need any additional baggage and prefer to have travel insurance. To pay, you want to use your gift card worth $144 and charge the remaining balance of $178 to your Mastercard ending in 4118. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'IA3PH8'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'fatima_taylor_8297', 'origin': 'EWR', 'destination': 'MSP', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT208', 'date': '2024-05-19'}, {'flight_number': 'HAT141', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Emma', 'last_name': 'Rossi', 'dob': '1971-10-26'}], 'payment_methods': [{'payment_id': 'gift_card_9166037', 'amount': 144}, {'payment_id': 'credit_card_1672809', 'amount': 178}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="chen_hernandez_2608",
+        instruction="Your user id is chen_hernandez_2608. You need to cancel your existing flight reservation with the ID TANH6H. After that, you want to book a new round-trip flight from Las Vegas to Orlando. The flights should be in economy class, departing on May 18 with flight numbers HAT137 and HAT214, and returning on May 19 with flight number HAT259. The passengers will be yourself, Chen Hernandez, born on July 19, 1965, and Liam Nguyen, born on August 7, 1960. You prefer to use your Mastercard ending in 6680 for the payment amounting to $932. Additionally, you want to add a total of 4 baggages to this reservation, all of which are included in the fare. You also want to purchase travel insurance for this booking. Furthermore, for your existing reservation with ID LSQVC2, you need to update the baggage allowance to include 2 additional non-free checked bags, and for this, you want to use your Visa ending in 7969. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'TANH6H'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'chen_hernandez_2608', 'origin': 'LAS', 'destination': 'MCO', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT137', 'date': '2024-05-18'}, {'flight_number': 'HAT214', 'date': '2024-05-18'}, {'flight_number': 'HAT259', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Chen', 'last_name': 'Hernandez', 'dob': '1985-06-15'}, {'first_name': 'Liam', 'last_name': 'Nguyen', 'dob': '1960-08-07'}], 'payment_methods': [{'payment_id': 'credit_card_8453507', 'amount': 932}], 'total_baggages': 4, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'LSQVC2', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'credit_card_6123046'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="harper_lopez_1489",
+        instruction="Your user id is harper_lopez_1489. You want to make changes to your existing reservation FBRWYE. Specifically, you need to update the flights to business class. The new flight dates should be as follows: flight HAT194 on May 16, flight HAT182 on May 19, and flights HAT214 and HAT045 both on May 20. You prefer to use your Mastercard ending in 9287 for this update.\n\nAdditionally, you want to book a new one-way flight from Minneapolis to Newark for Ethan Johnson, traveling in basic economy. The flight number is HAT196, departing on May 18. For the payment, you would like to use your $69 gift card first, and cover any remaining balance with your Mastercard ending in 9575. You do not need any additional baggage or insurance for this booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'FBRWYE', 'cabin': 'business', 'flights': [{'flight_number': 'HAT194', 'date': '2024-05-16'}, {'flight_number': 'HAT182', 'date': '2024-05-19'}, {'flight_number': 'HAT214', 'date': '2024-05-20'}, {'flight_number': 'HAT045', 'date': '2024-05-20'}], 'payment_id': 'credit_card_9875103'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'harper_lopez_1489', 'origin': 'MSP', 'destination': 'EWR', 'flight_type': 'one_way', 'cabin': 'basic_economy', 'flights': [{'flight_number': 'HAT196', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Ethan', 'last_name': 'Johnson', 'dob': '1988-04-07'}], 'payment_methods': [{'payment_id': 'gift_card_7854500', 'amount': 69}, {'payment_id': 'credit_card_3075831', 'amount': 14}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="sofia_li_6597",
+        instruction="Your user id is sofia_li_6597. You want to cancel your current reservation from Las Vegas to Denver with the reservation ID 23LMN8. After canceling, you wish to book a new one-way flight from Las Vegas to Denver on May 19, in economy class, for Raj Kim. The flight number for this booking is HAT162. You will have one checked bag and want to include travel insurance. You prefer to use your $75 gift card first for payment, and then cover the remaining balance with your Visa card ending in 6765. Additionally, for your existing reservation with ID 91YIE2, you need to update the baggage details to include two bags, with one being a non-free checked bag, and use your Visa card ending in 6765 to pay for any additional charges. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '23LMN8'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'sofia_li_6597', 'origin': 'LAS', 'destination': 'DEN', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT162', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Raj', 'last_name': 'Kim', 'dob': '1959-07-23'}], 'payment_methods': [{'payment_id': 'gift_card_9832455', 'amount': 75}, {'payment_id': 'credit_card_9131473', 'amount': 150}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '91YIE2', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_9131473'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="evelyn_wilson_2294",
+        instruction="Your user id is evelyn_wilson_2294. You want to cancel your current reservation from Dallas to New York (reservation id 6JRQ1T) and book a new one-way business class flight on May 19. The flights should be HAT128 from DFW to ATL and HAT110 from ATL to LGA. You want to include 2 pieces of luggage, with 1 being non-free, and add insurance for this trip. You'd like to use your $300 gift card and cover the remaining balance with your Visa card ending in 6910. Additionally, for your existing reservation from Las Vegas to Denver (reservation id U4IIND), you want to update it to include 1 additional piece of non-free luggage, and charge it to your Visa card ending in 6910. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '6JRQ1T'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'evelyn_wilson_2294', 'origin': 'DFW', 'destination': 'LGA', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT128', 'date': '2024-05-19'}, {'flight_number': 'HAT110', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Evelyn', 'last_name': 'Wilson', 'dob': '1990-02-15'}], 'payment_methods': [{'payment_id': 'gift_card_7448149', 'amount': 300}, {'payment_id': 'credit_card_7936331', 'amount': 535}], 'total_baggages': 2, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'U4IIND', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_7936331'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="evelyn_silva_5208",
+        instruction="Your user id is evelyn_silva_5208. You want to cancel your existing reservation from Minneapolis to Newark with reservation ID HE73UU. After that, you need to book a new round-trip flight from Minneapolis (MSP) to Newark (EWR) in economy class. The outbound flight should be on May 20 with flight number HAT300, and the return should be on May 21 with flight number HAT208. Olivia Ahmed will be the sole passenger, and you want to include 2 checked bags with this booking. You prefer to pay using your $500 certificate, applying $332 towards this reservation. Additionally, you would like to update your reservation 90WDMA to include 4 total baggages, with 2 being non-free. For this change, you want to use your Visa card ending in 5642. Please ensure that travel insurance is included in the new booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'HE73UU'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'evelyn_silva_5208', 'origin': 'MSP', 'destination': 'EWR', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT300', 'date': '2024-05-20'}, {'flight_number': 'HAT208', 'date': '2024-05-21'}], 'passengers': [{'first_name': 'Olivia', 'last_name': 'Ahmed', 'dob': '1980-12-07'}], 'payment_methods': [{'payment_id': 'certificate_3781045', 'amount': 332}], 'total_baggages': 2, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '90WDMA', 'total_baggages': 4, 'nonfree_baggages': 2, 'payment_id': 'credit_card_1638882'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="anya_johansson_1855",
+        instruction="Your user id is anya_johansson_1855. You need to update your reservation L0A0CE. Change the cabin to economy and the flight to HAT208 on May 17. Use your Visa ending in 2974 for any costs associated with this change. Add one checked baggage to this reservation, and use your gift card to cover this fee. You also want to cancel your reservation VAFQ3Q completely. Subsequently, you want to book a new round-trip flight from Newark to Los Angeles. The outbound flight should be HAT041 on May 17, and the return flight should be HAT012 on May 19. Both you and Emma Gonzalez will be traveling. You want to fly in economy class and have two pieces of baggage, one of which is non-free. For the new booking, use your $100 certificate, one $150 certificate, another $150 certificate, and the remaining balance with your Visa ending in 2974. You also want to include travel insurance for this trip. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'L0A0CE', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT208', 'date': '2024-05-17'}], 'payment_id': 'credit_card_2114702'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'L0A0CE', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'gift_card_7865517'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'VAFQ3Q'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'anya_johansson_1855', 'origin': 'EWR', 'destination': 'LAX', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT041', 'date': '2024-05-17'}, {'flight_number': 'HAT012', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Anya', 'last_name': 'Johansson', 'dob': '1984-10-10'}, {'first_name': 'Emma', 'last_name': 'Gonzalez', 'dob': '1984-10-10'}], 'payment_methods': [{'payment_id': 'certificate_8387108', 'amount': 100}, {'payment_id': 'certificate_7696738', 'amount': 150}, {'payment_id': 'certificate_9039426', 'amount': 150}, {'payment_id': 'credit_card_2114702', 'amount': 306}], 'total_baggages': 2, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="olivia_patel_3577",
+        instruction="Your user id is olivia_patel_3577. You want to first get the details of your reservation with ID 71MZYC. Next, you want to cancel the reservation with ID FA3Q0Z. After that, you would like to update your reservation ID 71MZYC to change the flights to business class on the following dates: flight number HAT274 on May 18, flight number HAT082 on May 18, flight number HAT190 on May 19, and flight number HAT047 on May 19. You want to add a total of 2 baggages, with 1 being non-free, and use your Mastercard ending in 9586 for payment. Additionally, you want to book a new one-way flight from Boston to Los Angeles in economy class on May 18. You prefer flight number HAT086 or HAT250, and the passenger will be Olivia Patel with the date of birth December 15, 1990. You want to include insurance and have 1 baggage. You would like to use your Mastercard ending in 9586 for this payment as well. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': '71MZYC'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'FA3Q0Z'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '71MZYC', 'cabin': 'business', 'flights': [{'flight_number': 'HAT274', 'date': '2024-05-18'}, {'flight_number': 'HAT082', 'date': '2024-05-18'}, {'flight_number': 'HAT190', 'date': '2024-05-19'}, {'flight_number': 'HAT047', 'date': '2024-05-19'}], 'payment_id': 'credit_card_6807937'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '71MZYC', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_6807937'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'olivia_patel_3577', 'origin': 'BOS', 'destination': 'LAX', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT086', 'date': '2024-05-18'}, {'flight_number': 'HAT250', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Olivia', 'last_name': 'Patel', 'dob': '1990-12-15'}], 'payment_methods': [{'payment_id': 'credit_card_6807937', 'amount': 375}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mason_johansson_5154",
+        instruction="Your user id is mason_johansson_5154. You want to update your flight reservation RB9S17 from Charlotte to Denver. Change your cabin from business to economy and reschedule the flight to May 19, using flight number HAT262. You prefer to use your Visa card ending in 2961 for any additional charges. Additionally, you want to book a new one-way flight from Dallas to Seattle for James Hernandez, departing on May 20 on flight number HAT183 in economy class. You will have one checked bag that requires payment, and you do not want to include travel insurance. Complete this booking using your Visa card ending in 1242. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'RB9S17', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT262', 'date': '2024-05-19'}], 'payment_id': 'credit_card_5590177'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mason_johansson_5154', 'origin': 'DFW', 'destination': 'SEA', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT183', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'James', 'last_name': 'Hernandez', 'dob': '1987-10-23'}], 'payment_methods': [{'payment_id': 'credit_card_3358561', 'amount': 190}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="daiki_rossi_4467",
+        instruction="Your user id is daiki_rossi_4467. You need to update your existing reservation NFFMYQ to change the return flight date to May 19, 2024, while keeping the cabin class in economy. You want to add two checked bags to this reservation. For these updates, please charge your Visa ending in 3402. After making these changes, please cancel reservation NFFMYQ altogether.\n\nAdditionally, you want to book a new round-trip flight from Denver to Dallas. You prefer economy class for both flights, departing on May 18, 2024, and returning on May 20, 2024, both on flight number HAT046. You will be the sole traveler. Please add one checked bag and include travel insurance. First, use your $9 gift card and pay the remaining balance with your Mastercard ending in 5748. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'NFFMYQ', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT225', 'date': '2024-05-24'}, {'flight_number': 'HAT262', 'date': '2024-05-19'}], 'payment_id': 'credit_card_7103786'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'NFFMYQ', 'total_baggages': 2, 'nonfree_baggages': 0, 'payment_id': 'credit_card_7103786'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'daiki_rossi_4467', 'origin': 'DEN', 'destination': 'DFW', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT046', 'date': '2024-05-18'}, {'flight_number': 'HAT046', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Daiki', 'last_name': 'Rossi', 'dob': '1990-01-01'}], 'payment_methods': [{'payment_id': 'gift_card_7336683', 'amount': 9}, {'payment_id': 'credit_card_3942896', 'amount': 382}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'NFFMYQ'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="harper_garcia_8677",
+        instruction="Your user id is harper_garcia_8677. You need to update your existing reservation for the trip from Philadelphia to Denver, changing the flights to depart on May 17 and return on May 20 in economy class. Use your Mastercard ending in 6617 for payment. Additionally, you want to book a new one-way flight from New York (JFK) to Miami for Lei Sanchez, departing on May 17 in basic economy. Use your $284 gift card to cover this booking, and if the amount exceeds it, you prefer to pay the remainder with your Mastercard ending in 6617. You do not require any baggage or insurance for either booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'CUPYN7', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT076', 'date': '2024-05-17'}, {'flight_number': 'HAT080', 'date': '2024-05-20'}], 'payment_id': 'credit_card_5865555'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'harper_garcia_8677', 'origin': 'JFK', 'destination': 'MIA', 'flight_type': 'one_way', 'cabin': 'basic_economy', 'flights': [{'flight_number': 'HAT060', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Lei', 'last_name': 'Sanchez', 'dob': '1954-08-11'}], 'payment_methods': [{'payment_id': 'gift_card_8173468', 'amount': 67}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="aarav_silva_6452",
+        instruction="Your user id is aarav_silva_6452. You want to cancel your existing reservation from Orlando to Houston with reservation ID YPTFZY. After canceling, you would like to book a new round-trip flight from Orlando to Houston. You prefer flying in economy class on the following flights: HAT075 and HAT175 on May 18, and then HAT112 and HAT154 on May 21 and May 22 respectively. The passenger will be Chen Khan, whose birthday is already on file. You want to pay for this booking using your Visa card ending in 5471. You need one checked baggage for this trip. Additionally, for your reservation with ID DKGIIH, you want to increase the total baggage count to 3, with 2 of them being nonfree, and you would like to use your Visa card ending in 9752 to cover any additional costs. You do not want insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'YPTFZY'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'aarav_silva_6452', 'origin': 'MCO', 'destination': 'IAH', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT075', 'date': '2024-05-18'}, {'flight_number': 'HAT175', 'date': '2024-05-18'}, {'flight_number': 'HAT112', 'date': '2024-05-21'}, {'flight_number': 'HAT154', 'date': '2024-05-22'}], 'passengers': [{'first_name': 'Chen', 'last_name': 'Khan', 'dob': '1975-08-26'}], 'payment_methods': [{'payment_id': 'credit_card_1049698', 'amount': 556}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'DKGIIH', 'total_baggages': 3, 'nonfree_baggages': 2, 'payment_id': 'credit_card_6280160'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mia_lopez_6592",
+        instruction="Your user id is mia_lopez_6592. You need details for your reservation with ID P9YQCF. You want to update the flights for this reservation to fly on May 19, changing to flight numbers HAT235 and HAT153, and on May 20, to flight numbers HAT032 and HAT026, all in business class. You want to pay for this update with your Visa ending in 3305. Additionally, you want to increase your total baggage allowance to 6 bags, with 1 being a non-free bag, using your $135 gift card for payment. Furthermore, you want to book a one-way business class flight from Denver to Atlanta on May 19 for Noah Silva, with flight number HAT261. You prefer to pay using your $250 certificate first and cover any remaining balance with your Visa ending in 3305. You want insurance for this booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'P9YQCF'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'P9YQCF', 'cabin': 'business', 'flights': [{'flight_number': 'HAT235', 'date': '2024-05-19'}, {'flight_number': 'HAT153', 'date': '2024-05-19'}, {'flight_number': 'HAT032', 'date': '2024-05-20'}, {'flight_number': 'HAT026', 'date': '2024-05-20'}], 'payment_id': 'credit_card_9314282'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'P9YQCF', 'total_baggages': 6, 'nonfree_baggages': 1, 'payment_id': 'gift_card_3319320'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mia_lopez_6592', 'origin': 'DEN', 'destination': 'ATL', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT261', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Noah', 'last_name': 'Silva', 'dob': '1995-01-20'}], 'payment_methods': [{'payment_id': 'certificate_5677938', 'amount': 250}, {'payment_id': 'credit_card_9314282', 'amount': 148}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mia_silva_9133",
+        instruction="Your user id is mia_silva_9133. You want to add an extra checked bag to your Dallas to Los Angeles round-trip flight under reservation ID P1D9KS, bringing the total to 2 bags, with one being paid. Use your Visa card ending in 2436 for the additional baggage fee. Next, you wish to cancel the existing reservation from Chicago to Las Vegas (reservation ID TD3FPM). Additionally, you want to book a new one-way flight from Chicago to Las Vegas for May 19 in economy class. The passengers will be Amelia Johansson and yourself, Mia Silva, but with a birthday correction to November 30, 1995. For this booking, you want to bring one checked bag and one carry-on, and you do not need insurance. Please use your $295 gift card first, and then cover the balance with your Visa card ending in 2436. Furthermore, you wish to upgrade the seats to business class for your Houston to Atlanta flight on May 19 under reservation ID YZF0F6 and pay with your Visa card ending in 7854. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'P1D9KS', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_9663703'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'TD3FPM'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mia_silva_9133', 'origin': 'ORD', 'destination': 'LAS', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT118', 'date': '2024-05-19'}, {'flight_number': 'HAT290', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Amelia', 'last_name': 'Johansson', 'dob': '1966-05-22'}, {'first_name': 'Mia', 'last_name': 'Silva', 'dob': '1995-11-30'}], 'payment_methods': [{'payment_id': 'gift_card_8700979', 'amount': 295}, {'payment_id': 'credit_card_9663703', 'amount': 393}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'YZF0F6', 'cabin': 'business', 'flights': [{'flight_number': 'HAT085', 'date': '2024-05-19'}, {'flight_number': 'HAT218', 'date': '2024-05-19'}], 'payment_id': 'credit_card_3163658'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="amelia_brown_8516",
+        instruction="Your user id is amelia_brown_8516. You want to update your existing reservation MJ3GPX. For this reservation, you wish to change the travel date to May 19, keeping the same flight numbers, HAT212 and HAT035, in business class. You would like to update the passengers to yourself, Amelia Brown, born on August 16, 1985, and Isabella Martin. Additionally, you want to have a total of 4 bags, with 2 of them being non-free. Please use your $125 gift card for this update.\n\nFurthermore, you want to book a new one-way flight from Phoenix to San Francisco on May 19, in business class, using flight number HAT283. The passenger for this booking will be Raj Silva. You wish to have 1 non-free bag and include travel insurance. Please use the remaining balance of your $125 gift card for this booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'MJ3GPX', 'cabin': 'business', 'flights': [{'flight_number': 'HAT212', 'date': '2024-05-19'}, {'flight_number': 'HAT035', 'date': '2024-05-19'}], 'payment_id': 'gift_card_8552977'},
+            ),
+            Action(
+                name="update_reservation_passengers",
+                kwargs={'reservation_id': 'MJ3GPX', 'passengers': [{'first_name': 'Amelia', 'last_name': 'Brown', 'dob': '1985-08-16'}, {'first_name': 'Isabella', 'last_name': 'Martin', 'dob': '1980-02-20'}]},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'MJ3GPX', 'total_baggages': 4, 'nonfree_baggages': 2, 'payment_id': 'gift_card_8552977'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'amelia_brown_8516', 'origin': 'PHX', 'destination': 'SFO', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT283', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Raj', 'last_name': 'Silva', 'dob': '1997-10-21'}], 'payment_methods': [{'payment_id': 'gift_card_8552977', 'amount': 546}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="mason_smith_9673",
+        instruction="Your user id is mason_smith_9673. You want to cancel your current reservation from Denver to San Francisco with reservation ID 1ETKA7. After canceling, you want to rebook a one-way flight on May 19 in economy class. The flights you want are HAT080 from Denver to Philadelphia and HAT199 from Philadelphia to San Francisco. You are traveling with Ava Davis, born on July 8, 1979. You want to add one baggage and opt for travel insurance. For payment, you would like to use your $250 certificate and cover the remaining $80 with your Mastercard ending in 9430. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '1ETKA7'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'mason_smith_9673', 'origin': 'DEN', 'destination': 'SFO', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT080', 'date': '2024-05-19'}, {'flight_number': 'HAT199', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Ava', 'last_name': 'Davis', 'dob': '1979-07-08'}], 'payment_methods': [{'payment_id': 'certificate_8616659', 'amount': 250}, {'payment_id': 'credit_card_3008313', 'amount': 80}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="olivia_rossi_1087",
+        instruction="Your user id is olivia_rossi_1087. You want to first check the details of your reservation with ID IJVS5N. Then, update the flights for this reservation to depart on May 17, maintaining business class. The first flight is HAT270 and the second is HAT167. You also want to add one checked baggage to this reservation, with one being a non-free baggage. Please use your Mastercard ending in 6883 for these updates.\n\nAdditionally, you want to book a new round trip from Phoenix to Las Vegas, departing on May 19 with flight HAT173 and returning on May 20 with flight HAT242. The passengers for this booking are yourself, Olivia Rossi (DOB: 1985-02-14), and Anya Brown (DOB: 1996-08-26). You prefer economy class for this trip and wish to have a total of two baggages, with one non-free. You want to include travel insurance. For payment, use your $150 certificate first, and then your Mastercard ending in 6883 for the remaining balance of $496.\n\nFinally, please cancel the reservation with ID 4FORX8. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': 'IJVS5N'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'IJVS5N', 'cabin': 'business', 'flights': [{'flight_number': 'HAT270', 'date': '2024-05-17'}, {'flight_number': 'HAT167', 'date': '2024-05-17'}], 'payment_id': 'credit_card_8752089'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'IJVS5N', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_8752089'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'olivia_rossi_1087', 'origin': 'PHX', 'destination': 'LAS', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT173', 'date': '2024-05-19'}, {'flight_number': 'HAT242', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Olivia', 'last_name': 'Rossi', 'dob': '1985-02-14'}, {'first_name': 'Anya', 'last_name': 'Brown', 'dob': '1996-08-26'}], 'payment_methods': [{'payment_id': 'certificate_9153684', 'amount': 150}, {'payment_id': 'credit_card_8752089', 'amount': 496}], 'total_baggages': 2, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '4FORX8'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="raj_ito_8898",
+        instruction="Your user id is raj_ito_8898. You want to update your existing reservation from Minneapolis to Orlando (reservation id ZWI06B) by changing the flight dates to May 19, with flight numbers HAT098 for the outbound and HAT298 for the return, both in economy class. You also want to add one checked bag. You prefer to use your Visa card ending in 7324 to cover any additional costs. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'ZWI06B', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT098', 'date': '2024-05-19'}, {'flight_number': 'HAT298', 'date': '2024-05-19'}], 'payment_id': 'credit_card_8368961'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'ZWI06B', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_8368961'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="raj_sanchez_7340",
+        instruction="Your user id is raj_sanchez_7340. You need to update your existing reservation with ID MZDDS4 for the trip from Miami to Los Angeles. You want to change the departure date for all legs of the journey to May 19, while maintaining business class. You prefer to use your Visa card ending in 4388 for payment. Additionally, you need to adjust the baggage allowance to include a total of 4 baggages, with 1 of them being a non-free checked bag. For this, you would like to use your gift card with the balance of $163. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'MZDDS4', 'cabin': 'business', 'flights': [{'flight_number': 'HAT050', 'date': '2024-05-19'}, {'flight_number': 'HAT228', 'date': '2024-05-19'}, {'flight_number': 'HAT202', 'date': '2024-05-19'}], 'payment_id': 'credit_card_7891819'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'MZDDS4', 'total_baggages': 4, 'nonfree_baggages': 1, 'payment_id': 'gift_card_4964153'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="raj_kovacs_4682",
+        instruction="Your user id is raj_kovacs_4682. You want to cancel your reservation from Phoenix to Denver with reservation ID HFNWM0. For your Minneapolis to Charlotte trip with reservation ID SR71QK, you want to update the flights to new dates: fly from MSP to EWR on May 16 with flight HAT196, from EWR to CLT on May 17 with flight HAT043, and return from CLT to DTW on May 19 with flight HAT176, and from DTW to MSP on May 19 with flight HAT237. You want to remain in business class for this trip, and use your Visa credit card ending in 3490 to cover any additional costs. Additionally, for your trip from LaGuardia to Orlando with reservation ID 18F5YD, you want to update your baggage to include a total of 2 bags, with 1 being non-free, and use your Visa card ending in 3490 for payment. Lastly, you want to book a one-way flight for Mei Hernandez from Phoenix to Seattle on May 20 in economy class, on flight HAT156, including 1 piece of baggage. You want to pay with your Visa card ending in 3490. You do not want insurance for this booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'HFNWM0'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'SR71QK', 'cabin': 'business', 'flights': [{'flight_number': 'HAT196', 'date': '2024-05-16'}, {'flight_number': 'HAT043', 'date': '2024-05-17'}, {'flight_number': 'HAT176', 'date': '2024-05-19'}, {'flight_number': 'HAT237', 'date': '2024-05-19'}], 'payment_id': 'credit_card_3662517'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '18F5YD', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_3662517'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'raj_kovacs_4682', 'origin': 'PHX', 'destination': 'SEA', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT156', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Mei', 'last_name': 'Hernandez', 'dob': '1977-05-16'}], 'payment_methods': [{'payment_id': 'credit_card_3662517', 'amount': 122}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="amelia_davis_7067",
+        instruction="Your user id is amelia_davis_7067. You want to modify your existing reservation 5KMMXF to upgrade the cabin class to economy for the flights on May 20 from Detroit to Houston via New York (flight numbers HAT169 and HAT279). You prefer to pay for this upgrade with your Mastercard ending in 6596. Additionally, you want to add one checked baggage and use your gift card to cover this cost. You also want to cancel your reservation VJD9VO entirely. Lastly, you want to book a new one-way trip from Los Angeles to Miami on May 17 with flight numbers HAT228 and HAT202 in basic economy for Lei Lee, using your gift card to pay $211 for the booking. You also want to include insurance for this new booking. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '5KMMXF', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT169', 'date': '2024-05-20'}, {'flight_number': 'HAT279', 'date': '2024-05-20'}], 'payment_id': 'credit_card_1874855'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '5KMMXF', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'gift_card_7549059'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'VJD9VO'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'amelia_davis_7067', 'origin': 'LAX', 'destination': 'MIA', 'flight_type': 'one_way', 'cabin': 'basic_economy', 'flights': [{'flight_number': 'HAT228', 'date': '2024-05-17'}, {'flight_number': 'HAT202', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Lei', 'last_name': 'Lee', 'dob': '1969-12-04'}], 'payment_methods': [{'payment_id': 'gift_card_7549059', 'amount': 211}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ivan_gonzalez_8223",
+        instruction="Your user id is ivan_gonzalez_8223. You want to search for a one-stop flight from New York (JFK) to Los Angeles (LAX) on May 18, 2024. You also wish to cancel your existing reservation with the ID DQDIJD. For your reservation with the ID ZMHRG1, you want to confirm the flights on May 26 and May 29—flight numbers HAT045 and HAT092, respectively—and ensure you remain in business class. Use your Visa ending in 6753 for this transaction. Additionally, update your reservation with the ID 6VPLRH to include a total of 2 baggages, of which 1 is non-free, and charge it to your Visa ending in 6753. Lastly, book a one-way flight from New York (JFK) to Phoenix (PHX) on May 20, 2024, for Juan Silva, who was born on March 12, 2000. This trip should be in economy class, with no additional baggage or insurance, and you will pay $140 using your Visa ending in 6753. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="search_onestop_flight",
+                kwargs={'origin': 'JFK', 'destination': 'LAX', 'date': '2024-05-18'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'DQDIJD'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'ZMHRG1', 'cabin': 'business', 'flights': [{'flight_number': 'HAT045', 'date': '2024-05-26'}, {'flight_number': 'HAT092', 'date': '2024-05-29'}], 'payment_id': 'credit_card_8306515'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '6VPLRH', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_8306515'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'ivan_gonzalez_8223', 'origin': 'JFK', 'destination': 'PHX', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT033', 'date': '2024-05-20'}], 'passengers': [{'first_name': 'Juan', 'last_name': 'Silva', 'dob': '2000-03-12'}], 'payment_methods': [{'payment_id': 'credit_card_8306515', 'amount': 140}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ethan_hernandez_8041",
+        instruction="Your user id is ethan_hernandez_8041. You want to cancel your existing reservation from Orlando to Atlanta under reservation ID QCTAE4. Then, search for a one-stop flight from Orlando (MCO) to Atlanta (ATL) on May 19. You want to book a new one-way flight for the same route on May 19 in business class, with flight numbers HAT101 and HAT070. The passengers will be Ethan Hernandez and Sophia Ahmed. You want to include one checked bag in the reservation and opt for travel insurance. You wish to pay using your $194 gift card first and cover the remaining amount with your Mastercard ending in 8952. Additionally, you want to update your reservation ID 8AXB7D to include one checked bag, using your Visa ending in 4041 for the payment. Lastly, ensure that the flights for reservation ID S6D2EB are updated to economy class with flight numbers HAT245 and HAT181 on May 19, paying with your Mastercard ending in 8952. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'QCTAE4'},
+            ),
+            Action(
+                name="search_onestop_flight",
+                kwargs={'origin': 'MCO', 'destination': 'ATL', 'date': '2024-05-19'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'ethan_hernandez_8041', 'origin': 'MCO', 'destination': 'ATL', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT101', 'date': '2024-05-19'}, {'flight_number': 'HAT070', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Ethan', 'last_name': 'Hernandez', 'dob': '1980-01-01'}, {'first_name': 'Sophia', 'last_name': 'Ahmed', 'dob': '1974-05-09'}], 'payment_methods': [{'payment_id': 'gift_card_7936162', 'amount': 194}, {'payment_id': 'credit_card_4480709', 'amount': 1360}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '8AXB7D', 'total_baggages': 1, 'nonfree_baggages': 1, 'payment_id': 'credit_card_4051240'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'S6D2EB', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT245', 'date': '2024-05-19'}, {'flight_number': 'HAT181', 'date': '2024-05-19'}], 'payment_id': 'credit_card_4480709'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="juan_brown_7405",
+        instruction="Your user id is juan_brown_7405. You need to first check the details of your existing reservation with the ID 5Q7ZUK. After reviewing, you want to add a total of 2 baggage items to this reservation, with 1 being a paid baggage, using your gift card with a balance of $64. Following that, you want to cancel your reservation with the ID 4ALCKY. Finally, you wish to book a new round-trip flight from New York (LGA) to Phoenix (PHX) in economy class. The outbound flight should be on May 16, flight number HAT245, and the return flight on May 17, flight number HAT032. You will be the passenger for this booking, and you want to use your $500 certificate to pay, which should cover the cost of $390. You want to include 1 checked baggage at no additional cost and opt for travel insurance. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': '5Q7ZUK'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '5Q7ZUK', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'gift_card_8693196'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '4ALCKY'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'juan_brown_7405', 'origin': 'LGA', 'destination': 'PHX', 'flight_type': 'round_trip', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT245', 'date': '2024-05-16'}, {'flight_number': 'HAT032', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Juan', 'last_name': 'Brown', 'dob': '1985-08-15'}], 'payment_methods': [{'payment_id': 'certificate_3753576', 'amount': 390}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="lei_patel_4666",
+        instruction="Your user id is lei_patel_4666. First, you want to upgrade your reservation with ID EU6W3B from economy to business class for the round-trip flight from Atlanta to Denver. The flights should be on May 18, and you want to use your Mastercard ending in 1592 to pay for this change. You also wish to update the baggage allowance for this reservation to include 3 bags, with 2 being nonfree, and you prefer to use your Mastercard ending in 5468 for this payment.\n\nAdditionally, you want to cancel your existing reservation with ID BPR8YJ. After this cancellation, you would like to book a new one-way flight from Boston to Orlando for Fatima Moore on May 18, in economy class. The flight number should be HAT235, and you intend to have 1 checked bag, which is nonfree. You would like to purchase travel insurance for this booking and use your Mastercard ending in 1592 to cover the cost of $205. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'EU6W3B', 'cabin': 'business', 'flights': [{'flight_number': 'HAT052', 'date': '2024-05-18'}, {'flight_number': 'HAT003', 'date': '2024-05-18'}, {'flight_number': 'HAT046', 'date': '2024-05-18'}, {'flight_number': 'HAT177', 'date': '2024-05-18'}], 'payment_id': 'credit_card_8391262'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'EU6W3B', 'total_baggages': 3, 'nonfree_baggages': 2, 'payment_id': 'credit_card_2675929'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'BPR8YJ'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'lei_patel_4666', 'origin': 'BOS', 'destination': 'MCO', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT235', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Fatima', 'last_name': 'Moore', 'dob': '2000-03-10'}], 'payment_methods': [{'payment_id': 'credit_card_8391262', 'amount': 205}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'yes'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="amelia_sanchez_4739",
+        instruction="Your user id is amelia_sanchez_4739. First, you want to check the reservation details for your trip with reservation ID 3FRNFB. Following that, you wish to update this reservation to change the flight dates to May 19, still in the economy cabin, using flight numbers HAT028 and HAT277. You will use your Mastercard ending in 3658 for any payment adjustments. Next, you want to book a new one-way flight from New York (JFK) to Miami (MIA) on May 18 for Ivan Martin in economy class on flight HAT126. You want to include one checked bag, and you will pay $169 using your Mastercard ending in 3658. Additionally, you need to update your other reservation, Q4L9HS, by adding two non-free checked bags, again paying with your Mastercard ending in 3658. Finally, you have decided to cancel the reservation 3FRNFB altogether. You do not require travel insurance for any bookings. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': '3FRNFB'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '3FRNFB', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT028', 'date': '2024-05-19'}, {'flight_number': 'HAT277', 'date': '2024-05-19'}], 'payment_id': 'credit_card_4065275'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'amelia_sanchez_4739', 'origin': 'JFK', 'destination': 'MIA', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT126', 'date': '2024-05-18'}], 'passengers': [{'first_name': 'Ivan', 'last_name': 'Martin', 'dob': '1973-08-20'}], 'payment_methods': [{'payment_id': 'credit_card_4065275', 'amount': 169}], 'total_baggages': 1, 'nonfree_baggages': 1, 'insurance': 'no'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': 'Q4L9HS', 'total_baggages': 2, 'nonfree_baggages': 2, 'payment_id': 'credit_card_4065275'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '3FRNFB'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="ivan_wilson_7416",
+        instruction="Your user id is ivan_wilson_7416. You want to update your existing reservation ZGW4PL to change the flights to May 20 in business class. The flights should include HAT084, HAT154, HAT299, and HAT162. You want to use your Mastercard ending in 3637 for this change. Additionally, you wish to add 2 baggages for reservation 7C0KB0, with 1 being non-free, and you want to pay for this with your $298 gift card. Afterward, please cancel the entire reservation 7C0KB0. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': 'ZGW4PL', 'cabin': 'business', 'flights': [{'flight_number': 'HAT084', 'date': '2024-05-20'}, {'flight_number': 'HAT154', 'date': '2024-05-20'}, {'flight_number': 'HAT299', 'date': '2024-05-20'}, {'flight_number': 'HAT162', 'date': '2024-05-20'}], 'payment_id': 'credit_card_1098682'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '7C0KB0', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'gift_card_3158743'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '7C0KB0'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="yusuf_patel_4029",
+        instruction="Your user id is yusuf_patel_4029. You want to update your round-trip reservation from San Francisco to Boston (reservation id: 7P3LPD) to change the flight dates to May 19, 2024, while maintaining the business class cabin. The flights involved are HAT204, HAT194, HAT006, and HAT107. You would like to use your Visa card ending in 1576 to pay for this change. Additionally, you want to increase your total baggage to 2 pieces, with 1 being a paid piece, and for this, you prefer using your Mastercard ending in 6922. Furthermore, you would like to cancel your one-way reservation from Philadelphia to Chicago (reservation id: 847MY1). You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': '7P3LPD'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '7P3LPD', 'cabin': 'business', 'flights': [{'flight_number': 'HAT204', 'date': '2024-05-19'}, {'flight_number': 'HAT194', 'date': '2024-05-19'}, {'flight_number': 'HAT006', 'date': '2024-05-19'}, {'flight_number': 'HAT107', 'date': '2024-05-19'}], 'payment_id': 'credit_card_5254946'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '7P3LPD', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_6642109'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '847MY1'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="liam_khan_2521",
+        instruction="Your user id is liam_khan_2521. You want to update your reservation 4NQLHD to change all flights on May 19 to business class, keeping the same flight numbers: HAT190, HAT047, HAT021, and HAT279. You will use your Mastercard ending in 9448 for this upgrade. Additionally, you want to increase the total baggage count to 3, all nonfree, and pay for these extra bags using your Visa card ending in 3422.\n\nYou also want to cancel your reservation KHIK97.\n\nFor a new booking, you want to fly one-way from Chicago (ORD) to Minneapolis (MSP) on May 19 in economy class. The flights should be HAT230 and HAT125. You will be traveling with Fatima Ito and will bring 1 bag, with no nonfree bags. You want to include insurance for this trip and use your $500 certificate to cover the cost, noting that $290 will be used for this reservation.\n\nFinally, you wish to send a $100 certificate to someone, but the recipient is not specified in this instruction. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '4NQLHD', 'cabin': 'business', 'flights': [{'flight_number': 'HAT190', 'date': '2024-05-19'}, {'flight_number': 'HAT047', 'date': '2024-05-19'}, {'flight_number': 'HAT021', 'date': '2024-05-19'}, {'flight_number': 'HAT279', 'date': '2024-05-19'}], 'payment_id': 'credit_card_7434610'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '4NQLHD', 'total_baggages': 3, 'nonfree_baggages': 3, 'payment_id': 'credit_card_7231150'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': 'KHIK97'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'liam_khan_2521', 'origin': 'ORD', 'destination': 'MSP', 'flight_type': 'one_way', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT230', 'date': '2024-05-19'}, {'flight_number': 'HAT125', 'date': '2024-05-19'}], 'passengers': [{'first_name': 'Fatima', 'last_name': 'Ito', 'dob': '1983-03-27'}], 'payment_methods': [{'payment_id': 'certificate_9254323', 'amount': 290}], 'total_baggages': 1, 'nonfree_baggages': 0, 'insurance': 'yes'},
+            ),
+            Action(
+                name="send_certificate",
+                kwargs={'user_id': 'liam_khan_2521', 'amount': 100},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="james_lopez_2996",
+        instruction="Your user id is james_lopez_2996. You need to update your reservation 4G711O to change the flights to new dates: fly from Chicago to Seattle on May 17 with flights HAT093 and HAT039, and return from Seattle to Chicago on May 20 with flights HAT100 and HAT261. Keep the cabin class as economy. You also want to increase your total baggage allowance to 2 bags, with one being a non-free bag. Pay for these changes using your Mastercard ending in 4494.\n\nAdditionally, you want to cancel your reservation 9TB533. After canceling, book a new one-way business class ticket for Daiki Anderson from Chicago to Atlanta on May 17, using flight HAT093. Use your Mastercard ending in 4494 to pay $287 for this booking. You do not require any checked baggage or insurance for Daiki's trip. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="get_reservation_details",
+                kwargs={'reservation_id': '4G711O'},
+            ),
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '4G711O', 'cabin': 'economy', 'flights': [{'flight_number': 'HAT093', 'date': '2024-05-17'}, {'flight_number': 'HAT039', 'date': '2024-05-17'}, {'flight_number': 'HAT100', 'date': '2024-05-20'}, {'flight_number': 'HAT261', 'date': '2024-05-20'}], 'payment_id': 'credit_card_3035616'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '4G711O', 'total_baggages': 2, 'nonfree_baggages': 1, 'payment_id': 'credit_card_3035616'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '9TB533'},
+            ),
+            Action(
+                name="book_reservation",
+                kwargs={'user_id': 'james_lopez_2996', 'origin': 'ORD', 'destination': 'ATL', 'flight_type': 'one_way', 'cabin': 'business', 'flights': [{'flight_number': 'HAT093', 'date': '2024-05-17'}], 'passengers': [{'first_name': 'Daiki', 'last_name': 'Anderson', 'dob': '1976-11-16'}], 'payment_methods': [{'payment_id': 'credit_card_3035616', 'amount': 287}], 'total_baggages': 0, 'nonfree_baggages': 0, 'insurance': 'no'},
+            ),
+        ],
+        outputs=[],
+    ),
+    Task(
+        annotator="synthetic",
+        user_id="james_lopez_2996",
+        instruction="Your user id is james_lopez_2996. For your reservation with ID 4G711O, you want to update your flights on May 19 to business class. The specific flights are HAT093, HAT039, HAT100, and HAT261. You wish to use your Mastercard ending in 4494 for any payment related to this update. Additionally, for your reservation 9IYV5O, you want to increase the total baggage to 4, with 1 non-free bag, using the same Mastercard for payment. Also, please cancel your reservation 9TB533 completely. You are reactive to the agent and will not say anything that is not asked.",
+        actions=[
+            Action(
+                name="update_reservation_flights",
+                kwargs={'reservation_id': '4G711O', 'cabin': 'business', 'flights': [{'flight_number': 'HAT093', 'date': '2024-05-19'}, {'flight_number': 'HAT039', 'date': '2024-05-19'}, {'flight_number': 'HAT100', 'date': '2024-05-19'}, {'flight_number': 'HAT261', 'date': '2024-05-19'}], 'payment_id': 'credit_card_3035616'},
+            ),
+            Action(
+                name="update_reservation_baggages",
+                kwargs={'reservation_id': '9IYV5O', 'total_baggages': 4, 'nonfree_baggages': 1, 'payment_id': 'credit_card_3035616'},
+            ),
+            Action(
+                name="cancel_reservation",
+                kwargs={'reservation_id': '9TB533'},
+            ),
+        ],
+        outputs=[],
+    ),
+]

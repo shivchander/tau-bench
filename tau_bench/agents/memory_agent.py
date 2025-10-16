@@ -29,6 +29,7 @@ class MemoryAgent(Agent):
         memory_collection_name: str = "action_memory",
         memory_top_k: int = 3,
         memory_db_path: Optional[str] = None,
+        env: str = "airline",
     ):
         self.tools_info = tools_info
         self.wiki = wiki
@@ -39,9 +40,9 @@ class MemoryAgent(Agent):
 
         # Load ChromaDB collection
         if memory_db_path is None:
-            # Default to syntoolmem/chroma_db
+            # Default to syntoolmem/chroma_db_{env}
             project_root = Path(__file__).parent.parent.parent
-            memory_db_path = str(project_root / "syntoolmem" / "chroma_db")
+            memory_db_path = str(project_root / "syntoolmem" / f"chroma_db_{env}")
 
         self.chroma_client = chromadb.PersistentClient(path=memory_db_path)
 
@@ -103,6 +104,9 @@ class MemoryAgent(Agent):
         info = env_reset_res.info.model_dump()
         reward = 0.0
 
+        # Track memory retrievals
+        memory_retrievals = []
+
         # Initial messages with system prompt and first user message
         messages: List[Dict[str, Any]] = [
             {"role": "system", "content": self.wiki},
@@ -114,8 +118,20 @@ class MemoryAgent(Agent):
         # Add user message with memory context if available
         if memory_context:
             user_content = f"{obs}\n\n{memory_context}"
+            memory_retrievals.append({
+                "turn": 0,
+                "query": obs,
+                "retrieved": True
+            })
+            print(f"[Memory] Retrieved {self.memory_top_k} examples for turn 0")
         else:
             user_content = obs
+            memory_retrievals.append({
+                "turn": 0,
+                "query": obs,
+                "retrieved": False
+            })
+            print(f"[Memory] No examples retrieved for turn 0")
 
         messages.append({"role": "user", "content": user_content})
 
@@ -155,16 +171,38 @@ class MemoryAgent(Agent):
                 # Retrieve similar actions for the new user message
                 memory_context = self.retrieve_similar_actions(env_response.observation)
 
-                # Add user message with memory context
+                # Track retrieval
+                turn_number = len([m for m in messages if m.get("role") == "user"])
                 if memory_context:
+                    memory_retrievals.append({
+                        "turn": turn_number,
+                        "query": env_response.observation,
+                        "retrieved": True
+                    })
                     user_content = f"{env_response.observation}\n\n{memory_context}"
+                    print(f"[Memory] Retrieved {self.memory_top_k} examples for turn {turn_number}")
                 else:
+                    memory_retrievals.append({
+                        "turn": turn_number,
+                        "query": env_response.observation,
+                        "retrieved": False
+                    })
                     user_content = env_response.observation
+                    print(f"[Memory] No examples retrieved for turn {turn_number}")
 
                 messages.append({"role": "user", "content": user_content})
 
             if env_response.done:
                 break
+
+        # Add memory retrieval stats to info
+        memory_retrieval_count = len([r for r in memory_retrievals if r["retrieved"]])
+        info["memory_retrievals"] = memory_retrievals
+        info["memory_retrieval_count"] = memory_retrieval_count
+        info["total_turns"] = len(memory_retrievals)
+
+        # Print summary
+        print(f"[Memory] Summary: {memory_retrieval_count}/{len(memory_retrievals)} turns used memory")
 
         return SolveResult(
             reward=reward,

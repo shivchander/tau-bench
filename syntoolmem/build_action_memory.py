@@ -17,6 +17,8 @@ from openai import AsyncOpenAI
 import chromadb
 from tqdm import tqdm
 from dotenv import load_dotenv
+from syntoolmem.tasks_airline_medium import TASKS as AIRLINE_TASKS
+from syntoolmem.tasks_retail_train import TASKS_TRAIN as RETAIL_TASKS
 
 # Load environment variables
 load_dotenv()
@@ -25,21 +27,11 @@ load_dotenv()
 openai_client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 
-async def generate_action_description(action, semaphore):
-    """
-    Use LLM to generate a natural language description of what an action does.
-
-    Args:
-        action: Dictionary with 'name' and 'kwargs' keys
-        semaphore: Asyncio semaphore for concurrency control
-
-    Returns:
-        String description of the action
-    """
-    prompt = f"""Given this flight reservation system action, generate a clear, natural language description (1-2 sentences) of what it does.
+# Environment-specific prompts
+AIRLINE_PROMPT_TEMPLATE = """Given this flight reservation system action, generate a clear, natural language description (1-2 sentences) of what it does.
 
 Action:
-{json.dumps(action, indent=2)}
+{action_json}
 
 Focus on:
 - What the action accomplishes
@@ -53,6 +45,62 @@ Examples:
 - "Update reservation flights to business class using gift card payment"
 
 Return ONLY the description text, no JSON or extra formatting."""
+
+RETAIL_PROMPT_TEMPLATE = """Given this e-commerce customer service action, generate a clear, natural language description (1-2 sentences) of what it does.
+
+Action:
+{action_json}
+
+Focus on:
+- What the action accomplishes
+- Key parameters (item details, payment methods, etc.)
+- Any distinguishing features
+
+Examples:
+- "Cancel a pending order using order ID"
+- "Modify shipping address for pending order to new city and zip code"
+- "Change item in pending order from leather boots to synthetic boots paid with PayPal"
+- "Apply discount coupon to order and update total price"
+
+Return ONLY the description text, no JSON or extra formatting."""
+
+
+def get_prompt_for_env(env_name: str, action: dict) -> str:
+    """
+    Get the appropriate prompt template for the environment.
+
+    Args:
+        env_name: Environment name ('airline' or 'retail')
+        action: Action dictionary
+
+    Returns:
+        Formatted prompt string
+    """
+    action_json = json.dumps(action, indent=2)
+
+    if env_name == "airline":
+        return AIRLINE_PROMPT_TEMPLATE.format(action_json=action_json)
+    elif env_name == "retail":
+        return RETAIL_PROMPT_TEMPLATE.format(action_json=action_json)
+    else:
+        raise ValueError(
+            f"Unknown environment: {env_name}. Choose 'airline' or 'retail'."
+        )
+
+
+async def generate_action_description(action, semaphore, env_name="airline"):
+    """
+    Use LLM to generate a natural language description of what an action does.
+
+    Args:
+        action: Dictionary with 'name' and 'kwargs' keys
+        semaphore: Asyncio semaphore for concurrency control
+        env_name: Environment name ('airline' or 'retail')
+
+    Returns:
+        String description of the action
+    """
+    prompt = get_prompt_for_env(env_name, action)
 
     async with semaphore:
         try:
@@ -73,13 +121,14 @@ Return ONLY the description text, no JSON or extra formatting."""
             return f"Perform {action['name']} action"
 
 
-async def process_all_actions(trajectories, max_concurrency):
+async def process_all_actions(trajectories, max_concurrency, env_name="airline"):
     """
     Process all actions from trajectories in parallel.
 
     Args:
         trajectories: List of trajectory dictionaries
         max_concurrency: Maximum number of concurrent LLM calls
+        env_name: Environment name ('airline' or 'retail')
 
     Returns:
         Tuple of (documents, metadatas, ids)
@@ -92,15 +141,15 @@ async def process_all_actions(trajectories, max_concurrency):
 
     for traj_idx, trajectory in enumerate(trajectories):
         for action_idx, action in enumerate(trajectory["actions"]):
-            tasks.append(generate_action_description(action, semaphore))
-            action_info.append({
-                "action": action,
-                "traj_idx": traj_idx,
-                "action_idx": action_idx
-            })
+            tasks.append(generate_action_description(action, semaphore, env_name))
+            action_info.append(
+                {"action": action, "traj_idx": traj_idx, "action_idx": action_idx}
+            )
 
     # Process all actions concurrently with progress bar
-    print(f"\nGenerating descriptions for {len(tasks)} actions with max_concurrency={max_concurrency}...")
+    print(
+        f"\nGenerating descriptions for {len(tasks)} actions with max_concurrency={max_concurrency}..."
+    )
 
     # Track progress using as_completed for UI feedback, but gather results in order
     with tqdm(total=len(tasks), desc="Generating descriptions") as pbar:
@@ -120,36 +169,56 @@ async def process_all_actions(trajectories, max_concurrency):
 
     for info, description in zip(action_info, descriptions):
         documents.append(description)
-        metadatas.append({
-            "action": json.dumps(info["action"]),
-            "action_name": info["action"]["name"],
-            "trajectory_id": info["traj_idx"],
-            "action_index": info["action_idx"]
-        })
+        metadatas.append(
+            {
+                "action": json.dumps(info["action"]),
+                "action_name": info["action"]["name"],
+                "trajectory_id": info["traj_idx"],
+                "action_index": info["action_idx"],
+            }
+        )
         ids.append(f"traj_{info['traj_idx']}_action_{info['action_idx']}")
 
     return documents, metadatas, ids
 
 
 async def build_action_memory_async(
-    json_path,
     output_collection_name="action_memory",
     max_trajectories=None,
-    max_concurrency=10
+    max_concurrency=10,
+    env_name="airline",
 ):
     """
     Build ChromaDB collection from trajectory data using async processing.
 
     Args:
-        json_path: Path to validated_tasks_medium_with_instructions.json
         output_collection_name: Name for the ChromaDB collection
         max_trajectories: Maximum number of trajectories to process (None = all)
         max_concurrency: Maximum number of concurrent LLM calls
+        env_name: Environment name ('airline' or 'retail')
     """
-    # Load trajectory data
-    print(f"Loading trajectories from {json_path}...")
-    with open(json_path, 'r', encoding='utf-8') as f:
-        trajectories = json.load(f)
+    # Load trajectory data from imported tasks
+    print(f"Loading trajectories for {env_name} environment...")
+
+    # Select tasks based on environment
+    if env_name == "airline":
+        tasks = AIRLINE_TASKS
+    elif env_name == "retail":
+        tasks = RETAIL_TASKS
+    else:
+        raise ValueError(f"Unknown environment: {env_name}")
+
+    # Convert Task objects to trajectory format
+    trajectories = []
+    for task in tasks:
+        trajectories.append(
+            {
+                "user_id": task.user_id,
+                "actions": [{"name": a.name, "kwargs": a.kwargs} for a in task.actions],
+                "instruction": task.instruction,
+                "outputs": task.outputs if hasattr(task, "outputs") else [],
+            }
+        )
 
     if max_trajectories:
         trajectories = trajectories[:max_trajectories]
@@ -158,12 +227,14 @@ async def build_action_memory_async(
         print(f"Loaded {len(trajectories)} trajectories")
 
     # Process all actions in parallel
-    documents, metadatas, ids = await process_all_actions(trajectories, max_concurrency)
+    documents, metadatas, ids = await process_all_actions(
+        trajectories, max_concurrency, env_name
+    )
 
     # Create ChromaDB client and collection (persistent)
     print("\nCreating ChromaDB collection...")
     script_dir = Path(__file__).parent
-    db_path = script_dir / "chroma_db"
+    db_path = script_dir / f"chroma_db_{env_name}"
     client = chromadb.PersistentClient(path=str(db_path))
 
     # Delete existing collection if it exists
@@ -175,16 +246,14 @@ async def build_action_memory_async(
 
     collection = client.create_collection(
         name=output_collection_name,
-        metadata={"description": "Action memory - maps natural language descriptions to tool calls"}
+        metadata={
+            "description": "Action memory - maps natural language descriptions to tool calls"
+        },
     )
 
     # Add all entries to ChromaDB
     print(f"\nAdding {len(documents)} actions to ChromaDB...")
-    collection.add(
-        documents=documents,
-        metadatas=metadatas,
-        ids=ids
-    )
+    collection.add(documents=documents, metadatas=metadatas, ids=ids)
 
     print(f"\n✓ Successfully created collection '{output_collection_name}'")
     print(f"✓ Total actions stored: {len(documents)}")
@@ -203,16 +272,20 @@ async def build_action_memory_async(
     return collection
 
 
-def build_action_memory(json_path, output_collection_name="action_memory", max_trajectories=None, max_concurrency=10):
+def build_action_memory(
+    output_collection_name="action_memory",
+    max_trajectories=None,
+    max_concurrency=10,
+    env_name="airline",
+):
     """
     Synchronous wrapper for build_action_memory_async.
     """
-    return asyncio.run(build_action_memory_async(
-        json_path,
-        output_collection_name,
-        max_trajectories,
-        max_concurrency
-    ))
+    return asyncio.run(
+        build_action_memory_async(
+            output_collection_name, max_trajectories, max_concurrency, env_name
+        )
+    )
 
 
 def test_retrieval(collection, query, n_results=3):
@@ -228,59 +301,66 @@ def test_retrieval(collection, query, n_results=3):
     print(f"QUERY: {query}")
     print("=" * 80)
 
-    results = collection.query(
-        query_texts=[query],
-        n_results=n_results
-    )
+    results = collection.query(query_texts=[query], n_results=n_results)
 
-    for idx, (doc, metadata) in enumerate(zip(results['documents'][0], results['metadatas'][0]), 1):
+    for idx, (doc, metadata) in enumerate(
+        zip(results["documents"][0], results["metadatas"][0]), 1
+    ):
         print(f"\n--- Result {idx} ---")
         print(f"Description: {doc}")
         print(f"Action name: {metadata['action_name']}")
 
-        action = json.loads(metadata['action'])
+        action = json.loads(metadata["action"])
         print("\nAction details:")
         print(json.dumps(action, indent=2))
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Build action memory database from tau-bench trajectories")
+    parser = argparse.ArgumentParser(
+        description="Build action memory database from tau-bench trajectories"
+    )
+    parser.add_argument(
+        "--env",
+        type=str,
+        choices=["airline", "retail"],
+        default="airline",
+        help="Environment to build memory for (default: airline)",
+    )
     parser.add_argument(
         "--max-trajectories",
         type=int,
         default=None,
-        help="Maximum number of trajectories to process (default: all)"
+        help="Maximum number of trajectories to process (default: all)",
     )
     parser.add_argument(
         "--max-concurrency",
         type=int,
         default=10,
-        help="Maximum number of concurrent LLM calls (default: 10)"
+        help="Maximum number of concurrent LLM calls (default: 10)",
     )
     parser.add_argument(
         "--collection-name",
         type=str,
-        default="action_memory",
-        help="Name for the ChromaDB collection (default: action_memory)"
+        default=None,
+        help="Name for the ChromaDB collection (default: action_memory_{env})",
     )
     parser.add_argument(
         "--skip-tests",
         action="store_true",
-        help="Skip running test queries after building the database"
+        help="Skip running test queries after building the database",
     )
 
     args = parser.parse_args()
 
-    # Path to the trajectory data
-    script_dir = Path(__file__).parent
-    json_path = script_dir / "../tau_bench/sdg/validated_tasks_medium_with_instructions.json"
+    # Determine collection name
+    collection_name = args.collection_name or f"action_memory_{args.env}"
 
     # Build the action memory
     collection = build_action_memory(
-        json_path,
-        output_collection_name=args.collection_name,
+        output_collection_name=collection_name,
         max_trajectories=args.max_trajectories,
-        max_concurrency=args.max_concurrency
+        max_concurrency=args.max_concurrency,
+        env_name=args.env,
     )
 
     # Test with some example queries
@@ -289,6 +369,11 @@ if __name__ == "__main__":
         print("TESTING RETRIEVAL")
         print("=" * 80)
 
-        test_retrieval(collection, "Add baggage to my reservation", n_results=2)
-        test_retrieval(collection, "Cancel a reservation", n_results=2)
-        test_retrieval(collection, "Book a flight with gift card", n_results=2)
+        if args.env == "airline":
+            test_retrieval(collection, "Add baggage to my reservation", n_results=2)
+            test_retrieval(collection, "Cancel a reservation", n_results=2)
+            test_retrieval(collection, "Book a flight with gift card", n_results=2)
+        elif args.env == "retail":
+            test_retrieval(collection, "Modify my order address", n_results=2)
+            test_retrieval(collection, "Cancel my pending order", n_results=2)
+            test_retrieval(collection, "Change item in my order", n_results=2)

@@ -1,0 +1,119 @@
+You are a simulator that generates synthetic user–agent scenarios for TauBench, an airline benchmark with tool-augmented conversations.
+
+You are given:
+1. A randomly sampled **user profile** (e.g. user_id, membership level, payment methods, saved passengers, etc.)
+2. Their **reservations** (each with reservation_id, flight details, fare_class, insurance, booking_time, status, etc.)
+3. A **tool definition** (function schema and description)
+4. A corresponding **policy document** (the operational rules the agent must follow)
+5. A **focused tool argument** (e.g. "reservation_id" or "flight_number") to anchor the scenario on.
+
+---
+
+### Your task
+Generate TWO short synthetic conversation scenarios:
+
+#### (A) HAPPY PATH
+A natural, realistic user query that makes the tool call valid under the policy.
+- The user's request should contain the required info (user_id, reservation_id, reason, etc.)
+- The agent should confirm eligibility via policy reasoning and end by calling the tool with correct arguments.
+- The conversation tone should match the provided examples.
+- The output should explicitly include the full tool call JSON, formatted like a TauBench assistant message.
+
+#### (B) ADVERSARIAL PATH
+A realistic user request that **appears plausible** but violates the policy.
+- The agent must detect the violation and politely refuse or hand off to a human agent.
+- No tool call should be made.
+- Clearly describe which policy rule is broken (e.g., “Basic economy fare with no insurance cannot be cancelled after 24 hours”).
+
+---
+
+### Output format
+Return a JSON object following this schema:
+
+{
+  "happy_path": {
+    "user_utterance": "<one natural user sentence in their voice>",
+    "policy_checklist": "<short textual reasoning that walks the policy rules & cites the relevant facts>",
+    "output": {
+      "content": null,
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{\"<arg1>\":\"...\"}",
+            "name": "<tool_name>"
+          },
+          "id": "call_<RANDOM_ID>",
+          "type": "function"
+        }
+      ]
+    }
+  },
+  "adversarial_path": {
+    "user_utterance": "<one natural user sentence in their voice>",
+    "policy_checklist": "<short textual reasoning that identifies the violated rule(s) and evidence>",
+    "output": {
+      "content": "<polite refusal message. Do NOT include tool_calls>",
+      "role": "assistant"
+    }
+  }
+}
+
+---
+
+### Example
+
+**TOOL:**
+cancel_reservation({"reservation_id": "string"})
+
+**POLICY:**
+Must have user_id, reservation_id, reason; cancel within 24h OR airline canceled; economy requires insurance; business always ok; whole trip not flown; refund to original methods in 5–7 business days.
+
+**OUTPUT:**
+{
+  "happy_path": {
+    "user_utterance": "Hi! Please cancel my booking ZFA04Y—I’m liam_lee_5870 and I booked it an hour ago due to a change of plan.",
+    "policy_checklist": "- Required fields present: user_id, reservation_id, reason.\n- Booking <24h → cancellation allowed regardless of fare.\n- Whole trip unflown (all segments scheduled).\n- Inform refund timeline: 5–7 business days to original payments.",
+    "output": {
+      "content": null,
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{\"reservation_id\":\"ZFA04Y\"}",
+            "name": "cancel_reservation"
+          },
+          "id": "call_d8Q2LkZxFwz0zqfA1Rj7aR4p",
+          "type": "function"
+        }
+      ]
+    }
+  },
+  "adversarial_path": {
+    "user_utterance": "Can you cancel 3FRNFB and refund me? Plans changed.",
+    "policy_checklist": "- Basic economy without insurance.\n- Booking >24h ago.\n- Policy forbids cancellation in this case; membership does not override.\n- No partial segment issues here, but still ineligible.",
+    "output": {
+      "content": "I'm sorry—basic economy tickets without travel insurance can't be cancelled for a refund after 24 hours unless the airline cancelled the flight.",
+      "role": "assistant"
+    }
+  }
+}
+
+---
+
+### Input
+
+USER_PROFILE:
+{{ user_profile }}
+
+RESERVATIONS:
+{{ reservations }}
+
+TOOL:
+{{ tool }}
+
+POLICY:
+{{ policy }}
+
+FOCUSED_ARGUMENT:
+{{ focused_argument }}

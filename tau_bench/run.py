@@ -200,9 +200,10 @@ def agent_factory(
             model=config.model,
             provider=config.model_provider,
             temperature=config.temperature,
-            memory_collection_name=config.memory_collection_name or "tool_memory_airline",
+            memory_collection_name=config.memory_collection_name,
             memory_top_k=config.memory_top_k,
             memory_db_path=config.memory_db_path,
+            env=config.env,
         )
     else:
         raise ValueError(f"Unknown agent strategy: {config.agent_strategy}")

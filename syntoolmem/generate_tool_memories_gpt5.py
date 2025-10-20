@@ -1,11 +1,12 @@
 """
-Generate tool memory database from tau-bench airline tools and policies.
+Generate tool memory database from tau-bench airline tools and policies using GPT-5.
 
 For each tool and each of its arguments, create synthetic scenarios where:
 - Happy path: Valid user query that satisfies policy → tool call
 - Adversarial path: Plausible query that violates policy → refusal
 
 Uses async processing for parallel LLM calls with configurable concurrency.
+GPT-5 version using the Responses API.
 """
 
 import asyncio
@@ -145,6 +146,106 @@ def sample_user_and_reservations(users, reservations):
     return user_profile, user_reservations
 
 
+def get_scenario_json_schema():
+    """
+    Define the JSON schema for scenario generation output.
+
+    Returns:
+        dict: JSON schema for structured output
+    """
+    return {
+        "type": "object",
+        "properties": {
+            "happy_path": {
+                "type": "object",
+                "properties": {
+                    "user_utterance": {
+                        "type": "string",
+                        "description": "Natural user query that makes the tool call valid"
+                    },
+                    "policy_checklist": {
+                        "type": "string",
+                        "description": "Policy reasoning and fact citations"
+                    },
+                    "output": {
+                        "type": "object",
+                        "properties": {
+                            "content": {
+                                "type": ["string", "null"],
+                                "description": "Assistant response content (null for tool calls)"
+                            },
+                            "role": {
+                                "type": "string",
+                                "enum": ["assistant"]
+                            },
+                            "tool_calls": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "function": {
+                                            "type": "object",
+                                            "properties": {
+                                                "arguments": {"type": "string"},
+                                                "name": {"type": "string"}
+                                            },
+                                            "required": ["arguments", "name"],
+                                            "additionalProperties": False
+                                        },
+                                        "id": {"type": "string"},
+                                        "type": {
+                                            "type": "string",
+                                            "enum": ["function"]
+                                        }
+                                    },
+                                    "required": ["function", "id", "type"],
+                                    "additionalProperties": False
+                                }
+                            }
+                        },
+                        "required": ["content", "role", "tool_calls"],
+                        "additionalProperties": False
+                    }
+                },
+                "required": ["user_utterance", "policy_checklist", "output"],
+                "additionalProperties": False
+            },
+            "adversarial_path": {
+                "type": "object",
+                "properties": {
+                    "user_utterance": {
+                        "type": "string",
+                        "description": "User query that violates policy"
+                    },
+                    "policy_checklist": {
+                        "type": "string",
+                        "description": "Policy violation reasoning"
+                    },
+                    "output": {
+                        "type": "object",
+                        "properties": {
+                            "content": {
+                                "type": "string",
+                                "description": "Polite refusal message"
+                            },
+                            "role": {
+                                "type": "string",
+                                "enum": ["assistant"]
+                            }
+                        },
+                        "required": ["content", "role"],
+                        "additionalProperties": False
+                    }
+                },
+                "required": ["user_utterance", "policy_checklist", "output"],
+                "additionalProperties": False
+            }
+        },
+        "additionalProperties": False,
+        "required": ["happy_path", "adversarial_path"]
+    }
+
+
 async def generate_scenario(
     tool_name,
     tool_schema,
@@ -156,7 +257,7 @@ async def generate_scenario(
     semaphore,
 ):
     """
-    Generate one happy+adversarial scenario using GPT-4o.
+    Generate one happy+adversarial scenario using GPT-5.
 
     Args:
         tool_name: Name of the tool
@@ -183,16 +284,39 @@ async def generate_scenario(
         focused_argument=focused_arg,
     )
 
+    # Get JSON schema for structured output
+    schema = get_scenario_json_schema()
+
     async with semaphore:
         try:
-            response = await openai_client.chat.completions.create(
-                model="gpt-4.1",
-                messages=[{"role": "user", "content": prompt}],
-                temperature=0.7,
-                response_format={"type": "json_object"},
+            # Use GPT-5 Responses API with JSON schema
+            response = await openai_client.responses.create(
+                model="gpt-5",
+                input=[
+                    {
+                        "role": "developer",
+                        "content": "You are a simulator that generates synthetic user–agent scenarios for TauBench, an airline benchmark with tool-augmented conversations."
+                    },
+                    {
+                        "role": "user",
+                        "content": prompt
+                    }
+                ],
+                text={
+                    "format": {
+                        "type": "json_schema",
+                        "name": "scenario_output",
+                        "strict": True,
+                        "schema": schema
+                    }
+                }
             )
 
-            result = json.loads(response.choices[0].message.content)
+            # Extract response content from GPT-5 response structure
+            response_text = response.output_text
+
+            # Parse JSON response
+            result = json.loads(response_text)
 
             # Add metadata
             result["metadata"] = {
@@ -285,7 +409,7 @@ async def process_all_scenarios(
 
 
 async def build_tool_memory_async(
-    collection_name="tool_memory_airline",
+    collection_name="tool_memory_airline_gpt5",
     max_tools=None,
     scenarios_per_arg=3,
     max_concurrency=10,
@@ -361,7 +485,7 @@ async def build_tool_memory_async(
     # Create ChromaDB collection
     print("\nCreating ChromaDB collection...")
     script_dir = Path(__file__).parent
-    db_path = script_dir / "chroma_db_airline_v2"
+    db_path = script_dir / "chroma_db_airline_gpt5"
     client = chromadb.PersistentClient(path=str(db_path))
 
     # Delete existing collection if it exists
@@ -374,7 +498,7 @@ async def build_tool_memory_async(
     collection = client.create_collection(
         name=collection_name,
         metadata={
-            "description": "Tool memory - synthetic scenarios for tool calls and policy compliance"
+            "description": "Tool memory - synthetic scenarios for tool calls and policy compliance (GPT-5 generated)"
         },
     )
 
@@ -408,7 +532,7 @@ async def build_tool_memory_async(
 
 
 def build_tool_memory(
-    collection_name="tool_memory_airline",
+    collection_name="tool_memory_airline_gpt5",
     max_tools=None,
     scenarios_per_arg=3,
     max_concurrency=10,
@@ -455,13 +579,13 @@ def test_retrieval(collection, query, n_results=3):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="Generate tool memory database from airline tools and policies"
+        description="Generate tool memory database from airline tools and policies using GPT-5"
     )
     parser.add_argument(
         "--collection-name",
         type=str,
-        default="tool_memory_airline",
-        help="Name for the ChromaDB collection (default: tool_memory_airline)",
+        default="tool_memory_airline_gpt5",
+        help="Name for the ChromaDB collection (default: tool_memory_airline_gpt5)",
     )
     parser.add_argument(
         "--max-tools",
@@ -478,7 +602,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--max-concurrency",
         type=int,
-        default=100,
+        default=10,
         help="Maximum number of concurrent LLM calls (default: 10)",
     )
     parser.add_argument(

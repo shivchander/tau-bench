@@ -42,6 +42,7 @@ python auto_error_identification.py --env retail --platform openai --results-pat
    - `tool_calling_agent.py` - Function calling strategy
    - `chat_react_agent.py` - ReAct reasoning strategy
    - `few_shot_agent.py` - Few-shot prompting strategy
+   - `memory_agent.py` - Memory-augmented tool calling with ChromaDB retrieval
    - `base.py` - Abstract agent interface
 
 3. **Model Utils** (`tau_bench/model_utils/`):
@@ -70,7 +71,7 @@ python auto_error_identification.py --env retail --platform openai --results-pat
 
 ### Supported Models and Strategies
 
-**Agent Strategies**: `tool-calling`, `act`, `react`, `few-shot`
+**Agent Strategies**: `tool-calling`, `act`, `react`, `few-shot`, `memory`
 
 **User Strategies**: `llm`, `react`, `verify`, `reflection`
 
@@ -81,6 +82,118 @@ python auto_error_identification.py --env retail --platform openai --results-pat
 ### Running Tests/Development
 
 The project uses standard Python development practices. Install with `pip install -e .` and run the main benchmarks using `python run.py` with appropriate arguments. Results are saved to the `results/` directory by default.
+
+## Memory-Augmented Agent System
+
+The tau-bench repository includes a memory-augmented agent that uses ChromaDB to retrieve relevant action examples during task execution. This system enables agents to learn from past successful trajectories and improve decision-making.
+
+### Overview
+
+The memory system consists of two main components:
+
+1. **Action Memory Builder** (`syntoolmem/build_action_memory.py`): Processes trajectory data and builds a ChromaDB collection where each action is stored with a natural language description
+2. **Memory Agent** (`tau_bench/agents/memory_agent.py`): Tool-calling agent that retrieves relevant action examples from memory for each user message
+
+### Building the Action Memory
+
+Before using the memory agent, you need to build the action memory database from trajectory data:
+
+```bash
+# Build memory for airline environment (default)
+uv run python -m syntoolmem.build_action_memory --env airline --max-concurrency 20
+
+# Build memory for retail environment
+uv run python -m syntoolmem.build_action_memory --env retail --max-concurrency 20
+
+# Build from a subset for testing
+uv run python -m syntoolmem.build_action_memory --env airline --max-trajectories 10 --max-concurrency 10
+
+# Build with custom collection name
+uv run python -m syntoolmem.build_action_memory --env airline --collection-name my_memory --skip-tests
+```
+
+**Key Parameters:**
+- `--env`: Environment (airline or retail) - determines prompt template and data source (default: airline)
+- `--max-trajectories`: Limit number of trajectories to process (default: all)
+- `--max-concurrency`: Number of parallel LLM calls for description generation (default: 10)
+- `--collection-name`: Name for the ChromaDB collection (default: action_memory_{env})
+- `--skip-tests`: Skip running test queries after building
+
+**Data Sources:**
+- **Airline**: Loads from `syntoolmem/tasks_airline_medium.py` (356 trajectories, ~1400 actions)
+- **Retail**: Loads from `syntoolmem/tasks_retail_train.py`
+
+**Environment-Specific Prompts:**
+- **Airline**: Focuses on flight reservations, baggage, cabin classes, payment methods
+- **Retail**: Focuses on orders, items, addresses, shipping, discounts
+
+**Performance:** With `--max-concurrency 20`, processing all ~356 trajectories (~1400 actions) takes approximately 2-3 minutes.
+
+### Using the Memory Agent
+
+Once the action memory is built, you can run the memory agent:
+
+```bash
+# Run memory agent on airline environment
+python run.py --agent-strategy memory --env airline --model gpt-4o --model-provider openai --user-model gpt-4o --user-model-provider openai --user-strategy llm --max-concurrency 10
+
+# Run with custom memory settings
+python run.py --agent-strategy memory --env airline --model gpt-4o --model-provider openai --user-model gpt-4o --user-model-provider openai --memory-top-k 5 --memory-collection-name action_memory
+
+# Run on specific tasks
+python run.py --agent-strategy memory --env airline --model gpt-4o --model-provider openai --user-model gpt-4o --user-model-provider openai --task-ids 0 1 2 --memory-top-k 3
+```
+
+**Memory Agent Parameters:**
+- `--memory-collection-name`: ChromaDB collection name (default: action_memory_{env})
+- `--memory-top-k`: Number of similar actions to retrieve per query (default: 3)
+- `--memory-db-path`: Path to ChromaDB database (default: syntoolmem/chroma_db_{env})
+
+### How It Works
+
+1. **Memory Building**: For each action in the trajectory data, the system:
+   - Uses GPT-4o to generate a natural language description of what the action does
+   - Stores the description as the document (for semantic search)
+   - Stores the full action details (name, kwargs) as metadata
+
+2. **Runtime Retrieval**: For each user message, the memory agent:
+   - Queries ChromaDB with the user message
+   - Retrieves top-k most similar action examples
+   - Injects these examples into the agent's context before making tool calls
+   - Uses the examples to inform decision-making and prevent errors
+
+### Benefits
+
+- **Error Prevention**: Prevents false assumptions (e.g., "economy class cannot be modified") by showing concrete examples
+- **Action Discovery**: Helps agents discover available capabilities through examples
+- **Parameter Learning**: Shows correct parameter formats and valid values
+- **Context-Aware**: Retrieves examples semantically similar to the current user request
+
+### Inspecting the Memory
+
+To inspect what's stored in the action memory:
+
+```bash
+# Inspect airline memory
+uv run python -m syntoolmem.inspect_action_memory --env airline
+
+# Inspect retail memory
+uv run python -m syntoolmem.inspect_action_memory --env retail
+```
+
+This script displays all stored actions grouped by action type and runs environment-specific example queries to demonstrate retrieval.
+
+### File Structure
+
+```
+syntoolmem/
+├── build_action_memory.py       # Build ChromaDB from trajectories
+├── inspect_action_memory.py     # Inspect and query the database
+├── tasks_airline_medium.py      # Airline trajectory data
+├── tasks_retail_train.py        # Retail trajectory data
+├── chroma_db_airline/           # Airline action memory database (generated)
+└── chroma_db_retail/            # Retail action memory database (generated)
+```
 
 ## Synthetic Data Generation (SDG) System
 

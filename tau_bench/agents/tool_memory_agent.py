@@ -29,10 +29,11 @@ class ToolMemoryAgent(Agent):
         model: str,
         provider: str,
         temperature: float = 0.0,
-        memory_collection_name: str = "tool_memory_airline",
+        memory_collection_name: Optional[str] = None,
         memory_top_k: int = 2,  # Fetch 2 happy + 2 adversarial
         memory_db_path: Optional[str] = None,
         memory_mode: str = "balanced",  # "balanced", "happy_only", or "adversarial_only"
+        env: str = "airline",  # "airline" or "retail"
     ):
         self.tools_info = tools_info
         self.wiki = wiki
@@ -41,12 +42,17 @@ class ToolMemoryAgent(Agent):
         self.temperature = temperature
         self.memory_top_k = memory_top_k
         self.memory_mode = memory_mode
+        self.env = env
+
+        # Set default collection name based on environment
+        if memory_collection_name is None:
+            memory_collection_name = f"tool_memory_{env}"
 
         # Load ChromaDB collection for tool memories
         if memory_db_path is None:
-            # Default to syntoolmem/chroma_db_tool_memories
+            # Default to syntoolmem/chroma_db_{env}
             project_root = Path(__file__).parent.parent.parent
-            memory_db_path = str(project_root / "syntoolmem" / "chroma_db_tool_memories")
+            memory_db_path = str(project_root / "syntoolmem" / f"chroma_db_{env}")
 
         self.chroma_client = chromadb.PersistentClient(path=memory_db_path)
 
